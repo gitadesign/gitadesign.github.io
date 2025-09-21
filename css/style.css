@@ -275,46 +275,46 @@ textarea {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
-/* Projects Section - Two Column Layout */
+/* Projects Section - Three Column Layout */
 .projects__content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
   margin-top: 2rem;
 }
 
 .projects__row {
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  transition: transform 0.3s ease;
   margin-bottom: 0;
 }
 
 .projects__row:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: none;
 }
 
 .projects__row-img-cont {
   overflow: hidden;
-  height: 280px;
+  height: auto;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
 .projects__row-img {
   width: 100%;
   height: auto;
-  min-height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
 .projects__row:hover .projects__row-img {
