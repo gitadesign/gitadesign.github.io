@@ -774,6 +774,9 @@ textarea {
     opacity: 0;
     top: 27px; } }
 .btn--spaced {
-  margin-bottom: 16rem;  /* more space below */
+  display: inline-block;
+  margin-top: -1.5rem !important;
+  margin-bottom: 6rem !important;
 }
+
 
