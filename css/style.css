@@ -773,3 +773,7 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+    .btn {
+  display: inline-block; /* makes margin work properly */
+  margin-bottom: 2rem;   /* adjust value as needed */
+}
