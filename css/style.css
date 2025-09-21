@@ -165,7 +165,7 @@ textarea {
     padding: calc(1.5rem - 2px) calc(5rem - 2px); }
 
 .sec-pad {
-  padding: 12rem 0; }
+  padding: 5rem 5; }
   @media only screen and (max-width: 56.25em) {
     .sec-pad {
       padding: 8rem 0; } }
@@ -773,11 +773,6 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
-    section#contact.sec-pad {
-  padding-top: 6rem !important;
-  padding-bottom: 18rem !important;
-}
-
 
 
 
