@@ -779,3 +779,28 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+/* FORCE OVERRIDE - Projects spacing fixes */
+#projects .projects__row-img-cont {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#projects .projects__row-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#projects .projects__row-content-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* FORCE OVERRIDE - Contact section bottom spacing */
+.contact .contact__form-container {
+  margin-bottom: 4rem !important;
+}
+
+body .main-footer {
+  margin-top: 4rem !important;
+}
