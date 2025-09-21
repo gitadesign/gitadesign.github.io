@@ -663,11 +663,11 @@ textarea {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 3rem; /* spacing between items */
-  max-width: 120rem; /* optional, limits grid width */
-  margin: 0 auto; /* centres the grid horizontally */
-  padding: 0 2rem; /* spacing from sides */
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* flexible 4 columns */
+  gap: 3rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .project-item {
