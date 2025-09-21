@@ -774,3 +774,8 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+    /* TEST - This should make project titles bright red */
+.projects__row-content-title {
+    color: red !important;
+    background: yellow !important;
+}
