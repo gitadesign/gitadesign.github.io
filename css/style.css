@@ -821,6 +821,10 @@ section#projects .projects__row .projects__row-content .projects__row-content-ti
   margin-top: 0 !important;
   padding-top: 0 !important;
   border-top: none !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 1.5rem !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
 }
 
 /* Force footer spacing */
