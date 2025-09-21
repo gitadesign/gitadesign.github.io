@@ -804,3 +804,27 @@ textarea {
 body .main-footer {
   margin-top: 4rem !important;
 }
+
+/* NUCLEAR OPTION - Force remove all spacing between image and title */
+section#projects .projects__row .projects__row-img-cont {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+section#projects .projects__row .projects__row-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+section#projects .projects__row .projects__row-content .projects__row-content-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+
+/* Force footer spacing */
+footer.main-footer {
+  margin-top: 6rem !important;
+  padding-top: 8rem !important;
+}
