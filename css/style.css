@@ -358,14 +358,14 @@ textarea {
 @media only screen and (max-width: 1000px) {
   .projects__content {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 3rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .projects__content {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 3rem;
   }
   
   .projects__row-content {
