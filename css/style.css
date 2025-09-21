@@ -831,4 +831,14 @@ section#projects .projects__row .projects__row-content .projects__row-content-ti
 footer.main-footer {
   margin-top: 6rem !important;
   padding-top: 8rem !important;
+}/* Fix project title spacing - add this to the end of your CSS file */
+section#projects .projects__row .projects__row-content .projects__row-content-title {
+    margin-block-start: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Fix footer spacing */
+footer.main-footer {
+    margin-top: 4rem !important;
 }
