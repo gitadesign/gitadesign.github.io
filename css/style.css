@@ -778,4 +778,11 @@ textarea {
 .projects__row-content-title {
     color: red !important;
     background: yellow !important;
+}/* Spacing fix attempt */
+.projects__row-img-cont {
+    margin-bottom: -2rem !important;
+}
+
+.contact {
+    margin-bottom: 8rem !important;
 }
