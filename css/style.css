@@ -275,11 +275,11 @@ textarea {
       .about__content-details-para:last-child {
         margin-bottom: 4rem; }
 
-/* Updated Projects Section - Two Column Layout */
+/* Projects Section - Two Column Layout */
 .projects__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
   margin-top: 2rem;
 }
 
@@ -291,6 +291,7 @@ textarea {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0;
 }
 
 .projects__row:hover {
@@ -301,6 +302,7 @@ textarea {
 .projects__row-img-cont {
   overflow: hidden;
   height: 200px;
+  width: 100%;
 }
 
 .projects__row-img {
@@ -326,36 +328,25 @@ textarea {
 
 .projects__row-content-title {
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 1.5rem;
   color: #333;
 }
 
-@media only screen and (max-width: 37.5em) {
-  .projects__row-content-title {
-    font-size: 2.2rem;
-  }
-}
-
 .projects__row-content-desc {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   flex-grow: 1;
-}
-
-@media only screen and (max-width: 37.5em) {
-  .projects__row-content-desc {
-    font-size: 1.5rem;
-  }
+  max-width: none;
 }
 
 /* Responsive design for projects */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   .projects__content {
     grid-template-columns: 1fr;
-    grid-gap: 3rem;
+    gap: 2rem;
   }
   
   .projects__row-content {
@@ -363,13 +354,13 @@ textarea {
     text-align: center;
     align-items: center;
   }
+  
+  .projects__row-img-cont {
+    height: 180px;
+  }
 }
 
-@media only screen and (max-width: 480px) {
-  .projects__content {
-    grid-gap: 2rem;
-  }
-  
+@media only screen and (max-width: 600px) {
   .projects__row-img-cont {
     height: 160px;
   }
@@ -380,6 +371,10 @@ textarea {
   
   .projects__row-content-title {
     font-size: 2rem;
+  }
+  
+  .projects__row-content-desc {
+    font-size: 1.4rem;
   }
 }
 
