@@ -746,19 +746,3 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
-.projects__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
-  gap: 5rem;
-  max-width: 1200px; /* constrain the width */
-  margin: 0 auto 8rem auto; /* center it horizontally and keep bottom margin */
-  padding: 0 2rem; /* space from edges on smaller screens */
-}
-
-@media only screen and (max-width: 900px) {
-  .projects__content {
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
-    gap: 3rem;
-  }
-}
-
