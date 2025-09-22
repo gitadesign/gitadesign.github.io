@@ -72,8 +72,11 @@ textarea {
       font-size: 4.5rem; } }
 
 .heading-sec__mb-bg {
-  margin-bottom: 4rem;
+  margin-bottom: 12rem; /* Increased space after heading section */
 }
+  @media only screen and (max-width: 56.25em) {
+    .heading-sec__mb-bg {
+      margin-bottom: 4rem; } }
 
 .heading-sec__mb-med {
   margin-bottom: 9rem; }
