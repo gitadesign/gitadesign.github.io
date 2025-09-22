@@ -244,6 +244,7 @@ textarea {
     max-width: 80rem; }
   .home-hero__cta {
     margin-top: 5rem;
+    margin-bottom: 3rem;
     text-align: center; }
 
 .about {
@@ -304,13 +305,13 @@ textarea {
 
 .projects__row-img-cont {
   overflow: hidden;
-  height: 550px;
+  height: 880px; /* Increased from 550px (60% larger) */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  margin: 0 0 -0.5rem 0;
+  margin: 0 0 1rem 0; /* Reduced gap under images */
   padding: 0;
   background-color: transparent;
 }
@@ -774,29 +775,27 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
-    /* TEST - This should make project titles bright red */
+/* Make project images 60% bigger and adjust spacing */
+.projects__row-img-cont {
+  height: 880px; /* Increased from 550px (60% larger) */
+  margin-bottom: 1rem; /* Reduced gap under images */
+  width: 100%;
+}
+
+/* Adjust project section spacing */
+.projects__content {
+  gap: 2rem; /* Reduced gap between project items */
+}
+
+/* Add space after the Contact button in About section */
+.home-hero__cta {
+  margin-top: 5rem;
+  margin-bottom: 3rem; /* Added bottom margin */
+  text-align: center;
+}
+
+/* Remove any test styles that might interfere */
 .projects__row-content-title {
-    color: red !important;
-    background: yellow !important;
-}/* Spacing fix attempt */
-.projects__row-img-cont {
-    margin-bottom: -2rem !important;
-}
-
-.contact {
-    margin-bottom: 8rem !important;
-}
-/* Fix image to title gap */
-.projects__row-img-cont {
-    margin-bottom: -2rem !important;
-}
-
-/* Fix contact button spacing */
-.contact {
-    padding-bottom: 16rem !important;
-}
-
-/* Alternative - add space above footer */
-.main-footer {
-    padding-top: 12rem !important;
+  color: inherit !important;
+  background: none !important;
 }
