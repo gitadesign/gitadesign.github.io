@@ -28,9 +28,8 @@
             />
           </div>
           <a 
-            href="javascript:void(0)" 
-            onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" 
-            class="header__logo-sub" 
+            href="#about" 
+            class="header__logo-sub"
             style="text-decoration: none; cursor: pointer;"
           >Gita Ogneva</a>
         </div>
@@ -334,5 +333,18 @@
     </footer>
 
     <script src="./index.js"></script>
+    <script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
   </body>
 </html>
