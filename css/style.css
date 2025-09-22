@@ -775,7 +775,7 @@ textarea {
       margin-right: 0; }
   .main-footer__lower {
     padding: 4rem 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #f4f4f4;
     color: #333;
     font-size: 1.2rem;
     text-align: left;
