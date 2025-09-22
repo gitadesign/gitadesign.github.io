@@ -101,7 +101,7 @@ textarea {
   .heading-sec__main::after {
     content: '';
     position: absolute;
-    top: calc(100%);
+    top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
     background: #0062b9;
