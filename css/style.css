@@ -277,7 +277,7 @@ textarea {
         font-weight: 700;
         margin: 0 3px; }
       .about__content-details-para:last-child {
-        margin-bottom: 40px; /* Add space after text */
+        margin-bottom: 25px; /* Reduced from 40px to bring button closer to text */
       }
 
 .projects {
@@ -904,25 +904,15 @@ textarea {
   margin-bottom: 6rem;
 }
 
-/* Adjust About section spacing */
-.about__content-main {
-  padding-bottom: 5rem;  /* Add space below the content */
+/* Adjust About section text and button spacing */
+.about__content-details-para:last-child {
+  margin-bottom: 25px; /* Reduced from 40px to bring button closer to text */
 }
 
 .about__content-details {
-  margin-bottom: 3rem;  /* Reduce space between text and button */
+  margin-bottom: 2rem; /* Reduced from 3rem to tighten spacing */
 }
 
-.about__content-details-para {
-  margin-bottom: 1rem;  /* Adjust paragraph spacing */
-}
-
-/* Increase overall section padding */
-.sec-pad {
-  padding: 12rem 0;  /* Increase from default padding */
-}
-
-/* Add space after the Contact button */
-.about__content .btn--med {
-  margin-bottom: 4rem;  /* Add space below button */
+.about__content .btn--bg {
+  margin-bottom: 60px !important; /* Keep bottom margin to maintain spacing after button */
 }
