@@ -288,12 +288,17 @@ textarea {
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 5rem;  /* Increased space between columns */
   padding: 0;
 }
 
 .projects__row {
   margin-bottom: 1.5rem;
+}
+
+/* Add extra space after first row */
+.projects__row:nth-child(-n+3) {
+  margin-bottom: 8rem;  /* More space after first row */
 }
 
 .projects__row-img-cont {
@@ -312,11 +317,21 @@ textarea {
   margin: 20px 0; /* Add vertical spacing */
 }
 
-/* Make project buttons narrower */
+/* Fix button spacing and alignment */
 .projects__row .btn {
-  max-width: 200px; /* Limit button width */
-  margin: 15px auto; /* Center button and add vertical space */
+  max-width: 200px;
+  margin: 15px auto 40px auto;  /* Added more bottom margin */
   display: block;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  white-space: nowrap;  /* Prevents text wrapping */
+}
+
+/* Ensure consistent button text alignment */
+.projects__row .btn--theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Responsive design for projects */
