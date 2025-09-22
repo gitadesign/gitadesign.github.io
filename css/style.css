@@ -734,7 +734,7 @@ textarea {
     border-bottom: 0; }
 
 .main-footer {
-  background: #04208f;
+  background: #0062b9; /* Match button blue color */
   color: #fff;
   margin-top: 6rem; }
   .main-footer__upper {
