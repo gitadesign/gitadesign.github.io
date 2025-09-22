@@ -734,31 +734,60 @@ textarea {
     border-bottom: 0; }
 
 .main-footer {
-  background: #f4f4f4; /* Match projects section background */
+  background: #fff;
   color: #333;
-}
-
-.main-footer__upper {
-  max-width: 120rem; /* Match main-container width */
-  margin: 0 auto;
-  width: 92%;
-  padding: 6rem 0;
-}
-
-.main-footer__lower {
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 92%;
-  padding: 4rem 0;
-  border-top: 1px solid #ddd;
-}
-
-/* Ensure text colors remain dark on light background */
-.main-footer__short-desc,
-.main-footer__lower,
-.main-footer__lower a {
-  color: #333;
-}
+  margin-top: 6rem; }
+  .main-footer__upper {
+    display: flex;
+    justify-content: space-between;
+    padding: 8rem 0; }
+    @media only screen and (max-width: 56.25em) {
+      .main-footer__upper {
+        padding: 6rem 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .main-footer__upper {
+        display: block; } }
+  .main-footer__row-1 {
+    order: 2; }
+    @media only screen and (max-width: 56.25em) {
+      .main-footer__row-1 {
+        margin-bottom: 5rem; } }
+  .main-footer__row-2 {
+    width: 40%;
+    order: 1;
+    max-width: 50rem; }
+    @media only screen and (max-width: 56.25em) {
+      .main-footer__row-2 {
+        width: 100%; } }
+  .main-footer__short-desc {
+    margin-top: 2rem;
+    color: #333;
+    font-size: 1.5rem;
+    line-height: 1.7; }
+  .main-footer__social-cont {
+    margin-top: 2rem; }
+  .main-footer__icon {
+    margin-right: 1rem;
+    width: 2.5rem;
+    filter: brightness(0);
+    }
+    .main-footer__icon--mr-none {
+      margin-right: 0; }
+  .main-footer__lower {
+    padding: 4rem 0;
+    border-top: 1px solid #ddd;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: left;
+    text-align: center; }
+    .main-footer__lower a {
+      text-decoration: underline;
+      font-weight: bold;
+      margin-left: 2px;
+      color: #333; }
+    @media only screen and (max-width: 56.25em) {
+      .main-footer__lower {
+        padding: 3.5rem 0; } }
 
 .skills {
   display: flex;
