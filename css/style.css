@@ -734,7 +734,7 @@ textarea {
     border-bottom: 0; }
 
 .main-footer {
-  background: #f4f4f4;
+  background: #fff !important;
   color: #333;
   margin-top: 6rem; }
   .main-footer__upper {
@@ -775,7 +775,7 @@ textarea {
       margin-right: 0; }
   .main-footer__lower {
     padding: 4rem 0;
-    border-top: 1px solid #f4f4f4;
+    border-top: 1px solid #0062b9;
     color: #333;
     font-size: 1.2rem;
     text-align: left;
@@ -784,7 +784,7 @@ textarea {
       text-decoration: underline;
       font-weight: bold;
       margin-left: 2px;
-      color: #333; }
+      color: #0062b9; }
     @media only screen and (max-width: 56.25em) {
       .main-footer__lower {
         padding: 3.5rem 0; } }
