@@ -108,7 +108,7 @@ textarea {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
-    margin-bottom: 5rem; /* Increased space after the blue line */
+    margin-bottom: 8rem; /* Increased space after the line */
     margin-top: 3rem; /* Space between text and line */
     }
     @media only screen and (max-width: 37.5em) {
