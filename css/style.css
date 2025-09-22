@@ -294,6 +294,11 @@ textarea {
 
 .projects__row {
   margin-bottom: 1.5rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Add extra space after first row */
@@ -305,7 +310,7 @@ textarea {
   width: 100%;
   height: auto;
   overflow: visible; /* Allow full image to show */
-  margin-bottom: 30px; /* Add more space between rows */
+  margin-bottom: 15px; /* Add more space between rows */
 }
 
 .projects__row-img {
@@ -320,19 +325,26 @@ textarea {
 
 /* Fix button spacing and alignment */
 .projects__row .btn {
+  position: relative; /* Remove any absolute positioning */
   max-width: 200px;
-  margin: 15px auto 40px auto;  /* Added more bottom margin */
-  display: block;
-  text-align: center;
-  padding: 1.5rem 2rem;
-  white-space: nowrap;  /* Prevents text wrapping */
-}
-
-/* Ensure consistent button text alignment */
-.projects__row .btn--theme {
+  margin: 15px auto 30px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem 3rem;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Remove transform/scale from buttons */
+.projects__row .btn--theme {
+  transform: none;
+}
+
+/* Ensure consistent text alignment in buttons */
+.projects__row .btn--theme span {
+  text-align: center;
+  width: 100%;
 }
 
 /* Responsive design for projects */
@@ -757,29 +769,43 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
-/* Fix project images and spacing */
+/* Fix project buttons and alignment */
+.projects__row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .projects__row-img-cont {
   width: 100%;
   height: auto;
-  overflow: visible; /* Allow full image to show */
-  margin-bottom: 30px; /* Add more space between rows */
+  overflow: visible;
+  margin-bottom: 15px;
 }
 
-.projects__row-img {
-  width: 130%; /* Make images 30% larger */
-  margin-left: -15%; /* Center the wider image */
-  height: auto;
-  transform: scale(1.5); /* Make image 50% larger */
-  transform-origin: center;
-  object-fit: contain; /* Ensure full image is visible */
-  margin: 20px 0; /* Add vertical spacing */
-}
-
-/* Make project buttons narrower */
 .projects__row .btn {
-  max-width: 200px; /* Limit button width */
-  margin: 15px auto; /* Center button and add vertical space */
-  display: block;
+  position: relative; /* Remove any absolute positioning */
+  max-width: 200px;
+  margin: 15px auto 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Remove transform/scale from buttons */
+.projects__row .btn--theme {
+  transform: none;
+}
+
+/* Ensure consistent text alignment in buttons */
+.projects__row .btn--theme span {
+  text-align: center;
+  width: 100%;
 }
 
 /* Fix Contact button spacing in About section */
