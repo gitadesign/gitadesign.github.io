@@ -846,3 +846,51 @@ textarea {
 .about__content .btn--bg {
   margin-bottom: 5rem !important;
 }
+
+/* Fix image and button alignment */
+.projects__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.projects__row-img-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projects__row-img {
+  width: 130%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform-origin: center;
+}
+
+/* Fix button alignment and text centering */
+.projects__row .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  min-width: 200px;
+  margin: 15px auto 30px;
+}
+
+.projects__row .btn--theme {
+  padding: 1.5rem 3rem;
+  white-space: nowrap;
+}
+
+/* Ensure text is centered within buttons */
+.btn {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
