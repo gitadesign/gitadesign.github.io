@@ -790,3 +790,33 @@ textarea {
   font-size: 2rem;
   margin-bottom: 8rem !important; /* Force larger bottom margin */
 }
+
+/* Override project image sizes and spacing - add at bottom of file */
+.projects__row-img {
+  transform: scale(1.5); /* Makes image 50% larger */
+  transform-origin: center center;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.projects__row-img-cont {
+  overflow: hidden;
+  margin-bottom: 10px !important; /* Reduces space under image */
+}
+
+/* Fix contact button spacing */
+.btn.btn--bg {
+  margin-bottom: 50px !important;
+}
+
+.home-hero__cta {
+  margin-bottom: 50px !important;
+}
+
+/* Ensure buttons stay visible */
+.projects__row .btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
