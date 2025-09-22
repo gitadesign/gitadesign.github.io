@@ -904,7 +904,25 @@ textarea {
   margin-bottom: 6rem;
 }
 
-/* Contact button spacing */
-.about__content-details-para:last-child {
-  margin-bottom: 5rem;
+/* Adjust About section spacing */
+.about__content-main {
+  padding-bottom: 5rem;  /* Add space below the content */
+}
+
+.about__content-details {
+  margin-bottom: 3rem;  /* Reduce space between text and button */
+}
+
+.about__content-details-para {
+  margin-bottom: 1rem;  /* Adjust paragraph spacing */
+}
+
+/* Increase overall section padding */
+.sec-pad {
+  padding: 12rem 0;  /* Increase from default padding */
+}
+
+/* Add space after the Contact button */
+.about__content .btn--med {
+  margin-bottom: 4rem;  /* Add space below button */
 }
