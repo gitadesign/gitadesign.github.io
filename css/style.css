@@ -288,8 +288,8 @@ textarea {
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;  /* Increased space between columns */
-  padding: 0;
+  gap: 6rem; /* Increase space between columns */
+  margin-bottom: 4rem;
 }
 
 .projects__row {
@@ -298,7 +298,7 @@ textarea {
 
 /* Add extra space after first row */
 .projects__row:nth-child(-n+3) {
-  margin-bottom: 8rem;  /* More space after first row */
+  margin-bottom: 6rem;
 }
 
 .projects__row-img-cont {
@@ -309,7 +309,8 @@ textarea {
 }
 
 .projects__row-img {
-  width: 100%;
+  width: 130%; /* Make images 30% larger */
+  margin-left: -15%; /* Center the wider image */
   height: auto;
   transform: scale(1.5); /* Make image 50% larger */
   transform-origin: center;
@@ -765,7 +766,8 @@ textarea {
 }
 
 .projects__row-img {
-  width: 100%;
+  width: 130%; /* Make images 30% larger */
+  margin-left: -15%; /* Center the wider image */
   height: auto;
   transform: scale(1.5); /* Make image 50% larger */
   transform-origin: center;
@@ -788,4 +790,33 @@ textarea {
 .about__content .btn--bg {
   margin-bottom: 60px !important; /* Force space under Contact button */
   display: inline-block;
+}
+
+/* Update project images size and spacing */
+.projects .main-container {
+  max-width: 1600px; /* Wider container for larger images */
+  width: 92%;
+  margin: 0 auto;
+}
+
+.projects__row-img {
+  width: 130%; /* Make images 30% larger */
+  margin-left: -15%; /* Center the wider image */
+}
+
+.projects__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem; /* Increase space between columns */
+  margin-bottom: 4rem;
+}
+
+/* Add extra space after first row */
+.projects__row:nth-child(-n+3) {
+  margin-bottom: 6rem;
+}
+
+/* Fix Contact button spacing */
+.about__content .btn--bg {
+  margin-bottom: 5rem !important;
 }
