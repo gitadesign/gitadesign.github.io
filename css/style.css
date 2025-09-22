@@ -251,13 +251,14 @@ textarea {
 
 .about {
   background: #fafafa;
-  padding: 12rem 0;
-  padding-bottom: 8rem; /* Add padding to bottom of About section */
+  padding: 15rem 0 12rem 0; /* Increased overall section padding */
   }
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem; }
+    grid-gap: 10rem;
+    margin-bottom: 8rem; /* Add space after content */
+    }
     @media only screen and (max-width: 56.25em) {
       .about__content {
         grid-template-columns: 1fr;
@@ -279,7 +280,7 @@ textarea {
         font-weight: 700;
         margin: 0 3px; }
       .about__content-details-para:last-child {
-        margin-bottom: 25px; /* Keeps text closer to button */
+        margin-bottom: 3rem; /* Space between text and button */
       }
 
 .projects {
@@ -908,13 +909,10 @@ textarea {
 
 /* Adjust About section spacing */
 .about__content-details-para:last-child {
-  margin-bottom: 25px; /* Keeps text closer to button */
-}
-
-.about__content-details {
-  margin-bottom: 2rem; /* Space between text and button */
+  margin-bottom: 3rem; /* Space between text and button */
 }
 
 .about__content .btn--bg {
-  margin-bottom: 60px !important; /* Restore space under button */
+  margin-bottom: 8rem !important; /* Space under Contact button */
+  display: inline-block;
 }
