@@ -275,7 +275,7 @@ textarea {
         font-weight: 700;
         margin: 0 3px; }
       .about__content-details-para:last-child {
-        margin-bottom: 4rem; }
+        margin-bottom: 6rem; }
 
 .projects {
   background: #f4f4f4;
@@ -285,46 +285,33 @@ textarea {
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  padding: 0;
 }
 
 .projects__row {
-  display: block;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
-  overflow: visible;
-  transition: transform 0.3s ease;
-  margin-bottom: 0;
-}
-
-.projects__row:hover {
-  transform: translateY(-10px);
+  margin-bottom: 1.5rem;
 }
 
 .projects__row-img-cont {
   overflow: hidden;
-  height: 880px; /* Increased from 550px (60% larger) */
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  margin: 0 0 1rem 0; /* Reduced gap under images */
+  margin: 0;
   padding: 0;
   background-color: transparent;
 }
 
 .projects__row-img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
   display: block;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  border-radius: 8px;
-  max-width: 100%;
-  max-height: 100%;
+  margin: 0 auto;
 }
 
 .projects__row:hover .projects__row-img {
@@ -775,27 +762,39 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
-/* Make project images 60% bigger and adjust spacing */
+/* Make images larger and reduce spacing */
 .projects__row-img-cont {
-  height: 880px; /* Increased from 550px (60% larger) */
-  margin-bottom: 1rem; /* Reduced gap under images */
+  height: auto;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Adjust project section spacing */
+.projects__row-img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px; /* Increase from default */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Adjust spacing between projects */
 .projects__content {
-  gap: 2rem; /* Reduced gap between project items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0;
 }
 
-/* Add space after the Contact button in About section */
-.home-hero__cta {
-  margin-top: 5rem;
-  margin-bottom: 3rem; /* Added bottom margin */
-  text-align: center;
+.projects__row {
+  margin-bottom: 1.5rem;
 }
 
-/* Remove any test styles that might interfere */
-.projects__row-content-title {
-  color: inherit !important;
-  background: none !important;
+/* Fix Contact button spacing in About section */
+.about__content-details-para:last-child {
+  margin-bottom: 6rem; /* Add space after the text, before the button */
+}
+
+.btn--bg {
+  margin-bottom: 4rem; /* Add space under the Contact button */
 }
