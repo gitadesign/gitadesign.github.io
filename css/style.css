@@ -251,7 +251,9 @@ textarea {
 
 .about {
   background: #fafafa;
-  padding: 12rem 0; }
+  padding: 12rem 0;
+  padding-bottom: 8rem; /* Add padding to bottom of About section */
+  }
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -277,7 +279,7 @@ textarea {
         font-weight: 700;
         margin: 0 3px; }
       .about__content-details-para:last-child {
-        margin-bottom: 25px; /* Reduced from 40px to bring button closer to text */
+        margin-bottom: 25px; /* Keeps text closer to button */
       }
 
 .projects {
@@ -904,15 +906,15 @@ textarea {
   margin-bottom: 6rem;
 }
 
-/* Adjust About section text and button spacing */
+/* Adjust About section spacing */
 .about__content-details-para:last-child {
-  margin-bottom: 25px; /* Reduced from 40px to bring button closer to text */
+  margin-bottom: 25px; /* Keeps text closer to button */
 }
 
 .about__content-details {
-  margin-bottom: 2rem; /* Reduced from 3rem to tighten spacing */
+  margin-bottom: 2rem; /* Space between text and button */
 }
 
 .about__content .btn--bg {
-  margin-bottom: 60px !important; /* Keep bottom margin to maintain spacing after button */
+  margin-bottom: 60px !important; /* Restore space under button */
 }
