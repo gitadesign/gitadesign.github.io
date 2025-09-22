@@ -72,7 +72,8 @@ textarea {
       font-size: 4.5rem; } }
 
 .heading-sec__mb-bg {
-  margin-bottom: 6rem; }
+  margin-bottom: 2rem;  /* Reduce space under the project description text */
+}
   @media only screen and (max-width: 56.25em) {
     .heading-sec__mb-bg {
       margin-bottom: 4rem; } }
@@ -295,7 +296,7 @@ textarea {
   box-shadow: none;
   overflow: visible;
   transition: transform 0.3s ease;
-  margin-bottom: 0;
+  margin-bottom: 2rem;  /* Add consistent spacing between project rows */
 }
 
 .projects__row:hover {
@@ -313,6 +314,9 @@ textarea {
   margin: 0 0 -0.5rem 0;
   padding: 0;
   background-color: transparent;
+  margin-top: 1rem;    /* Reduce space above images */
+  max-width: 800px;    /* Make images larger */
+  margin: 0 auto;
 }
 
 .projects__row-img {
@@ -324,6 +328,9 @@ textarea {
   border-radius: 8px;
   max-width: 100%;
   max-height: 100%;
+  width: 100%;         /* Make image fill container */
+  height: auto;
+  margin-bottom: 1rem; /* Reduce space between image and button */
 }
 
 .projects__row:hover .projects__row-img {
@@ -767,36 +774,65 @@ textarea {
 
 @keyframes wheel {
   to {
-    opacity: 0;
-    top: 27px; } }
-
+    opacity: 0;    /* TEST - This should make project titles bright red */
+    top: 27px; } }tle {
+;
 @-webkit-keyframes wheel {
-  to {
-    opacity: 0;
-    top: 27px; } }
-    /* TEST - This should make project titles bright red */
-.projects__row-content-title {
-    color: red !important;
-    background: yellow !important;
-}/* Spacing fix attempt */
-.projects__row-img-cont {
-    margin-bottom: -2rem !important;
-}
+  to {/* Spacing fix attempt */
+    opacity: 0;.projects__row-img-cont {
+    top: 27px; } }-bottom: -2rem !important;
 
-.contact {
-    margin-bottom: 8rem !important;
+/* Spacing fix attempt */
+.projects__row-img-cont {
+    margin-bottom: -2rem !important;important;
+}
+* Fix image to title gap */
+.contact {.projects__row-img-cont {
+    margin-bottom: 8rem !important;ant;
 }
 /* Fix image to title gap */
-.projects__row-img-cont {
-    margin-bottom: -2rem !important;
+.projects__row-img-cont {* Fix contact button spacing */
+    margin-bottom: -2rem !important;.contact {
 }
 
 /* Fix contact button spacing */
-.contact {
+.contact {* Alternative - add space above footer */
     padding-bottom: 16rem !important;
-}
-
+}portant;
 /* Alternative - add space above footer */
 .main-footer {
     padding-top: 12rem !important;
+}
+/* Fix contact form spacing */
+.contact__form-container {
+    margin-bottom: 6rem !important;
+}
+
+/* Adjust project section spacing */
+.heading-sec__mb-bg {
+  margin-bottom: 2rem;  /* Reduce space under the project description text */
+}
+
+.projects__row {
+  margin-bottom: 2rem;  /* Add consistent spacing between project rows */
+}
+
+.projects__row-img-cont {
+  margin-top: 1rem;    /* Reduce space above images */
+  width: 100%;
+  max-width: 800px;    /* Make images larger */
+  margin: 0 auto;
+}
+
+.projects__row-img {
+  width: 100%;         /* Make image fill container */
+  height: auto;
+  max-width: 100%;     /* Ensure image doesn't exceed container */
+  margin-bottom: 1rem; /* Reduce space between image and button */
+}
+
+/* Adjust About section button spacing */
+.about__content-main .btn {
+  margin-top: 2rem;    /* Add space above Contact button */
+  margin-bottom: 2rem; /* Add space below Contact button */
 }
