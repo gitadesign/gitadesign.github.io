@@ -786,3 +786,17 @@ textarea {
 .contact {
     margin-bottom: 8rem !important;
 }
+/* Fix image to title gap */
+.projects__row-img-cont {
+    margin-bottom: -2rem !important;
+}
+
+/* Fix contact button spacing */
+.contact {
+    padding-bottom: 16rem !important;
+}
+
+/* Alternative - add space above footer */
+.main-footer {
+    padding-top: 12rem !important;
+}
