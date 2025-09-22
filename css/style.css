@@ -150,7 +150,9 @@ textarea {
     transform: translateY(-3px); }
   .btn--bg {
     padding: 1.5rem 8rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-bottom: 8rem !important; /* Force larger bottom margin */
+  }
   .btn--med {
     padding: 1.5rem 5rem;
     font-size: 1.6rem; }
@@ -275,7 +277,8 @@ textarea {
         font-weight: 700;
         margin: 0 3px; }
       .about__content-details-para:last-child {
-        margin-bottom: 6rem; }
+        margin-bottom: 40px; /* Add space after text */
+      }
 
 .projects {
   background: #f4f4f4;
@@ -294,51 +297,26 @@ textarea {
 }
 
 .projects__row-img-cont {
-  overflow: hidden;
-  height: auto;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
+  height: auto;
+  overflow: visible; /* Allow full image to show */
+  margin-bottom: 30px; /* Add more space between rows */
 }
 
 .projects__row-img {
-  width: 150%; /* Make images 50% larger */
+  width: 100%;
   height: auto;
-  max-width: none; /* Remove max-width constraint */
+  transform: scale(1.5); /* Make image 50% larger */
+  transform-origin: center;
+  object-fit: contain; /* Ensure full image is visible */
+  margin: 20px 0; /* Add vertical spacing */
+}
+
+/* Make project buttons narrower */
+.projects__row .btn {
+  max-width: 200px; /* Limit button width */
+  margin: 15px auto; /* Center button and add vertical space */
   display: block;
-  margin: 0 -25%; /* Compensate for the extra width to keep centered */
-  transform: scale(1); /* Reset any existing transforms */
-}
-
-.projects__row:hover .projects__row-img {
-  transform: scale(1.05);
-}
-
-.projects__row-content {
-  padding: 0;
-  margin: 0;
-}
-
-.projects__row-content-title {
-  font-weight: 700;
-  font-size: 2.2rem;
-  margin: 0 0 1.5rem 0;
-  padding: 0;
-  color: #333;
-  display: block;
-}
-
-.projects__row-content-desc {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  max-width: none;
 }
 
 /* Responsive design for projects */
@@ -763,60 +741,36 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
-/* Make images 50% bigger and reduce spacing */
+/* Fix project images and spacing */
 .projects__row-img-cont {
   width: 100%;
-  overflow: hidden; /* Contain the larger image */
-  margin-bottom: 0.5rem; /* Reduce space under image */
+  height: auto;
+  overflow: visible; /* Allow full image to show */
+  margin-bottom: 30px; /* Add more space between rows */
 }
 
 .projects__row-img {
-  width: 150%; /* Make images 50% larger */
+  width: 100%;
   height: auto;
-  max-width: none; /* Remove max-width constraint */
+  transform: scale(1.5); /* Make image 50% larger */
+  transform-origin: center;
+  object-fit: contain; /* Ensure full image is visible */
+  margin: 20px 0; /* Add vertical spacing */
+}
+
+/* Make project buttons narrower */
+.projects__row .btn {
+  max-width: 200px; /* Limit button width */
+  margin: 15px auto; /* Center button and add vertical space */
   display: block;
-  margin: 0 -25%; /* Compensate for the extra width to keep centered */
-  transform: scale(1); /* Reset any existing transforms */
 }
 
 /* Fix Contact button spacing in About section */
-.home-hero__cta {
-  margin-top: 5rem;
-  margin-bottom: 10rem !important; /* Force larger bottom margin */
+.about__content-details-para:last-child {
+  margin-bottom: 40px; /* Add space after text */
 }
 
-.btn--bg {
-  padding: 1.5rem 8rem;
-  font-size: 2rem;
-  margin-bottom: 8rem !important; /* Force larger bottom margin */
-}
-
-/* Override project image sizes and spacing - add at bottom of file */
-.projects__row-img {
-  transform: scale(1.5); /* Makes image 50% larger */
-  transform-origin: center center;
-  transition: transform 0.3s ease;
-  max-width: 100%;
-  height: auto;
-}
-
-.projects__row-img-cont {
-  overflow: hidden;
-  margin-bottom: 10px !important; /* Reduces space under image */
-}
-
-/* Fix contact button spacing */
-.btn.btn--bg {
-  margin-bottom: 50px !important;
-}
-
-.home-hero__cta {
-  margin-bottom: 50px !important;
-}
-
-/* Ensure buttons stay visible */
-.projects__row .btn {
-  position: relative;
-  z-index: 2;
-  margin-top: 10px;
+.about__content .btn--bg {
+  margin-bottom: 60px !important; /* Force space under Contact button */
+  display: inline-block;
 }
