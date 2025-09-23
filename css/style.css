@@ -1,3 +1,8 @@
+/* Strongest override for footer at end of file */
+.main-footer {
+  background: #000 !important;
+  color: #fff !important;
+}
 /*
 0 - 600px:      Phone
 600 - 900px:    Tablet portrait
