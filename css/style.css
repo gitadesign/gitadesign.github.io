@@ -922,4 +922,4 @@ textarea {
 .about__content .btn--bg {
   margin-bottom: 8rem !important; /* Space under Contact button */
   display: inline-block;
-}
+}/* Spacer replacing Projects heading (keeps visual balance, responsive) */.projects__spacer {  height: 4.5rem;          /* phone / small screens */}/* Larger gaps on bigger screens so spacing feels proportional */@media (min-width: 600px) {  .projects__spacer { height: 6rem; }}@media (min-width: 900px) {  .projects__spacer { height: 8rem; }}@media (min-width: 1200px) {  .projects__spacer { height: 10rem; }}/* Defensive: ensure the decorative blue line for heading doesn't show if heading classes remain elsewhere.   This only targets the pseudo-element when it's inside the projects section wrapper. */#projects .heading-sec__main::after {  display: none !important;}
