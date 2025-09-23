@@ -78,6 +78,9 @@ textarea {
   justify-content: space-between;
   padding: 1rem 5rem;
   color: #fff !important;
+  filter: none !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
 }
 
 .header__logo-container {
