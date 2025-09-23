@@ -145,13 +145,31 @@ textarea {
   box-sizing: border-box;
 }
 
-/* Ensure the immediate main-container inside #projects does not add offset */
+/* Force-center projects grid (scoped override) */
 #projects > .main-container {
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  display: flex;
+  justify-content: center; /* center the grid container horizontally */
+  align-items: flex-start;
   padding-left: 0;
   padding-right: 0;
+}
+
+/* Visible grid width: controls how wide the 3-column block appears */
+#projects .projects__content {
+  width: 1200px;           /* set the visible grid width (change if you want larger/smaller) */
+  max-width: calc(100% - 4rem);
+  margin: 0;               /* parent flex container centers this element */
+  box-sizing: border-box;
+  gap: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 6rem;
+}
+
+/* Ensure image cells behave normally inside the centered grid */
+#projects .projects__row,
+#projects .projects__row-img-cont {
+  width: 100%;
   box-sizing: border-box;
 }
 
