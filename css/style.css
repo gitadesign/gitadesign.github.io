@@ -136,7 +136,7 @@ textarea {
   width: 92%;
 }
 
-/* Projects Section */
+/* Projects Section - Larger grid */
 #projects {
   background: #f4f4f4;
   padding: 12rem 0 8rem 0;
@@ -146,8 +146,8 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
-  max-width: 140rem;
-  width: 85%;
+  max-width: 160rem;  /* increased from 140rem */
+  width: 92%;         /* increased from 85% for better proportions */
   margin: 0 auto;
   padding-top: 6rem;
 }
@@ -163,6 +163,7 @@ textarea {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 4px;
+  min-height: 520px;  /* increased from default for larger images */
 }
 
 .projects__row-img {
@@ -171,6 +172,38 @@ textarea {
   object-fit: cover;
   display: block;
   transition: transform .3s ease;
+}
+
+/* Update responsive breakpoints for larger grid */
+@media only screen and (max-width: 75em) {
+  .projects__content {
+    width: 95%;
+    gap: 5rem;
+  }
+  .projects__row-img-cont {
+    min-height: 460px;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .projects__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    width: 90%;
+  }
+  .projects__row-img-cont {
+    min-height: 420px;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .projects__content {
+    grid-template-columns: 1fr;
+    width: 85%;
+  }
+  .projects__row-img-cont {
+    min-height: 380px;
+  }
 }
 
 /* Project Overlay */
