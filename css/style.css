@@ -140,11 +140,17 @@ textarea {
 /* Scoped, high-specificity overrides only for #projects subtree */
 
 #projects {
-  width: 100%;
-  padding-top: 12rem;
-  padding-bottom: 8rem;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
   background: #f4f4f4;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
   transform: none !important;
 }
 
@@ -175,14 +181,17 @@ textarea {
 #projects .projects__content {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
-  gap: 6rem !important;
-  width: min(1104px, 92%) !important; /* 1104px = 3 * column width with gaps in your layout */
-  max-width: 1104px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-top: 6rem !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 4rem 4rem !important;
+  width: 1200px !important;
+  max-width: 96vw !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
-
+  align-items: center !important;
+  justify-items: center !important;
+  align-content: center !important;
+  justify-content: center !important;
   position: static !important;
   left: auto !important;
   transform: none !important;
@@ -204,14 +213,18 @@ textarea {
   position: relative !important;
   overflow: hidden !important;
   aspect-ratio: 4/3 !important;
-  min-height: 360px !important;
-  border-radius: 4px !important;
+  min-height: 420px !important;
+  max-width: 360px !important;
+  width: 100% !important;
+  border-radius: 8px !important;
 }
 
 #projects .projects__row-img {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
+  min-height: 420px !important;
+  max-width: 360px !important;
   object-fit: cover !important;
   transform: none !important;
   margin: 0 !important;
