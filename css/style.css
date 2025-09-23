@@ -136,10 +136,13 @@ textarea {
   width: 92%;
 }
 
-/* Projects Section */
+/* Projects Section - centered grid */
 #projects {
   background: #f4f4f4;
   padding: 12rem 0 8rem 0;
+  display: flex;
+  justify-content: center; /* Center the main container */
+  width: 100%;
 }
 
 .projects__content {
@@ -147,59 +150,45 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
   padding-top: 6rem;
-  max-width: 140rem; /* slightly smaller than before */
-  margin: 0 auto; /* centers the grid */
-  width: 85%; /* reduced from 92% to pull in sides */
+  max-width: 140rem;
+  width: 85%;
+  margin: 0 auto;
 }
 
-.projects__row {
-  position: relative;
-  width: 100%;
+/* Update responsive behavior to maintain centering */
+@media only screen and (max-width: 75em) {
+  .projects__content {
+    width: 90%;
+    gap: 5rem;
+  }
 }
 
-.projects__row-img-cont {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  border-radius: 4px;
-  min-height: 420px; /* slightly reduced height */
+@media only screen and (max-width: 56.25em) {
+  .projects__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    width: 85%;
+  }
 }
 
-.projects__row-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .3s ease;
+@media only screen and (max-width: 37.5em) {
+  .projects__content {
+    grid-template-columns: 1fr;
+  }
+  .projects__row-img-cont {
+    min-height: 320px;
+  }
+  
+  .header__links { display: none; }
+  
+  .contact__btn {
+    width: 100%;
+  }
 }
 
-/* Project Overlay */
-.projects__overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255,255,255,0);
-  opacity: 0;
-  transition: all .3s ease;
-  pointer-events: none;
-}
-
-.projects__row-img-cont:hover .projects__overlay {
-  background: rgba(255,255,255,0.85);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.projects__overlay span {
-  color: #000;
-  font-size: 2.4rem; /* larger text for bigger tiles */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 1.5rem 3rem; /* more padding around text */
+/* Hide any leftover buttons */
+.projects__row .btn {
+  display: none !important;
 }
 
 /* About Section */
@@ -444,24 +433,4 @@ textarea {
   .main-footer__row-2 {
     max-width: 100%;
   }
-}
-
-@media only screen and (max-width: 37.5em) {
-  .projects__content {
-    grid-template-columns: 1fr;
-  }
-  .projects__row-img-cont {
-    min-height: 320px;
-  }
-  
-  .header__links { display: none; }
-  
-  .contact__btn {
-    width: 100%;
-  }
-}
-
-/* Hide any leftover buttons */
-.projects__row .btn {
-  display: none !important;
 }
