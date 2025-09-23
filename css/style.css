@@ -520,6 +520,13 @@ textarea {
   color: #fff !important;
 }
 
+/* Strong override for Get in touch separator line */
+.contact .heading-sec__main::after {
+  background: #fff !important;
+  border-radius: 5px !important;
+  z-index: 2 !important;
+}
+
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
