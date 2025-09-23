@@ -138,48 +138,55 @@ textarea {
 
 /* Projects Section - Fix centering and remove conflicting styles */
 #projects {
-  background: #f4f4f4;
-  padding: 12rem 0 8rem 0;
-}
-
-/* Remove this entirely as it's causing the offset */
-#projects .main-container {
-  /* remove all rules here */
-}
-
-/* Clean up projects grid */
-.projects__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6rem;
-  max-width: 140rem;
-  width: 85%;
-  margin: 0 auto;
-  padding-top: 6rem;
-}
-
-/* Remove these properties that were causing problems */
-.projects__content {
-  position: relative;
-  left: 0;
-}
-
-/* Keep other project styles the same */
-.projects__row-img-cont {
-  position: relative;
+  /* keep existing spacing but ensure the projects block itself is full-width */
   width: 100%;
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+  background: #f4f4f4;
+}
+
+/* Ensure the immediate .main-container inside #projects doesn't constrain/offset the grid */
+#projects > .main-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;        /* remove any outer auto margins that can combine oddly */
+  padding-left: 0;  /* neutralize unexpected padding */
+  padding-right: 0;
+  display: block;
+}
+
+/* Actual grid: centered and sized. Important overrides ensure no inherited offsets remain. */
+#projects .projects__content,
+#projects > .main-container > .projects__content {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 6rem !important;
+  max-width: 1200px !important;    /* control the visible width of the grid */
+  width: 85% !important;           /* keeps responsiveness while capping width */
+  margin-left: auto !important;    /* force center */
+  margin-right: auto !important;   /* force center */
+  float: none !important;
+  position: static !important;
+  transform: none !important;
+  left: auto !important;
+  right: auto !important;
+  padding-top: 6rem;
+  box-sizing: border-box;
+}
+
+/* Ensure the image containers keep their intended size and do not stretch page */
+#projects .projects__row-img-cont {
+  min-height: 375px;      /* slightly smaller than previous large value */
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 4px;
-  min-height: 440px;
 }
 
-.projects__row-img {
+/* Keep image behavior */
+#projects .projects__row-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform .3s ease;
 }
 
 /* Update responsive breakpoints */
