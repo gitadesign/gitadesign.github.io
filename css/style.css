@@ -928,49 +928,105 @@ textarea {
 /* Ensure top spacing isn't lost (adjust if your spacer exists) */
 #projects { padding-top: 6rem; padding-bottom: 8rem; }
 
-/* Final override: restore projects layout, spacing and about section padding */
-#projects {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+/* container sizing */
+.projects {
+  background: #f4f4f4;
+  padding: 0; /* section padding handled via #projects above */
 }
 .projects .main-container {
   max-width: 120rem;
   width: 92%;
   margin: 0 auto;
 }
+
+/* grid */
 .projects__content {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 8rem !important;
   align-items: start;
 }
-.projects__row { display: block; width: 100%; margin: 0; padding: 0; }
-.projects__row-img-cont { position: relative; overflow: hidden; width: 100%; display: block; }
+
+/* row / image container */
+.projects__row {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.projects__row-img-cont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+/* image: full width, keep aspect */
 .projects__row-img {
   width: 100% !important;
   height: auto !important;
   display: block !important;
   object-fit: cover;
   transition: transform .35s ease !important;
+  transform: none !important;
 }
-.projects__row-img-cont:hover .projects__row-img { transform: scale(1.03) !important; }
+
+/* subtle zoom on hover */
+.projects__row-img-cont:hover .projects__row-img {
+  transform: scale(1.03) !important;
+}
+
+/* overlay link */
 .projects__overlay {
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  text-decoration: none; color: #000; background: rgba(255,255,255,0); opacity: 0;
-  transition: background .22s ease, opacity .22s ease; z-index: 10; pointer-events: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background: rgba(255,255,255,0);
+  opacity: 0;
+  transition: background .22s ease, opacity .22s ease;
+  z-index: 10;
+  pointer-events: none;
 }
+
+/* show overlay on hover */
 .projects__row-img-cont:hover .projects__overlay {
-  background: rgba(255,255,255,0.85); opacity: 1; pointer-events: auto;
+  background: rgba(255,255,255,0.85);
+  opacity: 1;
+  pointer-events: auto;
 }
+
+/* overlay text */
 .projects__overlay span {
-  padding: 1rem 1.8rem; font-size: 1.8rem; font-weight:700; text-transform: uppercase; color: #000;
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
 }
+
+/* hide legacy buttons (defensive) */
+.projects__row .btn { display: none !important; }
+
+/* responsive: 1 column on small screens */
 @media only screen and (max-width: 56.25em) {
-  .projects__content { grid-template-columns: 1fr !important; gap: 4rem !important; }
-  #projects { padding-top: 6rem; padding-bottom: 6rem; }
-  .projects__overlay span { font-size: 1.6rem; padding: .9rem 1.2rem; white-space: normal; }
+  .projects__content {
+    grid-template-columns: 1fr !important;
+    gap: 4rem !important;
+  }
+  .projects__overlay span {
+    font-size: 1.6rem;
+    padding: 0.9rem 1.2rem;
+    white-space: normal;
+  }
 }
-.about {
-  padding-top: 8rem !important;
-  padding-bottom: 8rem !important;
-}
+
+/* small fix: ensure heading decorative line (if present elsewhere) does not overlap subtitles inside projects */
+#projects .heading-sec__main::after { display: none !important; }
