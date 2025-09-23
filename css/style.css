@@ -77,6 +77,10 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 5rem;
+  max-width: 120rem;
+  width: 92%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .header__logo-container {
