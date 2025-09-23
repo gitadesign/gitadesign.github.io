@@ -446,7 +446,7 @@ textarea {
 
 /* Contact Section Restoration */
 .contact {
-  background: linear-gradient(to right, rgba(0,98,185,0.8), rgba(0,98,185,0.8));
+  background: #0062b9 !important;
   padding: 12rem 0;
   color: #fff;
 }
@@ -505,6 +505,13 @@ textarea {
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+/* Make only the contact section's submit button black */
+.contact__form .contact__btn {
+  background: #000 !important;
+  color: #fff !important;
+}
 }
 
 /* Footer - V1 Restoration */
