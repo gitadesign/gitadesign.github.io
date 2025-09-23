@@ -201,27 +201,16 @@ textarea {
   padding: 1.5rem 3rem; /* more padding around text */
 }
 
-/* About Section */
+/* About Section - Exact V1 Restoration */
 .about {
   background: #fafafa;
-  padding: 15rem 0 12rem 0;
+  padding: 15rem 0;
 }
 
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10rem;
-  margin-bottom: 8rem;
-}
-
-.about__content-main {
-  display: flex;
-  flex-direction: column;
-}
-
-.about__content-skills {
-  display: flex;
-  flex-direction: column;
 }
 
 .about__content-title {
@@ -232,13 +221,12 @@ textarea {
 
 .about__content-details-para {
   font-size: 1.8rem;
-  color: grey;
+  color: #666;
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
 
-/* About Section Restoration */
 .heading-sec__mb-med {
   margin-bottom: 9rem;
 }
@@ -276,17 +264,21 @@ textarea {
   line-height: 1.6;
 }
 
-/* Skills Section */
+/* Skills Section - Exact V1 Style */
+.about__content-skills {
+  display: flex;
+  flex-direction: column;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .skills__skill {
   padding: 1rem 2rem;
-  background: rgba(153,153,153,.2);
+  background: rgba(153, 153, 153, .2);
   border-radius: 5px;
   font-size: 1.6rem;
   font-weight: 600;
@@ -356,16 +348,20 @@ textarea {
   cursor: pointer;
 }
 
-/* Footer Restoration */
+/* Footer - Exact V1 Style */
 .main-footer {
   background: #000;
   color: #fff;
+  margin-top: 6rem;
 }
 
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
   padding: 8rem 0;
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 92%;
 }
 
 .main-footer__row-1 {
@@ -396,6 +392,9 @@ textarea {
   border-top: 1px solid #444;
   color: #eee;
   font-size: 1.2rem;
+}
+
+.main-footer__lower .main-container {
   text-align: left;
 }
 
@@ -447,12 +446,12 @@ textarea {
   
   .main-footer__upper {
     flex-direction: column;
-    gap: 4rem;
-    padding: 6rem 0;
+    gap: 5rem;
   }
+  
   .main-footer__row-1,
   .main-footer__row-2 {
-    max-width: 100%;
+    text-align: left;
   }
 }
 
