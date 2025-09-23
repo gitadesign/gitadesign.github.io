@@ -201,7 +201,7 @@ textarea {
   padding: 1.5rem 3rem; /* more padding around text */
 }
 
-/* About Section - With aligned skills */
+/* About Section - Remove alignment attempts */
 .about {
   background: #fafafa;
   padding: 15rem 0;
@@ -211,7 +211,6 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10rem;
-  align-items: start; /* This ensures top alignment of columns */
 }
 
 .about__content-title {
@@ -231,9 +230,9 @@ textarea {
 .about__content-skills {
   display: flex;
   flex-direction: column;
-  padding-top: 7rem; /* This will align skills with first text line */
 }
 
+/* Headings - V1 Style */
 .heading-sec__mb-med {
   margin-bottom: 9rem;
 }
@@ -391,6 +390,14 @@ textarea {
   color: #eee;
   font-size: 1.2rem;
   text-align: left;
+}
+
+/* Footer heading fixes */
+.main-footer .heading-sm {
+  font-size: 2.2rem;
+  text-transform: none; /* removes all caps */
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
 }
 
 /* Button Styles */
