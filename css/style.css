@@ -215,10 +215,10 @@ textarea {
   position: relative !important;
   overflow: hidden !important;
   aspect-ratio: unset !important;
-  min-width: 560px !important;
-  max-width: 560px !important;
-  width: 560px !important;
-  height: 346px !important;
+  min-width: 588px !important;
+  max-width: 588px !important;
+  width: 588px !important;
+  height: 363px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
