@@ -201,7 +201,7 @@ textarea {
   padding: 1.5rem 3rem; /* more padding around text */
 }
 
-/* About Section - Exact V1 Restoration */
+/* About Section - With aligned skills */
 .about {
   background: #fafafa;
   padding: 15rem 0;
@@ -211,6 +211,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10rem;
+  align-items: start; /* This ensures top alignment of columns */
 }
 
 .about__content-title {
@@ -225,6 +226,12 @@ textarea {
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 1rem;
+}
+
+.about__content-skills {
+  display: flex;
+  flex-direction: column;
+  padding-top: 7rem; /* This will align skills with first text line */
 }
 
 .heading-sec__mb-med {
@@ -265,11 +272,6 @@ textarea {
 }
 
 /* Skills Section - Exact V1 Style */
-.about__content-skills {
-  display: flex;
-  flex-direction: column;
-}
-
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -348,20 +350,16 @@ textarea {
   cursor: pointer;
 }
 
-/* Footer - Exact V1 Style */
+/* Footer - V1 Restoration */
 .main-footer {
   background: #000;
   color: #fff;
-  margin-top: 6rem;
 }
 
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
   padding: 8rem 0;
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 92%;
 }
 
 .main-footer__row-1 {
@@ -392,9 +390,6 @@ textarea {
   border-top: 1px solid #444;
   color: #eee;
   font-size: 1.2rem;
-}
-
-.main-footer__lower .main-container {
   text-align: left;
 }
 
