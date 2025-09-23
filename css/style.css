@@ -136,78 +136,70 @@ textarea {
   width: 92%;
 }
 
-/* Projects Section - Fix centering and remove conflicting styles */
+/* ===== CONSOLIDATED Projects / Grid CENTERING (replace previous project rules) ===== */
+/* Scoped, high-specificity overrides only for #projects subtree */
+
 #projects {
-  width: 100% !important;
-  box-sizing: border-box;
+  width: 100%;
   padding-top: 12rem;
   padding-bottom: 8rem;
   background: #f4f4f4;
+  box-sizing: border-box;
   transform: none !important;
-  left: auto !important;
-  right: auto !important;
 }
 
-/* Center projects grid only (no header changes */
+/* Keep the main-container centered but remove any accidental offsets
+   limit its visible width so the projects block lines up visually with the page */
 #projects > .main-container {
-  display: flex !important;
-  justify-content: center !important;
+  width: 100% !important;
+  max-width: 1200px !important;  /* visual page width for projects */
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
   box-sizing: border-box !important;
-}
-
-#projects .projects__content {
-  width: clamp(760px, 72vw, 1200px) !important; /* visible grid width */
-  max-width: 1200px !important;
-  margin: 0 !important;   /* remove any inherited left offset */
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Remove any layout-affecting rules from the .main-container inside #projects */
-#projects > .main-container {
   display: block !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 auto !important;
-  box-sizing: border-box !important;
 }
 
-/* Hide spacer that was shifting the start position */
+/* Hide spacer that previously shifted layout */
 #projects .projects__spacer {
   display: none !important;
   width: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
-/* Center the actual grid and limit its visible width */
+/* The centered grid: fixed visible width (responsive), truly centered via margin:auto.
+   max-width here controls how wide the 3-column layout appears. */
 #projects .projects__content {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 6rem !important;
-  width: min(1200px, 92%) !important; /* visible grid width, responsive */
-  max-width: 1200px !important;
-  margin: 0 auto !important;         /* THIS centers the grid */
+  width: min(1104px, 92%) !important; /* 1104px = 3 * column width with gaps in your layout */
+  max-width: 1104px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-top: 6rem !important;
   box-sizing: border-box !important;
-  padding-top: 6rem;
-  float: none !important;
+
   position: static !important;
+  left: auto !important;
   transform: none !important;
+  float: none !important;
 }
 
-/* Ensure no stray offsets from rows/containers */
+/* Ensure rows / cells don't introduce offsets */
 #projects .projects__row,
 #projects .projects__row-img-cont {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  float: none !important;
   box-sizing: border-box !important;
+  float: none !important;
 }
 
-/* Image sizing */
+/* Image sizing + overlay anchoring */
 #projects .projects__row-img-cont {
   position: relative !important;
   overflow: hidden !important;
@@ -226,18 +218,18 @@ textarea {
   z-index: 1 !important;
 }
 
-/* Overlay: full-area anchor, on-top of image */
+/* Overlay: full-area anchor on top of image */
 #projects .projects__overlay {
   position: absolute !important;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0 !important;
   display: flex !important;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
   background: rgba(255,255,255,0) !important;
   opacity: 0 !important;
   transition: background .22s ease, opacity .22s ease !important;
   pointer-events: none !important;
-  z-index: 2 !important;
+  z-index: 3 !important;
   text-decoration: none !important;
   color: inherit !important;
 }
@@ -249,19 +241,18 @@ textarea {
 }
 
 #projects .projects__overlay span {
-  display: inline-block !important;
   color: #000 !important;
   font-size: 2rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   padding: 1rem 1.6rem !important;
   white-space: nowrap !important;
-  z-index: 3 !important;
+  z-index: 4 !important;
 }
 
-/* Responsive: keep centered & scale down */
+/* Responsive fallbacks */
 @media (max-width: 1200px) {
-  #projects .projects__content { width: 92% !important; grid-template-columns: repeat(2, 1fr) !important; }
+  #projects .projects__content { width: 92% !important; max-width: none !important; grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 900px) {
   #projects .projects__content { width: 92% !important; grid-template-columns: 1fr !important; gap: 4rem !important; }
