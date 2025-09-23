@@ -130,7 +130,7 @@ textarea {
 }
 
 .header__link:hover {
-  color: #0062b9;
+  color: #0062b9 !important;
 }
 
 /* First, restore the main container style */
