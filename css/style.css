@@ -12,7 +12,7 @@ $breakpoint arguement choices:
 
 Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
 */
-/* Reset & Base */
+/* Lines 1-456 omitted */
 *,
 *::after,
 *::before {
