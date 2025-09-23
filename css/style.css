@@ -213,30 +213,35 @@ textarea {
 /* Image sizing + overlay anchoring */
 #projects .projects__row-img-cont {
   position: relative !important;
-  overflow: visible !important;
-  aspect-ratio: 4/3 !important;
-  min-height: 340px !important;
-  max-width: 340px !important;
+  overflow: hidden !important;
+  aspect-ratio: unset !important;
+  min-width: 340px !important;
+  max-width: 400px !important;
   width: 100% !important;
+  height: 260px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   border-radius: 8px !important;
 }
 
 #projects .projects__row-img {
   display: block !important;
   width: 100% !important;
-  height: auto !important;
-  min-height: 0 !important;
-  max-width: 100% !important;
-  object-fit: contain !important;
-  transform: none !important;
-  margin: 0 auto !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  margin: 0 !important;
   z-index: 1 !important;
 }
 
 /* Overlay: full-area anchor on top of image */
 #projects .projects__overlay {
   position: absolute !important;
-  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
