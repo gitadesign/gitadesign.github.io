@@ -231,7 +231,7 @@ textarea {
 .about__content-skills {
   display: flex;
   flex-direction: column;
-  padding-top: 7rem; /* This will align skills with first text line */
+  padding-top: 9.5rem; /* Adjusted to better align with first text line */
 }
 
 .heading-sec__mb-med {
@@ -360,14 +360,14 @@ textarea {
   display: flex;
   justify-content: space-between;
   padding: 8rem 0;
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 92%;
 }
 
-.main-footer__row-1 {
-  order: 2;
-}
-
+.main-footer__row-1,
 .main-footer__row-2 {
-  order: 1;
+  order: initial; /* Remove order properties */
 }
 
 .main-footer__short-desc {
@@ -391,6 +391,14 @@ textarea {
   color: #eee;
   font-size: 1.2rem;
   text-align: left;
+}
+
+/* Footer heading fixes */
+.main-footer .heading-sm {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
 }
 
 /* Button Styles */
