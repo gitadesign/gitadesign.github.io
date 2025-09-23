@@ -139,17 +139,17 @@ textarea {
 /* Projects Section */
 #projects {
   background: #f4f4f4;
-  padding: 12rem 0 8rem 0; /* increased top padding for better spacing */
+  padding: 12rem 0 8rem 0;
 }
 
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8rem;
+  gap: 6rem;
   padding-top: 6rem;
-  max-width: 160rem; /* wider than main container for larger images */
-  margin: 0 auto;
-  width: 92%;
+  max-width: 140rem; /* slightly smaller than before */
+  margin: 0 auto; /* centers the grid */
+  width: 85%; /* reduced from 92% to pull in sides */
 }
 
 .projects__row {
@@ -163,7 +163,7 @@ textarea {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 4px;
-  min-height: 480px; /* force taller image containers */
+  min-height: 420px; /* slightly reduced height */
 }
 
 .projects__row-img {
@@ -360,35 +360,22 @@ textarea {
 .main-footer {
   background: #000;
   color: #fff;
+  margin-top: 6rem;
 }
 
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
   padding: 8rem 0;
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 92%;
 }
 
-.main-footer__row-1 {
-  order: 2;
-}
-
+.main-footer__row-1,
 .main-footer__row-2 {
-  order: 1;
-}
-
-.main-footer__short-desc {
-  margin-top: 2rem;
-  color: #eee;
-  font-size: 1.5rem;
-  line-height: 1.7;
-}
-
-.main-footer__social-cont {
-  margin-top: 2rem;
-}
-
-.main-footer__icon {
-  width: 2.5rem;
+  flex: 1;
+  max-width: 40rem;
 }
 
 .main-footer__lower {
@@ -396,6 +383,9 @@ textarea {
   border-top: 1px solid #444;
   color: #eee;
   font-size: 1.2rem;
+}
+
+.main-footer__lower .main-container {
   text-align: left;
 }
 
@@ -426,10 +416,11 @@ textarea {
 @media only screen and (max-width: 75em) {
   html { font-size: 59%; }
   .projects__content {
-    gap: 6rem;
+    width: 90%;
+    gap: 5rem;
   }
   .projects__row-img-cont {
-    min-height: 400px;
+    min-height: 380px;
   }
 }
 
@@ -441,18 +432,18 @@ textarea {
   .projects__content {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
+    width: 85%;
   }
   
-  .projects__row-img-cont {
-    min-height: 380px;
+  .main-footer__upper {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 6rem 0;
   }
-  
-  .about__content {
-    grid-template-columns: 1fr;
-    gap: 8rem;
+  .main-footer__row-1,
+  .main-footer__row-2 {
+    max-width: 100%;
   }
-  
-  .main-footer__upper { padding: 6rem 0; }
 }
 
 @media only screen and (max-width: 37.5em) {
