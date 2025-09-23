@@ -146,10 +146,10 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
+  max-width: 140rem;
+  width: 85%;
+  margin: 0 auto;
   padding-top: 6rem;
-  max-width: 140rem; /* slightly smaller than before */
-  margin: 0 auto; /* centers the grid */
-  width: 85%; /* reduced from 92% to pull in sides */
 }
 
 .projects__row {
@@ -163,7 +163,6 @@ textarea {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 4px;
-  min-height: 420px; /* slightly reduced height */
 }
 
 .projects__row-img {
@@ -211,7 +210,8 @@ textarea {
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10rem;
+  grid-gap: 10rem;
+  margin-bottom: 8rem;
 }
 
 .about__content-main {
@@ -232,7 +232,7 @@ textarea {
 
 .about__content-details-para {
   font-size: 1.8rem;
-  color: #666;
+  color: grey;
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -360,22 +360,35 @@ textarea {
 .main-footer {
   background: #000;
   color: #fff;
-  margin-top: 6rem;
 }
 
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
   padding: 8rem 0;
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 92%;
 }
 
-.main-footer__row-1,
+.main-footer__row-1 {
+  order: 2;
+}
+
 .main-footer__row-2 {
-  flex: 1;
-  max-width: 40rem;
+  order: 1;
+}
+
+.main-footer__short-desc {
+  margin-top: 2rem;
+  color: #eee;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.main-footer__social-cont {
+  margin-top: 2rem;
+}
+
+.main-footer__icon {
+  width: 2.5rem;
 }
 
 .main-footer__lower {
@@ -383,9 +396,6 @@ textarea {
   border-top: 1px solid #444;
   color: #eee;
   font-size: 1.2rem;
-}
-
-.main-footer__lower .main-container {
   text-align: left;
 }
 
