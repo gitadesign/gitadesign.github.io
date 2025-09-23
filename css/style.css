@@ -184,7 +184,7 @@ textarea {
   grid-template-rows: repeat(2, 1fr) !important;
   gap: 4rem 4rem !important;
   width: 100%;
-  max-width: 1400px !important;
+  max-width: 1800px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 4vw !important;
@@ -215,10 +215,10 @@ textarea {
   position: relative !important;
   overflow: hidden !important;
   aspect-ratio: unset !important;
-  min-width: 340px !important;
-  max-width: 400px !important;
+  min-width: 420px !important;
+  max-width: 520px !important;
   width: 100% !important;
-  height: 260px !important;
+  height: 340px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
