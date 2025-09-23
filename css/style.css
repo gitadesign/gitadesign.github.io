@@ -148,6 +148,23 @@ textarea {
   right: auto !important;
 }
 
+/* Center projects grid only (no header changes */
+#projects > .main-container {
+  display: flex !important;
+  justify-content: center !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#projects .projects__content {
+  width: clamp(760px, 72vw, 1200px) !important; /* visible grid width */
+  max-width: 1200px !important;
+  margin: 0 !important;   /* remove any inherited left offset */
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
 /* Remove any layout-affecting rules from the .main-container inside #projects */
 #projects > .main-container {
   display: block !important;
