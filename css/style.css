@@ -556,6 +556,7 @@ textarea {
 /* Only the Get in touch section's separator line to white */
 .contact .heading-sec__main::after {
   background: #fff !important;
+  z-index: 2;
 }
   font-size: 1.2rem;
   text-align: left;
