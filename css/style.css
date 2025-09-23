@@ -922,4 +922,116 @@ textarea {
 .about__content .btn--bg {
   margin-bottom: 8rem !important; /* Space under Contact button */
   display: inline-block;
-}/* Spacer replacing Projects heading (keeps visual balance, responsive) */.projects__spacer {  height: 4.5rem;          /* phone / small screens */}/* Larger gaps on bigger screens so spacing feels proportional */@media (min-width: 600px) {  .projects__spacer { height: 6rem; }}@media (min-width: 900px) {  .projects__spacer { height: 8rem; }}@media (min-width: 1200px) {  .projects__spacer { height: 10rem; }}/* Defensive: ensure the decorative blue line for heading doesn't show if heading classes remain elsewhere.   This only targets the pseudo-element when it's inside the projects section wrapper. */#projects .heading-sec__main::after {  display: none !important;}
+}
+
+/* --- APPEND: projects authoritative layout + hover overlay --- */
+
+/* keep distance from fixed header and maintain balance */
+#projects {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+/* container sizing */
+.projects .main-container {
+  max-width: 120rem;
+  width: 92%;
+  margin: 0 auto;
+}
+
+/* grid: 3-up, larger visuals */
+.projects__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7.5rem;
+  align-items: start;
+}
+
+/* each project cell */
+.projects__row {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* image container: force a consistent large visual without cropping page layout */
+.projects__row-img-cont {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* aspect-ratio gives taller images on desktop so visuals are larger */
+  aspect-ratio: 4 / 3;
+  display: block;
+  border-radius: 4px;
+}
+
+/* images: fill container, keep proportions */
+.projects__row-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+  transform: none;
+}
+
+/* gentle zoom on hover (small) */
+.projects__row-img-cont:hover .projects__row-img {
+  transform: scale(1.04);
+}
+
+/* overlay: white translucent + black text on hover */
+.projects__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  background: rgba(255,255,255,0);
+  opacity: 0;
+  transition: background .22s ease, opacity .22s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* show overlay on hover */
+.projects__row-img-cont:hover .projects__overlay {
+  background: rgba(255,255,255,0.86);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* overlay text */
+.projects__overlay span {
+  display: inline-block;
+  padding: 1.1rem 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* hide any leftover buttons defensively */
+.projects__row .btn {
+  display: none !important;
+}
+
+/* responsive: stack to single column on small screens and keep good spacing */
+@media only screen and (max-width: 900px) {
+  .projects__content {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+  }
+  #projects { padding-top: 6rem; padding-bottom: 6rem; }
+  .projects__row-img-cont { aspect-ratio: 16 / 9; }
+  .projects__overlay span { font-size: 1.6rem; padding: .9rem 1.4rem; white-space: normal; }
+}
+
+/* defensive: ensure heading decorative line inside #projects never renders */
+#projects .heading-sec__main::after { display: none !important; }

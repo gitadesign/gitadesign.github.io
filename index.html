@@ -1,300 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Gita Ogneva</title>
-    <meta name="Gita Ogneva" content="Portfolio" />
+    <meta name="description" content="Portfolio — Gita Ogneva" />
 
     <link rel="stylesheet" href="css/style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
   </head>
+
   <body>
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
-            <img
-              src="./assets/png/IMG_5017_1_S.png"
-              alt="Gita Photo"
-              class="header__logo-img"
-            />
+            <img src="./assets/png/IMG_5017_1_S.png" alt="Gita Photo" class="header__logo-img" />
           </div>
-          <a 
-            href="javascript:void(0)" 
-            onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" 
-            class="header__logo-sub"
-            style="text-decoration: none; cursor: pointer;"
-          >Gita Ogneva</a>
+          <a href="#about" class="header__logo-sub" style="text-decoration:none; cursor:pointer;">Gita Ogneva</a>
         </div>
-        <div class="header__main">
+
+        <nav class="header__main" aria-label="Main navigation">
           <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a
-                href="#"
-                class="header__link"
-                onclick="window.scrollTo(0, 0);"
-                > Home </a
-              >
-            </li>
-            <li class="header__link-wrapper">
-              <a href="#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="#projects" class="header__link">Projects </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="#contact" class="header__link">Contact </a>
-            </li>
+            <li class="header__link-wrapper"><a href="#" class="header__link" title="Home">Home</a></li>
+            <li class="header__link-wrapper"><a href="#about" class="header__link" title="About">About</a></li>
+            <li class="header__link-wrapper"><a href="#projects" class="header__link" title="Projects">Projects</a></li>
+            <li class="header__link-wrapper"><a href="#contact" class="header__link" title="Contact">Contact</a></li>
           </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="#"> Home </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="#projects"> Projects </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
+        </nav>
       </div>
     </header>
-      </div>
-          </section>
+
+    <!-- Projects -->
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
-        <!-- Projects heading removed on purpose; keep vertical spacing -->
         <div class="projects__spacer" aria-hidden="true"></div>
 
         <div class="projects__content">
-          <!-- First 4 existing projects with updated styling -->
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/Projects/Air Liquide/Brochures/Biogas & Biomethane Brochure 2024/Biogas BrochureSpread View 1.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-                style="max-width: 90%; height: auto;"
-              />
+              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
+                   alt="Brochures Preview"
+                   class="projects__row-img" loading="lazy" />
+              <a href="./brochures.html" class="projects__overlay"><span>Brochures</span></a>
             </div>
-            <a
-              href="./project-1.html"
-              class="btn btn--med btn--theme dynamicBgClr"
-              target="_blank"
-              style="display:block; margin: 10px auto 0; text-align:center;"
-              >Brochures</a
-            >
-          </div>
-
-          <!-- Repeat for each project with different button text -->
-          <div class="projects__row">
-            <!-- Same image and structure as above -->
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-                style="max-width: 90%; height: auto;"
-              />
-            </div>
-            <a href="./project-2.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank" style="display:block; margin: 10px auto 0; text-align:center;">Campaigns</a>
           </div>
 
           <div class="projects__row">
-            <!-- Same structure for Roll-ups -->
             <div class="projects__row-img-cont">
-              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg" alt="Software Screenshot" class="projects__row-img" loading="lazy" style="max-width: 90%; height: auto;"/>
+              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
+                   alt="Campaigns Preview"
+                   class="projects__row-img" loading="lazy" />
+              <a href="./campaigns.html" class="projects__overlay"><span>Campaigns</span></a>
             </div>
-            <a href="./project-3.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank" style="display:block; margin: 10px auto 0; text-align:center;">Roll-ups</a>
-          </div>
-
-          <!-- New projects -->
-          <div class="projects__row">
-            <!-- Signage -->
-            <div class="projects__row-img-cont">
-              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg" alt="Software Screenshot" class="projects__row-img" loading="lazy" style="max-width: 90%; height: auto;"/>
-            </div>
-            <a href="./project-4.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank" style="display:block; margin: 10px auto 0; text-align:center;">Signage</a>
           </div>
 
           <div class="projects__row">
-            <!-- Flyers & Posters -->
             <div class="projects__row-img-cont">
-              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg" alt="Software Screenshot" class="projects__row-img" loading="lazy" style="max-width: 90%; height: auto;"/>
+              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
+                   alt="Roll-ups Preview"
+                   class="projects__row-img" loading="lazy" />
+              <a href="./rollups.html" class="projects__overlay"><span>Roll-ups</span></a>
             </div>
-            <a href="./project-5.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank" style="display:block; margin: 10px auto 0; text-align:center;">Flyers & Posters</a>
           </div>
 
           <div class="projects__row">
-            <!-- Logos -->
             <div class="projects__row-img-cont">
-              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg" alt="Software Screenshot" class="projects__row-img" loading="lazy" style="max-width: 90%; height: auto;"/>
+              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
+                   alt="Signage Preview"
+                   class="projects__row-img" loading="lazy" />
+              <a href="./signage.html" class="projects__overlay"><span>Signage</span></a>
             </div>
-            <a href="./project-6.html" class="btn btn--med btn--theme dynamicBgClr" target="_blank" style="display:block; margin: 10px auto 0; text-align:center;">Logos</a>
+          </div>
+
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
+                   alt="Flyers Preview"
+                   class="projects__row-img" loading="lazy" />
+              <a href="./flyers.html" class="projects__overlay"><span>Flyers &amp; Posters</span></a>
+            </div>
+          </div>
+
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img src="./assets/Projects/Air Liquide/Brochures/Safety in Labs 2023/Safety_in_Labs_BrochureCover 1.jpg"
+                   alt="Logos Preview"
+                   class="projects__row-img" loading="lazy" />
+              <a href="./logos.html" class="projects__overlay"><span>Logos</span></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- About -->
     <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
-          </span>
         </h2>
+
         <div class="about__content">
           <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
             <div class="about__content-details">
               <p class="about__content-details-para">
-                Hey! It's
-                <strong>Gita</strong>
-                and I'm a <strong> Frontend Web Developer </strong> located in
-                Los Angeles. I've done
-                <strong> remote </strong>
-                projects for agencies, consulted for startups, and collaborated
-                with talented people to create
-                <strong>digital products </strong>
-                for both business and consumer use.
+                Hey! It's <strong>Gita</strong> and I'm a Frontend Web Developer located in Los Angeles.
+                I've done remote projects for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use.
               </p>
               <p class="about__content-details-para">
-                I'm a bit of a digital product junky. Over the years, I've used
-                hundreds of web and mobile apps in different industries and
-                verticals. Feel free to
-                <strong>contact</strong> me here.
+                I'm a bit of a digital product junky. Over the years, I've used hundreds of web and mobile apps in different industries and verticals. Feel free to contact me here.
               </p>
+              <a href="#contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
             </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
           </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">Adobe Creative Suite</div>
-              <div class="skills__skill">InDesign</div>
-              <div class="skills__skill">Photoshop</div>
-              <div class="skills__skill">Illustrator</div>
-              <div class="skills__skill">Premiere Pro</div>
-              <div class="skills__skill">Brand Strategy</div>
-              <div class="skills__skill">CMS</div>
-              <div class="skills__skill">Wordpress</div>
-              <div class="skills__skill">Digital Marketing</div>
-              <div class="skills__skill">Mac</div>
-              <div class="skills__skill">Windows</div>
-              <div class="skills__skill">Project & Stakeholder Management</div>
-             </div>
-          </div>
-        </div>
-      </div>
-    </section> <!-- Add this closing tag for About section -->
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Get in touch</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-          </span>
-        </h2>
-        <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
-            </button>
-          </form>
         </div>
       </div>
     </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">Get in touch</span>
+        </h2>
+
+        <form class="contact__form" action="#" method="post">
+          <div class="contact__form-field">
+            <label class="contact__form-label" for="name">Name</label>
+            <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
+          </div>
+
+          <div class="contact__form-field">
+            <label class="contact__form-label" for="email">Email</label>
+            <input required placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email" />
+          </div>
+
+          <div class="contact__form-field">
+            <label class="contact__form-label" for="message">Message</label>
+            <textarea required placeholder="Enter Your Message" class="contact__form-input" name="message" id="message" rows="6"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--theme contact__btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>LinkedIn</span>
-            </h2>
+            <h4 class="heading heading-sm">LinkedIn</h4>
             <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="#">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
+              <a target="_blank" rel="noreferrer" href="#" class="main-footer__social">
+                <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" class="main-footer__icon" />
               </a>
             </div>
           </div>
+
           <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Gita Ogneva</h4>
-            <p class="main-footer__short-desc">
-              Graphic Designer and Brand Specialist
-            </p>
+            <h4 class="heading heading-sm">Gita Ogneva</h4>
+            <p class="main-footer__short-desc">Graphic Designer and Brand Specialist</p>
           </div>
         </div>
 
@@ -304,33 +173,25 @@
       </div>
     </footer>
 
-    <script src="./index.js"></script>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all navigation links
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            
-            if (href === '#') {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            } else {
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+      // smooth internal link scrolling
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener('click', function (e) {
+            var href = this.getAttribute('href');
+            if (!href || href === '#') {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              return;
             }
+            var target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
         });
-    });
-});
-</script>
+      });
+    </script>
   </body>
 </html>
