@@ -136,33 +136,28 @@ textarea {
   width: 92%;
 }
 
-/* Projects Section - Fix centering */
+/* Projects Section - Centered Grid */
 #projects {
   background: #f4f4f4;
   padding: 12rem 0 8rem 0;
-}
-
-/* Remove the nested container that's causing the offset */
-.projects .main-container {
-  max-width: 140rem;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
-  max-width: 140rem;  /* explicitly set max-width here */
+  max-width: 140rem;
   width: 85%;
-  margin: 0 auto;     /* this centers the grid */
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 6rem;
-}
-
-.projects__row {
   position: relative;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Keep other project styles the same */
 .projects__row-img-cont {
   position: relative;
   width: 100%;
