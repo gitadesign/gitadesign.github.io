@@ -136,20 +136,23 @@ textarea {
   width: 92%;
 }
 
-/* Projects Section - Centered and sized correctly */
+/* Projects Section - Properly centered */
 #projects {
   background: #f4f4f4;
   padding: 12rem 0 8rem 0;
-  display: flex;
-  justify-content: center;
   width: 100%;
+}
+
+.projects .main-container {
+  max-width: 140rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
-  max-width: 140rem; /* reduced from 160rem */
   width: 85%;
   margin: 0 auto;
   padding-top: 6rem;
@@ -166,7 +169,7 @@ textarea {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 4px;
-  min-height: 440px; /* reduced from 520px */
+  min-height: 440px;
 }
 
 .projects__row-img {
