@@ -129,21 +129,25 @@ textarea {
   color: #0062b9;
 }
 
-/* Projects Section - Centered Grid */
+/* First, restore the main container style */
+.main-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 92%;
+}
+
+/* Projects Section - Fix centering and remove conflicting styles */
 #projects {
   background: #f4f4f4;
   padding: 12rem 0 8rem 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
+/* Remove this entirely as it's causing the offset */
 #projects .main-container {
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  /* remove all rules here */
 }
 
+/* Clean up projects grid */
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -152,6 +156,10 @@ textarea {
   width: 85%;
   margin: 0 auto;
   padding-top: 6rem;
+}
+
+/* Remove these properties that were causing problems */
+.projects__content {
   position: relative;
   left: 0;
 }
@@ -176,33 +184,50 @@ textarea {
 
 /* Update responsive breakpoints */
 @media only screen and (max-width: 75em) {
+  html { font-size: 59%; }
   .projects__content {
     width: 90%;
     gap: 5rem;
   }
   .projects__row-img-cont {
-    min-height: 400px;
+    min-height: 380px;
   }
 }
 
 @media only screen and (max-width: 56.25em) {
+  html { font-size: 56%; }
+  
+  .header__content { padding: 0 2rem; }
+  
   .projects__content {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    width: 90%;
+    width: 85%;
   }
-  .projects__row-img-cont {
-    min-height: 420px;
+  
+  .main-footer__upper {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  
+  .main-footer__row-1,
+  .main-footer__row-2 {
+    text-align: left;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
   .projects__content {
     grid-template-columns: 1fr;
-    width: 85%;
   }
   .projects__row-img-cont {
-    min-height: 380px;
+    min-height: 320px;
+  }
+  
+  .header__links { display: none; }
+  
+  .contact__btn {
+    width: 100%;
   }
 }
 
