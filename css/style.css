@@ -136,18 +136,21 @@ textarea {
   width: 92%;
 }
 
-/* Projects Section - Larger grid */
+/* Projects Section - Centered and sized correctly */
 #projects {
   background: #f4f4f4;
   padding: 12rem 0 8rem 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .projects__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
-  max-width: 160rem;  /* increased from 140rem */
-  width: 92%;         /* increased from 85% for better proportions */
+  max-width: 140rem; /* reduced from 160rem */
+  width: 85%;
   margin: 0 auto;
   padding-top: 6rem;
 }
@@ -163,7 +166,7 @@ textarea {
   aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 4px;
-  min-height: 520px;  /* increased from default for larger images */
+  min-height: 440px; /* reduced from 520px */
 }
 
 .projects__row-img {
@@ -174,14 +177,14 @@ textarea {
   transition: transform .3s ease;
 }
 
-/* Update responsive breakpoints for larger grid */
+/* Update responsive breakpoints */
 @media only screen and (max-width: 75em) {
   .projects__content {
-    width: 95%;
+    width: 90%;
     gap: 5rem;
   }
   .projects__row-img-cont {
-    min-height: 460px;
+    min-height: 400px;
   }
 }
 
