@@ -158,64 +158,114 @@ textarea {
 }
 
 #projects .projects__content {
-  /* visible grid width */
-  width: min(1200px, 92%);
-  max-width: 1200px;
-  margin: 0;               /* remove inherited offsets */
-  box-sizing: border-box;
-  /* center to viewport (not to ancestor). This avoids touching header/layout. */
-  position: relative;
-  left: calc(50vw - 50%);
+  width: clamp(760px, 72vw, 1200px) !important; /* visible grid width */
+  max-width: 1200px !important;
+  margin: 0 !important;   /* remove any inherited left offset */
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
-/* Ensure grid cells and image containers fill their columns */
+/* Remove any layout-affecting rules from the .main-container inside #projects */
+#projects > .main-container {
+  display: block !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Hide spacer that was shifting the start position */
+#projects .projects__spacer {
+  display: none !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Center the actual grid and limit its visible width */
+#projects .projects__content {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 6rem !important;
+  width: min(1200px, 92%) !important; /* visible grid width, responsive */
+  max-width: 1200px !important;
+  margin: 0 auto !important;         /* THIS centers the grid */
+  box-sizing: border-box !important;
+  padding-top: 6rem;
+  float: none !important;
+  position: static !important;
+  transform: none !important;
+}
+
+/* Ensure no stray offsets from rows/containers */
 #projects .projects__row,
 #projects .projects__row-img-cont {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  box-sizing: border-box !important;
 }
 
-/* Make sure image container is the positioned ancestor for overlay */
+/* Image sizing */
 #projects .projects__row-img-cont {
-  position: relative;
+  position: relative !important;
+  overflow: hidden !important;
+  aspect-ratio: 4/3 !important;
+  min-height: 360px !important;
+  border-radius: 4px !important;
 }
 
-/* Overlay: full-area anchor, predictable stacking */
+#projects .projects__row-img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: none !important;
+  margin: 0 !important;
+  z-index: 1 !important;
+}
+
+/* Overlay: full-area anchor, on-top of image */
 #projects .projects__overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0);
-  opacity: 0;
-  pointer-events: none;
-  transition: background .22s ease, opacity .22s ease;
-  z-index: 2;
-}
-#projects .projects__row-img-cont:hover .projects__overlay {
-  background: rgba(255,255,255,0.86);
-  opacity: 1;
-  pointer-events: auto;
-}
-#projects .projects__overlay span {
-  color: #000;
-  font-weight: 700;
-  font-size: 2rem;
-  padding: 1rem 1.6rem;
-  white-space: nowrap;
-  z-index: 3;
+  background: rgba(255,255,255,0) !important;
+  opacity: 0 !important;
+  transition: background .22s ease, opacity .22s ease !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
-/* Responsive: keep viewport-centering while allowing grid to scale */
+#projects .projects__row-img-cont:hover .projects__overlay {
+  background: rgba(255,255,255,0.86) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#projects .projects__overlay span {
+  display: inline-block !important;
+  color: #000 !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  padding: 1rem 1.6rem !important;
+  white-space: nowrap !important;
+  z-index: 3 !important;
+}
+
+/* Responsive: keep centered & scale down */
 @media (max-width: 1200px) {
-  #projects .projects__content { left: calc(50vw - 50%); width: 92%; max-width: none; grid-template-columns: repeat(2,1fr); }
+  #projects .projects__content { width: 92% !important; grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 900px) {
-  #projects .projects__content { left: calc(50vw - 50%); width: 92%; grid-template-columns: 1fr; gap: 4rem; }
-  #projects .projects__row-img-cont { min-height: 300px; }
+  #projects .projects__content { width: 92% !important; grid-template-columns: 1fr !important; gap: 4rem !important; }
+  #projects .projects__row-img-cont { min-height: 300px !important; }
 }
 
 @media only screen and (max-width: 75em) {
