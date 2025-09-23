@@ -206,7 +206,17 @@ textarea {
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
+  gap: 10rem;
+}
+
+.about__content-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__content-skills {
+  display: flex;
+  flex-direction: column;
 }
 
 .about__content-title {
@@ -233,11 +243,11 @@ textarea {
 
 .skills__skill {
   padding: 1rem 2rem;
-  background: rgba(153,153,153,0.2);
+  background: rgba(153,153,153,.2);
   border-radius: 5px;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #777;
+  color: #666;
 }
 
 /* Footer */
@@ -285,7 +295,7 @@ textarea {
   
   .about__content {
     grid-template-columns: 1fr;
-    grid-gap: 8rem;
+    gap: 8rem;
   }
   
   .main-footer__upper { padding: 6rem 0; }
