@@ -926,16 +926,34 @@ textarea {
 
 /* Projects: overlay hover, keep spacing and 3-up grid */
 /* Ensure top spacing isn't lost (adjust if your spacer exists) */
-#projects { padding-top: 6rem; }
+#projects { padding-top: 6rem; padding-bottom: 8rem; }
 
-/* Grid: keep 3 columns */
-.projects__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8rem;
+/* container sizing */
+.projects {
+  background: #f4f4f4;
+  padding: 0; /* section padding handled via #projects above */
+}
+.projects .main-container {
+  max-width: 120rem;
+  width: 92%;
+  margin: 0 auto;
 }
 
-/* Image container and overlay */
+/* grid */
+.projects__content {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8rem !important;
+  align-items: start;
+}
+
+/* row / image container */
+.projects__row {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 .projects__row-img-cont {
   position: relative;
   overflow: hidden;
@@ -943,22 +961,22 @@ textarea {
   display: block;
 }
 
-/* Reset any previous forcing of oversized / scaled images */
+/* image: full width, keep aspect */
 .projects__row-img {
   width: 100% !important;
   height: auto !important;
-  display: block;
-  transform: none !important;
-  transition: transform .45s ease;
+  display: block !important;
   object-fit: cover;
+  transition: transform .35s ease !important;
+  transform: none !important;
 }
 
-/* Slight gentle zoom on hover, not enough to crop buttons/overlay */
+/* subtle zoom on hover */
 .projects__row-img-cont:hover .projects__row-img {
-  transform: scale(1.03);
+  transform: scale(1.03) !important;
 }
 
-/* Overlay that appears on hover (white translucent + black text) */
+/* overlay link */
 .projects__overlay {
   position: absolute;
   inset: 0;
@@ -970,18 +988,18 @@ textarea {
   background: rgba(255,255,255,0);
   opacity: 0;
   transition: background .22s ease, opacity .22s ease;
-  z-index: 5;
+  z-index: 10;
   pointer-events: none;
 }
 
-/* Show overlay on hover */
+/* show overlay on hover */
 .projects__row-img-cont:hover .projects__overlay {
   background: rgba(255,255,255,0.85);
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Overlay text styling */
+/* overlay text */
 .projects__overlay span {
   display: inline-block;
   padding: 1rem 1.8rem;
@@ -994,80 +1012,21 @@ textarea {
   white-space: nowrap;
 }
 
-/* Hide legacy buttons */
-.projects__row .btn {
-  display: none !important;
-}
+/* hide legacy buttons (defensive) */
+.projects__row .btn { display: none !important; }
 
-/* Responsive: single column on small screens */
-@media only screen and (max-width: 56.25em) {
-  .projects__content {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-  .projects__overlay span { font-size: 1.6rem; padding: .9rem 1.2rem; white-space: normal; }
-}
-
-/* Restore stable projects layout (override any earlier conflicting rules) */
-.projects {
-  background: #f4f4f4 !important;
-  padding: 8rem 0 !important;
-}
-
-.projects .main-container {
-  max-width: 120rem !important;
-  width: 92% !important;
-  margin: 0 auto !important;
-}
-
-/* Grid: force 3 columns and proper gap/alignment */
-.projects__content {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 8rem !important;
-  align-items: start !important;
-  margin: 0 auto !important;
-}
-
-/* Row wrapper */
-.projects__row {
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
-
-/* Image container */
-.projects__row-img-cont {
-  position: relative !important;
-  overflow: hidden !important;
-  width: 100% !important;
-  display: block !important;
-}
-
-/* Ensure images fill the column but keep aspect ratio */
-.projects__row-img {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  object-fit: cover !important;
-  transform: none !important;
-}
-
-/* Overlay already present — ensure it sits above image */
-.projects__overlay {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 10 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Maintain responsive behaviour */
+/* responsive: 1 column on small screens */
 @media only screen and (max-width: 56.25em) {
   .projects__content {
     grid-template-columns: 1fr !important;
     gap: 4rem !important;
   }
+  .projects__overlay span {
+    font-size: 1.6rem;
+    padding: 0.9rem 1.2rem;
+    white-space: normal;
+  }
 }
+
+/* small fix: ensure heading decorative line (if present elsewhere) does not overlap subtitles inside projects */
+#projects .heading-sec__main::after { display: none !important; }
