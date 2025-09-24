@@ -229,8 +229,9 @@ textarea {
   position: relative !important;
   overflow: hidden !important;
   aspect-ratio: unset !important;
-  width: 100% !important;
+  min-width: 617px !important;
   max-width: 617px !important;
+  width: 617px !important;
   height: 381px !important;
   display: flex !important;
   align-items: center !important;
@@ -424,16 +425,18 @@ textarea {
     grid-template-columns: 1fr !important;
     width: 90% !important;
     max-width: 90% !important;
-    gap: 1rem !important;
+    gap: 2rem !important;
     margin: 0 auto !important;
     padding: 0 !important;
   }
   
   .projects__row-img-cont {
     width: 100% !important;
-    max-width: 240px !important;
-    height: 160px !important;
-    margin: 0 auto 0.5rem auto !important;
+    min-width: 280px !important;
+    max-width: 320px !important;
+    width: 320px !important;
+    height: 200px !important;
+    margin: 0 auto !important;
   }
   
   .projects__row-img {
@@ -739,7 +742,7 @@ textarea {
   html.html body.body #projects .projects__content {
     width: 90% !important;
     max-width: 90% !important;
-    gap: 0.5rem !important;
+    gap: 2rem !important;
     grid-template-columns: 1fr !important;
     margin: 0 auto !important;
     padding: 0 !important;
@@ -747,10 +750,11 @@ textarea {
   
   html.html body.body #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 220px !important;
-    min-height: 140px !important;
-    height: 140px !important;
-    margin: 0 auto 0.5rem auto !important;
+    min-width: 280px !important;
+    max-width: 320px !important;
+    width: 320px !important;
+    height: 200px !important;
+    margin: 0 auto !important;
   }
   
   html.html body.body #projects .projects__row-img {
