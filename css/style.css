@@ -39,8 +39,8 @@
     overflow-x: hidden !important;
   }
   #projects .projects__row-img-cont {
-    width: 80vw !important;
-    max-width: 90vw !important;
+    width: 90vw !important;
+    max-width: 95vw !important;
     min-width: 0 !important;
     height: auto !important;
     margin: 0 auto 0.5rem auto !important;
