@@ -564,6 +564,11 @@ textarea {
   border-radius: 5px;
 }
 
+/* Blue separator for About section (explicit) */
+.about .heading-sec__main::after {
+  background: #0062b9 !important;
+}
+
 /* White separator for Contact section */
 .contact .heading-sec__main::after {
   background: #fff !important;
