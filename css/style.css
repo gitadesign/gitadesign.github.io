@@ -1,3 +1,176 @@
+/* --- Highly Targeted Responsive Fixes: Mobile & iPad --- */
+@media (max-width: 600px) {
+  html, body {
+    background: #f4f4f4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    z-index: 1000 !important;
+  }
+  body {
+    padding-top: 5.5rem !important;
+  }
+  #projects {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f4f4f4 !important;
+    min-height: unset !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  #projects .projects__content {
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    justify-items: center !important;
+    align-items: center !important;
+    overflow-x: hidden !important;
+  }
+  #projects .projects__row-img-cont {
+    width: 80vw !important;
+    max-width: 90vw !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto 0.5rem auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .about__content {
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    display: flex !important;
+    width: 98vw !important;
+    max-width: 98vw !important;
+    z-index: 2 !important;
+  }
+  .about__content-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .about__content-details,
+  .about__content-skills {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .about__content-skills {
+    margin-top: 2.2rem !important;
+  }
+  .main-footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    border: none !important;
+    background: #000 !important;
+    box-shadow: none !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  html, body {
+    background: #f4f4f4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    z-index: 1000 !important;
+  }
+  body {
+    padding-top: 5.5rem !important;
+  }
+  #projects {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f4f4f4 !important;
+    min-height: unset !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  #projects .projects__content {
+    margin: 0 !important;
+    padding: 0 !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    justify-items: center !important;
+    align-items: center !important;
+    overflow-x: hidden !important;
+  }
+  #projects .projects__row-img-cont {
+    width: 40vw !important;
+    max-width: 45vw !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto 1rem auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .about__content {
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    display: flex !important;
+    width: 90vw !important;
+    max-width: 90vw !important;
+    z-index: 2 !important;
+  }
+  .about__content-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .about__content-details,
+  .about__content-skills {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .about__content-skills {
+    margin-top: 2.2rem !important;
+  }
+  .main-footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    border: none !important;
+    background: #000 !important;
+    box-shadow: none !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+/* --- End Highly Targeted Responsive Fixes --- */
 /* --- Ultra-Final iPad & Phone Section/Gaps/Footer/Image Fixes --- */
 @media (max-width: 600px) {
   .header {
