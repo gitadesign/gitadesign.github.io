@@ -15,8 +15,16 @@
 
     <link rel="stylesheet" href="css/style.css?v=2025092402" />
     
-    <!-- MOBILE & TABLET FIXES -->
+    <!-- MOBILE & TABLET FIXES + SECTION LINES -->
     <style>
+    /* Section separator line fixes */
+    #about .heading-sec__main::after {
+      background: #0062b9 !important;
+    }
+    
+    #contact .heading-sec__main::after {
+      background: #fff !important;
+    }
     /* Mobile fixes - minimal cropping */
     @media only screen and (max-width: 600px) {
       #projects .projects__content {
