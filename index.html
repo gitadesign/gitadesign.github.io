@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Gita Ogneva</title>
     <meta name="description" content="Portfolio — Gita Ogneva" />
@@ -211,10 +211,23 @@
             var target = document.querySelector(href);
             if (target) {
               e.preventDefault();
-              target.scrollIntoView({ behavior: 'smooth' });
+              // Use scrollIntoView with block: 'start' for better iPad compatibility
+              target.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+              });
             }
           });
         });
+        
+        // Prevent scroll restoration on page refresh for iPad
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        
+        // Force scroll to top on page load
+        window.scrollTo(0, 0);
       });
     </script>
   </body>

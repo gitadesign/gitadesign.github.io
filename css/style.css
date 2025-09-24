@@ -28,6 +28,7 @@ html {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -39,6 +40,8 @@ body {
   overflow-y: scroll;
   width: 100%;
   max-width: 100vw;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
 }
 
 /* Typography & Links */
@@ -354,6 +357,8 @@ textarea {
     width: 100% !important;
     max-width: 100vw !important;
     overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    position: relative !important;
   }
   
   #projects { 
@@ -434,20 +439,22 @@ textarea {
   
   .projects__content {
     grid-template-columns: 1fr !important;
-    width: 95% !important;
-    max-width: 95% !important;
+    width: 90% !important;
+    max-width: 90% !important;
     gap: 2rem !important;
     margin: 0 auto !important;
-    padding: 0 1rem !important;
+    padding: 0 !important;
   }
   
   .projects__row-img-cont {
     width: 100% !important;
     min-width: unset !important;
-    max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16/10 !important;
+    max-width: 320px !important;
+    height: 200px !important;
     margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   .projects__row-img {
@@ -751,9 +758,9 @@ textarea {
   }
   
   html.html body.body #projects .projects__content {
-    width: 95% !important;
-    max-width: 95% !important;
-    gap: 1rem !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    gap: 2rem !important;
     grid-template-columns: 1fr !important;
     margin: 0 auto !important;
     padding: 0 !important;
@@ -762,10 +769,12 @@ textarea {
   html.html body.body #projects .projects__row-img-cont {
     width: 100% !important;
     min-width: unset !important;
-    max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16/10 !important;
+    max-width: 320px !important;
+    height: 200px !important;
     margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   html.html body.body #projects .projects__row-img {
