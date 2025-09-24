@@ -69,6 +69,8 @@
     background: #000 !important;
     box-shadow: none !important;
     z-index: 2000 !important;
+    display: block !important;
+    overflow-x: hidden !important;
   }
   .about__content {
     margin: 0 !important;
@@ -165,6 +167,28 @@
     background: #000 !important;
     box-shadow: none !important;
     z-index: 2000 !important;
+    display: block !important;
+    overflow-x: hidden !important;
+  }
+  #projects .projects__row-img-cont {
+    width: 22vw !important;
+    max-width: 140px !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto 1rem auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+  }
+  #projects .projects__row-img-cont img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
   }
   .about__content-title {
     margin: 0 0 2.2rem 0 !important;
