@@ -376,8 +376,9 @@ textarea {
   
   .projects__row-img-cont {
     width: 100% !important;
-    max-width: 260px !important;
-    height: 180px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10 !important;
     margin: 0 auto !important;
   }
   
@@ -435,17 +436,17 @@ textarea {
     grid-template-columns: 1fr !important;
     width: 95% !important;
     max-width: 95% !important;
-    gap: 1rem !important;
+    gap: 2rem !important;
     margin: 0 auto !important;
-    padding: 0 !important;
+    padding: 0 1rem !important;
   }
   
   .projects__row-img-cont {
     width: 100% !important;
-    min-width: 350px !important;
-    max-width: 380px !important;
-    width: 380px !important;
-    height: 240px !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10 !important;
     margin: 0 auto !important;
   }
   
@@ -760,10 +761,10 @@ textarea {
   
   html.html body.body #projects .projects__row-img-cont {
     width: 100% !important;
-    min-width: 350px !important;
-    max-width: 380px !important;
-    width: 380px !important;
-    height: 240px !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10 !important;
     margin: 0 auto !important;
   }
   
@@ -826,8 +827,9 @@ textarea {
   
   html.html body.body #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 240px !important;
-    height: 160px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10 !important;
     margin: 0 auto !important;
   }
   
