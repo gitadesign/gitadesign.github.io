@@ -207,7 +207,7 @@
     <section id="about" class="about sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__main" style="position: relative;">About Me</span>
         </h2>
 
         <div class="about__content">
@@ -249,7 +249,7 @@
     <section id="contact" class="contact sec-pad">
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">Get in touch</span>
+          <span class="heading-sec__main" style="position: relative;">Get in touch</span>
         </h2>
 
         <form class="contact__form" action="#" method="post">
@@ -348,6 +348,42 @@
         setTimeout(function() {
           window.scrollTo(0, 0);
         }, 100);
+        
+        // Force section line colors on mobile with high priority
+        function fixSectionLines() {
+          // Create ultra-specific CSS rules
+          var mobileStyle = document.createElement('style');
+          mobileStyle.id = 'mobile-section-fixes';
+          mobileStyle.textContent = `
+            @media screen and (max-width: 600px) {
+              #about .heading-sec__main::after {
+                background: #0062b9 !important;
+                background-color: #0062b9 !important;
+              }
+              #contact .heading-sec__main::after {
+                background: #fff !important;
+                background-color: #fff !important;
+              }
+            }
+            #about .heading-sec__main::after {
+              background: #0062b9 !important;
+            }
+            #contact .heading-sec__main::after {
+              background: #fff !important;
+            }
+          `;
+          
+          // Remove any existing fix and add new one
+          var existing = document.getElementById('mobile-section-fixes');
+          if (existing) existing.remove();
+          document.head.appendChild(mobileStyle);
+        }
+        
+        // Run the fix multiple times to ensure it works
+        fixSectionLines();
+        setTimeout(fixSectionLines, 100);
+        setTimeout(fixSectionLines, 500);
+        setTimeout(fixSectionLines, 1000);
       });
     </script>
   </body>
