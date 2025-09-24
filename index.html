@@ -202,7 +202,7 @@
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med" style="position: relative;">
           <span class="heading-sec__main">About Me</span>
-          <div class="custom-underline" style="position: absolute; top: calc(100% + 1.5rem); height: 5px; width: 3rem; background: #0062b9; left: 50%; transform: translateX(-50%); border-radius: 5px;"></div>
+          <div class="custom-underline" style="position: absolute !important; top: calc(100% + 1.5rem) !important; height: 5px !important; width: 3rem !important; background: #0062b9 !important; left: 50% !important; transform: translateX(-50%) !important; border-radius: 5px !important; display: block !important; z-index: 999 !important; visibility: visible !important; opacity: 1 !important;"></div>
         </h2>
 
         <div class="about__content">
@@ -245,7 +245,7 @@
       <div class="main-container">
         <h2 class="heading heading-sec heading-sec__mb-med" style="position: relative;">
           <span class="heading-sec__main">Get in touch</span>
-          <div class="custom-underline" style="position: absolute; top: calc(100% + 1.5rem); height: 5px; width: 3rem; background: #fff; left: 50%; transform: translateX(-50%); border-radius: 5px;"></div>
+          <div class="custom-underline" style="position: absolute !important; top: calc(100% + 1.5rem) !important; height: 5px !important; width: 3rem !important; background: #fff !important; left: 50% !important; transform: translateX(-50%) !important; border-radius: 5px !important; display: block !important; z-index: 999 !important; visibility: visible !important; opacity: 1 !important;"></div>
         </h2>
 
         <form class="contact__form" action="#" method="post">
@@ -375,11 +375,43 @@
           document.head.appendChild(mobileStyle);
         }
         
-        // Run the fix multiple times to ensure it works
+        // Mobile-specific fix
+        function forceMobileLines() {
+          if (window.innerWidth <= 600) {
+            // Force show the custom underlines on mobile
+            var aboutUnderline = document.querySelector('#about .custom-underline');
+            var contactUnderline = document.querySelector('#contact .custom-underline');
+            
+            if (aboutUnderline) {
+              aboutUnderline.style.display = 'block';
+              aboutUnderline.style.background = '#0062b9';
+              aboutUnderline.style.visibility = 'visible';
+              aboutUnderline.style.opacity = '1';
+            }
+            
+            if (contactUnderline) {
+              contactUnderline.style.display = 'block';
+              contactUnderline.style.background = '#fff';
+              contactUnderline.style.visibility = 'visible';
+              contactUnderline.style.opacity = '1';
+            }
+            
+            console.log('Mobile lines forced:', aboutUnderline, contactUnderline);
+          }
+        }
+        
+        // Run multiple times
         fixSectionLines();
-        setTimeout(fixSectionLines, 100);
-        setTimeout(fixSectionLines, 500);
-        setTimeout(fixSectionLines, 1000);
+        forceMobileLines();
+        setTimeout(function() {
+          fixSectionLines();
+          forceMobileLines();
+        }, 100);
+        setTimeout(forceMobileLines, 500);
+        setTimeout(forceMobileLines, 1000);
+        
+        // Also run on window resize
+        window.addEventListener('resize', forceMobileLines);
       });
     </script>
   </body>
