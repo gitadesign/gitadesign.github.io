@@ -1,3 +1,143 @@
+/* --- Custom Responsive Fixes for Mobile & Tablet --- */
+@media (max-width: 900px) {
+  /* HEADER: wider with padding */
+  .header__content {
+    width: 100vw !important;
+    padding: 1.5rem 2rem !important;
+    box-sizing: border-box !important;
+  }
+  .header__logo-img-cont {
+    margin-left: 0.5rem !important;
+  }
+  /* HEADER LINKS: horizontal on tablet */
+  .header__links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+    justify-content: flex-end !important;
+    width: 100%;
+  }
+  .header__link {
+    padding: 1.2rem 1.2rem !important;
+    font-size: 1.4rem !important;
+  }
+  /* PROJECTS: 2 columns, fit images */
+  .projects__content {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    width: 98vw !important;
+    max-width: 98vw !important;
+    margin: 0 auto !important;
+  }
+  .projects__row-img-cont {
+    width: 90vw !important;
+    max-width: 400px !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+  /* ABOUT & SKILLS: stack vertically, margin below projects */
+  .about__content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    width: 98vw !important;
+    max-width: 98vw !important;
+    margin: 0 auto 3rem auto !important;
+  }
+  .about__content-details,
+  .about__content-skills {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  /* CONTACT: smaller form, margins */
+  .contact__form {
+    width: 90vw !important;
+    max-width: 420px !important;
+    margin: 2rem auto !important;
+    padding: 2rem 1rem !important;
+  }
+  .contact {
+    padding: 4rem 0 2rem 0 !important;
+  }
+  /* FOOTER: narrower */
+  .main-footer {
+    max-width: 98vw !important;
+    margin: 0 auto !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* HEADER: more padding, logo spacing */
+  .header__content {
+    width: 100vw !important;
+    padding: 1.2rem 1.2rem !important;
+    box-sizing: border-box !important;
+  }
+  .header__logo-img-cont {
+    margin-left: 0.5rem !important;
+  }
+  /* HEADER LINKS: show horizontally if possible, else stack */
+  .header__links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.2rem !important;
+    width: 100%;
+    justify-content: flex-end !important;
+  }
+  .header__link {
+    padding: 1rem 0.7rem !important;
+    font-size: 1.2rem !important;
+  }
+  /* PROJECTS: 1 column, fit images */
+  .projects__content {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem !important;
+    width: 99vw !important;
+    max-width: 99vw !important;
+    margin: 0 auto !important;
+  }
+  .projects__row-img-cont {
+    width: 98vw !important;
+    max-width: 98vw !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+  /* ABOUT & SKILLS: stack vertically, margin below projects */
+  .about__content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    width: 99vw !important;
+    max-width: 99vw !important;
+    margin: 0 auto 2rem auto !important;
+  }
+  .about__content-details,
+  .about__content-skills {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  /* CONTACT: smaller form, margins */
+  .contact__form {
+    width: 98vw !important;
+    max-width: 340px !important;
+    margin: 1.5rem auto !important;
+    padding: 1.2rem 0.5rem !important;
+  }
+  .contact {
+    padding: 2rem 0 1rem 0 !important;
+  }
+  /* FOOTER: narrower, left margin */
+  .main-footer {
+    max-width: 99vw !important;
+    margin: 0 auto 0 1.2rem !important;
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+  }
+}
+/* --- End Custom Responsive Fixes --- */
 /* Strongest override for footer at end of file */
 .main-footer {
   background: #000 !important;
