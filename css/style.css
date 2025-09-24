@@ -16,18 +16,18 @@
     overflow-x: hidden !important;
   }
   #projects .projects__row-img-cont {
-    width: 38vw !important;
-    max-width: 80px !important;
+    width: 80vw !important;
+    max-width: 320px !important;
     min-width: 0 !important;
     height: auto !important;
-    margin: 0 auto 0.5rem auto !important;
+    margin: 0 auto 1rem auto !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
   }
   #projects .projects__row-img-cont img {
     width: 100% !important;
-    max-width: 80px !important;
+    max-width: 320px !important;
     height: auto !important;
     object-fit: contain !important;
     display: block !important;
@@ -52,8 +52,8 @@
     overflow-x: hidden !important;
   }
   #projects .projects__row-img-cont {
-    width: 22vw !important;
-    max-width: 120px !important;
+    width: 40vw !important;
+    max-width: 260px !important;
     min-width: 0 !important;
     height: auto !important;
     margin: 0 auto 1rem auto !important;
@@ -64,7 +64,7 @@
   }
   #projects .projects__row-img-cont img {
     width: 100% !important;
-    max-width: 120px !important;
+    max-width: 260px !important;
     height: auto !important;
     object-fit: contain !important;
     display: block !important;
