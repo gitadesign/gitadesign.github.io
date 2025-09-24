@@ -17,13 +17,28 @@
     
     <!-- MOBILE & TABLET FIXES + SECTION LINES -->
     <style>
-    /* Section separator line fixes */
-    #about .heading-sec__main::after {
+    /* Section separator line fixes - all devices */
+    html body #about .heading-sec__main::after {
       background: #0062b9 !important;
+      border: none !important;
     }
     
-    #contact .heading-sec__main::after {
+    html body #contact .heading-sec__main::after {
       background: #fff !important;
+      border: none !important;
+    }
+    
+    /* Force mobile section lines */
+    @media screen and (max-width: 600px) {
+      html body #about span.heading-sec__main::after {
+        background-color: #0062b9 !important;
+        background: #0062b9 !important;
+      }
+      
+      html body #contact span.heading-sec__main::after {
+        background-color: #fff !important;
+        background: #fff !important;
+      }
     }
     /* Mobile fixes - minimal cropping */
     @media only screen and (max-width: 600px) {

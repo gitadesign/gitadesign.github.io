@@ -869,6 +869,15 @@ textarea {
     height: 100% !important;
     object-fit: cover !important;
   }
+  
+  /* Mobile section line color overrides */
+  html body #about .heading-sec__main::after {
+    background: #0062b9 !important;
+  }
+  
+  html body #contact .heading-sec__main::after {
+    background: #fff !important;
+  }
 }
 
 /* iPad/Tablet Final Fixes */
