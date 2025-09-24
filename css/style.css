@@ -66,6 +66,9 @@ textarea {
 /* Header */
 .header {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   background: #000 !important;
@@ -315,27 +318,36 @@ textarea {
 @media only screen and (max-width: 56.25em) {
   html { font-size: 56%; }
   
+  .header {
+    position: fixed !important;
+    top: 0 !important;
+  }
+  
   .header__content { padding: 1.5rem 3rem !important; }
   
   /* iPad specific fixes */
-  body { padding-top: 8rem !important; }
+  body { padding-top: 7rem !important; }
   
   #projects { 
-    margin-top: 2rem !important;
-    padding-top: 3rem !important;
+    margin-top: 1rem !important;
+    padding-top: 2rem !important;
   }
   
   .projects__content {
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-    width: 85%;
+    gap: 3rem;
+    width: 90%;
+  }
+  
+  .projects__row-img-cont {
+    max-width: 300px !important;
   }
   
   .projects__row-img {
     object-fit: contain !important;
   }
   
-  .about { margin-top: 4rem !important; }
+  .about { margin-top: 3rem !important; }
   
   .main-footer__upper {
     flex-direction: column;
@@ -350,30 +362,42 @@ textarea {
 
 @media only screen and (max-width: 37.5em) {
   /* Mobile phone fixes */
+  .header {
+    position: fixed !important;
+    top: 0 !important;
+  }
+  
   .header__content { 
-    padding: 1.5rem 2rem !important; 
+    padding: 1.2rem 1.5rem !important; 
     width: 100% !important;
   }
   
-  body { padding-top: 7rem !important; }
+  body { padding-top: 6rem !important; }
   
   #projects { 
-    margin-top: 2rem !important;
-    padding-top: 2rem !important;
+    margin-top: 1rem !important;
+    padding-top: 1.5rem !important;
   }
   
   .projects__content {
     grid-template-columns: 1fr;
+    width: 95% !important;
+    gap: 1.5rem !important;
   }
+  
   .projects__row-img-cont {
-    min-height: 320px;
+    min-height: 200px !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
   }
   
   .projects__row-img {
     object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
   }
   
-  .about { margin-top: 3rem !important; }
+  .about { margin-top: 2rem !important; }
   
   .about__content { display: block !important; }
   .about__content-details { margin-bottom: 4rem !important; }
