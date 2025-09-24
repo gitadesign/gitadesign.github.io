@@ -1,3 +1,100 @@
+/* --- Final iPhone & iPad Project/Footer/About Fixes --- */
+@media (max-width: 600px) {
+  /* Projects: smaller images, big gap before first project, move below header */
+  #projects {
+    margin-top: 6.5rem !important;
+    padding-top: 1.5rem !important;
+  }
+  #projects .projects__row-img-cont {
+    width: 70vw !important;
+    max-width: 150px !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto 0.7rem auto !important;
+  }
+  #projects .projects__content {
+    margin-top: 2.5rem !important;
+  }
+  /* About: reduce gap before, add gap before My Skills */
+  .about__content {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    align-items: center !important;
+  }
+  .about__content-skills {
+    margin-top: 2.8rem !important;
+  }
+  /* Contact: wider background for form */
+  .contact__form {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 1rem auto !important;
+    padding: 1rem 0.5rem !important;
+    background: #fff !important;
+    border-radius: 0 !important;
+  }
+  /* Footer: full width, no white border, black background */
+  .main-footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 1rem 0 1rem 0 !important;
+    border: none !important;
+    background: #000 !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  /* Projects: move first project lower below header */
+  #projects {
+    margin-top: 7.5rem !important;
+    padding-top: 2rem !important;
+  }
+  #projects .projects__row-img-cont {
+    width: 32vw !important;
+    max-width: 180px !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto 1rem auto !important;
+  }
+  #projects .projects__content {
+    margin-top: 2.5rem !important;
+  }
+  /* About: reduce gap before, add gap before My Skills */
+  .about__content {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    align-items: center !important;
+  }
+  .about__content-skills {
+    margin-top: 3.2rem !important;
+  }
+  /* Contact: wider background for form */
+  .contact__form {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 1.5rem auto !important;
+    padding: 1.5rem 0.5rem !important;
+    background: #fff !important;
+    border-radius: 0 !important;
+  }
+  /* Footer: full width, no white border, black background */
+  .main-footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 1rem 0 1rem 0 !important;
+    border: none !important;
+    background: #000 !important;
+    box-shadow: none !important;
+  }
+}
+/* --- End Final iPhone & iPad Project/Footer/About Fixes --- */
 /* --- Mobile Project & Footer Fixes --- */
 @media (max-width: 600px) {
   /* Projects: smaller images, move below header */
