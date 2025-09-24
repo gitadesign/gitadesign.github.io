@@ -279,8 +279,26 @@ textarea {
   #projects .projects__content { width: 92% !important; max-width: none !important; grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 900px) {
+  /* Override desktop fixed height for mobile/tablet */
+  #projects { 
+    min-height: auto !important; 
+    height: auto !important; 
+    justify-content: flex-start !important;
+  }
   #projects .projects__content { width: 92% !important; grid-template-columns: 1fr !important; gap: 4rem !important; }
-  #projects .projects__row-img-cont { min-height: 300px !important; }
+  #projects .projects__row-img-cont { 
+    min-height: 300px !important; 
+    object-fit: contain !important;
+  }
+  #projects .projects__row-img {
+    object-fit: contain !important;
+  }
+  
+  /* Ensure body has padding for fixed header */
+  body { padding-top: 8rem !important; }
+  
+  /* About section spacing */
+  .about { margin-top: 3rem !important; }
 }
 
 @media only screen and (max-width: 75em) {
@@ -297,13 +315,27 @@ textarea {
 @media only screen and (max-width: 56.25em) {
   html { font-size: 56%; }
   
-  .header__content { padding: 0 2rem; }
+  .header__content { padding: 1.5rem 3rem !important; }
+  
+  /* iPad specific fixes */
+  body { padding-top: 8rem !important; }
+  
+  #projects { 
+    margin-top: 2rem !important;
+    padding-top: 3rem !important;
+  }
   
   .projects__content {
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
     width: 85%;
   }
+  
+  .projects__row-img {
+    object-fit: contain !important;
+  }
+  
+  .about { margin-top: 4rem !important; }
   
   .main-footer__upper {
     flex-direction: column;
@@ -317,6 +349,19 @@ textarea {
 }
 
 @media only screen and (max-width: 37.5em) {
+  /* Mobile phone fixes */
+  .header__content { 
+    padding: 1.5rem 2rem !important; 
+    width: 100% !important;
+  }
+  
+  body { padding-top: 7rem !important; }
+  
+  #projects { 
+    margin-top: 2rem !important;
+    padding-top: 2rem !important;
+  }
+  
   .projects__content {
     grid-template-columns: 1fr;
   }
@@ -324,133 +369,18 @@ textarea {
     min-height: 320px;
   }
   
+  .projects__row-img {
+    object-fit: contain !important;
+  }
+  
+  .about { margin-top: 3rem !important; }
+  
+  .about__content { display: block !important; }
+  .about__content-details { margin-bottom: 4rem !important; }
+  
   .header__links { display: none; }
   
-  .contact__btn {
-    width: 100%;
-  }
-}
-
-/* iPad Responsive Fixes */
-@media (min-width: 601px) and (max-width: 900px) {
-  /* Header spacing */
-  .header__content {
-    padding: 1.5rem 3rem !important;
-  }
-  
-  /* Body padding to account for fixed header */
-  body {
-    padding-top: 8rem !important;
-  }
-  
-  /* Projects section: override desktop styles for proper spacing */
-  #projects {
-    min-height: auto !important;
-    height: auto !important;
-    margin-top: 2rem !important;
-    padding-top: 3rem !important;
-    justify-content: flex-start !important;
-  }
-  
-  #projects .projects__content {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 3rem !important;
-    width: 90% !important;
-    max-width: 90% !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
-  }
-  
-  #projects .projects__row-img-cont {
-    width: 100% !important;
-    height: auto !important;
-    min-width: auto !important;
-    max-width: none !important;
-    min-height: auto !important;
-    aspect-ratio: 1.6 !important;
-  }
-  
-  #projects .projects__row-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-  }
-  
-  /* About section: clear spacing after projects */
-  .about {
-    margin-top: 4rem !important;
-    clear: both !important;
-  }
-  
-  .about__content {
-    margin-top: 0 !important;
-    gap: 5rem !important;
-  }
-}
-
-/* Mobile Phone Responsive Fixes */
-@media (max-width: 600px) {
-  /* Header: make wider with more padding */
-  .header__content {
-    padding: 1.5rem 2rem !important;
-    width: 100% !important;
-  }
-  
-  /* Body padding to account for fixed header */
-  body {
-    padding-top: 7rem !important;
-  }
-  
-  /* Projects section: override desktop styles for proper spacing */
-  #projects {
-    min-height: auto !important;
-    height: auto !important;
-    margin-top: 2rem !important;
-    padding-top: 2rem !important;
-    justify-content: flex-start !important;
-  }
-  
-  #projects .projects__content {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-    width: 90% !important;
-    max-width: 90% !important;
-    margin: 0 auto !important;
-    padding: 0 1rem !important;
-  }
-  
-  #projects .projects__row-img-cont {
-    width: 100% !important;
-    height: auto !important;
-    min-width: auto !important;
-    max-width: none !important;
-    min-height: auto !important;
-    aspect-ratio: 1.6 !important;
-    margin-bottom: 2rem !important;
-  }
-  
-  #projects .projects__row-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-  }
-  
-  /* About section: clear spacing after projects */
-  .about {
-    margin-top: 3rem !important;
-    clear: both !important;
-  }
-  
-  .about__content {
-    display: block !important;
-    margin-top: 0 !important;
-  }
-  
-  .about__content-details {
-    margin-bottom: 4rem !important;
-  }
-  
-  /* Contact form: fix submit button */
+  /* Fix submit button */
   .contact__form {
     width: 95% !important;
     max-width: 400px !important;
@@ -461,9 +391,10 @@ textarea {
     width: auto !important;
     padding: 2rem 4rem !important;
     font-size: 1.4rem !important;
-    display: inline-block !important;
   }
 }
+
+
 
 
 
