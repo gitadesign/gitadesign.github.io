@@ -564,6 +564,11 @@ textarea {
   border-radius: 5px;
 }
 
+/* White separator for Contact section */
+.contact .heading-sec__main::after {
+  background: #fff !important;
+}
+
 .heading-sec__sub {
   display: block;
   text-align: center;
