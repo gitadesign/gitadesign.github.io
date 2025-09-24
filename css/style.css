@@ -19,6 +19,7 @@
     border-radius: 0 !important;
     display: block !important;
     overflow-x: hidden !important;
+    z-index: 100 !important;
   }
   #projects .projects__row-img-cont {
     background: transparent !important;
@@ -45,7 +46,6 @@
     border: none !important;
     box-shadow: none !important;
   }
-}
 
 @media (min-width: 601px) and (max-width: 900px) {
   #projects {
@@ -67,6 +67,7 @@
     border-radius: 0 !important;
     display: block !important;
     overflow-x: hidden !important;
+    z-index: 100 !important;
   }
   #projects .projects__row-img-cont {
     background: transparent !important;
@@ -470,172 +471,6 @@
   .about__content-skills {
     margin-top: 2.8rem !important;
   }
-  /* Footer: remove left white side, just black */
-  .main-footer {
-    max-width: 100vw !important;
-    margin: 0 !important;
-    padding: 1rem 0 1rem 0 !important;
-    border: none !important;
-    background: #000 !important;
-    box-shadow: none !important;
-  }
-}
-/* --- End Mobile Project & Footer Fixes --- */
-/* --- Ultra-Targeted Mobile & iPad Fixes --- */
-@media (max-width: 600px) {
-  /* Projects: smaller, centered, no overlap, no scroll */
-  #projects {
-    min-height: unset !important;
-    height: auto !important;
-    margin-bottom: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    z-index: 1 !important;
-  }
-  #projects .projects__content {
-    grid-template-columns: 1fr !important;
-    gap: 0.5rem !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin: 0 auto 0.5rem auto !important;
-    padding: 0 0.5rem !important;
-    justify-items: center !important;
-    align-items: center !important;
-    overflow-x: hidden !important;
-  }
-  #projects .projects__row-img-cont {
-    width: 88vw !important;
-    max-width: 270px !important;
-    min-width: 0 !important;
-    height: auto !important;
-    margin: 0 auto !important;
-  }
-  /* About/Skills: clear below projects, centered, proper gap */
-  .about__content {
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-    align-items: center !important;
-    flex-direction: column !important;
-    display: flex !important;
-    width: 98vw !important;
-    max-width: 98vw !important;
-    z-index: 2 !important;
-  }
-  .about__content-details,
-  .about__content-skills {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-  .about__content-skills {
-    margin-top: 2.5rem !important;
-  }
-  /* Contact: wider form (white bit only) */
-  .contact__form {
-    width: 99vw !important;
-    max-width: 99vw !important;
-    min-width: 0 !important;
-    margin: 1rem auto !important;
-    padding: 1rem 0.5rem !important;
-  }
-  /* Footer: just black, no borders/lines, fit width */
-  .main-footer {
-    max-width: 100vw !important;
-    margin: 0 auto !important;
-    padding: 1rem 0 1rem 0 !important;
-    border: none !important;
-    min-height: unset !important;
-    height: auto !important;
-    box-shadow: none !important;
-    background: #000 !important;
-  }
-  .main-footer__upper, .main-footer__lower {
-    padding: 0.2rem 0 !important;
-    margin: 0 !important;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  /* Projects: margin above, smaller, centered, no overlap */
-  #projects {
-    min-height: unset !important;
-    height: auto !important;
-    margin-top: 5.5rem !important;
-    margin-bottom: 1rem !important;
-    padding-bottom: 1rem !important;
-    z-index: 1 !important;
-  }
-  #projects .projects__content {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1.2rem !important;
-    width: 98vw !important;
-    max-width: 98vw !important;
-    margin: 0 auto 1rem auto !important;
-    padding: 0 1rem !important;
-    justify-items: center !important;
-    align-items: center !important;
-    overflow-x: hidden !important;
-  }
-  #projects .projects__row-img-cont {
-    width: 40vw !important;
-    max-width: 260px !important;
-    min-width: 0 !important;
-    height: auto !important;
-    margin: 0 auto !important;
-  }
-  /* About: center, reduce gap before, clear below projects */
-  .about__content {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    align-items: center !important;
-    flex-direction: column !important;
-    display: flex !important;
-    width: 90vw !important;
-    max-width: 90vw !important;
-    z-index: 2 !important;
-  }
-  .about__content-details,
-  .about__content-skills {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-  /* Contact: much wider form */
-  .contact__form {
-    width: 80vw !important;
-    max-width: 600px !important;
-    margin: 1.5rem auto !important;
-    padding: 1.5rem 1rem !important;
-  }
-  /* Footer: fit width, just black, no borders/lines */
-  .main-footer {
-    max-width: 98vw !important;
-    margin: 0 auto !important;
-    padding: 1rem 0 1rem 0 !important;
-    border: none !important;
-    min-height: unset !important;
-    height: auto !important;
-    box-shadow: none !important;
-    background: #000 !important;
-  }
-  .main-footer__upper, .main-footer__lower {
-    padding: 0.2rem 0 !important;
-    margin: 0 !important;
-  }
-}
-/* --- End Ultra-Targeted Mobile & iPad Fixes --- */
-/* --- Strong Mobile & iPad Fixes --- */
-@media (max-width: 600px) {
-  /* Hide header nav links absolutely */
-  header .header__links, .header__links { display: none !important; }
-  /* Projects: smaller, centered, fit window, no scroll */
-  #projects .projects__content {
-    grid-template-columns: 1fr !important;
-    gap: 0.7rem !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin: 0 auto 0.7rem auto !important;
-    padding: 0 0.5rem !important;
-    justify-items: center !important;
-    align-items: center !important;
-    overflow-x: hidden !important;
   }
   #projects .projects__row-img-cont {
     width: 90vw !important;
