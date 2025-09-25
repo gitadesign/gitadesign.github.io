@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<ht    /* Hide original pseudo-elements since we use custom divs */
+    #about .heading-sec__main::after,
+    #contact .heading-sec__main::after {
+      display: none !important;
+    }head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -72,14 +75,7 @@
         object-fit: contain !important;
       }
       
-      /* Mobile section line fixes */
-      #about .heading-sec__main::after {
-        background: #0062b9 !important;
-      }
-      
-      #contact .heading-sec__main::after {
-        background: #fff !important;
-      }
+
     }
     
     /* iPad fixes - single column layout */
@@ -203,7 +199,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
         </h2>
-        <div style="width: 3rem; height: 5px; background: #0062b9; margin: 1.5rem auto 0 auto; border-radius: 5px; display: block;"></div>
+        <div style="width: 3rem; height: 5px; background: #0062b9; margin: 0.5rem auto 1rem auto; border-radius: 5px; display: block;"></div>
 
         <div class="about__content">
           <div class="about__content-main">
@@ -246,7 +242,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Get in touch</span>
         </h2>
-        <div style="width: 3rem; height: 5px; background: #fff; margin: 1.5rem auto 0 auto; border-radius: 5px; display: block;"></div>
+        <div style="width: 3rem; height: 5px; background: #fff; margin: 0.5rem auto 1rem auto; border-radius: 5px; display: block;"></div>
 
         <form class="contact__form" action="#" method="post">
           <div class="contact__form-field">
@@ -345,73 +341,7 @@
           window.scrollTo(0, 0);
         }, 100);
         
-        // Force section line colors on mobile with high priority
-        function fixSectionLines() {
-          // Create ultra-specific CSS rules
-          var mobileStyle = document.createElement('style');
-          mobileStyle.id = 'mobile-section-fixes';
-          mobileStyle.textContent = `
-            @media screen and (max-width: 600px) {
-              #about .heading-sec__main::after {
-                background: #0062b9 !important;
-                background-color: #0062b9 !important;
-              }
-              #contact .heading-sec__main::after {
-                background: #fff !important;
-                background-color: #fff !important;
-              }
-            }
-            #about .heading-sec__main::after {
-              background: #0062b9 !important;
-            }
-            #contact .heading-sec__main::after {
-              background: #fff !important;
-            }
-          `;
-          
-          // Remove any existing fix and add new one
-          var existing = document.getElementById('mobile-section-fixes');
-          if (existing) existing.remove();
-          document.head.appendChild(mobileStyle);
-        }
-        
-        // Mobile-specific fix
-        function forceMobileLines() {
-          if (window.innerWidth <= 600) {
-            // Force show the custom underlines on mobile
-            var aboutUnderline = document.querySelector('#about .custom-underline');
-            var contactUnderline = document.querySelector('#contact .custom-underline');
-            
-            if (aboutUnderline) {
-              aboutUnderline.style.display = 'block';
-              aboutUnderline.style.background = '#0062b9';
-              aboutUnderline.style.visibility = 'visible';
-              aboutUnderline.style.opacity = '1';
-            }
-            
-            if (contactUnderline) {
-              contactUnderline.style.display = 'block';
-              contactUnderline.style.background = '#fff';
-              contactUnderline.style.visibility = 'visible';
-              contactUnderline.style.opacity = '1';
-            }
-            
-            console.log('Mobile lines forced:', aboutUnderline, contactUnderline);
-          }
-        }
-        
-        // Run multiple times
-        fixSectionLines();
-        forceMobileLines();
-        setTimeout(function() {
-          fixSectionLines();
-          forceMobileLines();
-        }, 100);
-        setTimeout(forceMobileLines, 500);
-        setTimeout(forceMobileLines, 1000);
-        
-        // Also run on window resize
-        window.addEventListener('resize', forceMobileLines);
+
       });
     </script>
   </body>
