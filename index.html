@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+
     <title>Gita Ogneva</title>
     <meta name="description" content="Portfolio — Gita Ogneva" />
     <meta name="robots" content="noindex, nofollow" />
@@ -92,8 +91,8 @@
       
       #projects .projects__row-img-cont {
         width: 100% !important;
-        height: 460px !important;
-        max-width: 720px !important;
+        height: 368px !important;
+        max-width: 576px !important;
         margin: 0 auto !important;
         display: flex !important;
         align-items: center !important;
@@ -119,12 +118,9 @@
     /* iPad fixes - single column layout */
     @media only screen and (min-width: 601px) and (max-width: 1024px) {
       html, body {
-        -webkit-overflow-scrolling: touch !important;
-        overscroll-behavior: auto !important;
+        -webkit-overflow-scrolling: auto !important;
+        overscroll-behavior: contain !important;
         scroll-behavior: auto !important;
-        overflow-y: scroll !important;
-        height: 100% !important;
-        min-height: 100vh !important;
       }
       
       #projects .projects__content {
@@ -149,26 +145,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
     
-    <!-- iPad scroll fix for refresh -->
-    <script>
-    // Scroll reset for iPad refresh only
-    if (window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
-      // Prevent scroll restoration on refresh
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-      }
-      
-      // Only reset on page refresh/reload
-      window.addEventListener('load', function() {
-        // Small delay to ensure page is ready
-        setTimeout(function() {
-          if (window.location.hash === '' || window.location.hash === '#') {
-            window.scrollTo(0, 0);
-          }
-        }, 100);
-      });
-    }
-    </script>
+
   </head>
 
   <body>
@@ -193,7 +170,6 @@
     </header>
 
     <!-- Projects -->
-    <div id="home" style="position: absolute; top: 0; visibility: hidden;"></div>
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
         <div class="projects__spacer" aria-hidden="true"></div>

@@ -782,8 +782,8 @@ textarea {
   
   #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 720px !important;
-    height: 460px !important;
+    max-width: 576px !important;
+    height: 368px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
     display: flex !important;
@@ -809,14 +809,13 @@ textarea {
 
 /* iPad/Tablet */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
-  html { overflow-x: hidden !important; overflow-y: scroll !important; height: 100% !important; }
-  body { padding-top: 7rem !important; overflow-x: hidden !important; overflow-y: scroll !important; min-height: 100vh !important; }
+  html { overflow-x: hidden !important; }
+  body { padding-top: 6.5rem !important; overflow-x: hidden !important; }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
-    padding-top: 4rem !important; 
-    min-height: 100vh !important; 
-    height: auto !important;
-    padding-bottom: 5rem !important;
+    padding-top: 1.5rem !important; 
+    min-height: auto !important; 
+    height: auto !important; 
   }
   #projects .projects__content {
     width: 90% !important;
@@ -852,8 +851,8 @@ textarea {
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 720px !important;
-    height: 460px !important;
+    max-width: 576px !important;
+    height: 368px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
     display: flex !important;
@@ -869,8 +868,8 @@ textarea {
   body #projects .projects__content #projects .projects__row-img-cont,
   #projects .projects__content .projects__row .projects__row-img-cont {
     width: 100% !important;
-    max-width: 720px !important;
-    height: 460px !important;
+    max-width: 576px !important;
+    height: 368px !important;
     margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
