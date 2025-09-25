@@ -307,7 +307,7 @@ textarea {
 }
 
 /* Responsive fallbacks */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   #projects .projects__content { width: 92% !important; max-width: none !important; grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 900px) {
