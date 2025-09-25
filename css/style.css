@@ -767,27 +767,37 @@ textarea {
   }
 }
 
-/* MacBook Pro / Mid Desktop (fix overflow & tiny images)
-   Narrower desktops (commonly 1200-1536px logical) cannot fit 3 fixed 617px columns.
-   Switch to 2 columns and let images scale fluidly. */
+/* MacBook Pro / Mid Desktop (1200px–1600px): keep 3 columns but scale tiles to fit viewport.
+   Remove rigid 617px width so 3 columns + gaps fit without overflow. Preserve natural image proportion. */
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
-  #projects { padding-top: 10rem !important; }
-  #projects .projects__content { 
-    grid-template-columns: repeat(2, 1fr) !important; 
-    max-width: 1200px !important; 
+  #projects { padding-top: 8rem !important; }
+  #projects .projects__content {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 100% !important;
+    gap: 2.2vw !important; /* scale gap with viewport */
+    padding: 0 3rem !important;
+    box-sizing: border-box !important;
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
     min-width: 0 !important; /* override 617px base */
     max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16/10 !important; /* maintain consistent proportion */
+    height: 16.8vw !important; /* reference implementation uniform height */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #fff !important; /* optional neutral background */
+    overflow: hidden !important;
+    border-radius: 8px !important;
   }
   #projects .projects__row-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    width: auto !important; /* allow natural width */
+    height: 100% !important; /* fill the uniform height */
+    max-width: 100% !important; /* prevent overflow */
+    object-fit: contain !important; /* do not crop */
+    display: block !important;
   }
+  #projects .projects__overlay { height: 100% !important; }
 }
 
 
