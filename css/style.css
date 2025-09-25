@@ -968,9 +968,9 @@ textarea {
 
 /* MacBook Pro 14" - CORRECT PROPORTIONS AND SIZING */
 @media screen and (min-width: 900px) and (max-width: 1600px) {
-  /* Proper header clearance */
+  /* MORE header clearance to stop text overlap */
   #projects {
-    padding-top: 150px !important;
+    padding-top: 180px !important;
     margin-top: 0 !important;
   }
   
@@ -983,12 +983,12 @@ textarea {
     margin: 0 auto !important;
   }
   
-  /* EXACT desktop proportions: 308×190px (617÷2 × 381÷2 = same 1.618 ratio) */
+  /* Small images that FIT: 250×155px (maintains exact 617:381 = 1.618 ratio) */
   #projects .projects__row-img-cont {
-    min-width: 308px !important;
-    max-width: 308px !important;
-    width: 308px !important;
-    height: 190px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    width: 250px !important;
+    height: 155px !important;
   }
 }
 
