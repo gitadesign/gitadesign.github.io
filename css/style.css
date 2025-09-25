@@ -966,30 +966,29 @@ textarea {
   }
 }
 
-/* MacBook Pro - FIT EVERYTHING ON SCREEN */
+/* MacBook Pro 14" - DEFINITIVE FIX */
 @media screen and (min-width: 900px) and (max-width: 1600px) {
-  /* Fix header overlap completely */
+  /* STOP header overlap - push content way down */
   #projects {
-    padding-top: 150px !important;
+    padding-top: 200px !important;
     margin-top: 0 !important;
-    min-height: 100vh !important;
   }
   
-  /* Make container much smaller to fit viewport */
+  /* Container that actually fits MacBook Pro viewport */
   #projects .projects__content {
-    width: 90% !important;
-    max-width: 1000px !important;
-    gap: 0.5rem !important;
-    padding: 1rem !important;
+    width: 85% !important;
+    max-width: 900px !important;
+    gap: 0.8rem !important;
+    padding: 0 1rem !important;
     margin: 0 auto !important;
   }
   
-  /* Much smaller images to fit MacBook Pro - 280×173px (same 1.62 ratio) */
+  /* Images sized to actually fit: 240×148px (617:381 ratio = 1.618) */
   #projects .projects__row-img-cont {
-    min-width: 280px !important;
-    max-width: 280px !important;
-    width: 280px !important;
-    height: 173px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    width: 240px !important;
+    height: 148px !important;
   }
 }
 
