@@ -296,32 +296,7 @@ textarea {
 
 
 
-/* Responsive fallbacks - changed from 1000px to 800px to avoid MacBook Pro conflict */
-@media (max-width: 800px) {
-  #projects .projects__content { width: 92% !important; max-width: none !important; grid-template-columns: repeat(2, 1fr) !important; }
-}
-@media (max-width: 900px) {
-  /* Override desktop fixed height for mobile/tablet */
-  #projects { 
-    min-height: auto !important; 
-    height: auto !important; 
-    justify-content: flex-start !important;
-  }
-  #projects .projects__content { width: 92% !important; grid-template-columns: 1fr !important; gap: 4rem !important; }
-  #projects .projects__row-img-cont { 
-    min-height: 300px !important; 
-    object-fit: contain !important;
-  }
-  #projects .projects__row-img {
-    object-fit: contain !important;
-  }
-  
-  /* Ensure body has padding for fixed header */
-  body { padding-top: 8rem !important; }
-  
-  /* About section spacing */
-  .about { margin-top: 3rem !important; }
-}
+/* Removed earlier redundant mobile/tablet overrides (max-width:800px & 900px) in favor of consolidated FINAL MOBILE & TABLET OVERRIDES near end of file. */
 
 @media only screen and (max-width: 75em) {
   html { font-size: 59%; }
@@ -792,17 +767,26 @@ textarea {
   }
 }
 
-/* MacBook Pro ONLY - Clean, simple fix */
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
-  #projects {
-    padding-top: 150px !important;
+/* MacBook Pro / Mid Desktop (fix overflow & tiny images)
+   Narrower desktops (commonly 1200-1536px logical) cannot fit 3 fixed 617px columns.
+   Switch to 2 columns and let images scale fluidly. */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  #projects { padding-top: 10rem !important; }
+  #projects .projects__content { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    max-width: 1200px !important; 
   }
-  
   #projects .projects__row-img-cont {
-    width: 280px !important;
-    height: 173px !important;
-    min-width: 280px !important;
-    max-width: 280px !important;
+    width: 100% !important;
+    min-width: 0 !important; /* override 617px base */
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/10 !important; /* maintain consistent proportion */
+  }
+  #projects .projects__row-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 }
 
