@@ -276,7 +276,7 @@ textarea {
     position: relative !important;
     overflow: hidden !important;
     width: 330px !important;
-    height: 105px !important;
+    height: 95px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -873,12 +873,23 @@ textarea {
     align-items: center !important;
   }
   #projects .projects__row-img-cont {
-    width: 90vw !important;
-    max-width: 755px !important;
-    min-width: 500px !important;
-    height: 465px !important;
+    width: 85vw !important;
+    max-width: 720px !important;
+    min-width: 475px !important;
+    height: 440px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
+  }
+}
+
+/* SUPER FORCE MOBILE - ULTIMATE PRIORITY */
+@media only screen and (max-width: 600px) {
+  body #projects .projects__content #projects .projects__row-img-cont,
+  #projects .projects__content .projects__row .projects__row-img-cont {
+    width: 85vw !important;
+    max-width: 720px !important;
+    min-width: 475px !important;
+    height: 440px !important;
   }
 }
 
