@@ -770,18 +770,24 @@ textarea {
 /* MacBook Pro / Mid Desktop (1200px–1600px): keep 3 columns but scale tiles to fit viewport.
    Remove rigid 617px width so 3 columns + gaps fit without overflow. Preserve natural image proportion. */
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
-  #projects { padding-top: 8rem !important; height: auto !important; min-height: auto !important; }
+  #projects { 
+    padding-top: 11rem !important; /* push below fixed header */
+    height: auto !important; 
+    min-height: auto !important; 
+    align-items: flex-start !important; 
+    justify-content: flex-start !important; 
+  }
   #projects .projects__content {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2.5rem !important;
-    padding: 0 2.5rem !important;
-    max-width: 1400px !important; /* cap width so 3 columns fit comfortably */
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 2.2rem 2.2rem !important;
+    padding: 0 3rem !important;
+    max-width: 95vw !important;
     margin: 0 auto !important;
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
-    min-width: 0 !important;
-    max-width: clamp(300px, 32vw, 440px) !important; /* responsive column width */
+    min-width: 0 !important; /* cancel 617px base */
+    max-width: 100% !important;
     height: auto !important;
     display: block !important;
     background: #fff !important;
