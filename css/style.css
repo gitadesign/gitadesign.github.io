@@ -966,32 +966,20 @@ textarea {
   }
 }
 
-/* MacBook Pro Fix - FORCE OVERRIDE the 617px hardcoded sizes */
-@media screen and (min-width: 1200px) and (max-width: 1500px) {
-  html body #projects .projects__content {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
-    width: 90% !important;
+/* MacBook Pro Fix - Target actual viewport range 900px-1199px */
+@media screen and (min-width: 901px) and (max-width: 1199px) {
+  #projects .projects__content {
+    width: 95% !important;
     max-width: 1000px !important;
-    gap: 0.5rem !important;
-    margin: 0 auto !important;
+    gap: 0.8rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
-  html body #projects .projects__row-img-cont {
-    width: 160px !important;
-    height: 99px !important;
-    min-width: 160px !important;
-    max-width: 160px !important;
-  }
-}
-
-/* NUCLEAR OPTION - Override everything for MacBook Pro */
-@media screen and (min-width: 1200px) and (max-width: 1500px) {
-  html body div#projects div.projects__content div.projects__row div.projects__row-img-cont {
-    width: 160px !important;
-    height: 99px !important;
-    min-width: 160px !important;
-    max-width: 160px !important;
+  #projects .projects__row-img-cont {
+    min-width: 200px !important;
+    max-width: 200px !important;
+    width: 200px !important;
+    height: 123px !important;
   }
 }
 
