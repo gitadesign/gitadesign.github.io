@@ -197,7 +197,8 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding-top: 150px;
+  padding-bottom: 0;
   margin: 0;
   transform: none !important;
   overflow-x: hidden;
@@ -259,15 +260,15 @@ textarea {
   float: none !important;
 }
 
-/* Image sizing + overlay anchoring */
+/* Image sizing + overlay anchoring - RESPONSIVE FOR MACBOOK PRO */
 #projects .projects__row-img-cont {
   position: relative !important;
   overflow: hidden !important;
   aspect-ratio: 617/381 !important;
-  min-width: 617px !important;
-  max-width: 617px !important;
-  width: 617px !important;
-  height: 381px !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
+  width: 280px !important;
+  height: 173px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
