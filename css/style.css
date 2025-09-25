@@ -306,6 +306,21 @@ textarea {
   z-index: 4 !important;
 }
 
+/* MacBook Pro and similar screen sizes (1280px-1440px) */
+@media (max-width: 1440px) and (min-width: 1001px) {
+  #projects .projects__row-img-cont {
+    min-width: 350px !important;
+    max-width: 350px !important;
+    width: 350px !important;
+    height: 216px !important;
+  }
+  #projects .projects__content {
+    gap: 2rem 2rem !important;
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+  }
+}
+
 /* Responsive fallbacks */
 @media (max-width: 1000px) {
   #projects .projects__content { width: 92% !important; max-width: none !important; grid-template-columns: repeat(2, 1fr) !important; }
