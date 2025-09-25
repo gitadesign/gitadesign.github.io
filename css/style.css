@@ -275,8 +275,8 @@ textarea {
   #projects .projects__row-img-cont {
     position: relative !important;
     overflow: hidden !important;
-    width: 320px !important;
-    height: 145px !important;
+    width: 330px !important;
+    height: 105px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -287,13 +287,14 @@ textarea {
   
   #projects .projects__row-img {
     display: block !important;
-    width: 120% !important;
+    width: 125% !important;
     height: auto !important;
-    object-fit: contain !important;
-    object-position: center !important;
+    object-fit: cover !important;
+    object-position: center center !important;
     border-radius: 8px !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     z-index: 1 !important;
+    transform: translateX(0) translateY(0) !important;
   }
 }
 
@@ -872,10 +873,10 @@ textarea {
     align-items: center !important;
   }
   #projects .projects__row-img-cont {
-    width: 95vw !important;
-    max-width: 795px !important;
-    min-width: 530px !important;
-    height: 490px !important;
+    width: 90vw !important;
+    max-width: 755px !important;
+    min-width: 500px !important;
+    height: 465px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
