@@ -966,23 +966,36 @@ textarea {
   }
 }
 
-/* MacBook Pro ONLY - Specific range above iPad (1025px+) to not conflict */
-@media screen and (min-width: 1025px) and (max-width: 1600px) and (min-height: 800px) {
-  #projects {
-    padding-top: 220px !important;
+/* MacBook Pro NUCLEAR OVERRIDE - MAXIMUM SPECIFICITY */
+@media screen and (min-width: 1000px) and (max-width: 1800px) {
+  html body section#projects.projects {
+    padding-top: 180px !important;
   }
   
-  #projects .projects__content {
-    width: 85% !important;
-    max-width: 900px !important;
-    gap: 1rem !important;
+  html body section#projects.projects div.main-container div.projects__content {
+    width: 90% !important;
+    max-width: 1000px !important;
+    gap: 0.8rem !important;
   }
   
-  #projects .projects__row-img-cont {
-    min-width: 160px !important;
-    max-width: 160px !important;
-    width: 160px !important;
-    height: 99px !important;
+  html body section#projects.projects div.main-container div.projects__content div.projects__row div.projects__row-img-cont {
+    min-width: 180px !important;
+    max-width: 180px !important;
+    width: 180px !important;
+    height: 111px !important;
+  }
+}
+
+/* BACKUP MACBOOK PRO OVERRIDE - In case above doesn't work */
+@media (min-width: 1000px) and (max-width: 1800px) {
+  section.projects div.projects__content div.projects__row div.projects__row-img-cont {
+    width: 180px !important;
+    height: 111px !important;
+    min-width: 180px !important;
+    max-width: 180px !important;
+  }
+  section.projects {
+    padding-top: 180px !important;
   }
 }
 
