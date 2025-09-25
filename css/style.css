@@ -278,7 +278,7 @@ textarea {
     position: relative !important;
     overflow: hidden !important;
     width: 330px !important;
-    height: 70px !important;
+    height: 400px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -286,8 +286,8 @@ textarea {
     margin: 0 auto !important;
     padding: 0 !important;
     max-width: 330px !important;
-    min-height: 70px !important;
-    max-height: 70px !important;
+    min-height: 400px !important;
+    max-height: 400px !important;
   }
   
   body #projects .projects__content .projects__row .projects__row-img,
