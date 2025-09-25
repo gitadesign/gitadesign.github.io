@@ -274,8 +274,8 @@ textarea {
   #projects .projects__row-img-cont {
     position: relative !important;
     overflow: visible !important;
-    width: 300px !important;
-    height: 189px !important;
+    width: 400px !important;
+    height: 250px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -286,8 +286,8 @@ textarea {
   
   #projects .projects__row-img {
     display: block !important;
-    width: 200px !important;
-    height: 125px !important;
+    width: 300px !important;
+    height: 189px !important;
     object-fit: cover !important;
     object-position: center !important;
     border-radius: 6px !important;
@@ -767,8 +767,8 @@ textarea {
     padding: 0 2rem !important;
   }
   #projects .projects__row-img-cont {
-    width: 288px !important;
-    height: 180px !important;
+    width: 350px !important;
+    height: 216px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
