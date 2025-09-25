@@ -756,14 +756,18 @@ textarea {
     height: auto !important; 
   }
   #projects .projects__content {
-    width: 85% !important;
-    gap: 1.5rem !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    width: 90% !important;
+    gap: 1.2rem !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    max-width: 800px !important; /* prevent iPad overflow */
+    margin: 0 auto !important;
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
+    max-width: 350px !important; /* limit iPad tile size */
     height: auto !important;
     aspect-ratio: 16/10 !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -779,15 +783,15 @@ textarea {
   }
   #projects .projects__content {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 2.2rem 2.2rem !important;
-    padding: 0 3rem !important;
-    max-width: 95vw !important;
+    gap: 1.5rem !important;
+    padding: 0 2rem !important;
+    max-width: 1300px !important; /* constrain to prevent overflow */
     margin: 0 auto !important;
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
     min-width: 0 !important; /* cancel 617px base */
-    max-width: 100% !important;
+    max-width: 380px !important; /* limit individual tile width */
     height: auto !important;
     display: block !important;
     background: #fff !important;
