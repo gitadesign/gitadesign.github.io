@@ -234,29 +234,56 @@ textarea {
   float: none !important;
 }
 
-/* Image sizing + overlay anchoring */
-#projects .projects__row-img-cont {
-  position: relative !important;
-  overflow: hidden !important;
-  aspect-ratio: unset !important;
-  min-width: 617px !important;
-  max-width: 617px !important;
-  width: 617px !important;
-  height: 381px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 8px !important;
+/* Image sizing + overlay anchoring - DESKTOP ONLY (above 1600px) */
+@media screen and (min-width: 1601px) {
+  #projects .projects__row-img-cont {
+    position: relative !important;
+    overflow: hidden !important;
+    aspect-ratio: unset !important;
+    min-width: 617px !important;
+    max-width: 617px !important;
+    width: 617px !important;
+    height: 381px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+  }
+  
+  #projects .projects__row-img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+  }
 }
 
-#projects .projects__row-img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  border-radius: 8px !important;
-  margin: 0 !important;
-  z-index: 1 !important;
+/* Base image sizing for MacBook Pro and below */
+@media screen and (max-width: 1600px) {
+  #projects .projects__row-img-cont {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 95px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    margin: 0 auto !important;
+  }
+  
+  #projects .projects__row-img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+  }
 }
 
 /* Overlay: full-area anchor on top of image */
