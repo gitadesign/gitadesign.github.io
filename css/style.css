@@ -966,29 +966,29 @@ textarea {
   }
 }
 
-/* MacBook Pro 14.2" Fix - Proper sizing and positioning */
-@media screen and (min-width: 900px) and (max-width: 1512px) {
-  /* Fix header overlap */
+/* MacBook Pro 14.2" - CALCULATED SIZING */
+@media screen and (min-width: 900px) and (max-width: 1600px) {
+  /* Fix header positioning */
   #projects {
-    padding-top: 120px !important;
+    padding-top: 100px !important;
+    margin-top: 0 !important;
   }
   
-  /* Proper grid sizing for MacBook Pro */
+  /* Container sizing for MacBook Pro viewport */
   #projects .projects__content {
-    width: 90% !important;
-    max-width: 1200px !important;
-    gap: 1.5rem !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    width: 95% !important;
+    max-width: 1300px !important;
+    gap: 1rem !important;
+    padding: 0 2rem !important;
+    margin: 0 auto !important;
   }
   
-  /* Maintain aspect ratio but fit screen - 617:381 = 1.62 ratio */
+  /* Exact proportions: 380×235px maintains 617:381 ratio (1.62:1) */
   #projects .projects__row-img-cont {
-    min-width: 320px !important;
-    max-width: 320px !important;
-    width: 320px !important;
-    height: 197px !important;
-    aspect-ratio: 617/381 !important;
+    min-width: 380px !important;
+    max-width: 380px !important;
+    width: 380px !important;
+    height: 235px !important;
   }
 }
 
