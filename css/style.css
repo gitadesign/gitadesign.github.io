@@ -791,7 +791,7 @@ textarea {
   #projects .projects__row-img-cont {
     width: 100% !important;
     min-width: 0 !important; /* cancel 617px base */
-    max-width: 380px !important; /* limit individual tile width */
+    max-width: 190px !important; /* 50% reduction from 380px */
     height: auto !important;
     display: block !important;
     background: #fff !important;
