@@ -783,10 +783,10 @@ textarea {
 /* iPad/Tablet */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   html { overflow-x: hidden !important; overflow-y: scroll !important; height: 100% !important; }
-  body { padding-top: 10rem !important; overflow-x: hidden !important; overflow-y: scroll !important; min-height: 100vh !important; }
+  body { padding-top: 8rem !important; overflow-x: hidden !important; overflow-y: scroll !important; min-height: 100vh !important; }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
-    padding-top: 12rem !important; 
+    padding-top: 6rem !important; 
     min-height: 100vh !important; 
     height: auto !important;
     padding-bottom: 5rem !important;
@@ -825,8 +825,8 @@ textarea {
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 340px !important;
-    height: 220px !important;
+    max-width: 500px !important;
+    height: 320px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
     display: flex !important;
@@ -842,8 +842,8 @@ textarea {
   body #projects .projects__content #projects .projects__row-img-cont,
   #projects .projects__content .projects__row .projects__row-img-cont {
     width: 100% !important;
-    max-width: 340px !important;
-    height: 220px !important;
+    max-width: 500px !important;
+    height: 320px !important;
     margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
