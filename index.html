@@ -119,7 +119,7 @@
       html, body {
         -webkit-overflow-scrolling: touch !important;
         overscroll-behavior: auto !important;
-        scroll-behavior: smooth !important;
+        scroll-behavior: auto !important;
         overflow-y: scroll !important;
         height: 100% !important;
         min-height: 100vh !important;
@@ -136,7 +136,7 @@
       #projects .projects__row-img-cont {
         width: 100% !important;
         height: auto !important;
-        max-width: 500px !important;
+        max-width: 550px !important;
         aspect-ratio: 16/10 !important;
         margin: 0 auto !important;
       }
@@ -146,6 +146,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    
+    <!-- iPad scroll fix for refresh -->
+    <script>
+    if (window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 100);
+      });
+      
+      // Also reset scroll on page show (back button)
+      window.addEventListener('pageshow', function() {
+        window.scrollTo(0, 0);
+      });
+    }
+    </script>
   </head>
 
   <body>
