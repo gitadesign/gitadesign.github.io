@@ -730,8 +730,8 @@ textarea {
     padding: 0 2rem !important;
   }
   #projects .projects__row-img-cont {
-    max-width: 350px !important;
-    height: 220px !important;
+    max-width: 315px !important; /* 10% reduction from 350px */
+    height: 198px !important; /* 10% reduction from 220px to maintain proportions */
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
@@ -791,7 +791,7 @@ textarea {
   #projects .projects__row-img-cont {
     width: 100% !important;
     min-width: 0 !important; /* cancel 617px base */
-    max-width: 190px !important; /* 50% reduction from 380px */
+    max-width: 95px !important; /* additional 50% reduction for cleaner grid */
     height: auto !important;
     display: block !important;
     background: #fff !important;
