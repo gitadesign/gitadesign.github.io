@@ -5,14 +5,21 @@
       display: none !important;
     }
     
-    /* Mobile-only underline positioning */
+    /* Mobile-only underline positioning - FORCE OVERRIDE */
     @media screen and (max-width: 600px) {
-      .heading-sec__mb-med {
+      html body #about .heading-sec__mb-med,
+      html body #contact .heading-sec__mb-med {
         margin-bottom: 2rem !important;
       }
       
-      .about-underline, .contact-underline {
-        margin: 0rem auto 3rem auto !important;
+      html body #about .about-underline,
+      html body #contact .contact-underline {
+        margin-top: 0rem !important;
+        margin-bottom: 3rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        position: relative !important;
+        transform: none !important;
       }
     }
     
@@ -358,6 +365,38 @@
         setTimeout(function() {
           window.scrollTo(0, 0);
         }, 100);
+        
+        // Force mobile underline positioning
+        function fixMobileUnderlines() {
+          if (window.innerWidth <= 600) {
+            var aboutHeading = document.querySelector('#about .heading-sec__mb-med');
+            var contactHeading = document.querySelector('#contact .heading-sec__mb-med');
+            var aboutUnderline = document.querySelector('#about .about-underline');
+            var contactUnderline = document.querySelector('#contact .contact-underline');
+            
+            if (aboutHeading) {
+              aboutHeading.style.marginBottom = '2rem';
+            }
+            if (contactHeading) {
+              contactHeading.style.marginBottom = '2rem';
+            }
+            if (aboutUnderline) {
+              aboutUnderline.style.margin = '0 auto 3rem auto';
+              aboutUnderline.style.position = 'relative';
+              aboutUnderline.style.transform = 'none';
+            }
+            if (contactUnderline) {
+              contactUnderline.style.margin = '0 auto 3rem auto';
+              contactUnderline.style.position = 'relative';
+              contactUnderline.style.transform = 'none';
+            }
+          }
+        }
+        
+        // Run mobile fix
+        fixMobileUnderlines();
+        setTimeout(fixMobileUnderlines, 500);
+        window.addEventListener('resize', fixMobileUnderlines);
         
 
       });
