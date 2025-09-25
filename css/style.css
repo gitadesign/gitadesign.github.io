@@ -264,11 +264,11 @@ textarea {
 /* Base image sizing for MacBook Pro and below */
 @media screen and (max-width: 1600px) {
   #projects {
-    padding-top: 12rem !important;
+    padding-top: 8rem !important;
   }
   
   #projects .projects__content {
-    margin-top: 3rem !important;
+    margin-top: 4rem !important;
   }
   
   #projects .projects__row-img-cont {
@@ -281,16 +281,16 @@ textarea {
     justify-content: center !important;
     border-radius: 8px !important;
     margin: 0 auto !important;
-    padding: 20px !important;
+    padding: 30px !important;
   }
   
   #projects .projects__row-img {
     display: block !important;
-    width: 80% !important;
-    height: 80% !important;
+    width: 70% !important;
+    height: 70% !important;
     object-fit: cover !important;
     object-position: center !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     margin: 0 !important;
     z-index: 1 !important;
   }
@@ -767,8 +767,8 @@ textarea {
     padding: 0 2rem !important;
   }
   #projects .projects__row-img-cont {
-    max-width: 450px !important;
-    height: 280px !important;
+    width: 320px !important;
+    height: 200px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
