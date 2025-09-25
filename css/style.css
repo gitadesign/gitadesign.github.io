@@ -966,29 +966,24 @@ textarea {
   }
 }
 
-/* MacBook Pro 14" - CORRECT PROPORTIONS AND SIZING */
-@media screen and (min-width: 900px) and (max-width: 1600px) {
-  /* MORE header clearance to stop text overlap */
-  #projects {
-    padding-top: 180px !important;
-    margin-top: 0 !important;
+/* MacBook Pro NUCLEAR FIX - Override everything */
+@media screen and (min-width: 800px) and (max-width: 1600px) {
+  html body section#projects {
+    padding-top: 200px !important;
   }
   
-  /* Smaller container to fit MacBook Pro */
-  #projects .projects__content {
-    width: 85% !important;
-    max-width: 900px !important;
-    gap: 0.5rem !important;
-    padding: 0 2rem !important;
-    margin: 0 auto !important;
+  html body section#projects div.projects__content {
+    width: 80% !important;
+    max-width: 850px !important;
+    gap: 0.75rem !important;
+    padding: 0 1.5rem !important;
   }
   
-  /* MUCH smaller images - EXACT proportions: 185×114px (617÷3.33 × 381÷3.33 = 1.618 ratio) */
-  #projects .projects__row-img-cont {
-    min-width: 185px !important;
-    max-width: 185px !important;
-    width: 185px !important;
-    height: 114px !important;
+  html body section#projects div.projects__content div.projects__row div.projects__row-img-cont {
+    min-width: 220px !important;
+    max-width: 220px !important;
+    width: 220px !important;
+    height: 136px !important;
   }
 }
 
