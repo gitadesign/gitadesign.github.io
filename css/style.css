@@ -259,29 +259,19 @@ textarea {
   float: none !important;
 }
 
-/* Image sizing + overlay anchoring - RESPONSIVE SIZING */
+/* Image sizing + overlay anchoring */
 #projects .projects__row-img-cont {
   position: relative !important;
   overflow: hidden !important;
-  aspect-ratio: unset !important;
-  min-width: 300px !important;
-  max-width: 300px !important;
-  width: 300px !important;
-  height: 185px !important;
+  aspect-ratio: 617/381 !important;
+  min-width: 617px !important;
+  max-width: 617px !important;
+  width: 617px !important;
+  height: 381px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 8px !important;
-}
-
-/* MacBook Pro screens - make even smaller */
-@media screen and (max-width: 1400px) {
-  #projects .projects__row-img-cont {
-    min-width: 250px !important;
-    max-width: 250px !important;
-    width: 250px !important;
-    height: 154px !important;
-  }
 }
 
 #projects .projects__row-img {
@@ -976,20 +966,29 @@ textarea {
   }
 }
 
-/* MacBook Pro Fix - Target actual viewport range 900px-1199px */
-@media screen and (min-width: 901px) and (max-width: 1199px) {
-  #projects .projects__content {
-    width: 95% !important;
-    max-width: 1000px !important;
-    gap: 0.8rem !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+/* MacBook Pro 14.2" Fix - Proper sizing and positioning */
+@media screen and (min-width: 900px) and (max-width: 1512px) {
+  /* Fix header overlap */
+  #projects {
+    padding-top: 120px !important;
   }
+  
+  /* Proper grid sizing for MacBook Pro */
+  #projects .projects__content {
+    width: 90% !important;
+    max-width: 1200px !important;
+    gap: 1.5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Maintain aspect ratio but fit screen - 617:381 = 1.62 ratio */
   #projects .projects__row-img-cont {
-    min-width: 200px !important;
-    max-width: 200px !important;
-    width: 200px !important;
-    height: 123px !important;
+    min-width: 320px !important;
+    max-width: 320px !important;
+    width: 320px !important;
+    height: 197px !important;
+    aspect-ratio: 617/381 !important;
   }
 }
 
