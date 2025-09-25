@@ -432,8 +432,8 @@ textarea {
   .projects__row-img-cont {
     width: 100% !important;
     min-width: unset !important;
-    max-width: 320px !important;
-    height: 200px !important;
+    max-width: 288px !important; /* 10% reduction from 320px */
+    height: 180px !important; /* 10% reduction from 200px */
     margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
@@ -788,9 +788,9 @@ textarea {
     max-width: 1300px !important; /* constrain to prevent overflow */
     margin: 0 auto !important;
   }
-  #projects .projects__row-img-cont {
-    width: 100% !important;
-    min-width: 0 !important; /* cancel 617px base */
+  #projects .projects__row .projects__row-img-cont {
+    width: 95px !important; /* force small size with higher specificity */
+    min-width: 95px !important; /* override 617px base */
     max-width: 95px !important; /* additional 50% reduction for cleaner grid */
     height: auto !important;
     display: block !important;
