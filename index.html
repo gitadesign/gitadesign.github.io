@@ -3,6 +3,21 @@
     #about .heading-sec__main::after,
     #contact .heading-sec__main::after {
       display: none !important;
+    }
+    
+    /* Responsive underline positioning for consistent distance */
+    @media screen and (max-width: 600px) {
+      .about-underline, .contact-underline {
+        margin-top: -6rem !important;
+        margin-bottom: 7.5rem !important;
+      }
+    }
+    
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      .about-underline, .contact-underline {
+        margin-top: -7rem !important;
+        margin-bottom: 8.5rem !important;
+      }
     }head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
@@ -199,7 +214,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
         </h2>
-        <div style="width: 3rem; height: 5px; background: #0062b9; margin: -8rem auto 9.5rem auto; border-radius: 5px; display: block;"></div>
+        <div class="about-underline" style="width: 3rem; height: 5px; background: #0062b9; margin: -8rem auto 9.5rem auto; border-radius: 5px; display: block;"></div>
 
         <div class="about__content">
           <div class="about__content-main">
@@ -242,7 +257,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Get in touch</span>
         </h2>
-        <div style="width: 3rem; height: 5px; background: #fff; margin: -8rem auto 9.5rem auto; border-radius: 5px; display: block;"></div>
+        <div class="contact-underline" style="width: 3rem; height: 5px; background: #fff; margin: -8rem auto 9.5rem auto; border-radius: 5px; display: block;"></div>
 
         <form class="contact__form" action="#" method="post">
           <div class="contact__form-field">
