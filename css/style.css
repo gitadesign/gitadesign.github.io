@@ -261,31 +261,38 @@ textarea {
   }
 }
 
-/* MacBook Pro ONLY - specific range */
+/* MacBook Pro ONLY - ULTRA HIGH SPECIFICITY */
 @media screen and (min-width: 901px) and (max-width: 1600px) {
-  #projects {
+  body #projects {
     padding-top: 22rem !important;
   }
   
-  #projects .projects__content {
+  body #projects .projects__content {
     margin-top: 8rem !important;
     gap: 0rem !important;
   }
   
-  #projects .projects__row-img-cont {
+  body #projects .projects__content .projects__row .projects__row-img-cont,
+  #projects .projects__content .projects__row-img-cont,
+  body #projects .projects__row-img-cont {
     position: relative !important;
     overflow: hidden !important;
     width: 330px !important;
-    height: 80px !important;
+    height: 70px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     border-radius: 8px !important;
     margin: 0 auto !important;
     padding: 0 !important;
+    max-width: 330px !important;
+    min-height: 70px !important;
+    max-height: 70px !important;
   }
   
-  #projects .projects__row-img {
+  body #projects .projects__content .projects__row .projects__row-img,
+  #projects .projects__content .projects__row-img,
+  body #projects .projects__row-img {
     display: block !important;
     width: 125% !important;
     height: auto !important;
@@ -786,9 +793,12 @@ textarea {
   #projects .projects__content {
     width: 90% !important;
     gap: 1.2rem !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    max-width: 800px !important; /* prevent iPad overflow */
+    grid-template-columns: 1fr !important;
+    max-width: 800px !important;
     margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
