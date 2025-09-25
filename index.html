@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Gita Ogneva</title>
     <meta name="description" content="Portfolio — Gita Ogneva" />
     <meta name="robots" content="noindex, nofollow" />
@@ -90,8 +92,8 @@
       
       #projects .projects__row-img-cont {
         width: 100% !important;
-        height: 368px !important;
-        max-width: 575px !important;
+        height: 460px !important;
+        max-width: 720px !important;
         margin: 0 auto !important;
         display: flex !important;
         align-items: center !important;
@@ -151,12 +153,22 @@
     <script>
     // Immediate scroll reset for iPad
     if (window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
+      // Prevent any scroll restoration
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      
       // Reset scroll immediately
       window.scrollTo(0, 0);
       
       // Reset on DOM ready
       document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo(0, 0);
+        // Try to navigate to home anchor
+        setTimeout(function() {
+          window.location.hash = '';
+          window.scrollTo(0, 0);
+        }, 10);
       });
       
       // Reset on window load
@@ -171,22 +183,32 @@
         setTimeout(function() {
           window.scrollTo(0, 0);
         }, 500);
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 1000);
       });
       
       // Reset on page show (back button/refresh)
-      window.addEventListener('pageshow', function() {
+      window.addEventListener('pageshow', function(e) {
         window.scrollTo(0, 0);
+        if (e.persisted) {
+          setTimeout(function() {
+            window.scrollTo(0, 0);
+          }, 100);
+        }
       });
-      
-      // Prevent any scroll restoration
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-      }
     }
     </script>
   </head>
 
   <body>
+    <!-- Immediate iPad scroll reset -->
+    <script>
+    if (window.matchMedia && window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
+      window.scrollTo(0, 0);
+    }
+    </script>
+    
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
@@ -208,6 +230,7 @@
     </header>
 
     <!-- Projects -->
+    <div id="home" style="position: absolute; top: 0; visibility: hidden;"></div>
     <section id="projects" class="projects sec-pad">
       <div class="main-container">
         <div class="projects__spacer" aria-hidden="true"></div>
