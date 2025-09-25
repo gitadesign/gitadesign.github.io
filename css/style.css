@@ -276,7 +276,7 @@ textarea {
     position: relative !important;
     overflow: hidden !important;
     width: 330px !important;
-    height: 95px !important;
+    height: 80px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -762,23 +762,7 @@ textarea {
     min-height: auto !important; 
     height: auto !important; 
   }
-  #projects .projects__content {
-    width: 100% !important;
-    gap: 0.75rem !important;
-    grid-template-columns: 1fr !important;
-    padding: 0 0.5rem !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  #projects .projects__row-img-cont {
-    width: 95vw !important;
-    max-width: 795px !important;
-    min-width: 530px !important;
-    height: 490px !important;
-    margin: 0 auto !important;
-    border-radius: 8px !important;
-  }
+
   #projects .projects__row-img {
     object-fit: cover !important;
     border-radius: 8px !important;
@@ -815,51 +799,7 @@ textarea {
   }
 }
 
-/* MacBook Pro / Mid Desktop (1200px–1600px): keep 3 columns but scale tiles to fit viewport.
-   Remove rigid 617px width so 3 columns + gaps fit without overflow. Preserve natural image proportion. */
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
-  #projects { 
-    padding-top: 11rem !important; /* push below fixed header */
-    height: auto !important; 
-    min-height: auto !important; 
-    align-items: flex-start !important; 
-    justify-content: flex-start !important; 
-  }
-  #projects .projects__content {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 1.5rem !important;
-    padding: 0 2rem !important;
-    max-width: 1300px !important; /* constrain to prevent overflow */
-    margin: 0 auto !important;
-  }
-  /* Ultra-specific selector to override base 617px rules */
-  #projects .projects__content .projects__row .projects__row-img-cont {
-    position: relative !important;
-    width: 95px !important; 
-    min-width: 95px !important; 
-    max-width: 95px !important; 
-    height: 60px !important; /* proportional height reduction */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #fff !important;
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    margin: 0 auto !important;
-    aspect-ratio: unset !important;
-  }
-  /* Ultra-specific selector for images too */
-  #projects .projects__content .projects__row .projects__row-img-cont .projects__row-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-    border-radius: 8px !important;
-    margin: 0 !important;
-    z-index: 1 !important;
-  }
-  #projects .projects__overlay { height: 100% !important; }
-}
+
 
 /* FORCE MOBILE STYLES - HIGHEST PRIORITY */
 @media screen and (max-width: 600px) {
