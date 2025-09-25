@@ -319,35 +319,7 @@ textarea {
   z-index: 4 !important;
 }
 
-/* MacBook Pro and similar screen sizes - FORCE OVERRIDE */
-@media screen and (min-width: 801px) and (max-width: 1440px) {
-  html body #projects .projects__content {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
-    width: 85% !important;
-    max-width: 1050px !important;
-    gap: 1rem !important;
-    padding: 0 1rem !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-  }
-  html body #projects .projects__row-img-cont {
-    min-width: 240px !important;
-    max-width: 240px !important;
-    width: 240px !important;
-    height: 148px !important;
-    margin: 0 !important;
-  }
-  html body #projects {
-    overflow-x: hidden !important;
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-  html body * {
-    box-sizing: border-box !important;
-  }
-}
+
 
 /* Responsive fallbacks - changed from 1000px to 800px to avoid MacBook Pro conflict */
 @media (max-width: 800px) {
@@ -991,6 +963,21 @@ textarea {
   
   html.html body.body .about.about {
     margin-top: 2rem !important;
+  }
+}
+
+/* MacBook Pro Fix - Simple and Direct */
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  #projects .projects__content {
+    width: 80% !important;
+    max-width: 900px !important;
+    gap: 1rem !important;
+  }
+  #projects .projects__row-img-cont {
+    width: 260px !important;
+    height: 160px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
   }
 }
 
