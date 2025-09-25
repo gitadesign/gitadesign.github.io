@@ -794,7 +794,7 @@ textarea {
   }
 
   #projects .projects__row-img {
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center center !important;
     border-radius: 8px !important;
     width: 100% !important;
@@ -810,14 +810,13 @@ textarea {
 /* iPad/Tablet */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   html { overflow-x: hidden !important; overflow-y: scroll !important; height: 100% !important; }
-  body { padding-top: 2rem !important; overflow-x: hidden !important; overflow-y: scroll !important; min-height: 100vh !important; }
+  body { padding-top: 7rem !important; overflow-x: hidden !important; overflow-y: scroll !important; min-height: 100vh !important; }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
-    padding-top: 0rem !important; 
+    padding-top: 4rem !important; 
     min-height: 100vh !important; 
     height: auto !important;
     padding-bottom: 5rem !important;
-    margin-top: 0rem !important;
   }
   #projects .projects__content {
     width: 90% !important;

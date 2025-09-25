@@ -107,7 +107,7 @@
       #projects .projects__row-img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: contain !important;
+        object-fit: cover !important;
         object-position: center center !important;
         margin: 0 auto !important;
         display: block !important;
@@ -151,64 +151,27 @@
     
     <!-- iPad scroll fix for refresh -->
     <script>
-    // Immediate scroll reset for iPad
+    // Scroll reset for iPad refresh only
     if (window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
-      // Prevent any scroll restoration
+      // Prevent scroll restoration on refresh
       if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
       }
       
-      // Reset scroll immediately
-      window.scrollTo(0, 0);
-      
-      // Reset on DOM ready
-      document.addEventListener('DOMContentLoaded', function() {
-        window.scrollTo(0, 0);
-        // Try to navigate to home anchor
-        setTimeout(function() {
-          window.location.hash = '';
-          window.scrollTo(0, 0);
-        }, 10);
-      });
-      
-      // Reset on window load
+      // Only reset on page refresh/reload
       window.addEventListener('load', function() {
-        window.scrollTo(0, 0);
+        // Small delay to ensure page is ready
         setTimeout(function() {
-          window.scrollTo(0, 0);
-        }, 50);
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-        }, 200);
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-        }, 500);
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-        }, 1000);
-      });
-      
-      // Reset on page show (back button/refresh)
-      window.addEventListener('pageshow', function(e) {
-        window.scrollTo(0, 0);
-        if (e.persisted) {
-          setTimeout(function() {
+          if (window.location.hash === '' || window.location.hash === '#') {
             window.scrollTo(0, 0);
-          }, 100);
-        }
+          }
+        }, 100);
       });
     }
     </script>
   </head>
 
   <body>
-    <!-- Immediate iPad scroll reset -->
-    <script>
-    if (window.matchMedia && window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
-      window.scrollTo(0, 0);
-    }
-    </script>
-    
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
