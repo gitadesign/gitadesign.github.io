@@ -767,8 +767,8 @@ textarea {
     padding: 0 2rem !important;
   }
   #projects .projects__row-img-cont {
-    width: 350px !important;
-    height: 216px !important;
+    width: 550px !important;
+    height: 340px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
@@ -801,7 +801,7 @@ textarea {
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 350px !important; /* limit iPad tile size */
+    max-width: 500px !important;
     height: auto !important;
     aspect-ratio: 16/10 !important;
     margin: 0 auto !important;
