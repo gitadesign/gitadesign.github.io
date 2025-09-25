@@ -969,7 +969,7 @@ textarea {
 /* MacBook Pro ONLY - Specific range above iPad (1025px+) to not conflict */
 @media screen and (min-width: 1025px) and (max-width: 1600px) and (min-height: 800px) {
   #projects {
-    padding-top: 150px !important;
+    padding-top: 220px !important;
   }
   
   #projects .projects__content {
@@ -979,10 +979,10 @@ textarea {
   }
   
   #projects .projects__row-img-cont {
-    min-width: 200px !important;
-    max-width: 200px !important;
-    width: 200px !important;
-    height: 124px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+    width: 160px !important;
+    height: 99px !important;
   }
 }
 
