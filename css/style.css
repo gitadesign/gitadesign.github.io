@@ -979,10 +979,10 @@ textarea {
   }
   
   #projects .projects__row-img-cont {
-    min-width: 260px !important;
-    max-width: 260px !important;
-    width: 260px !important;
-    height: 161px !important;
+    min-width: 130px !important;
+    max-width: 130px !important;
+    width: 130px !important;
+    height: 80px !important;
   }
 }
 
