@@ -966,18 +966,18 @@ textarea {
   }
 }
 
-/* MacBook Pro Fix - Simple and Direct */
+/* MacBook Pro Fix - Make images MUCH smaller to fit 3 columns */
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
   #projects .projects__content {
-    width: 80% !important;
-    max-width: 900px !important;
-    gap: 1rem !important;
+    width: 95% !important;
+    max-width: 1200px !important;
+    gap: 0.5rem !important;
   }
   #projects .projects__row-img-cont {
-    width: 260px !important;
-    height: 160px !important;
-    min-width: 260px !important;
-    max-width: 260px !important;
+    width: 180px !important;
+    height: 111px !important;
+    min-width: 180px !important;
+    max-width: 180px !important;
   }
 }
 
