@@ -276,7 +276,7 @@ textarea {
     position: relative !important;
     overflow: hidden !important;
     width: 320px !important;
-    height: 180px !important;
+    height: 162px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -766,12 +766,15 @@ textarea {
     gap: 0.75rem !important;
     grid-template-columns: 1fr !important;
     padding: 0 0.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   #projects .projects__row-img-cont {
     width: 95vw !important;
-    max-width: 690px !important;
-    min-width: 460px !important;
-    height: 425px !important;
+    max-width: 795px !important;
+    min-width: 530px !important;
+    height: 490px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
