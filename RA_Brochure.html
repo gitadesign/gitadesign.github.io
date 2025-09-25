@@ -1,61 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>R&A Brochure - Gita Ogneva</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>R&A Brochure — Gita Ogneva</title>
+    <meta name="description" content="R&A Brochure Portfolio — Gita Ogneva" />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23000'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%23fff'%3EG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/style.css?v=2025092403" />
+    
+    <style>
+        body {
+            background: #f4f4f4 !important;
+        }
+        
+        .brochure-gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            background: #f4f4f4;
+        }
+        
+        .brochure-image-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            background: #f4f4f4;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .brochure-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .brochure-gallery {
+                padding: 0 15px !important;
+            }
+            .brochure-image-container {
+                margin-bottom: 25px !important;
+            }
+        }
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <main style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-        <h1>R&A Brochure Gallery</h1>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img src="./assets/png/IMG_5017_1_S.png" alt="Gita Photo" class="header__logo-img" />
+          </div>
+          <a href="./index.html#about" class="header__logo-sub" style="text-decoration:none; cursor:pointer;">Gita Ogneva</a>
+        </div>
+
+        <nav class="header__main" aria-label="Main navigation">
+          <ul class="header__links">
+            <li class="header__link-wrapper"><a href="./index.html" class="header__link" title="Home">Home</a></li>
+            <li class="header__link-wrapper"><a href="./index.html#about" class="header__link" title="About">About</a></li>
+            <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link" title="Projects">Projects</a></li>
+            <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- R&A Brochure Gallery -->
+    <section class="brochure-gallery">
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 1" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 1" class="brochure-image" loading="lazy" />
         </div>
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 2" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 2" class="brochure-image" loading="lazy" />
         </div>
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 3" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 3" class="brochure-image" loading="lazy" />
         </div>
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 4" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 4" class="brochure-image" loading="lazy" />
         </div>
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 5" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 5" class="brochure-image" loading="lazy" />
         </div>
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 6" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 6" class="brochure-image" loading="lazy" />
         </div>
         
-        <div style="margin-bottom: 20px; background: #f4f4f4; padding: 10px; border-radius: 8px;">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" 
-                 alt="R&A Brochure Page 7" 
-                 style="width: 100%; height: auto; display: block;">
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure Page 7" class="brochure-image" loading="lazy" />
         </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/gitagraph/" class="main-footer__social" style="border: 2px solid white; padding: 5px 7px; border-radius: 8px; display: inline-block;">
+                <img src="./assets/png/linkedin-ico.png" alt="LinkedIn" class="main-footer__icon" style="transform: translateY(1px);" />
+              </a>
+            </div>
+          </div>
+
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm">Gita Ogneva</h4>
+            <p class="main-footer__short-desc">Graphic Designer and Brand Specialist</p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2025. Gita Ogneva
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      var isIpad = /iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document;
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        if (isIpad) {
+          document.body.style.webkitOverflowScrolling = 'auto';
+          document.documentElement.style.scrollBehavior = 'auto';
+        }
         
-        <footer style="text-align: center; margin-top: 40px; padding: 20px;">
-            <a href="./index.html" style="color: #0062b9; text-decoration: none;">← Back to Portfolio</a>
-            <p style="margin-top: 10px; color: #666;">&copy; 2025 Gita Ogneva</p>
-        </footer>
-    </main>
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        
+        window.addEventListener('beforeunload', function() {
+          window.scrollTo(0, 0);
+        });
+        
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 100);
+      });
+    </script>
 </body>
 </html>
