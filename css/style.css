@@ -966,8 +966,8 @@ textarea {
   }
 }
 
-/* MacBook Pro ONLY - Very specific range to not affect desktop/iPad */
-@media screen and (min-width: 1200px) and (max-width: 1512px) and (min-height: 700px) {
+/* MacBook Pro ONLY - Specific range above iPad (1025px+) to not conflict */
+@media screen and (min-width: 1025px) and (max-width: 1600px) and (min-height: 800px) {
   #projects {
     padding-top: 150px !important;
   }
@@ -979,10 +979,10 @@ textarea {
   }
   
   #projects .projects__row-img-cont {
-    min-width: 130px !important;
-    max-width: 130px !important;
-    width: 130px !important;
-    height: 80px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    width: 200px !important;
+    height: 124px !important;
   }
 }
 
