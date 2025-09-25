@@ -262,9 +262,9 @@ textarea {
 }
 
 /* MacBook Pro ONLY - ULTRA HIGH SPECIFICITY */
-@media screen and (min-width: 901px) and (max-width: 1600px) {
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
   body #projects {
-    padding-top: 22rem !important;
+    padding-top: 15rem !important;
   }
   
   body #projects .projects__content {
@@ -277,17 +277,17 @@ textarea {
   body #projects .projects__row-img-cont {
     position: relative !important;
     overflow: hidden !important;
-    width: 330px !important;
-    height: 250px !important;
+    width: 347px !important;
+    height: 263px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     border-radius: 8px !important;
     margin: 0 auto !important;
     padding: 0 !important;
-    max-width: 330px !important;
-    min-height: 250px !important;
-    max-height: 250px !important;
+    max-width: 347px !important;
+    min-height: 263px !important;
+    max-height: 263px !important;
   }
   
   body #projects .projects__content .projects__row .projects__row-img,
@@ -781,7 +781,7 @@ textarea {
 }
 
 /* iPad/Tablet */
-@media screen and (min-width: 601px) and (max-width: 900px) {
+@media screen and (min-width: 601px) and (max-width: 1024px) {
   html { overflow-x: hidden !important; }
   body { padding-top: 6.5rem !important; overflow-x: hidden !important; }
   .header { position: fixed !important; z-index: 9999 !important; }
