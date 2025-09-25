@@ -264,18 +264,19 @@ textarea {
 /* MacBook Pro ONLY - specific range */
 @media screen and (min-width: 901px) and (max-width: 1600px) {
   #projects {
-    padding-top: 15rem !important;
+    padding-top: 20rem !important;
   }
   
   #projects .projects__content {
-    margin-top: 6rem !important;
+    margin-top: 8rem !important;
+    gap: 1rem !important;
   }
   
   #projects .projects__row-img-cont {
     position: relative !important;
     overflow: hidden !important;
-    width: 400px !important;
-    height: 250px !important;
+    width: 320px !important;
+    height: 200px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -764,11 +765,12 @@ textarea {
     width: 100% !important;
     gap: 1.5rem !important;
     grid-template-columns: 1fr !important;
-    padding: 0 2rem !important;
+    padding: 0 1rem !important;
   }
   #projects .projects__row-img-cont {
-    width: 700px !important;
-    height: 430px !important;
+    width: calc(100vw - 2rem) !important;
+    max-width: 500px !important;
+    height: 310px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
