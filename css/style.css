@@ -974,21 +974,21 @@ textarea {
     margin-top: 0 !important;
   }
   
-  /* Container with proper padding */
+  /* Smaller container to fit MacBook Pro */
   #projects .projects__content {
-    width: 95% !important;
-    max-width: 1100px !important;
-    gap: 1rem !important;
-    padding: 0 3rem !important;
+    width: 85% !important;
+    max-width: 900px !important;
+    gap: 0.5rem !important;
+    padding: 0 2rem !important;
     margin: 0 auto !important;
   }
   
-  /* Small images that FIT: 250×155px (maintains exact 617:381 = 1.618 ratio) */
+  /* MUCH smaller images - EXACT proportions: 185×114px (617÷3.33 × 381÷3.33 = 1.618 ratio) */
   #projects .projects__row-img-cont {
-    min-width: 250px !important;
-    max-width: 250px !important;
-    width: 250px !important;
-    height: 155px !important;
+    min-width: 185px !important;
+    max-width: 185px !important;
+    width: 185px !important;
+    height: 114px !important;
   }
 }
 
