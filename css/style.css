@@ -197,7 +197,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: clamp(50px, 15vh, 200px) 0 0 0;
   margin: 0;
   transform: none !important;
   overflow-x: hidden;
@@ -264,10 +264,10 @@ textarea {
   position: relative !important;
   overflow: hidden !important;
   aspect-ratio: unset !important;
-  min-width: 617px !important;
-  max-width: 617px !important;
-  width: 617px !important;
-  height: 381px !important;
+  min-width: clamp(200px, 30vw, 617px) !important;
+  max-width: clamp(200px, 30vw, 617px) !important;
+  width: clamp(200px, 30vw, 617px) !important;
+  height: clamp(123px, 18.5vw, 381px) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
