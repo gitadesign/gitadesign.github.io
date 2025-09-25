@@ -261,19 +261,19 @@ textarea {
   }
 }
 
-/* Base image sizing for MacBook Pro and below */
-@media screen and (max-width: 1600px) {
+/* MacBook Pro ONLY - specific range */
+@media screen and (min-width: 901px) and (max-width: 1600px) {
   #projects {
-    padding-top: 8rem !important;
+    padding-top: 15rem !important;
   }
   
   #projects .projects__content {
-    margin-top: 4rem !important;
+    margin-top: 6rem !important;
   }
   
   #projects .projects__row-img-cont {
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     width: 300px !important;
     height: 189px !important;
     display: flex !important;
@@ -281,13 +281,13 @@ textarea {
     justify-content: center !important;
     border-radius: 8px !important;
     margin: 0 auto !important;
-    padding: 30px !important;
+    padding: 0 !important;
   }
   
   #projects .projects__row-img {
     display: block !important;
-    width: 70% !important;
-    height: 70% !important;
+    width: 200px !important;
+    height: 125px !important;
     object-fit: cover !important;
     object-position: center !important;
     border-radius: 6px !important;
@@ -767,8 +767,8 @@ textarea {
     padding: 0 2rem !important;
   }
   #projects .projects__row-img-cont {
-    width: 320px !important;
-    height: 200px !important;
+    width: 288px !important;
+    height: 180px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
   }
