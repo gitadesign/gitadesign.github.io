@@ -90,8 +90,8 @@
       
       #projects .projects__row-img-cont {
         width: 100% !important;
-        height: 320px !important;
-        max-width: 500px !important;
+        height: 368px !important;
+        max-width: 575px !important;
         margin: 0 auto !important;
         display: flex !important;
         align-items: center !important;
@@ -149,17 +149,39 @@
     
     <!-- iPad scroll fix for refresh -->
     <script>
+    // Immediate scroll reset for iPad
     if (window.matchMedia('(min-width: 601px) and (max-width: 1024px)').matches) {
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          window.scrollTo(0, 0);
-        }, 100);
+      // Reset scroll immediately
+      window.scrollTo(0, 0);
+      
+      // Reset on DOM ready
+      document.addEventListener('DOMContentLoaded', function() {
+        window.scrollTo(0, 0);
       });
       
-      // Also reset scroll on page show (back button)
+      // Reset on window load
+      window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 50);
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 200);
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 500);
+      });
+      
+      // Reset on page show (back button/refresh)
       window.addEventListener('pageshow', function() {
         window.scrollTo(0, 0);
       });
+      
+      // Prevent any scroll restoration
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
     }
     </script>
   </head>
