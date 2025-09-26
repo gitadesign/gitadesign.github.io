@@ -165,8 +165,8 @@ textarea {
 }
 
 @media screen and (min-width: 1441px) {
-  .header__content { padding: 0.5rem 5rem; }
-  .header__link { padding: 1.5rem 3rem; }
+  .header__content { padding: 0.3rem 5rem; }
+  .header__link { padding: 1.2rem 3rem; }
 }
 
 /* First, restore the main container style */
@@ -319,7 +319,24 @@ textarea {
   }
 }
 
-
+/* 27-inch iMac adjustments - Additional to MacBook Pro base */
+@media screen and (min-width: 1441px) {
+  body #projects {
+    padding-top: 6rem !important;
+  }
+  
+  body #projects .projects__content .projects__row .projects__row-img-cont,
+  #projects .projects__content .projects__row-img-cont,
+  body #projects .projects__row-img-cont {
+    width: 382px !important;
+    height: 289px !important;
+    max-width: 382px !important;
+    min-height: 289px !important;
+    max-height: 289px !important;
+    margin: 3px auto !important;
+    transform: scale(1.1) !important;
+  }
+}
 
 /* Overlay: full-area anchor on top of image */
 #projects .projects__overlay {
@@ -788,9 +805,9 @@ textarea {
   
   #projects .projects__content {
     width: 100% !important;
-    gap: 3px !important;
+    gap: 1px !important;
     grid-template-columns: 1fr !important;
-    padding: 0 5px !important;
+    padding: 0 2px !important;
     display: grid !important;
     justify-items: center !important;
     align-items: center !important;
@@ -808,14 +825,11 @@ textarea {
     background: #f4f4f4 !important;
   }
 
-  body #projects .projects__content .projects__row-img,
   #projects .projects__row-img {
     object-fit: cover !important;
     object-position: center center !important;
     width: 85% !important;
     height: 85% !important;
-    margin: auto !important;
-    transform: scale(0.85) !important;
   }
   #projects .projects__row {
     display: flex !important;
