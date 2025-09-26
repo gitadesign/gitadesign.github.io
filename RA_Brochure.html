@@ -226,6 +226,38 @@
                 display: block !important; 
             }
         }
+        
+        /* ULTIMATE MOBILE OVERRIDE - MAXIMUM SPECIFICITY */
+        @media only screen and (max-width: 600px) {
+            html body section.brochure-gallery {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+            
+            html body section.brochure-gallery div.brochure-image-container {
+                width: 145% !important;
+                max-width: 145% !important;
+                margin: 0 auto 25px auto !important;
+                display: block !important;
+                text-align: center !important;
+                position: relative !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+            }
+            
+            html body section.brochure-gallery div.brochure-image-container img.brochure-image {
+                width: 100% !important;
+                height: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+                object-fit: contain !important;
+                object-position: center center !important;
+            }
+        }
     </style>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
