@@ -165,8 +165,13 @@ textarea {
 }
 
 @media screen and (min-width: 1441px) {
-  .header__content { padding: 0.5rem 5rem; }
-  .header__link { padding: 1.5rem 3rem; }
+  .header__content { padding: 0.3rem 5rem; }
+  .header__link { padding: 1.2rem 3rem; }
+  
+  /* Increase project image sizes by 10% for large screens */
+  #projects .projects__row-img-cont {
+    transform: scale(1.1);
+  }
 }
 
 /* First, restore the main container style */
@@ -799,9 +804,9 @@ textarea {
   }
   
   #projects .projects__row-img-cont {
-    width: 100% !important;
-    max-width: 576px !important;
-    height: 368px !important;
+    width: 85% !important;
+    max-width: 490px !important;
+    height: 313px !important;
     margin: 0 auto !important;
     border-radius: 8px !important;
     display: flex !important;
