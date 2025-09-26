@@ -26,7 +26,7 @@
         }
         
         .brochure-gallery {
-            max-width: 1000px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 8rem 2rem 4rem 2rem;
             background: #f4f4f4 !important;
@@ -50,10 +50,10 @@
         @media screen and (min-width: 1441px) {
             body .brochure-gallery {
                 padding: 4.5rem 2rem 4rem 2rem !important;
-                max-width: 1100px !important;
+                max-width: 1045px !important;
             }
             body .brochure-gallery .brochure-image-container {
-                transform: scale(1.1) !important;
+                transform: scale(1.045) !important;
                 margin-bottom: 3rem !important;
                 transform-origin: center !important;
             }
@@ -79,16 +79,133 @@
             }
             body .brochure-gallery .brochure-image-container {
                 margin-bottom: 25px !important;
-                width: 85% !important;
+                width: 80.75% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
-                max-width: 85% !important;
+                max-width: 80.75% !important;
                 box-sizing: border-box !important;
             }
             body .brochure-gallery .brochure-image-container .brochure-image {
                 width: 100% !important;
                 height: auto !important;
                 display: block !important;
+            }
+        }
+        
+        /* COMPREHENSIVE RESPONSIVE HEADER RULES - MATCHES MAIN SITE */
+        
+        /* Mobile (iPhone) - max-width: 600px */
+        @media screen and (max-width: 600px) {
+            body { 
+                padding-top: 5.5rem !important; 
+                overflow-x: hidden !important; 
+            }
+            .header { 
+                position: fixed !important; 
+                z-index: 9999 !important; 
+            }
+            .brochure-gallery {
+                padding-top: 1rem !important;
+            }
+        }
+        
+        /* iPad - 601px to 1024px */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            html { 
+                overflow-x: hidden !important; 
+            }
+            body { 
+                padding-top: 6.5rem !important; 
+                overflow-x: hidden !important; 
+            }
+            .header { 
+                position: fixed !important; 
+                z-index: 9999 !important; 
+            }
+            .brochure-gallery {
+                padding-top: 1.5rem !important;
+            }
+        }
+        
+        /* MacBook Pro - 1025px to 1600px */
+        @media screen and (min-width: 1025px) and (max-width: 1600px) {
+            body { 
+                padding-top: 7rem !important;
+            }
+            .header { 
+                position: fixed !important; 
+                z-index: 9999 !important; 
+            }
+            .brochure-gallery {
+                padding-top: 5rem !important;
+            }
+        }
+        
+        /* Large Desktop (27inch) - above 1600px */
+        @media screen and (min-width: 1601px) {
+            body { 
+                padding-top: 8rem !important;
+            }
+            .header { 
+                position: fixed !important; 
+                z-index: 9999 !important; 
+            }
+            .brochure-gallery {
+                padding-top: 2rem !important;
+            }
+        }
+        
+        /* RESPONSIVE IMAGE CONTAINER ADJUSTMENTS */
+        
+        /* Tablet adjustments */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            .brochure-gallery {
+                max-width: 90% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .brochure-image-container {
+                margin-bottom: 1.5rem !important;
+            }
+        }
+        
+        /* MacBook Pro specific adjustments */
+        @media screen and (min-width: 1025px) and (max-width: 1600px) {
+            .brochure-gallery {
+                max-width: 85% !important;
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+            }
+            .brochure-image-container {
+                margin-bottom: 2rem !important;
+            }
+        }
+        
+        /* Mobile improvements */
+        @media screen and (max-width: 600px) {
+            * { 
+                overflow-x: hidden !important; 
+                box-sizing: border-box !important; 
+            }
+            .brochure-gallery {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            .brochure-image-container {
+                border-radius: 6px !important;
+            }
+            .header__links { 
+                display: flex !important; 
+            }
+        }
+        
+        /* iPad specific navigation fixes */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            .header__links { 
+                display: flex !important; 
+            }
+            .header__main { 
+                display: block !important; 
             }
         }
     </style>
@@ -102,7 +219,7 @@
         /* FORCE MOBILE STYLES - ULTIMATE OVERRIDE */
         @media screen and (max-width: 600px) {
             html body section.brochure-gallery div.brochure-image-container {
-                width: 85% !important;
+                width: 80.75% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
                 margin-bottom: 25px !important;
@@ -114,10 +231,10 @@
         @media screen and (min-width: 1441px) {
             html body section.brochure-gallery {
                 padding-top: 4.5rem !important;
-                max-width: 1100px !important;
+                max-width: 1045px !important;
             }
             html body section.brochure-gallery div.brochure-image-container {
-                transform: scale(1.1) !important;
+                transform: scale(1.045) !important;
                 margin-bottom: 3rem !important;
             }
         }
