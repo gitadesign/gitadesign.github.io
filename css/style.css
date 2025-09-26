@@ -151,6 +151,11 @@ textarea {
   color: #0062b9 !important;
 }
 
+/* TEST - RED BORDER TO CHECK CHANGES */
+body {
+  border: 5px solid red !important;
+}
+
 /* Header responsive adjustments */
 @media screen and (min-width: 601px) {
   .header__content { padding: 0.7rem 5rem; }
