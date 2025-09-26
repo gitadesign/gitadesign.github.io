@@ -151,11 +151,6 @@ textarea {
   color: #0062b9 !important;
 }
 
-/* TEST - RED BORDER TO CHECK CHANGES */
-body {
-  border: 5px solid red !important;
-}
-
 /* Header responsive adjustments */
 @media screen and (min-width: 601px) {
   .header__content { padding: 0.7rem 5rem; }
@@ -324,28 +319,32 @@ body {
   }
 }
 
-/* 27-inch iMac adjustments - Additional to MacBook Pro base */
+/* 27-inch iMac adjustments - ULTRA HIGH SPECIFICITY */
 @media screen and (min-width: 1441px) {
-  body #projects {
-    padding-top: 0.75rem !important;
+  html body #projects {
+    padding-top: 2rem !important;
+    margin-top: 0 !important;
   }
   
-  body #projects .projects__content {
+  html body #projects .projects__content {
     gap: 2rem !important;
-    margin-top: 4rem !important;
+    margin-top: 2rem !important;
+    padding-top: 0 !important;
   }
   
-  body #projects .projects__content .projects__row .projects__row-img-cont,
-  #projects .projects__content .projects__row-img-cont,
-  body #projects .projects__row-img-cont {
-    margin: 15px 15px !important;
+  html body #projects .projects__content .projects__row .projects__row-img-cont,
+  html body #projects .projects__content .projects__row-img-cont,
+  html body #projects .projects__row-img-cont {
+    margin: 20px !important;
+    padding: 10px !important;
     transform: scale(1.15) !important;
     box-sizing: border-box !important;
+    background: #f8f8f8 !important;
   }
   
-  body #projects .projects__content .projects__row .projects__row-img,
-  #projects .projects__content .projects__row-img,
-  body #projects .projects__row-img {
+  html body #projects .projects__content .projects__row .projects__row-img,
+  html body #projects .projects__content .projects__row-img,
+  html body #projects .projects__row-img {
     width: 112% !important;
     height: auto !important;
   }
@@ -816,26 +815,28 @@ body {
     height: auto !important; 
   }
   
-  #projects .projects__content {
+  html body #projects .projects__content {
     width: 100% !important;
-    gap: 2px !important;
+    gap: 1px !important;
     grid-template-columns: 1fr !important;
-    padding: 0 10px !important;
+    padding: 0 8px !important;
     display: grid !important;
-    justify-items: center !important;
+    justify-items: stretch !important;
     align-items: center !important;
+    margin: 0 !important;
   }
   
-  #projects .projects__row-img-cont {
-    width: 95% !important;
-    max-width: 380px !important;
-    height: 240px !important;
-    margin: 0 auto !important;
+  html body #projects .projects__row-img-cont {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 220px !important;
+    margin: 1px 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
+    box-sizing: border-box !important;
   }
 
   body #projects .projects__content .projects__row-img,
