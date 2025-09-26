@@ -165,17 +165,21 @@ textarea {
 }
 
 @media screen and (min-width: 1441px) {
-  .header__content { padding: 0.2rem 5rem; }
-  .header__link { padding: 1rem 3rem; }
+  .header__content { padding: 0.1rem 5rem; }
+  .header__link { padding: 0.8rem 3rem; }
   
-  /* Reduce top padding and increase project image sizes by 20% for large screens */
+  /* Reduce top padding and adjust project image sizes for large screens */
   #projects {
-    padding-top: 5rem !important;
+    padding-top: 4rem !important;
+  }
+  
+  #projects .projects__content {
+    gap: 15px !important;
   }
   
   #projects .projects__row-img-cont {
-    transform: scale(1.2);
-    margin: 5px !important;
+    transform: scale(1.14);
+    margin: 8px !important;
   }
 }
 
@@ -308,7 +312,7 @@ textarea {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin: 10px auto !important;
+    margin: 6px auto !important;
     padding: 0 !important;
     max-width: 347px !important;
     min-height: 263px !important;
@@ -804,25 +808,24 @@ textarea {
     align-items: center !important;
   }
   
-  body #projects .projects__content .projects__row-img-cont,
   #projects .projects__row-img-cont {
-    width: 80% !important;
-    max-width: 460px !important;
-    height: 295px !important;
+    width: 100% !important;
+    max-width: 576px !important;
+    height: 368px !important;
     margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
-    transform: scale(0.85) !important;
   }
 
   #projects .projects__row-img {
     object-fit: cover !important;
     object-position: center center !important;
-    width: 100% !important;
-    height: 100% !important;
+    width: 95% !important;
+    height: 95% !important;
+    margin: auto !important;
   }
   #projects .projects__row {
     display: flex !important;
@@ -837,7 +840,7 @@ textarea {
   body { padding-top: 6.5rem !important; overflow-x: hidden !important; }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
-    padding-top: 3rem !important; 
+    padding-top: 5rem !important; 
     min-height: auto !important; 
     height: auto !important; 
   }
