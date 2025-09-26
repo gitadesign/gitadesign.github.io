@@ -29,6 +29,27 @@
             background: #f4f4f4 !important;
         }
         
+        /* Adjust top padding for different screen sizes to match reduced header height */
+        @media screen and (min-width: 601px) {
+            .brochure-gallery {
+                padding: 7rem 2rem 4rem 2rem;
+            }
+        }
+        
+        /* MacBook Pro and similar laptops - further reduce top padding */
+        @media screen and (min-width: 1025px) and (max-width: 1440px) {
+            .brochure-gallery {
+                padding: 6.5rem 2rem 4rem 2rem;
+            }
+        }
+        
+        /* Large desktop screens - reduced padding for better fit */
+        @media screen and (min-width: 1441px) {
+            .brochure-gallery {
+                padding: 6rem 2rem 4rem 2rem;
+            }
+        }
+        
         .brochure-image-container {
             width: 100%;
             margin-bottom: 2rem;
@@ -49,6 +70,9 @@
             }
             .brochure-image-container {
                 margin-bottom: 25px !important;
+                width: 85% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
             }
         }
     </style>

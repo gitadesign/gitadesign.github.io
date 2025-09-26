@@ -151,6 +151,49 @@ textarea {
   color: #0062b9 !important;
 }
 
+/* Header height adjustments for different screen sizes */
+/* Tablet and larger - reduce header height */
+@media screen and (min-width: 601px) {
+  .header__content {
+    padding: 0.7rem 5rem;
+  }
+  
+  .header__link {
+    padding: 1.8rem 3rem;
+  }
+  
+  .header__logo-img-cont {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  
+  .header__logo-sub {
+    font-size: 1.7rem;
+  }
+}
+
+/* MacBook Pro and similar laptops (smaller desktop screens) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .header__content {
+    padding: 0.6rem 5rem;
+  }
+  
+  .header__link {
+    padding: 1.6rem 3rem;
+  }
+}
+
+/* Large desktop screens (27-inch iMac and larger) */
+@media screen and (min-width: 1441px) {
+  .header__content {
+    padding: 0.5rem 5rem;
+  }
+  
+  .header__link {
+    padding: 1.5rem 3rem;
+  }
+}
+
 /* First, restore the main container style */
 .main-container {
   max-width: 120rem;
