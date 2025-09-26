@@ -306,7 +306,7 @@
         </h2>
         <div class="contact-underline" style="width: 3rem !important; height: 5px !important; background: #fff !important; margin: -8rem auto 9.5rem auto !important; border-radius: 5px !important; display: block !important;"></div>
 
-        <form class="contact__form" action="#" method="post">
+        <form class="contact__form" action="https://formspree.io/f/xdkovoyq" method="post">
           <div class="contact__form-field">
             <label class="contact__form-label" for="name">Name</label>
             <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
@@ -321,6 +321,18 @@
             <label class="contact__form-label" for="message">Message</label>
             <textarea required placeholder="Enter Your Message" class="contact__form-input" name="message" id="message" rows="6"></textarea>
           </div>
+
+          <!-- Formspree honeypot field to prevent spam -->
+          <input type="text" name="_gotcha" style="display:none" />
+          
+          <!-- Hidden field to set your email as recipient -->
+          <input type="hidden" name="_to" value="g.ogneva@gmail.com" />
+          
+          <!-- Subject line for the email -->
+          <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
+          
+          <!-- Redirect after successful submission -->
+          <input type="hidden" name="_next" value="https://gitadesign.github.io/#contact" />
 
           <button type="submit" class="btn btn--theme contact__btn">Submit</button>
         </form>
