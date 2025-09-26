@@ -165,22 +165,8 @@ textarea {
 }
 
 @media screen and (min-width: 1441px) {
-  .header__content { padding: 0.1rem 5rem; }
-  .header__link { padding: 0.8rem 3rem; }
-  
-  /* Reduce top padding and adjust project image sizes for large screens */
-  #projects {
-    padding-top: 4rem !important;
-  }
-  
-  #projects .projects__content {
-    gap: 15px !important;
-  }
-  
-  #projects .projects__row-img-cont {
-    transform: scale(1.14);
-    margin: 8px !important;
-  }
+  .header__content { padding: 0.5rem 5rem; }
+  .header__link { padding: 1.5rem 3rem; }
 }
 
 /* First, restore the main container style */
@@ -292,7 +278,7 @@ textarea {
 }
 
 /* MacBook Pro ONLY - ULTRA HIGH SPECIFICITY */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
   body #projects {
     padding-top: 8rem !important;
   }
@@ -333,48 +319,7 @@ textarea {
   }
 }
 
-/* 27-inch iMac and larger screens - ULTRA HIGH SPECIFICITY */
-@media screen and (min-width: 1441px) {
-  body #projects {
-    padding-top: 4rem !important;
-  }
-  
-  body #projects .projects__content {
-    margin-top: 6rem !important;
-    gap: 15px !important;
-  }
-  
-  body #projects .projects__content .projects__row .projects__row-img-cont,
-  #projects .projects__content .projects__row-img-cont,
-  body #projects .projects__row-img-cont {
-    position: relative !important;
-    overflow: hidden !important;
-    width: 347px !important;
-    height: 263px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 8px auto !important;
-    padding: 0 !important;
-    max-width: 347px !important;
-    min-height: 263px !important;
-    max-height: 263px !important;
-    transform: scale(1.14) !important;
-  }
-  
-  body #projects .projects__content .projects__row .projects__row-img,
-  #projects .projects__content .projects__row-img,
-  body #projects .projects__row-img {
-    display: block !important;
-    width: 125% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    margin: 0 auto !important;
-    z-index: 1 !important;
-    transform: translateX(0) translateY(0) !important;
-  }
-}
+
 
 /* Overlay: full-area anchor on top of image */
 #projects .projects__overlay {
@@ -863,12 +808,14 @@ textarea {
     background: #f4f4f4 !important;
   }
 
+  body #projects .projects__content .projects__row-img,
   #projects .projects__row-img {
     object-fit: cover !important;
     object-position: center center !important;
     width: 85% !important;
     height: 85% !important;
     margin: auto !important;
+    transform: scale(0.85) !important;
   }
   #projects .projects__row {
     display: flex !important;
