@@ -335,11 +335,9 @@ textarea {
   html body #projects .projects__content .projects__row .projects__row-img-cont,
   html body #projects .projects__content .projects__row-img-cont,
   html body #projects .projects__row-img-cont {
-    margin: 20px !important;
-    padding: 10px !important;
+    margin: 15px !important;
     transform: scale(1.15) !important;
     box-sizing: border-box !important;
-    background: #f8f8f8 !important;
   }
   
   html body #projects .projects__content .projects__row .projects__row-img,
@@ -815,28 +813,26 @@ textarea {
     height: auto !important; 
   }
   
-  html body #projects .projects__content {
+  #projects .projects__content {
     width: 100% !important;
-    gap: 1px !important;
+    gap: 4px !important;
     grid-template-columns: 1fr !important;
-    padding: 0 8px !important;
+    padding: 0 12px !important;
     display: grid !important;
-    justify-items: stretch !important;
+    justify-items: center !important;
     align-items: center !important;
-    margin: 0 !important;
   }
   
-  html body #projects .projects__row-img-cont {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: 220px !important;
-    margin: 1px 0 !important;
+  #projects .projects__row-img-cont {
+    width: 92% !important;
+    max-width: 350px !important;
+    height: 260px !important;
+    margin: 0 auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
-    box-sizing: border-box !important;
   }
 
   body #projects .projects__content .projects__row-img,
