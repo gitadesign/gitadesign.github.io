@@ -329,17 +329,13 @@ textarea {
   #projects .projects__content .projects__row-img-cont,
   body #projects .projects__row-img-cont {
     margin: 3px auto !important;
-    width: 399px !important;
-    height: 302px !important;
-    max-width: 399px !important;
-    min-height: 302px !important;
-    max-height: 302px !important;
+    transform: scale(1.15) !important;
   }
   
   body #projects .projects__content .projects__row .projects__row-img,
   #projects .projects__content .projects__row-img,
   body #projects .projects__row-img {
-    width: 124% !important;
+    width: 112% !important;
     height: auto !important;
   }
 }
@@ -831,12 +827,14 @@ textarea {
     background: #f4f4f4 !important;
   }
 
+  body #projects .projects__content .projects__row-img,
   #projects .projects__row-img {
     object-fit: cover !important;
     object-position: center center !important;
     width: 80% !important;
     height: 80% !important;
     margin: auto !important;
+    transform: scale(0.8) !important;
   }
   #projects .projects__row {
     display: flex !important;
