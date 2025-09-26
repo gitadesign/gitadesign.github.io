@@ -165,8 +165,8 @@ textarea {
 }
 
 @media screen and (min-width: 1441px) {
-  .header__content { padding: 0.15rem 5rem; }
-  .header__link { padding: 0.6rem 3rem; }
+  .header__content { padding: 0.8rem 5rem; }
+  .header__link { padding: 1.8rem 3rem; }
 }
 
 /* First, restore the main container style */
@@ -322,13 +322,17 @@ textarea {
 /* 27-inch iMac adjustments - Additional to MacBook Pro base */
 @media screen and (min-width: 1441px) {
   body #projects {
-    padding-top: 3rem !important;
+    padding-top: 1.5rem !important;
+  }
+  
+  body #projects .projects__content {
+    gap: 2rem !important;
   }
   
   body #projects .projects__content .projects__row .projects__row-img-cont,
   #projects .projects__content .projects__row-img-cont,
   body #projects .projects__row-img-cont {
-    margin: 3px auto !important;
+    margin: 8px !important;
     transform: scale(1.15) !important;
   }
   
