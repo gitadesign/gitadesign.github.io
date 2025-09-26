@@ -165,12 +165,17 @@ textarea {
 }
 
 @media screen and (min-width: 1441px) {
-  .header__content { padding: 0.3rem 5rem; }
-  .header__link { padding: 1.2rem 3rem; }
+  .header__content { padding: 0.2rem 5rem; }
+  .header__link { padding: 1rem 3rem; }
   
-  /* Increase project image sizes by 10% for large screens */
+  /* Reduce top padding and increase project image sizes by 20% for large screens */
+  #projects {
+    padding-top: 5rem !important;
+  }
+  
   #projects .projects__row-img-cont {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    margin: 5px !important;
   }
 }
 
@@ -270,7 +275,6 @@ textarea {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: 8px !important;
   }
   
   #projects .projects__row-img {
@@ -278,7 +282,6 @@ textarea {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    border-radius: 8px !important;
     margin: 0 !important;
     z-index: 1 !important;
   }
@@ -305,7 +308,6 @@ textarea {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: 8px !important;
     margin: 10px auto !important;
     padding: 0 !important;
     max-width: 347px !important;
@@ -321,7 +323,6 @@ textarea {
     height: auto !important;
     object-fit: cover !important;
     object-position: center center !important;
-    border-radius: 8px !important;
     margin: 0 auto !important;
     z-index: 1 !important;
     transform: translateX(0) translateY(0) !important;
@@ -803,23 +804,23 @@ textarea {
     align-items: center !important;
   }
   
+  body #projects .projects__content .projects__row-img-cont,
   #projects .projects__row-img-cont {
-    width: 85% !important;
-    max-width: 490px !important;
-    height: 313px !important;
+    width: 80% !important;
+    max-width: 460px !important;
+    height: 295px !important;
     margin: 0 auto !important;
-    border-radius: 8px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
+    transform: scale(0.85) !important;
   }
 
   #projects .projects__row-img {
     object-fit: cover !important;
     object-position: center center !important;
-    border-radius: 8px !important;
     width: 100% !important;
     height: 100% !important;
   }
@@ -836,7 +837,7 @@ textarea {
   body { padding-top: 6.5rem !important; overflow-x: hidden !important; }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
-    padding-top: 1.5rem !important; 
+    padding-top: 3rem !important; 
     min-height: auto !important; 
     height: auto !important; 
   }
@@ -852,10 +853,11 @@ textarea {
   }
   #projects .projects__row-img-cont {
     width: 100% !important;
-    max-width: 550px !important;
+    max-width: 605px !important;
     height: auto !important;
     aspect-ratio: 16/10 !important;
     margin: 0 auto !important;
+    transform: scale(1.1) !important;
   }
 }
 
