@@ -235,6 +235,7 @@
                 align-items: center !important;
                 justify-content: center !important;
                 text-align: center !important;
+                margin: 0 auto !important;
             }
             
             html body section.brochure-gallery div.brochure-image-container {
@@ -246,7 +247,7 @@
             }
             
             html body section.brochure-gallery div.brochure-image-container img.brochure-image {
-                width: 130% !important;
+                width: 120% !important;
                 height: auto !important;
                 display: block !important;
                 margin: 0 auto !important;
@@ -284,7 +285,7 @@
             }
         }
         
-        /* Final mobile image override - reasonable sizing */
+        /* Final mobile image override - centered and 20% larger */
         @media (max-width: 600px) {
             html body main section.brochure-gallery div.brochure-image-container,
             html body section.brochure-gallery div.brochure-image-container {
@@ -292,13 +293,19 @@
                 max-width: 400px !important;
                 margin: 20px auto !important;
                 transform: none !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
             }
             
             html body main section.brochure-gallery div.brochure-image-container img,
             html body section.brochure-gallery div.brochure-image-container img {
-                width: 130% !important;
+                width: 120% !important;
                 height: auto !important;
                 transform: none !important;
+                margin: 0 auto !important;
+                display: block !important;
             }
         }
     </style>
