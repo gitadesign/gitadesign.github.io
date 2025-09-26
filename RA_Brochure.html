@@ -43,10 +43,15 @@
             }
         }
         
-        /* Large desktop screens - reduced padding for better fit */
+        /* Large desktop screens - reduced padding and larger images */
         @media screen and (min-width: 1441px) {
             .brochure-gallery {
-                padding: 6rem 2rem 4rem 2rem;
+                padding: 4.5rem 2rem 4rem 2rem;
+                max-width: 1100px;
+            }
+            .brochure-image-container {
+                transform: scale(1.1);
+                margin-bottom: 3rem;
             }
         }
         
@@ -68,11 +73,12 @@
             .brochure-gallery {
                 padding: 0 15px !important;
             }
-            .brochure-image-container {
+            .brochure-gallery .brochure-image-container {
                 margin-bottom: 25px !important;
                 width: 85% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
+                max-width: 85% !important;
             }
         }
     </style>

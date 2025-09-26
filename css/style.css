@@ -151,47 +151,22 @@ textarea {
   color: #0062b9 !important;
 }
 
-/* Header height adjustments for different screen sizes */
-/* Tablet and larger - reduce header height */
+/* Header responsive adjustments */
 @media screen and (min-width: 601px) {
-  .header__content {
-    padding: 0.7rem 5rem;
-  }
-  
-  .header__link {
-    padding: 1.8rem 3rem;
-  }
-  
-  .header__logo-img-cont {
-    width: 4.2rem;
-    height: 4.2rem;
-  }
-  
-  .header__logo-sub {
-    font-size: 1.7rem;
-  }
+  .header__content { padding: 0.7rem 5rem; }
+  .header__link { padding: 1.8rem 3rem; }
+  .header__logo-img-cont { width: 4.2rem; height: 4.2rem; }
+  .header__logo-sub { font-size: 1.7rem; }
 }
 
-/* MacBook Pro and similar laptops (smaller desktop screens) */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .header__content {
-    padding: 0.6rem 5rem;
-  }
-  
-  .header__link {
-    padding: 1.6rem 3rem;
-  }
+  .header__content { padding: 0.6rem 5rem; }
+  .header__link { padding: 1.6rem 3rem; }
 }
 
-/* Large desktop screens (27-inch iMac and larger) */
 @media screen and (min-width: 1441px) {
-  .header__content {
-    padding: 0.5rem 5rem;
-  }
-  
-  .header__link {
-    padding: 1.5rem 3rem;
-  }
+  .header__content { padding: 0.5rem 5rem; }
+  .header__link { padding: 1.5rem 3rem; }
 }
 
 /* First, restore the main container style */
@@ -385,7 +360,7 @@ textarea {
 
 
 
-/* Removed earlier redundant mobile/tablet overrides (max-width:800px & 900px) in favor of consolidated FINAL MOBILE & TABLET OVERRIDES near end of file. */
+/* Consolidated responsive overrides */
 
 @media only screen and (max-width: 75em) {
   html { font-size: 59%; }
@@ -881,42 +856,5 @@ textarea {
 
 
 
-/* FORCE MOBILE STYLES - HIGHEST PRIORITY */
-@media screen and (max-width: 600px) {
-  #projects .projects__content {
-    width: 100% !important;
-    gap: 3px !important;
-    grid-template-columns: 1fr !important;
-    padding: 0 5px !important;
-    display: grid !important;
-    justify-items: center !important;
-    align-items: center !important;
-  }
-  #projects .projects__row-img-cont {
-    width: 100% !important;
-    max-width: 576px !important;
-    height: 368px !important;
-    margin: 0 auto !important;
-    border-radius: 8px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-  }
-}
-
-/* SUPER FORCE MOBILE - ULTIMATE PRIORITY */
-@media only screen and (max-width: 600px) {
-  body #projects .projects__content #projects .projects__row-img-cont,
-  #projects .projects__content .projects__row .projects__row-img-cont {
-    width: 100% !important;
-    max-width: 576px !important;
-    height: 368px !important;
-    margin: 0 auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
+/* Removed redundant mobile overrides - consolidated into main mobile section above */
 
