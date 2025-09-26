@@ -81,51 +81,9 @@
             display: block;
         }
         
-        @media screen and (max-width: 600px) {
-            .brochure-gallery {
-                padding: 0 15px !important;
-            }
-            body .brochure-gallery .brochure-image-container {
-                margin-bottom: 25px !important;
-                width: 167% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                max-width: 167% !important;
-                box-sizing: border-box !important;
-                display: flex !important;
-                justify-content: center !important;
-                align-items: center !important;
-            }
-            body .brochure-gallery .brochure-image-container .brochure-image {
-                width: 100% !important;
-                height: auto !important;
-                display: block !important;
-                margin: 0 auto !important;
-                object-fit: contain !important;
-                object-position: center center !important;
-            }
-        }
+
         
-        /* COMPREHENSIVE RESPONSIVE HEADER RULES - MATCHES MAIN SITE */
-        
-        /* Mobile (iPhone) - max-width: 600px */
-        @media screen and (max-width: 600px) {
-            * { 
-                overflow-x: hidden !important; 
-                box-sizing: border-box !important; 
-            }
-            body { 
-                padding-top: 5.5rem !important; 
-                overflow-x: hidden !important; 
-            }
-            .header { 
-                position: fixed !important; 
-                z-index: 9999 !important; 
-            }
-            .brochure-gallery {
-                padding-top: 3rem !important;
-            }
-        }
+        /* RESPONSIVE HEADER AND LAYOUT RULES */
         
         /* iPad - 601px to 1024px */
         @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -199,23 +157,7 @@
             }
         }
         
-        /* Mobile improvements */
-        @media screen and (max-width: 600px) {
-            .brochure-gallery {
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-            .brochure-image-container {
-                border-radius: 6px !important;
-            }
-            .brochure-image {
-                margin: 0 auto !important;
-                display: block !important;
-            }
-        }
+
         
         /* iPad specific navigation fixes */
         @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -227,34 +169,7 @@
             }
         }
         
-        /* ULTIMATE MOBILE OVERRIDE - MAXIMUM SPECIFICITY */
-        @media only screen and (max-width: 600px) {
-            html body section.brochure-gallery {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center !important;
-                text-align: center !important;
-                margin: 0 auto !important;
-            }
-            
-            html body section.brochure-gallery div.brochure-image-container {
-                width: 90vw !important;
-                max-width: 350px !important;
-                margin: 0 auto 25px auto !important;
-                display: block !important;
-                text-align: center !important;
-            }
-            
-            html body section.brochure-gallery div.brochure-image-container img.brochure-image {
-                width: 120% !important;
-                height: auto !important;
-                display: block !important;
-                margin: 0 auto !important;
-                object-fit: contain !important;
-                object-position: center center !important;
-            }
-        }
+
     </style>
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -263,18 +178,7 @@
     
     <!-- Final override styles with maximum specificity -->
     <style>
-        /* FORCE MOBILE STYLES - ULTIMATE OVERRIDE */
-        @media screen and (max-width: 600px) {
-            html body section.brochure-gallery div.brochure-image-container {
-                width: 95vw !important;
-                max-width: 500px !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                margin-bottom: 25px !important;
-                box-sizing: border-box !important;
-                overflow: hidden !important;
-            }
-        }
+
         
         /* Large desktop styles */
         @media screen and (min-width: 1441px) {
@@ -287,26 +191,35 @@
             }
         }
         
-        /* Final mobile image override - larger containers and images */
+        /* MOBILE STYLES */
         @media (max-width: 600px) {
-            html body main section.brochure-gallery div.brochure-image-container,
+            * { overflow-x: hidden !important; box-sizing: border-box !important; }
+            body { padding-top: 5.5rem !important; overflow-x: hidden !important; }
+            .header { position: fixed !important; z-index: 9999 !important; }
+            .brochure-gallery { padding-top: 3rem !important; }
+            
+            html body section.brochure-gallery {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+            
             html body section.brochure-gallery div.brochure-image-container {
                 width: 95vw !important;
                 max-width: 500px !important;
                 margin: 20px auto !important;
-                transform: none !important;
                 display: flex !important;
                 justify-content: center !important;
                 align-items: center !important;
-                text-align: center !important;
                 overflow: hidden !important;
+                border-radius: 6px !important;
             }
             
-            html body main section.brochure-gallery div.brochure-image-container img,
             html body section.brochure-gallery div.brochure-image-container img {
                 width: 140% !important;
                 height: auto !important;
-                transform: none !important;
                 margin: 0 auto !important;
                 display: block !important;
                 object-fit: cover !important;
