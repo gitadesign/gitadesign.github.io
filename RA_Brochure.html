@@ -3,8 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /            html body section.brochure-gallery div.brochure-image-container {
+                width: 145% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                margin-bottom: 25px !important;
+                box-sizing: border-box !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <title>R&A Brochure — Gita Ogneva</title>
@@ -79,16 +87,22 @@
             }
             body .brochure-gallery .brochure-image-container {
                 margin-bottom: 25px !important;
-                width: 126% !important;
+                width: 145% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
-                max-width: 126% !important;
+                max-width: 145% !important;
                 box-sizing: border-box !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
             }
             body .brochure-gallery .brochure-image-container .brochure-image {
                 width: 100% !important;
                 height: auto !important;
                 display: block !important;
+                margin: 0 auto !important;
+                object-fit: contain !important;
+                object-position: center center !important;
             }
         }
         
@@ -190,9 +204,16 @@
             .brochure-gallery {
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
             }
             .brochure-image-container {
                 border-radius: 6px !important;
+            }
+            .brochure-image {
+                margin: 0 auto !important;
+                display: block !important;
             }
         }
         
