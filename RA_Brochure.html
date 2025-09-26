@@ -26,7 +26,7 @@
         }
         
         .brochure-gallery {
-            max-width: 950px;
+            max-width: 1235px;
             margin: 0 auto;
             padding: 8rem 2rem 4rem 2rem;
             background: #f4f4f4 !important;
@@ -50,10 +50,10 @@
         @media screen and (min-width: 1441px) {
             body .brochure-gallery {
                 padding: 4.5rem 2rem 4rem 2rem !important;
-                max-width: 1045px !important;
+                max-width: 1359px !important;
             }
             body .brochure-gallery .brochure-image-container {
-                transform: scale(1.045) !important;
+                transform: scale(1.359) !important;
                 margin-bottom: 3rem !important;
                 transform-origin: center !important;
             }
@@ -79,10 +79,10 @@
             }
             body .brochure-gallery .brochure-image-container {
                 margin-bottom: 25px !important;
-                width: 80.75% !important;
+                width: 105% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
-                max-width: 80.75% !important;
+                max-width: 105% !important;
                 box-sizing: border-box !important;
             }
             body .brochure-gallery .brochure-image-container .brochure-image {
@@ -96,6 +96,10 @@
         
         /* Mobile (iPhone) - max-width: 600px */
         @media screen and (max-width: 600px) {
+            * { 
+                overflow-x: hidden !important; 
+                box-sizing: border-box !important; 
+            }
             body { 
                 padding-top: 5.5rem !important; 
                 overflow-x: hidden !important; 
@@ -105,7 +109,7 @@
                 z-index: 9999 !important; 
             }
             .brochure-gallery {
-                padding-top: 1rem !important;
+                padding-top: 3rem !important;
             }
         }
         
@@ -137,7 +141,7 @@
                 z-index: 9999 !important; 
             }
             .brochure-gallery {
-                padding-top: 5rem !important;
+                padding-top: 2rem !important;
             }
         }
         
@@ -160,7 +164,7 @@
         /* Tablet adjustments */
         @media screen and (min-width: 601px) and (max-width: 1024px) {
             .brochure-gallery {
-                max-width: 90% !important;
+                max-width: 117% !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
@@ -172,7 +176,7 @@
         /* MacBook Pro specific adjustments */
         @media screen and (min-width: 1025px) and (max-width: 1600px) {
             .brochure-gallery {
-                max-width: 85% !important;
+                max-width: 111% !important;
                 padding-left: 2rem !important;
                 padding-right: 2rem !important;
             }
@@ -183,19 +187,12 @@
         
         /* Mobile improvements */
         @media screen and (max-width: 600px) {
-            * { 
-                overflow-x: hidden !important; 
-                box-sizing: border-box !important; 
-            }
             .brochure-gallery {
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
             .brochure-image-container {
                 border-radius: 6px !important;
-            }
-            .header__links { 
-                display: flex !important; 
             }
         }
         
@@ -219,7 +216,7 @@
         /* FORCE MOBILE STYLES - ULTIMATE OVERRIDE */
         @media screen and (max-width: 600px) {
             html body section.brochure-gallery div.brochure-image-container {
-                width: 80.75% !important;
+                width: 105% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
                 margin-bottom: 25px !important;
@@ -231,10 +228,10 @@
         @media screen and (min-width: 1441px) {
             html body section.brochure-gallery {
                 padding-top: 4.5rem !important;
-                max-width: 1045px !important;
+                max-width: 1359px !important;
             }
             html body section.brochure-gallery div.brochure-image-container {
-                transform: scale(1.045) !important;
+                transform: scale(1.359) !important;
                 margin-bottom: 3rem !important;
             }
         }
