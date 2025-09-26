@@ -266,11 +266,13 @@
         /* FORCE MOBILE STYLES - ULTIMATE OVERRIDE */
         @media screen and (max-width: 600px) {
             html body section.brochure-gallery div.brochure-image-container {
-                width: 126% !important;
+                width: 95vw !important;
+                max-width: 500px !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
                 margin-bottom: 25px !important;
                 box-sizing: border-box !important;
+                overflow: hidden !important;
             }
         }
         
@@ -285,27 +287,30 @@
             }
         }
         
-        /* Final mobile image override - centered and 20% larger */
+        /* Final mobile image override - larger containers and images */
         @media (max-width: 600px) {
             html body main section.brochure-gallery div.brochure-image-container,
             html body section.brochure-gallery div.brochure-image-container {
-                width: 90vw !important;
-                max-width: 400px !important;
+                width: 95vw !important;
+                max-width: 500px !important;
                 margin: 20px auto !important;
                 transform: none !important;
                 display: flex !important;
                 justify-content: center !important;
                 align-items: center !important;
                 text-align: center !important;
+                overflow: hidden !important;
             }
             
             html body main section.brochure-gallery div.brochure-image-container img,
             html body section.brochure-gallery div.brochure-image-container img {
-                width: 120% !important;
+                width: 140% !important;
                 height: auto !important;
                 transform: none !important;
                 margin: 0 auto !important;
                 display: block !important;
+                object-fit: cover !important;
+                object-position: center center !important;
             }
         }
     </style>
