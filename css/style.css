@@ -35,34 +35,13 @@ body {
   max-width: 100vw;
   /* Universal responsive padding to prevent header overlap - cross-browser compatible */
   padding-top: calc(6rem + 1vw) !important;
+  /* Match the grey background color of image containers */
+  background-color: #f4f4f4 !important;
 }
 
 
 
-/* Responsive padding adjustments for different screen sizes */
-@media screen and (max-width: 600px) {
-  body { 
-    padding-top: 7rem !important; /* Mobile header clearance */
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-  body { 
-    padding-top: 8rem !important; /* Tablet header clearance */
-  }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  body { 
-    padding-top: 9rem !important; /* MacBook Pro header clearance */
-  }
-}
-
-@media screen and (min-width: 1441px) {
-  body { 
-    padding-top: 10rem !important; /* 27-inch iMac header clearance */
-  }
-}
+/* Individual responsive padding rules removed - now using global calc() padding in main body selector */
 
 @media not all and (min-width: 601px) and (max-width: 1024px) {
   body {
@@ -470,9 +449,8 @@ textarea {
     box-sizing: border-box !important;
   }
   
-  /* iPad specific fixes */
+  /* iPad specific fixes - padding now handled by global body rule */
   body { 
-    padding-top: 7rem !important; 
     margin: 0 !important;
     width: 100% !important;
     max-width: 100vw !important;
