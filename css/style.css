@@ -33,9 +33,36 @@ body {
   overflow-y: auto !important;
   width: 100%;
   max-width: 100vw;
+  /* Universal responsive padding to prevent header overlap - cross-browser compatible */
+  padding-top: calc(6rem + 1vw) !important;
 }
 
 
+
+/* Responsive padding adjustments for different screen sizes */
+@media screen and (max-width: 600px) {
+  body { 
+    padding-top: 7rem !important; /* Mobile header clearance */
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  body { 
+    padding-top: 8rem !important; /* Tablet header clearance */
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  body { 
+    padding-top: 9rem !important; /* MacBook Pro header clearance */
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  body { 
+    padding-top: 10rem !important; /* 27-inch iMac header clearance */
+  }
+}
 
 @media not all and (min-width: 601px) and (max-width: 1024px) {
   body {
@@ -319,33 +346,53 @@ textarea {
   }
 }
 
-/* 27-inch iMac adjustments - ULTRA HIGH SPECIFICITY */
+/* 27-inch iMac adjustments - SCOPED TO MAIN PAGE ONLY */
 @media screen and (min-width: 1441px) {
-  html body #projects {
+  /* Only apply to main page projects section */
+  body.main-page #projects,
+  body:not([class*="project"]) #projects {
     padding-top: 2rem !important;
     margin-top: 0 !important;
   }
   
-  html body #projects .projects__content {
+  body.main-page #projects .projects__content,
+  body:not([class*="project"]) #projects .projects__content {
     gap: 2rem !important;
     margin-top: 2rem !important;
     padding-top: 0 !important;
   }
   
-  html body #projects .projects__content .projects__row .projects__row-img-cont,
-  html body #projects .projects__content .projects__row-img-cont,
-  html body #projects .projects__row-img-cont {
+  body.main-page #projects .projects__content .projects__row .projects__row-img-cont,
+  body.main-page #projects .projects__content .projects__row-img-cont,
+  body.main-page #projects .projects__row-img-cont,
+  body:not([class*="project"]) #projects .projects__content .projects__row .projects__row-img-cont,
+  body:not([class*="project"]) #projects .projects__content .projects__row-img-cont,
+  body:not([class*="project"]) #projects .projects__row-img-cont {
     margin: 15px !important;
     transform: scale(1.15) !important;
     box-sizing: border-box !important;
   }
   
-  html body #projects .projects__content .projects__row .projects__row-img,
-  html body #projects .projects__content .projects__row-img,
-  html body #projects .projects__row-img {
+  body.main-page #projects .projects__content .projects__row .projects__row-img,
+  body.main-page #projects .projects__content .projects__row-img,
+  body.main-page #projects .projects__row-img,
+  body:not([class*="project"]) #projects .projects__content .projects__row .projects__row-img,
+  body:not([class*="project"]) #projects .projects__content .projects__row-img,
+  body:not([class*="project"]) #projects .projects__row-img {
     width: 112% !important;
     height: auto !important;
   }
+}
+
+/* Ensure safe spacing for projects and individual pages */
+#projects {
+  margin-top: 2rem !important; /* Extra buffer for projects section */
+}
+
+.project-details,
+.project-cs-hero {
+  margin-top: 3rem !important; /* Extra safe spacing for project pages */
+  padding-top: 2rem !important;
 }
 
 /* Overlay: full-area anchor on top of image */
