@@ -438,6 +438,12 @@ textarea {
   margin-bottom: 6rem;
 }
 
+/* Override heading margin for sections with custom underlines */
+#about .heading-sec__mb-med,
+#contact .heading-sec__mb-med {
+  margin-bottom: 0 !important;
+}
+
 .heading-sec__main {
   display: block;
   font-size: 4rem;
@@ -466,7 +472,7 @@ textarea {
   width: 3rem !important;
   height: 5px !important;
   border-radius: 5px !important;
-  margin: 0.3rem auto 3rem auto !important;
+  margin: 1rem auto 3rem auto !important;
   display: block !important;
   position: static !important;
   clear: both !important;
