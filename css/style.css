@@ -18,11 +18,7 @@ html {
   overflow-y: auto !important;
 }
 
-@media not all and (min-width: 601px) and (max-width: 1024px) {
-  html {
-    -webkit-overflow-scrolling: touch;
-  }
-}
+/* Removed redundant @media not all rule - handled in consolidated tablet media query */
 
 body {
   box-sizing: border-box;
@@ -39,23 +35,31 @@ body {
   background-color: #f4f4f4 !important;
 }
 
-
-
-/* Individual responsive padding rules removed - now using global calc() padding in main body selector */
-
-@media not all and (min-width: 601px) and (max-width: 1024px) {
-  body {
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: none;
-  }
+/* Project pages: prevent excessive image cropping */
+body:not(.main-page) img,
+body:not(.main-page) .projects__row-img,
+body[class*="project"] img,
+body[class*="project"] .projects__row-img {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 90vh !important;
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    -webkit-overflow-scrolling: auto !important;
-    overscroll-behavior: contain !important;
-  }
+/* Project pages: prevent image container cropping */
+body:not(.main-page) .projects__row-img-cont,
+body[class*="project"] .projects__row-img-cont {
+  height: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+  min-height: auto !important;
+  max-height: none !important;
+  aspect-ratio: none !important;
+  overflow: visible !important;
 }
+
+/* Tablet rules consolidated into main tablet section below */
 
 /* Typography & Links */
 a {
@@ -830,7 +834,7 @@ textarea {
 /* Mobile */
 @media screen and (max-width: 600px) {
   * { overflow-x: hidden !important; box-sizing: border-box !important; }
-  body { padding-top: 5.5rem !important; overflow-x: hidden !important; }
+  body { overflow-x: hidden !important; } /* padding-top now handled by global body rule */
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
     padding: 1rem 0 !important; 
@@ -876,10 +880,14 @@ textarea {
   }
 }
 
-/* iPad/Tablet */
+/* iPad/Tablet - Consolidated */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
   html { overflow-x: hidden !important; }
-  body { padding-top: 6.5rem !important; overflow-x: hidden !important; }
+  body { 
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: auto !important;
+    overscroll-behavior: contain !important;
+  }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
     padding-top: 5rem !important; 
