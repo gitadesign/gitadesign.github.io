@@ -27,8 +27,6 @@ html {
   overflow-y: auto !important;
 }
 
-/* Removed redundant @media not all rule - handled in consolidated tablet media query */
-
 body {
   box-sizing: border-box;
   position: relative;
@@ -245,7 +243,7 @@ textarea {
   color: #0062b9 !important;
 }
 
-/* Removed redundant header rules - now handled by comprehensive responsive system */
+
 
 /* First, restore the main container style */
 .main-container {
@@ -352,9 +350,7 @@ textarea {
   }
 }
 
-/* Removed redundant MacBook Pro rule - now handled by comprehensive responsive system */
 
-/* Removed redundant 27-inch iMac rules - now handled by comprehensive responsive system */
 
 /* Ensure safe spacing for individual pages */
 .project-details,
@@ -452,36 +448,17 @@ textarea {
   margin-bottom: 0;
 }
 
-.heading-sec__main::after {
-  content: '';
-  position: absolute;
-  top: calc(100% + 1.5rem);
-  height: 5px;
-  width: 3rem;
-  background: #0062b9;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
-}
-
-/* Removed redundant separator rules - handled in main responsive sections */
-
-/* Hide ALL pseudo-elements to prevent duplicates - use HTML divs only */
+/* Hide ALL pseudo-elements - use only HTML div separators */
 .heading-sec__main::after {
   display: none !important;
 }
 
-#about .heading-sec__main::after,
-#contact .heading-sec__main::after {
-  display: none !important;
-}
-
-/* Custom underline divs for sections - single separator line only */
+/* Global separator line styling - closer to headings */
 .about-underline, .contact-underline {
   width: 3rem;
   height: 5px;
   border-radius: 5px;
-  margin: 0.8rem auto 3rem auto;
+  margin: 0.5rem auto 3rem auto;
   display: block;
 }
 
@@ -665,12 +642,10 @@ textarea {
   color: #fff;
 }
 
-/* Contact button spacing - add margin above */
+/* Contact button spacing */
 .about__content-details .btn {
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
 }
-
-/* Legacy mobile/tablet rules removed - all handled by comprehensive responsive system */
 
 
 
@@ -746,6 +721,7 @@ textarea {
     display: block !important;
     cursor: pointer;
     padding: 0.5rem;
+    margin-right: 1rem;
   }
   
   /* About section - single column on mobile */
@@ -834,8 +810,6 @@ textarea {
     gap: 4rem !important;
   }
 }
-
-/* Remove iPad landscape special case - handled by regular laptop breakpoints */
 
 /* Small Laptops: 1025-1366px (13" MacBook, smaller Windows laptops) */
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
