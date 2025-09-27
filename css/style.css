@@ -1,5 +1,14 @@
 
-/* Responsive: 0-600px Mobile, 601-900px Tablet, 901-1200px Laptop, 1200px+ Desktop */
+/* Comprehensive Responsive Breakpoints for All Devices:
+   0-480px:     Small Mobile (iPhone SE, older phones)
+   481-768px:   Large Mobile (iPhone Pro, Android phones)
+   769-1024px:  Tablets (iPad, Android tablets) 
+   1025-1366px: Small Laptops (13" MacBook, smaller Windows laptops)
+   1367-1440px: Standard Laptops (15" MacBook Pro, most Windows laptops)
+   1441-1920px: Large Desktops (27" iMac, 1080p monitors)
+   1921px+:     Ultra-wide/4K displays
+   
+   Global padding handles all header overlap - no device-specific padding needed */
 *,
 *::after,
 *::before {
@@ -867,7 +876,6 @@ textarea {
   }
   .header { position: fixed !important; z-index: 9999 !important; }
   #projects { 
-    padding-top: 5rem !important; 
     min-height: auto !important; 
     height: auto !important; 
   }
@@ -893,5 +901,87 @@ textarea {
 
 
 
-/* Removed redundant mobile overrides - consolidated into main mobile section above */
+/* =================================================================
+   COMPREHENSIVE RESPONSIVE COVERAGE FOR ALL MODERN DEVICES
+   Global padding handles header overlap - no additional padding needed
+   ================================================================= */
+
+/* Small Mobile Phones: 0-480px (iPhone SE, older Android) */
+@media screen and (max-width: 480px) {
+  html { font-size: 55%; }
+  .header__content { padding: 0.8rem 1rem; }
+  .projects__content { 
+    grid-template-columns: 1fr !important; 
+    gap: 1.5rem !important; 
+    width: 95% !important; 
+  }
+}
+
+/* Large Mobile Phones: 481-768px (iPhone Pro, modern Android) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  html { font-size: 57%; }
+  .header__content { padding: 1rem 1.5rem; }
+  .projects__content { 
+    grid-template-columns: 1fr !important; 
+    gap: 2rem !important; 
+    width: 90% !important; 
+  }
+}
+
+/* Tablets: 769-1024px (iPad, Android tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html { font-size: 58%; }
+  .header__content { padding: 1.2rem 2rem; }
+  .projects__content { 
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 2.5rem !important; 
+    width: 85% !important; 
+  }
+}
+
+/* Small Laptops: 1025-1366px (13" MacBook, smaller Windows laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  html { font-size: 60%; }
+  .header__content { padding: 1.5rem 3rem; }
+  .projects__content { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 3rem !important; 
+    width: 90% !important; 
+  }
+}
+
+/* Standard Laptops: 1367-1440px (15" MacBook Pro, most Windows laptops) */
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+  html { font-size: 61%; }
+  .header__content { padding: 1.5rem 4rem; }
+  .projects__content { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 3.5rem !important; 
+    width: 85% !important; 
+  }
+}
+
+/* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  html { font-size: 62.5%; }
+  .header__content { padding: 1.8rem 5rem; }
+  .projects__content { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 4rem !important; 
+    width: 80% !important; 
+    max-width: 1600px !important; 
+  }
+}
+
+/* Ultra-wide/4K Displays: 1921px+ */
+@media screen and (min-width: 1921px) {
+  html { font-size: 65%; }
+  .header__content { padding: 2rem 6rem; }
+  .projects__content { 
+    grid-template-columns: repeat(3, 1fr) !important; 
+    gap: 5rem !important; 
+    width: 75% !important; 
+    max-width: 1800px !important; 
+  }
+}
 
