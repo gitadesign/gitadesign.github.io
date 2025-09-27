@@ -464,6 +464,37 @@ textarea {
   border-radius: 5px;
 }
 
+/* Global responsive separator styling - consistent across all devices */
+@media screen and (max-width: 768px) {
+  .heading-sec__main::after {
+    top: calc(100% + 1rem) !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .heading-sec__main::after {
+    top: calc(100% + 1.2rem) !important;
+  }
+}
+
+/* Custom underline divs for sections (global responsive) */
+.about-underline, .contact-underline {
+  width: 3rem;
+  height: 5px;
+  border-radius: 5px;
+  margin: 1.5rem auto 3rem auto;
+  display: block;
+}
+
+.about-underline {
+  background: #0062b9;
+}
+
+.contact-underline {
+  background: #fff;
+}
+
 /* Blue separator for About section (explicit) */
 .about .heading-sec__main::after {
   background: #0062b9 !important;
@@ -658,12 +689,27 @@ textarea {
 /* All Mobile Devices: 0-768px (Simplified for iPhone 16 and all phones) */
 @media screen and (max-width: 768px) {
   html { font-size: 55%; }
+  
+  /* Ensure mobile content fits screen width */
+  body { 
+    overflow-x: hidden !important; 
+    max-width: 100vw !important;
+  }
+  
+  .main-container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
   .header__content { padding: 1rem 1rem; }
   .projects__content { 
     grid-template-columns: 1fr !important; 
-    gap: 5px !important; 
-    width: 100% !important; 
-    padding: 0 5px !important;
+    gap: 1rem !important; 
+    width: 90% !important; 
+    max-width: 380px !important;
+    padding: 0 1rem !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
     justify-items: center !important;
@@ -707,8 +753,8 @@ textarea {
   }
   
   #projects .projects__row-img-cont {
-    width: 100% !important;
-    max-width: 350px !important;
+    width: 90% !important;
+    max-width: 280px !important;
     height: auto !important;
     margin: 15px auto !important;
     border-radius: 6px !important;
