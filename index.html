@@ -10,86 +10,14 @@
     <meta name="robots" content="noindex, nofollow" />
     
     <!-- Google tag (gtag.js) -->
-
-      // Mobile Menu Functions
-      function toggleMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
-        
-        hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
-        
-        // Prevent scrolling when menu is open
-        if (mobileMenu.classList.contains("active")) {
-          document.body.style.overflow = "hidden";
-        } else {
-          document.body.style.overflow = "";
-        }
-      }
-      
-      function closeMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
-        
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-      
-      // Close menu when clicking outside
-      document.addEventListener("click", function(event) {
-        const mobileMenu = document.getElementById("mobileMenu");
-        const hamburger = document.querySelector(".header__hamburger");
-        
-        if (mobileMenu.classList.contains("active") && 
-            !hamburger.contains(event.target) && 
-            !mobileMenu.contains(event.target)) {
-          closeMobileMenu();
-        }
-      });    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK9VRMYM1Z"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK9VRMYM1Z"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-JK9VRMYM1Z');
-
-      // Mobile Menu Functions
-      function toggleMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
-        
-        hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
-        
-        // Prevent scrolling when menu is open
-        if (mobileMenu.classList.contains("active")) {
-          document.body.style.overflow = "hidden";
-        } else {
-          document.body.style.overflow = "";
-        }
-      }
-      
-      function closeMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
-        
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove("active");
-        document.body.style.overflow = "";
-      }
-      
-      // Close menu when clicking outside
-      document.addEventListener("click", function(event) {
-        const mobileMenu = document.getElementById("mobileMenu");
-        const hamburger = document.querySelector(".header__hamburger");
-        
-        if (mobileMenu.classList.contains("active") && 
-            !hamburger.contains(event.target) && 
-            !mobileMenu.contains(event.target)) {
-          closeMobileMenu();
-        }
-      });    </script>
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -245,18 +173,20 @@
         </div>
 
         <nav class="header__main" aria-label="Main navigation">
-        <!-- Hamburger Menu for Mobile -->
-        <div class="header__hamburger" onclick="toggleMobileMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>          <ul class="header__links">
+          <ul class="header__links">
             <li class="header__link-wrapper"><a href="#" class="header__link" title="Home">Home</a></li>
             <li class="header__link-wrapper"><a href="#about" class="header__link" title="About">About</a></li>
             <li class="header__link-wrapper"><a href="#projects" class="header__link" title="Projects">Projects</a></li>
             <li class="header__link-wrapper"><a href="#contact" class="header__link" title="Contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <div class="header__hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
@@ -460,14 +390,143 @@
             if (!href || href === '#') {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: isIpad ? 'auto' : 'smooth' });
-
-
-
-
-
-
-
-
-
+              return;
+            }
+            var target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              if (isIpad) {
+                // Use simpler scrolling for iPad with better offset
+                var targetOffset = target.offsetTop - 100; // Account for header
+                window.scrollTo({ top: targetOffset, behavior: 'auto' });
+              } else {
+                // Better scroll positioning for mobile and desktop
+                var headerHeight = window.innerWidth <= 600 ? 80 : 100;
+                var targetOffset = target.offsetTop - headerHeight;
+                window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+              }
+            }
+          });
+        });
+        
+        // Prevent scroll restoration issues
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        
+        // Handle page refresh scroll position
+        window.addEventListener('beforeunload', function() {
+          window.scrollTo(0, 0);
+        });
+        
+        // Force scroll to top on page load with delay for iPad
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 100);
+        
+        // Force mobile underline positioning
+        function fixMobileUnderlines() {
+          if (window.innerWidth <= 600) {
+            var aboutHeading = document.querySelector('#about .heading-sec__mb-med');
+            var contactHeading = document.querySelector('#contact .heading-sec__mb-med');
+            var aboutUnderline = document.querySelector('#about .about-underline');
+            var contactUnderline = document.querySelector('#contact .contact-underline');
+            
+            if (aboutHeading) {
+              aboutHeading.style.marginBottom = '2rem';
+            }
+            if (contactHeading) {
+              contactHeading.style.marginBottom = '2rem';
+            }
+            if (aboutUnderline) {
+              aboutUnderline.style.margin = '0 auto 3rem auto';
+              aboutUnderline.style.position = 'relative';
+              aboutUnderline.style.transform = 'none';
+            }
+            if (contactUnderline) {
+              contactUnderline.style.margin = '0 auto 3rem auto';
+              contactUnderline.style.position = 'relative';
+              contactUnderline.style.transform = 'none';
+            }
+          }
+        }
+        
+        // Run mobile fix
+        fixMobileUnderlines();
+        setTimeout(fixMobileUnderlines, 500);
+        window.addEventListener('resize', fixMobileUnderlines);
+        
+        // Image protection - disable right-click on images
+        document.addEventListener('contextmenu', function(e) {
+          if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+            return false;
+          }
+        });
+        
+        // Additional protection - disable drag on images
+        document.addEventListener('dragstart', function(e) {
+          if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+            return false;
+          }
+        });
+        
+        // Disable keyboard shortcuts that could be used to save images
+        document.addEventListener('keydown', function(e) {
+          // Disable Ctrl+S (Save), Ctrl+A (Select All), Ctrl+Shift+I (Developer Tools)
+          if ((e.ctrlKey || e.metaKey) && (e.keyCode === 83 || e.keyCode === 65 || (e.shiftKey && e.keyCode === 73))) {
+            e.preventDefault();
+            return false;
+          }
+          // Disable F12 (Developer Tools)
+          if (e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+          }
+        });
       });
 
+      // Mobile Menu Functions
+      window.toggleMobileMenu = function() {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        
+        if (hamburger && mobileMenu) {
+          hamburger.classList.toggle("active");
+          mobileMenu.classList.toggle("active");
+          
+          // Prevent scrolling when menu is open
+          if (mobileMenu.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+          } else {
+            document.body.style.overflow = "";
+          }
+        }
+      };
+      
+      window.closeMobileMenu = function() {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        
+        if (hamburger && mobileMenu) {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+      };
+      
+      // Close menu when clicking outside
+      document.addEventListener("click", function(event) {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".header__hamburger");
+        
+        if (mobileMenu && hamburger && mobileMenu.classList.contains("active") && 
+            !hamburger.contains(event.target) && 
+            !mobileMenu.contains(event.target)) {
+          closeMobileMenu();
+        }
+      });
+    </script>
+  </body>
+</html>
