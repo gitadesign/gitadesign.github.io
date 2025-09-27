@@ -107,9 +107,9 @@ textarea {
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
 }
 
-/* Hamburger Menu - Show on mobile, hidden on desktop */
+/* Hamburger Menu - Hidden by default, shown on mobile */
 .header__hamburger {
-  display: block;
+  display: none;
   flex-direction: column;
   cursor: pointer;
   padding: 0.5rem;
@@ -818,10 +818,7 @@ textarea {
     overscroll-behavior: contain !important;
   }
   
-  /* Hide hamburger menu on tablets and desktop */
-  .header__hamburger {
-    display: none !important;
-  }
+
   
   .header__content { 
     padding: 1rem 2rem; 
@@ -887,6 +884,16 @@ textarea {
 /* Small Laptops: 1025-1366px (13" MacBook, smaller Windows laptops) */
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
   html { font-size: 60%; }
+  
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none !important; }
+  
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+  
   .header__content { padding: 1rem 3rem; }
   .projects__content { 
     gap: 3rem !important; 
