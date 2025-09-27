@@ -16,7 +16,7 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23000'/%3E%3Ctext x='16' y='22' font-family='Arial, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%23fff'%3EG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="css/style.css?v=2025092604" />
+    <link rel="stylesheet" href="css/style.css?v=2025092736" />
     
     <style>
         html, body {
@@ -220,6 +220,32 @@
                 object-position: center center !important;
             }
         }
+        
+        /* ALL MOBILE AND TABLET DEVICES - FORCE HAMBURGER */
+        @media (max-width: 1024px) {
+            header .header__hamburger, 
+            .header .header__hamburger,
+            .header__hamburger { 
+                display: block !important; 
+                flex-direction: column !important;
+                cursor: pointer !important;
+                padding: 0.5rem !important;
+                z-index: 1001 !important;
+                margin-right: 1rem !important;
+            }
+            header .header__hamburger span,
+            .header .header__hamburger span,
+            .header__hamburger span {
+                display: block !important;
+                width: 25px !important;
+                height: 3px !important;
+                background: white !important;
+                margin: 3px 0 !important;
+                transition: 0.3s ease !important;
+            }
+            .header__links, 
+            .header .header__links { display: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -240,8 +266,25 @@
             <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <div class="header__hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="header__mobile-menu" id="mobileMenu">
+      <ul class="header__links">
+        <li class="header__link-wrapper"><a href="./index.html" class="header__link" title="Home">Home</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#about" class="header__link" title="About">About</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link" title="Projects">Projects</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
+      </ul>
+    </div>
 
     <!-- Water Treatment Brochure Gallery -->
     <section class="brochure-gallery">
@@ -347,6 +390,39 @@
         if (e.keyCode === 123) {
           e.preventDefault();
           return false;
+        }
+      });
+      
+      // Mobile menu functionality
+      function toggleMobileMenu() {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.querySelector(".header__mobile-menu");
+        
+        if (hamburger && mobileMenu) {
+          hamburger.classList.toggle("active");
+          mobileMenu.classList.toggle("active");
+        }
+      }
+
+      function closeMobileMenu() {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.querySelector(".header__mobile-menu");
+        
+        if (hamburger && mobileMenu) {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        }
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.querySelector(".header__mobile-menu");
+        
+        if (mobileMenu && hamburger && mobileMenu.classList.contains("active") && 
+            !hamburger.contains(event.target) && 
+            !mobileMenu.contains(event.target)) {
+          closeMobileMenu();
         }
       });
     </script>

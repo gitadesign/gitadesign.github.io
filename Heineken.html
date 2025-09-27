@@ -240,8 +240,25 @@
             <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <div class="header__hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="header__mobile-menu" id="mobileMenu">
+      <ul class="header__links">
+        <li class="header__link-wrapper"><a href="./index.html" class="header__link" title="Home">Home</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#about" class="header__link" title="About">About</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link" title="Projects">Projects</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
+      </ul>
+    </div>
 
     <!-- Heineken Marketing Brochure Gallery -->
     <section class="brochure-gallery">
