@@ -784,6 +784,17 @@ textarea {
     width: 1.8rem !important;
     height: auto !important;
   }
+  
+  /* Project pages - force same header behavior as main page on mobile */
+  body:not(.main-page) .header__links {
+    display: none !important;
+  }
+  
+  body:not(.main-page) .header__content {
+    padding: 1rem 2rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
 }
 
 
@@ -859,6 +870,11 @@ textarea {
   .main-footer__social[style] .main-footer__icon {
     width: 2rem !important;
     height: auto !important;
+  }
+  
+  /* Project pages - force same header behavior as main page on tablet */
+  body:not(.main-page) .header__content {
+    padding: 1rem 2rem !important;
   }
 }
 
