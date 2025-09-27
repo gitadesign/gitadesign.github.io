@@ -107,9 +107,9 @@ textarea {
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
 }
 
-/* Hamburger Menu - Hidden by default, shown on mobile */
+/* Hamburger Menu - Show on mobile, hidden on desktop */
 .header__hamburger {
-  display: none;
+  display: block;
   flex-direction: column;
   cursor: pointer;
   padding: 0.5rem;
@@ -657,12 +657,7 @@ textarea {
   order: 1 !important;
 }
 
-/* Override any inline styling on footer icons */
-.main-footer__icon {
-  width: 2.5rem !important;
-  height: auto !important;
-  transform: translateY(1px) !important;
-}
+/* Removed duplicate footer icon rule */
 
 .main-footer__lower {
   padding: 4rem 0;
@@ -721,7 +716,6 @@ textarea {
   
   /* Ensure mobile content fits screen width */
   body { 
-    overflow-x: hidden !important; 
     max-width: 100vw !important;
   }
   
@@ -784,13 +778,7 @@ textarea {
     padding: 0.5rem;
     margin-right: 1rem;
   }
-  
-  /* Force hamburger visibility on ALL pages */
-  header .header__hamburger {
-    display: block !important;
-    position: relative !important;
-    z-index: 1000 !important;
-  }
+
   
   /* About section - single column on mobile */
   .about__content {
@@ -813,11 +801,7 @@ textarea {
     width: 1.8rem !important;
     height: auto !important;
   }
-  
-  /* Mobile - responsive footer icon sizing */
-  .main-footer__social[style] .main-footer__icon {
-    width: 1.8rem !important;
-  }
+
 }
 
 
@@ -831,9 +815,12 @@ textarea {
   }
   
   body {
-    -webkit-overflow-scrolling: touch !important;
     overscroll-behavior: contain !important;
-    scroll-behavior: smooth !important;
+  }
+  
+  /* Hide hamburger menu on tablets and desktop */
+  .header__hamburger {
+    display: none !important;
   }
   
   .header__content { 
@@ -894,11 +881,7 @@ textarea {
     width: 2rem !important;
     height: auto !important;
   }
-  
-  /* Tablet - responsive footer icon sizing */
-  .main-footer__social[style] .main-footer__icon {
-    width: 2rem !important;
-  }
+
 }
 
 /* Small Laptops: 1025-1366px (13" MacBook, smaller Windows laptops) */
@@ -906,7 +889,6 @@ textarea {
   html { font-size: 60%; }
   .header__content { padding: 1rem 3rem; }
   .projects__content { 
-    grid-template-columns: repeat(3, 1fr) !important; 
     gap: 3rem !important; 
     width: 90% !important; 
   }
@@ -917,7 +899,6 @@ textarea {
   html { font-size: 61%; }
   .header__content { padding: 1rem 4rem; }
   .projects__content { 
-    grid-template-columns: repeat(3, 1fr) !important; 
     gap: 3.5rem !important; 
     width: 85% !important; 
   }
@@ -926,9 +907,8 @@ textarea {
 /* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
   html { font-size: 62.5%; }
-  .header .header__content { padding: 1rem 4rem !important; }
+  .header__content { padding: 1rem 4rem; }
   .projects__content { 
-    grid-template-columns: repeat(3, 1fr) !important; 
     gap: 4rem !important; 
     width: 80% !important; 
     max-width: 1600px !important; 
@@ -940,7 +920,6 @@ textarea {
   html { font-size: 65%; }
   .header__content { padding: 1rem 6rem; }
   .projects__content { 
-    grid-template-columns: repeat(3, 1fr) !important; 
     gap: 5rem !important; 
     width: 75% !important; 
     max-width: 1800px !important; 
