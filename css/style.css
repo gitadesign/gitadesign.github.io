@@ -448,26 +448,36 @@ textarea {
   margin-bottom: 0;
 }
 
-/* Hide ALL pseudo-elements - use only HTML div separators */
-.heading-sec__main::after {
+/* COMPLETELY DISABLE ALL PSEUDO-ELEMENT SEPARATORS */
+.heading-sec__main::after,
+.heading-sec__main::before,
+#about .heading-sec__main::after,
+#contact .heading-sec__main::after,
+.about .heading-sec__main::after,
+.contact .heading-sec__main::after {
   display: none !important;
+  content: none !important;
+  visibility: hidden !important;
 }
 
-/* Global separator line styling - closer to headings */
-.about-underline, .contact-underline {
-  width: 3rem;
-  height: 5px;
-  border-radius: 5px;
-  margin: 0.5rem auto 3rem auto;
-  display: block;
+/* SINGLE GLOBAL SEPARATOR STYLE - HTML divs only */
+.about-underline, 
+.contact-underline {
+  width: 3rem !important;
+  height: 5px !important;
+  border-radius: 5px !important;
+  margin: 0.3rem auto 3rem auto !important;
+  display: block !important;
+  position: static !important;
+  clear: both !important;
 }
 
 .about-underline {
-  background: #0062b9;
+  background: #0062b9 !important;
 }
 
 .contact-underline {
-  background: #fff;
+  background: #fff !important;
 }
 
 .heading-sec__sub {
