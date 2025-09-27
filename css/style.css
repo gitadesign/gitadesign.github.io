@@ -655,8 +655,8 @@ textarea {
    Global padding handles header overlap - no additional padding needed
    ================================================================= */
 
-/* Small Mobile Phones: 0-480px (iPhone SE, older Android) */
-@media screen and (max-width: 480px) {
+/* All Mobile Devices: 0-768px (Simplified for iPhone 16 and all phones) */
+@media screen and (max-width: 768px) {
   html { font-size: 55%; }
   .header__content { padding: 1rem 1rem; }
   .projects__content { 
@@ -701,117 +701,28 @@ textarea {
     padding: 1.5rem 2rem !important;
   }
   
-  /* Projects mobile layout */
+  /* Projects mobile layout - simplified */
   #projects .projects__row {
     width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
   }
   
   #projects .projects__row-img-cont {
-    width: 95vw !important;
-    max-width: 500px !important;
+    width: 100% !important;
+    max-width: 350px !important;
     height: auto !important;
-    margin: 20px auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    margin: 15px auto !important;
     border-radius: 6px !important;
     overflow: hidden !important;
-    position: relative !important;
-    background: #f4f4f4 !important;
   }
   
   #projects .projects__row-img {
-    width: 110% !important;
-    min-width: 110% !important;
+    width: 100% !important;
     height: auto !important;
     object-fit: cover !important;
-    object-position: center center !important;
-    margin: 0 auto !important;
     display: block !important;
   }
 }
 
-/* Large Mobile Phones: 481-768px (iPhone Pro, modern Android) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  html { font-size: 57%; }
-  .header__content { padding: 1rem 1.5rem; }
-  .projects__content { 
-    grid-template-columns: 1fr !important; 
-    gap: 5px !important; 
-    width: 100% !important; 
-    padding: 0 5px !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-    justify-items: center !important;
-  }
-  
-  /* Hide desktop navigation */
-  .header__links { display: none !important; }
-  
-  /* Show hamburger menu */
-  .header__hamburger {
-    display: block !important;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-  
-  .header__hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    transition: 0.3s;
-  }
-  
-  /* About section - single column on mobile */
-  .about__content {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 3rem !important;
-  }
-  
-  /* Contact form button fix */
-  .contact__btn {
-    width: 100% !important;
-    padding: 1.5rem 2rem !important;
-  }
-  
-  /* Projects mobile layout - same as small mobile */
-  #projects .projects__row {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  
-  #projects .projects__row-img-cont {
-    width: 95vw !important;
-    max-width: 500px !important;
-    height: auto !important;
-    margin: 20px auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-radius: 6px !important;
-    overflow: hidden !important;
-    position: relative !important;
-    background: #f4f4f4 !important;
-  }
-  
-  #projects .projects__row-img {
-    width: 110% !important;
-    min-width: 110% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    margin: 0 auto !important;
-    display: block !important;
-  }
-}
 
 /* Tablets: 769-1024px (iPad, Android tablets) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
