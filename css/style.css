@@ -615,29 +615,8 @@ textarea {
   margin-top: 2rem;
 }
 
-.main-footer__social {
-  border: 2px solid white;
-  padding: 5px 7px;
-  border-radius: 8px;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.main-footer__social:hover {
-  background: white;
-  transform: translateY(-2px);
-}
-
-.main-footer__social:hover .main-footer__icon {
-  filter: invert(1);
-}
-
 .main-footer__icon {
   width: 2.5rem;
-  height: auto;
-  max-width: 100%;
-  transform: translateY(1px);
-  display: block;
 }
 
 .main-footer__lower {
@@ -776,42 +755,6 @@ textarea {
     display: block !important;
     padding: 1.5rem 2rem !important;
   }
-  
-  /* Footer responsive layout */
-  .main-footer__upper {
-    flex-direction: column !important;
-    text-align: center !important;
-    padding: 4rem 0 !important;
-  }
-  
-  .main-footer__row-1 {
-    order: 1 !important;
-    margin-bottom: 3rem !important;
-  }
-  
-  .main-footer__row-2 {
-    order: 2 !important;
-  }
-  
-  /* LinkedIn icon - smaller on mobile */
-  .main-footer__icon {
-    width: 2rem !important;
-    height: auto !important;
-  }
-  
-  /* Social container */
-  .main-footer__social-cont {
-    margin-top: 1rem !important;
-  }
-  
-  /* Footer text scaling */
-  .main-footer .heading-sm {
-    font-size: 2rem !important;
-  }
-  
-  .main-footer__short-desc {
-    font-size: 1.4rem !important;
-  }
 }
 
 
@@ -881,16 +824,6 @@ textarea {
     display: flex !important;
     flex-direction: column !important;
     gap: 4rem !important;
-  }
-  
-  /* Footer responsive - tablet */
-  .main-footer__upper {
-    padding: 6rem 0 !important;
-  }
-  
-  /* LinkedIn icon - medium size on tablet */
-  .main-footer__icon {
-    width: 2.3rem !important;
   }
 }
 
