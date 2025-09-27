@@ -412,7 +412,7 @@ textarea {
 /* About Section - Remove alignment attempts */
 .about {
   background: #fafafa;
-  padding: 15rem 0;
+  padding: 8rem 0;
 }
 
 .about__content {
@@ -442,7 +442,7 @@ textarea {
 
 /* Headings - V1 Style */
 .heading-sec__mb-med {
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
 }
 
 .heading-sec__main {
@@ -507,7 +507,7 @@ textarea {
 /* Contact Section Restoration */
 .contact {
   background: #0062b9 !important;
-  padding: 12rem 0;
+  padding: 8rem 0;
   color: #fff;
 }
 
@@ -686,6 +686,19 @@ textarea {
     margin: 5px 0;
     transition: 0.3s;
   }
+  
+  /* About section - single column on mobile */
+  .about__content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3rem !important;
+  }
+  
+  /* Contact form button fix */
+  .contact__btn {
+    width: 100% !important;
+    padding: 1.5rem 2rem !important;
+  }
 }
 
 /* Large Mobile Phones: 481-768px (iPhone Pro, modern Android) */
@@ -716,6 +729,19 @@ textarea {
     margin: 5px 0;
     transition: 0.3s;
   }
+  
+  /* About section - single column on mobile */
+  .about__content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3rem !important;
+  }
+  
+  /* Contact form button fix */
+  .contact__btn {
+    width: 100% !important;
+    padding: 1.5rem 2rem !important;
+  }
 }
 
 /* Tablets: 769-1024px (iPad, Android tablets) */
@@ -726,6 +752,13 @@ textarea {
     grid-template-columns: 1fr !important; 
     gap: 2rem !important; 
     width: 90% !important; 
+  }
+  
+  /* About section - single column on tablets */
+  .about__content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4rem !important;
   }
 }
 
