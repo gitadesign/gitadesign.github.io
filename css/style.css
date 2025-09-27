@@ -449,7 +449,7 @@ textarea {
   letter-spacing: 3px;
   text-align: center;
   position: relative;
-  margin-bottom: 3.5rem;
+  margin-bottom: 0;
 }
 
 .heading-sec__main::after {
@@ -696,6 +696,38 @@ textarea {
     width: 100% !important;
     padding: 1.5rem 2rem !important;
   }
+  
+  /* Projects mobile layout */
+  #projects .projects__row {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  #projects .projects__row-img-cont {
+    width: 95vw !important;
+    max-width: 500px !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    background: #f4f4f4 !important;
+  }
+  
+  #projects .projects__row-img {
+    width: 110% !important;
+    min-width: 110% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
 }
 
 /* Large Mobile Phones: 481-768px (iPhone Pro, modern Android) */
@@ -739,6 +771,38 @@ textarea {
     width: 100% !important;
     padding: 1.5rem 2rem !important;
   }
+  
+  /* Projects mobile layout - same as small mobile */
+  #projects .projects__row {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  #projects .projects__row-img-cont {
+    width: 90% !important;
+    max-width: 550px !important;
+    height: auto !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    background: #f4f4f4 !important;
+  }
+  
+  #projects .projects__row-img {
+    width: 110% !important;
+    min-width: 110% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
 }
 
 /* Tablets: 769-1024px (iPad, Android tablets) */
@@ -758,22 +822,37 @@ textarea {
     gap: 4rem !important;
   }
   
-  /* Optimize iPad projects section to match individual project pages */
-  #projects .projects__row-img-cont {
+  /* iPad portrait mode - single column like mobile */
+  #projects .projects__row {
     width: 100% !important;
-    max-width: 700px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  #projects .projects__row-img-cont {
+    width: 90% !important;
+    max-width: 600px !important;
     height: auto !important;
     aspect-ratio: auto !important;
-    margin: 0 auto 2rem auto !important;
-    overflow: visible !important;
+    margin: 20px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    background: #f4f4f4 !important;
   }
   
   #projects .projects__row-img {
-    object-fit: contain !important;
-    object-position: center !important;
-    width: 100% !important;
+    width: 110% !important;
+    min-width: 110% !important;
     height: auto !important;
-    max-height: 70vh !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 }
 

@@ -54,8 +54,8 @@
     
     @media screen and (min-width: 601px) and (max-width: 1024px) {
       .about-underline, .contact-underline {
-        margin-top: -7rem !important;
-        margin-bottom: 8.5rem !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 3rem !important;
       }
     }
     </style>
@@ -79,7 +79,7 @@
       transform: translateX(-50%) !important;
       border-radius: 5px !important;
     }
-    /* Mobile fixes - minimal cropping */
+    /* Mobile projects content grid - minimal rules for grid layout */
     @media only screen and (max-width: 600px) {
       #projects .projects__content {
         display: grid !important;
@@ -91,45 +91,9 @@
         box-sizing: border-box !important;
         justify-items: center !important;
       }
-      
-      #projects .projects__row {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-      }
-      
-      #projects .projects__row-img-cont {
-        width: 95vw !important;
-        max-width: 500px !important;
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-        aspect-ratio: auto !important;
-        margin: 20px auto !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        border-radius: 6px !important;
-        overflow: hidden !important;
-        position: relative !important;
-        background: #f4f4f4 !important;
-      }
-      
-      #projects .projects__row-img {
-        width: 110% !important;
-        min-width: 110% !important;
-        height: auto !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-        margin: 0 auto !important;
-        display: block !important;
-      }
-      
-
     }
     
-    /* iPad fixes - single column layout */
+    /* iPad fixes - minimal rules for scroll behavior */
     @media only screen and (min-width: 601px) and (max-width: 1024px) {
       html, body {
         -webkit-overflow-scrolling: auto !important;
@@ -143,25 +107,6 @@
         width: 85% !important;
         margin: 0 auto !important;
         padding: 0 !important;
-      }
-      
-      #projects .projects__row-img-cont {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 700px !important;
-        aspect-ratio: auto !important;
-        margin: 0 auto 2rem auto !important;
-        display: block !important;
-        overflow: visible !important;
-        border-radius: 8px !important;
-      }
-      
-      #projects .projects__row-img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
-        object-position: center !important;
-        max-height: 70vh !important;
       }
     }
     </style>
@@ -279,7 +224,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">About Me</span>
         </h2>
-        <div class="about-underline" style="width: 3rem !important; height: 5px !important; background: #0062b9 !important; margin: -8rem auto 9.5rem auto !important; border-radius: 5px !important; display: block !important;"></div>
+        <div class="about-underline" style="width: 3rem !important; height: 5px !important; background: #0062b9 !important; margin: 1.5rem auto 3rem auto !important; border-radius: 5px !important; display: block !important;"></div>
 
         <div class="about__content">
           <div class="about__content-main">
@@ -331,7 +276,7 @@
         <h2 class="heading heading-sec heading-sec__mb-med">
           <span class="heading-sec__main">Get in touch</span>
         </h2>
-        <div class="contact-underline" style="width: 3rem !important; height: 5px !important; background: #fff !important; margin: -8rem auto 9.5rem auto !important; border-radius: 5px !important; display: block !important;"></div>
+        <div class="contact-underline" style="width: 3rem !important; height: 5px !important; background: #fff !important; margin: 1.5rem auto 3rem auto !important; border-radius: 5px !important; display: block !important;"></div>
 
         <form class="contact__form" action="https://formsubmit.co/g.ogneva@gmail.com" method="POST">
           <div class="contact__form-field">
@@ -450,12 +395,12 @@
               contactHeading.style.marginBottom = '2rem';
             }
             if (aboutUnderline) {
-              aboutUnderline.style.margin = '0 auto 3rem auto';
+              aboutUnderline.style.margin = '1.5rem auto 3rem auto';
               aboutUnderline.style.position = 'relative';
               aboutUnderline.style.transform = 'none';
             }
             if (contactUnderline) {
-              contactUnderline.style.margin = '0 auto 3rem auto';
+              contactUnderline.style.margin = '1.5rem auto 3rem auto';
               contactUnderline.style.position = 'relative';
               contactUnderline.style.transform = 'none';
             }
