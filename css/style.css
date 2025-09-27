@@ -642,23 +642,26 @@ textarea {
   transform: translateY(1px) !important;
 }
 
-/* Project pages - force same footer layout as main page on desktop */
-body:not(.main-page) .main-footer__upper {
+/* Force same footer layout on ALL pages (desktop default) */
+.main-footer__upper {
   display: flex !important;
   justify-content: space-between !important;
   padding: 8rem 0 !important;
 }
 
-body:not(.main-page) .main-footer__row-1 {
+.main-footer__row-1 {
   order: 2 !important;
 }
 
-body:not(.main-page) .main-footer__row-2 {
+.main-footer__row-2 {
   order: 1 !important;
 }
 
-body:not(.main-page) .main-footer__icon {
+/* Override any inline styling on footer icons */
+.main-footer__icon {
   width: 2.5rem !important;
+  height: auto !important;
+  transform: translateY(1px) !important;
 }
 
 .main-footer__lower {
@@ -774,12 +777,19 @@ body:not(.main-page) .main-footer__icon {
   /* Hide desktop navigation */
   .header__links { display: none !important; }
   
-  /* Show hamburger menu on mobile */
+  /* Show hamburger menu on mobile - ALL pages */
   .header__hamburger {
     display: block !important;
     cursor: pointer;
     padding: 0.5rem;
     margin-right: 1rem;
+  }
+  
+  /* Force hamburger visibility on ALL pages */
+  header .header__hamburger {
+    display: block !important;
+    position: relative !important;
+    z-index: 1000 !important;
   }
   
   /* About section - single column on mobile */
@@ -804,15 +814,9 @@ body:not(.main-page) .main-footer__icon {
     height: auto !important;
   }
   
-  /* Project pages - force same header behavior as main page on mobile */
-  body:not(.main-page) .header__links {
-    display: none !important;
-  }
-  
-  body:not(.main-page) .header__content {
-    padding: 1rem 2rem !important;
-    width: 100% !important;
-    max-width: 100vw !important;
+  /* Mobile - responsive footer icon sizing */
+  .main-footer__social[style] .main-footer__icon {
+    width: 1.8rem !important;
   }
 }
 
@@ -891,9 +895,9 @@ body:not(.main-page) .main-footer__icon {
     height: auto !important;
   }
   
-  /* Project pages - force same header behavior as main page on tablet */
-  body:not(.main-page) .header__content {
-    padding: 1rem 2rem !important;
+  /* Tablet - responsive footer icon sizing */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2rem !important;
   }
 }
 
