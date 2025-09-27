@@ -904,6 +904,13 @@ textarea {
 /* Standard Laptops: 1367-1440px (15" MacBook Pro, most Windows laptops) */
 @media screen and (min-width: 1367px) and (max-width: 1440px) {
   html { font-size: 61%; }
+  
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+  
   .header__content { padding: 1rem 4rem; }
   .projects__content { 
     gap: 3.5rem !important; 
@@ -914,6 +921,13 @@ textarea {
 /* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
   html { font-size: 62.5%; }
+  
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+  
   .header__content { padding: 1rem 4rem; }
   .projects__content { 
     gap: 4rem !important; 
@@ -925,6 +939,13 @@ textarea {
 /* Ultra-wide/4K Displays: 1921px+ */
 @media screen and (min-width: 1921px) {
   html { font-size: 65%; }
+  
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+  
   .header__content { padding: 1rem 6rem; }
   .projects__content { 
     gap: 5rem !important; 
