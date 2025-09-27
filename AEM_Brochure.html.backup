@@ -7,8 +7,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>R&A Roll-ups — Gita Ogneva</title>
-    <meta name="description" content="R&A Roll-ups Portfolio — Gita Ogneva" />
+    <title>Dinex AEM Brochure — Gita Ogneva</title>
+    <meta name="description" content="Dinex AEM Aftermarket Brochure Portfolio — Gita Ogneva" />
     <meta name="robots" content="noindex, nofollow" />
     
     <!-- Favicon -->
@@ -53,7 +53,7 @@
                 max-width: 1359px !important;
             }
             body .brochure-gallery .brochure-image-container {
-                transform: scale(1.1) !important;
+                transform: scale(1.359) !important;
                 margin-bottom: 3rem !important;
                 transform-origin: center !important;
             }
@@ -211,8 +211,8 @@
             
             html body section.brochure-gallery div.brochure-image-container img.brochure-image,
             html body section.brochure-gallery div.brochure-image-container img {
-                width: 110% !important;
-                min-width: 110% !important;
+                width: 180% !important;
+                min-width: 180% !important;
                 height: auto !important;
                 margin: 0 auto !important;
                 display: block !important;
@@ -243,25 +243,44 @@
       </div>
     </header>
 
-    <!-- R&A Roll-ups Gallery -->
+    <!-- Dinex AEM Brochure Gallery -->
     <section class="brochure-gallery">
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 1.webp" alt="RA Roll-up Design 1" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Cover 1.webp" alt="AEM Brochure Cover 1" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 2.webp" alt="RA Roll-up Design 2" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Cover 2.webp" alt="AEM Brochure Cover 2" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 3.webp" alt="RA Roll-up Design 3" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Cover 3.webp" alt="AEM Brochure Cover 3" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 4.webp" alt="RA Roll-up Design 4" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Spread 1.webp" alt="AEM Brochure Spread 1" class="brochure-image" loading="lazy" />
         </div>
-
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Spread 2.webp" alt="AEM Brochure Spread 2" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Spread 3.webp" alt="AEM Brochure Spread 3" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Spread 4.webp" alt="AEM Brochure Spread 4" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Spread 5.webp" alt="AEM Brochure Spread 5" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Dinex/AEM Brochure/AEM_Brochure_EN_Back Cover.webp" alt="AEM Brochure Back Cover" class="brochure-image" loading="lazy" />
+        </div>
     </section>
 
     <footer class="main-footer">

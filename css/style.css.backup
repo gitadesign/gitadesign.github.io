@@ -314,7 +314,7 @@ textarea {
   #projects .projects__content .projects__row-img,
   body #projects .projects__row-img {
     display: block !important;
-    width: 110% !important;
+    width: 125% !important;
     height: auto !important;
     object-fit: cover !important;
     object-position: center center !important;
@@ -348,7 +348,7 @@ textarea {
   body:not([class*="project"]) #projects .projects__content .projects__row .projects__row-img,
   body:not([class*="project"]) #projects .projects__content .projects__row-img,
   body:not([class*="project"]) #projects .projects__row-img {
-    width: 110% !important;
+    width: 112% !important;
     height: auto !important;
   }
 }

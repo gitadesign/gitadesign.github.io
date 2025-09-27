@@ -117,8 +117,8 @@
       }
       
       #projects .projects__row-img {
-        width: 110% !important;
-        min-width: 110% !important;
+        width: 180% !important;
+        min-width: 180% !important;
         height: auto !important;
         object-fit: cover !important;
         object-position: center center !important;

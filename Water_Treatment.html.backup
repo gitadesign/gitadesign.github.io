@@ -7,8 +7,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>R&A Roll-ups — Gita Ogneva</title>
-    <meta name="description" content="R&A Roll-ups Portfolio — Gita Ogneva" />
+    <title>Water Treatment Brochure — Gita Ogneva</title>
+    <meta name="description" content="Water Treatment Brochure Portfolio — Gita Ogneva" />
     <meta name="robots" content="noindex, nofollow" />
     
     <!-- Favicon -->
@@ -53,7 +53,7 @@
                 max-width: 1359px !important;
             }
             body .brochure-gallery .brochure-image-container {
-                transform: scale(1.1) !important;
+                transform: scale(1.359) !important;
                 margin-bottom: 3rem !important;
                 transform-origin: center !important;
             }
@@ -211,8 +211,8 @@
             
             html body section.brochure-gallery div.brochure-image-container img.brochure-image,
             html body section.brochure-gallery div.brochure-image-container img {
-                width: 110% !important;
-                min-width: 110% !important;
+                width: 180% !important;
+                min-width: 180% !important;
                 height: auto !important;
                 margin: 0 auto !important;
                 display: block !important;
@@ -243,25 +243,36 @@
       </div>
     </header>
 
-    <!-- R&A Roll-ups Gallery -->
+    <!-- Water Treatment Brochure Gallery -->
     <section class="brochure-gallery">
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 1.webp" alt="RA Roll-up Design 1" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN1.webp" alt="Water Treatment Brochure Page 1" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 2.webp" alt="RA Roll-up Design 2" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN2.webp" alt="Water Treatment Brochure Page 2" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 3.webp" alt="RA Roll-up Design 3" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN3.webp" alt="Water Treatment Brochure Page 3" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Roll-ups/RA Roll-ups/RA_Roll-up_Roll-up 4.webp" alt="RA Roll-up Design 4" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN4.webp" alt="Water Treatment Brochure Page 4" class="brochure-image" loading="lazy" />
         </div>
-
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN5.webp" alt="Water Treatment Brochure Page 5" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN6.webp" alt="Water Treatment Brochure Page 6" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/Water Treatment Brochures 2024/Water_Treatment_EN7.webp" alt="Water Treatment Brochure Page 7" class="brochure-image" loading="lazy" />
+        </div>
     </section>
 
     <footer class="main-footer">
