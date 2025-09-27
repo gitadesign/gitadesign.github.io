@@ -642,6 +642,25 @@ textarea {
   transform: translateY(1px) !important;
 }
 
+/* Project pages - force same footer layout as main page on desktop */
+body:not(.main-page) .main-footer__upper {
+  display: flex !important;
+  justify-content: space-between !important;
+  padding: 8rem 0 !important;
+}
+
+body:not(.main-page) .main-footer__row-1 {
+  order: 2 !important;
+}
+
+body:not(.main-page) .main-footer__row-2 {
+  order: 1 !important;
+}
+
+body:not(.main-page) .main-footer__icon {
+  width: 2.5rem !important;
+}
+
 .main-footer__lower {
   padding: 4rem 0;
   border-top: 1px solid #444;
