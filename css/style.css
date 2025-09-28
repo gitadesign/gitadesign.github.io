@@ -818,7 +818,12 @@ textarea {
     overscroll-behavior: contain !important;
   }
   
-
+  /* Hide hamburger menu on iPad - show desktop navigation */
+  .header__hamburger { display: none !important; }
+  
+  /* Show desktop navigation links on iPad */
+  .header__links { display: flex !important; }
+  .header__main { display: block !important; }
   
   .header__content { 
     padding: 1rem 2rem; 

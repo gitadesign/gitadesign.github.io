@@ -220,7 +220,39 @@
                 object-position: center center !important;
             }
         }
-    </style>
+        
+        /* MOBILE DEVICES ONLY - FORCE HAMBURGER */
+        @media (max-width: 768px) {
+            header .header__hamburger, 
+            .header .header__hamburger,
+            .header__hamburger { 
+                display: block !important; 
+                flex-direction: column !important;
+                cursor: pointer !important;
+                padding: 0.5rem !important;
+                z-index: 1001 !important;
+                margin-right: 1rem !important;
+            }
+            header .header__hamburger span,
+            .header .header__hamburger span,
+            .header__hamburger span {
+                display: block !important;
+                width: 25px !important;
+                height: 3px !important;
+                background: white !important;
+                margin: 3px 0 !important;
+                transition: 0.3s ease !important;
+            }
+            .header__links, 
+            .header .header__links { display: none !important; }
+        }
+        
+        /* iPad - 769px to 1024px - DESKTOP NAVIGATION */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .header__hamburger { display: none !important; }
+            .header__links { display: flex !important; }
+            .header__main { display: block !important; }
+        }    </style>
 </head>
 <body>
     <header class="header">
@@ -240,8 +272,25 @@
             <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
           </ul>
         </nav>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <div class="header__hamburger" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="header__mobile-menu" id="mobileMenu">
+      <ul class="header__links">
+        <li class="header__link-wrapper"><a href="./index.html" class="header__link" title="Home">Home</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#about" class="header__link" title="About">About</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#projects" class="header__link" title="Projects">Projects</a></li>
+        <li class="header__link-wrapper"><a href="./index.html#contact" class="header__link" title="Contact">Contact</a></li>
+      </ul>
+    </div>
 
     <!-- R&A Roll-ups Gallery -->
     <section class="brochure-gallery">
@@ -336,6 +385,39 @@
         if (e.keyCode === 123) {
           e.preventDefault();
           return false;
+        }
+      });
+      
+      // Mobile menu functionality
+      function toggleMobileMenu() {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.querySelector(".header__mobile-menu");
+        
+        if (hamburger && mobileMenu) {
+          hamburger.classList.toggle("active");
+          mobileMenu.classList.toggle("active");
+        }
+      }
+
+      function closeMobileMenu() {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.querySelector(".header__mobile-menu");
+        
+        if (hamburger && mobileMenu) {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        }
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const hamburger = document.querySelector(".header__hamburger");
+        const mobileMenu = document.querySelector(".header__mobile-menu");
+        
+        if (mobileMenu && hamburger && mobileMenu.classList.contains("active") && 
+            !hamburger.contains(event.target) && 
+            !mobileMenu.contains(event.target)) {
+          closeMobileMenu();
         }
       });
     </script>

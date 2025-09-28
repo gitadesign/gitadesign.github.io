@@ -221,8 +221,8 @@
             }
         }
         
-        /* ALL MOBILE AND TABLET DEVICES - FORCE HAMBURGER */
-        @media (max-width: 1024px) {
+        /* MOBILE DEVICES ONLY - FORCE HAMBURGER */
+        @media (max-width: 768px) {
             header .header__hamburger, 
             .header .header__hamburger,
             .header__hamburger { 
@@ -245,6 +245,13 @@
             }
             .header__links, 
             .header .header__links { display: none !important; }
+        }
+        
+        /* iPad - 769px to 1024px - DESKTOP NAVIGATION */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .header__hamburger { display: none !important; }
+            .header__links { display: flex !important; }
+            .header__main { display: block !important; }
         }
     </style>
 </head>
