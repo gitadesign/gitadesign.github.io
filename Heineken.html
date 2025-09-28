@@ -220,6 +220,32 @@
                 object-position: center center !important;
             }
         }
+        
+        /* ALL MOBILE AND TABLET DEVICES - FORCE HAMBURGER */
+        @media (max-width: 1024px) {
+            header .header__hamburger, 
+            .header .header__hamburger,
+            .header__hamburger { 
+                display: block !important; 
+                flex-direction: column !important;
+                cursor: pointer !important;
+                padding: 0.5rem !important;
+                z-index: 1001 !important;
+                margin-right: 1rem !important;
+            }
+            header .header__hamburger span,
+            .header .header__hamburger span,
+            .header__hamburger span {
+                display: block !important;
+                width: 25px !important;
+                height: 3px !important;
+                background: white !important;
+                margin: 3px 0 !important;
+                transition: 0.3s ease !important;
+            }
+            .header__links, 
+            .header .header__links { display: none !important; }
+        }
     </style>
 </head>
 <body>
