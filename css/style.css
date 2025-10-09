@@ -926,14 +926,20 @@ html body section.brochure-gallery,
 
 }
 
-/* Small Laptops: 1025-1366px (13" MacBook, smaller Windows laptops) */
-@media screen and (min-width: 1025px) and (max-width: 1366px) {
+/* All Laptops and Desktops: 1025px+ (Ensure 3-column grid) */
+@media screen and (min-width: 1025px) {
   html { font-size: 60%; }
   
   /* Hide hamburger menu on desktop */
   .header__hamburger { display: none !important; }
   
-  /* All gallery pages should be single column like R&A layout */
+  /* MAIN PAGE: Always 3-column grid on laptops/desktops */
+  #projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 3rem !important; 
+    width: 90% !important; 
+  }
   
   /* Project pages - reset footer icon to desktop size */
   .main-footer__social[style] .main-footer__icon {
@@ -942,33 +948,17 @@ html body section.brochure-gallery,
   }
   
   .header__content { padding: 1rem 3rem; }
-  .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 3rem !important; 
-    width: 90% !important; 
-  }
 }
 
-/* Standard Laptops: 1367-1440px (15" MacBook Pro, most Windows laptops) */
-@media screen and (min-width: 1367px) and (max-width: 1440px) {
+/* Standard Laptops: 1366-1440px (15" MacBook Pro, most Windows laptops) */
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
   html { font-size: 61%; }
   
-  /* Project pages - reset footer icon to desktop size */
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem !important;
-    height: auto !important;
-  }
-  
   .header__content { padding: 1rem 4rem; }
-  .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+  #projects .projects__content { 
     gap: 3.5rem !important; 
     width: 85% !important; 
   }
-  
-  /* All gallery pages should be single column like R&A layout */
 }
 
 /* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
@@ -982,9 +972,7 @@ html body section.brochure-gallery,
   }
   
   .header__content { padding: 1rem 4rem; }
-  .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+  #projects .projects__content { 
     gap: 4rem !important; 
     width: 80% !important; 
     max-width: 1600px !important; 
@@ -1002,9 +990,7 @@ html body section.brochure-gallery,
   }
   
   .header__content { padding: 1rem 6rem; }
-  .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
+  #projects .projects__content { 
     gap: 5rem !important; 
     width: 75% !important; 
     max-width: 1800px !important; 
