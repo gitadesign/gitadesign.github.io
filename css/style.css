@@ -981,7 +981,7 @@ html body section.brochure-gallery,
   
   /* Gallery pages - larger images with less padding */
   .brochure-gallery {
-    max-width: 1400px !important;
+    max-width: 1200px !important;
     padding: 4rem 0.5rem 2.5rem 0.5rem !important;
   }
   
@@ -989,6 +989,18 @@ html body section.brochure-gallery,
     transform: scale(1.25) !important;
     transform-origin: center !important;
     margin-bottom: 2.5rem !important;
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  .brochure-image-container .brochure-image {
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: auto !important;
   }
   
   /* About section - keep 2-column layout on laptops */
@@ -1040,7 +1052,7 @@ html body section.brochure-gallery,
   
   /* Gallery pages - larger images with less padding */
   .brochure-gallery {
-    max-width: 1500px !important;
+    max-width: 1200px !important;
     padding: 3.5rem 0.5rem 2.5rem 0.5rem !important;
   }
   
@@ -1048,6 +1060,18 @@ html body section.brochure-gallery,
     transform: scale(1.28) !important;
     transform-origin: center !important;
     margin-bottom: 2.8rem !important;
+    width: 85% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+  }
+  
+  .brochure-image-container .brochure-image {
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: auto !important;
   }
   
   /* About section - 2-column layout */
