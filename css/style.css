@@ -938,20 +938,20 @@ html body section.brochure-gallery,
   .header__main { display: block !important; }
   
   .main-container {
-    width: 88% !important;
+    width: 92% !important;
     margin: 0 auto !important;
-    padding: 0 2rem !important;
+    padding: 0 1rem !important;
   }
   
-  /* MAIN PAGE: 3-column grid for small laptops */
+  /* MAIN PAGE: 3-column grid for small laptops with larger images */
   #projects .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2.5rem !important; 
-    width: 95% !important;
-    max-width: 1200px !important;
+    gap: 2rem !important; 
+    width: 98% !important;
+    max-width: 1300px !important;
     margin: 0 auto !important;
-    padding: 0 1rem !important;
+    padding: 0 0.5rem !important;
     box-sizing: border-box !important;
   }
   
@@ -967,6 +967,8 @@ html body section.brochure-gallery,
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
+    transform: scale(1.08) !important;
+    transform-origin: center !important;
   }
   
   #projects .projects__row-img {
@@ -975,6 +977,18 @@ html body section.brochure-gallery,
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
+  }
+  
+  /* Gallery pages - larger images with less padding */
+  .brochure-gallery {
+    max-width: 1400px !important;
+    padding: 4rem 0.5rem 2.5rem 0.5rem !important;
+  }
+  
+  .brochure-image-container {
+    transform: scale(1.25) !important;
+    transform-origin: center !important;
+    margin-bottom: 2.5rem !important;
   }
   
   /* About section - keep 2-column layout on laptops */
@@ -1005,18 +1019,35 @@ html body section.brochure-gallery,
   .header__main { display: block !important; }
   
   .main-container {
-    width: 85% !important;
+    width: 88% !important;
     margin: 0 auto !important;
   }
   
-  /* MAIN PAGE: 3-column grid for standard laptops */
+  /* MAIN PAGE: 3-column grid for standard laptops with larger images */
   #projects .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 3.5rem !important; 
-    width: 85% !important;
-    max-width: 1400px !important;
+    gap: 2.8rem !important; 
+    width: 90% !important;
+    max-width: 1450px !important;
     margin: 0 auto !important;
+  }
+  
+  #projects .projects__row-img-cont {
+    transform: scale(1.12) !important;
+    transform-origin: center !important;
+  }
+  
+  /* Gallery pages - larger images with less padding */
+  .brochure-gallery {
+    max-width: 1500px !important;
+    padding: 3.5rem 0.5rem 2.5rem 0.5rem !important;
+  }
+  
+  .brochure-image-container {
+    transform: scale(1.28) !important;
+    transform-origin: center !important;
+    margin-bottom: 2.8rem !important;
   }
   
   /* About section - 2-column layout */
