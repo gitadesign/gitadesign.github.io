@@ -68,6 +68,12 @@ body[class*="project"] .projects__row-img-cont {
 
 /* Tablet rules consolidated into main tablet section below */
 
+/* Gallery Brochure Images */
+.brochure-image-container {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
 /* Typography & Links */
 a {
   text-decoration: none;
