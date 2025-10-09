@@ -712,6 +712,25 @@ textarea {
 
 
 /* =================================================================
+   GALLERY GLOBAL STYLES - Clean, consistent padding
+   ================================================================= */
+
+/* Global gallery image padding - AFTER each image (not above) */
+.brochure-gallery .brochure-image {
+  margin-bottom: 2rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove rounded containers globally */
+.brochure-image-container {
+  border-radius: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* =================================================================
    COMPREHENSIVE RESPONSIVE COVERAGE FOR ALL MODERN DEVICES
    Global padding handles header overlap - no additional padding needed
    ================================================================= */
@@ -899,25 +918,7 @@ textarea {
   /* Hide hamburger menu on desktop */
   .header__hamburger { display: none !important; }
   
-  /* FIX: Force 3-column layout for gallery pages on laptops */
-  .brochure-gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important;
-    max-width: 1235px !important;
-    margin: 0 auto !important;
-    padding: 6rem 2rem 4rem 2rem !important;
-  }
-  
-  .brochure-image-container {
-    margin-bottom: 2rem !important;
-  }
-  
-  .brochure-image {
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom: 1rem !important;
-  }
+  /* All gallery pages should be single column like R&A layout */
   
   /* Project pages - reset footer icon to desktop size */
   .main-footer__social[style] .main-footer__icon {
@@ -948,25 +949,7 @@ textarea {
     width: 85% !important; 
   }
   
-  /* FIX: Force 3-column layout for gallery pages on standard laptops */
-  .brochure-gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important;
-    max-width: 1235px !important;
-    margin: 0 auto !important;
-    padding: 6rem 2rem 4rem 2rem !important;
-  }
-  
-  .brochure-image-container {
-    margin-bottom: 2rem !important;
-  }
-  
-  .brochure-image {
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom: 1rem !important;
-  }
+  /* All gallery pages should be single column like R&A layout */
 }
 
 /* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
