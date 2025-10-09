@@ -30,32 +30,36 @@
             margin: 0 auto;
             padding: 8rem 2rem 4rem 2rem;
             background: #f4f4f4 !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
         
-        /* Adjust top padding for different screen sizes to match reduced header height */
-        @media screen and (min-width: 601px) {
+        /* Tablet layout - 2 columns */
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
             .brochure-gallery {
                 padding: 7rem 2rem 4rem 2rem;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
         }
         
-        /* MacBook Pro and similar laptops - further reduce top padding */
-        @media screen and (min-width: 1025px) and (max-width: 1440px) {
+        /* Laptop/Desktop layout - 3 columns */
+        @media screen and (min-width: 1025px) {
             .brochure-gallery {
                 padding: 6.5rem 2rem 4rem 2rem;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
             }
         }
         
-        /* Large desktop screens - reduced padding and larger images */
+        /* Large desktop screens - maintain 3 columns with more space */
         @media screen and (min-width: 1441px) {
             body .brochure-gallery {
                 padding: 4.5rem 2rem 4rem 2rem !important;
                 max-width: 1359px !important;
-            }
-            body .brochure-gallery .brochure-image-container {
-                transform: scale(1.1) !important;
-                margin-bottom: 3rem !important;
-                transform-origin: center !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2.5rem !important;
             }
         }
         
@@ -65,12 +69,19 @@
             background: #f4f4f4;
             border-radius: 8px;
             overflow: hidden;
+            aspect-ratio: auto;
+            padding-bottom: 1.5rem;
         }
         
         .brochure-image {
             width: 100%;
             height: auto;
             display: block;
+            object-fit: contain;
+            object-position: center;
+            margin-bottom: 1rem;
+            max-height: none;
+            min-height: auto;
         }
         
 
@@ -123,30 +134,11 @@
             }
         }
         
-        /* RESPONSIVE IMAGE CONTAINER ADJUSTMENTS */
+        /* RESPONSIVE IMAGE CONTAINER ADJUSTMENTS - cleaned up for grid layout */
         
-        /* Tablet adjustments */
-        @media screen and (min-width: 601px) and (max-width: 1024px) {
-            .brochure-gallery {
-                max-width: 117% !important;
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
-            }
-            .brochure-image-container {
-                margin-bottom: 1.5rem !important;
-            }
-        }
-        
-        /* MacBook Pro specific adjustments */
-        @media screen and (min-width: 1025px) and (max-width: 1600px) {
-            .brochure-gallery {
-                max-width: 88.8% !important;
-                padding-left: 2rem !important;
-                padding-right: 2rem !important;
-            }
-            .brochure-image-container {
-                margin-bottom: 2rem !important;
-            }
+        /* Ensure proper spacing and no margin-bottom conflicts with grid gap */
+        .brochure-image-container {
+            margin-bottom: 0 !important;
         }
         
 
@@ -172,14 +164,17 @@
     <style>
 
         
-        /* Large desktop styles */
+        /* Large desktop styles - maintain grid layout */
         @media screen and (min-width: 1441px) {
             html body section.brochure-gallery {
                 padding-top: 4.5rem !important;
                 max-width: 1200px !important;
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 2.5rem !important;
             }
             html body section.brochure-gallery div.brochure-image-container {
-                margin-bottom: 3rem !important;
+                margin-bottom: 0 !important;
             }
         }
         
@@ -222,13 +217,14 @@
             
             html body section.brochure-gallery div.brochure-image-container img.brochure-image,
             html body section.brochure-gallery div.brochure-image-container img {
-                width: 110% !important;
-                min-width: 110% !important;
+                width: 100% !important;
+                min-width: 100% !important;
                 height: auto !important;
                 margin: 0 auto !important;
                 display: block !important;
-                object-fit: cover !important;
+                object-fit: contain !important;
                 object-position: center center !important;
+                max-height: none !important;
             }
         }
         
