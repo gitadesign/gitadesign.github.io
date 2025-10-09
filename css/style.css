@@ -1,14 +1,9 @@
 
-/* Comprehensive Responsive Breakpoints for All Devices:
-   0-480px:     Small Mobile (iPhone SE, older phones)
-   481-768px:   Large Mobile (iPhone Pro, Android phones)
-   769-1024px:  Tablets (iPad, Android tablets) 
-   1025-1366px: Small Laptops (13" MacBook, smaller Windows laptops)
-   1367-1440px: Standard Laptops (15" MacBook Pro, most Windows laptops)
-   1441-1920px: Large Desktops (27" iMac, 1080p monitors)
-   1921px+:     Ultra-wide/4K displays
-   
-   Global padding handles all header overlap - no device-specific padding needed */
+/* ===== RESPONSIVE PORTFOLIO CSS =====
+   Breakpoints: 0-768px (Mobile) | 769-1024px (Tablet) | 1025px+ (Desktop)
+   Optimized for modern devices with simplified responsive approach */
+
+/* Reset & Base Styles */
 *,
 *::after,
 *::before {
@@ -21,10 +16,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,43 +24,19 @@ body {
   position: relative;
   line-height: 1.5;
   font-family: 'Source Sans Pro', sans-serif;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
+  overflow-x: hidden;
+  background-color: #f4f4f4;
+  padding-top: calc(6rem + 1vw);
+}
+
+/* Project pages image handling */
+body:not(.main-page) img {
+  object-fit: contain;
+  object-position: center;
   width: 100%;
-  max-width: 100vw;
-  /* Universal responsive padding to prevent header overlap - cross-browser compatible */
-  padding-top: calc(6rem + 1vw) !important;
-  /* Match the grey background color of image containers */
-  background-color: #f4f4f4 !important;
+  height: auto;
+  max-height: 90vh;
 }
-
-/* Project pages: prevent excessive image cropping */
-body:not(.main-page) img,
-body:not(.main-page) .projects__row-img,
-body[class*="project"] img,
-body[class*="project"] .projects__row-img {
-  object-fit: contain !important;
-  object-position: center !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 90vh !important;
-}
-
-/* Project pages: prevent image container cropping */
-body:not(.main-page) .projects__row-img-cont,
-body[class*="project"] .projects__row-img-cont {
-  height: auto !important;
-  width: auto !important;
-  max-width: 100% !important;
-  min-height: auto !important;
-  max-height: none !important;
-  aspect-ratio: none !important;
-  overflow: visible !important;
-}
-
-/* Tablet rules consolidated into main tablet section below */
-
-/* Gallery Brochure Images - REMOVED CONFLICTING STYLES */
 
 /* Typography & Links */
 a {
@@ -105,83 +73,8 @@ textarea {
   right: 0;
   width: 100%;
   z-index: 1000;
-  background: #000 !important;
+  background: #000;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
-}
-
-/* Hamburger Menu - Hidden by default, shown on mobile */
-.header__hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 1001;
-}
-
-.header__hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: white;
-  margin: 3px 0;
-  transition: 0.3s ease;
-  border-radius: 1px;
-}
-
-/* Hamburger animation when active */
-.header__hamburger.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.header__hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.header__hamburger.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* Mobile menu overlay */
-.header__mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 1000;
-  padding-top: 8rem;
-}
-
-.header__mobile-menu.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.header__mobile-menu .header__links {
-  display: flex !important;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.header__mobile-menu .header__link {
-  color: white !important;
-  text-decoration: none;
-  padding: 1.5rem 0;
-  font-size: 1.8rem;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  width: 80vw;
-  transition: color 0.3s ease;
-}
-
-.header__mobile-menu .header__link:hover {
-  color: #0062b9 !important;
 }
 
 .header__content {
@@ -189,17 +82,14 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 5rem;
-  color: #fff !important;
-  filter: none !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
+  color: #fff;
 }
 
 .header__logo-container {
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: #fff !important;
+  color: #fff;
   transition: color .3s;
 }
 
@@ -234,7 +124,7 @@ textarea {
   padding: 2.2rem 3rem;
   display: inline-block;
   font-size: 1.6rem;
-  color: #fff !important;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -242,169 +132,162 @@ textarea {
 }
 
 .header__link:hover {
-  color: #0062b9 !important;
+  color: #0062b9;
+}
+
+/* Mobile Hamburger Menu */
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s ease;
+  border-radius: 1px;
+}
+
+.header__hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.header__hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.header__mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 1000;
+  padding-top: 8rem;
+}
+
+.header__mobile-menu.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__mobile-menu .header__links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__mobile-menu .header__link {
+  color: white;
+  text-decoration: none;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 80vw;
+  transition: color 0.3s ease;
+}
+
+.header__mobile-menu .header__link:hover {
+  color: #0062b9;
 }
 
 
-
-/* First, restore the main container style */
+/* Layout */
 .main-container {
   max-width: 120rem;
   margin: 0 auto;
   width: 92%;
 }
 
-/* ===== CONSOLIDATED Projects / Grid CENTERING (replace previous project rules) ===== */
-/* Scoped, high-specificity overrides only for #projects subtree */
-
+/* Projects Section */
 #projects {
-  width: 100%;
-  max-width: 100vw;
-  min-height: auto;
-  height: auto;
   background: #f4f4f4;
-  box-sizing: border-box;
-  display: block;
   padding: 2rem 0 4rem 0;
-  margin: 0;
-  transform: none !important;
-  overflow-x: hidden;
 }
 
-/* Keep the main-container centered but remove any accidental offsets
-   limit its visible width so the projects block lines up visually with the page */
-#projects > .main-container {
-  width: 100% !important;
-  max-width: 1200px !important;  /* visual page width for projects */
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
-  display: block !important;
-}
-
-/* Hide spacer that previously shifted layout */
 #projects .projects__spacer {
-  display: none !important;
-  width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
+  display: none;
 }
 
-/* The centered grid: fixed visible width (responsive), truly centered via margin:auto.
-   max-width here controls how wide the 3-column layout appears. */
 #projects .projects__content {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  grid-template-rows: repeat(2, 1fr) !important;
-  gap: 4rem 4rem !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+#projects .projects__row {
   width: 100%;
-  max-width: 1800px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 4vw !important;
-  padding-right: 4vw !important;
-  box-sizing: border-box !important;
-  align-items: center !important;
-  justify-items: center !important;
-  align-content: center !important;
-  justify-content: center !important;
-  position: static !important;
-  left: auto !important;
-  transform: none !important;
-  float: none !important;
 }
 
-/* Ensure rows / cells don't introduce offsets */
-#projects .projects__row,
 #projects .projects__row-img-cont {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  float: none !important;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Image sizing + overlay anchoring - DESKTOP ONLY (above 1600px) */
-@media screen and (min-width: 1601px) {
-  #projects .projects__row-img-cont {
-    position: relative !important;
-    overflow: hidden !important;
-    aspect-ratio: unset !important;
-    min-width: 617px !important;
-    max-width: 617px !important;
-    width: 617px !important;
-    height: 381px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
-  #projects .projects__row-img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    margin: 0 !important;
-    z-index: 1 !important;
-  }
+#projects .projects__row-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
 
-
-
-/* Ensure safe spacing for individual pages */
-.project-details,
-.project-cs-hero {
-  margin-top: 3rem !important; /* Extra safe spacing for project pages */
-  padding-top: 2rem !important;
-}
-
-/* Overlay: full-area anchor on top of image */
+/* Project hover overlay */
 #projects .projects__overlay {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background: rgba(255,255,255,0) !important;
-  opacity: 0 !important;
-  transition: background .22s ease, opacity .22s ease !important;
-  pointer-events: none !important;
-  z-index: 3 !important;
-  text-decoration: none !important;
-  color: inherit !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0);
+  opacity: 0;
+  transition: all .3s ease;
+  pointer-events: none;
+  z-index: 2;
 }
 
 #projects .projects__row-img-cont:hover .projects__overlay {
-  background: rgba(255,255,255,0.86) !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
+  background: rgba(255,255,255,0.86);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #projects .projects__overlay span {
-  color: #000 !important;
-  font-size: 2rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  padding: 1rem 1.6rem !important;
-  white-space: nowrap !important;
-  z-index: 4 !important;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 1.6rem;
+  white-space: nowrap;
 }
 
 
 
-/* Legacy responsive rules removed - all handled by comprehensive responsive system */
 
-
-
-
-
-/* About Section - Remove alignment attempts */
+/* About Section */
 .about {
   background: #fafafa;
   padding: 8rem 0;
@@ -413,7 +296,7 @@ textarea {
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
+  gap: 10rem;
 }
 
 .about__content-title {
@@ -435,15 +318,14 @@ textarea {
   flex-direction: column;
 }
 
-/* Headings - V1 Style */
+/* Headings */
 .heading-sec__mb-med {
   margin-bottom: 6rem;
 }
 
-/* Override heading margin for sections with custom underlines */
 #about .heading-sec__mb-med,
 #contact .heading-sec__mb-med {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 
 .heading-sec__main {
@@ -456,36 +338,26 @@ textarea {
   margin-bottom: 0;
 }
 
-/* COMPLETELY DISABLE ALL PSEUDO-ELEMENT SEPARATORS */
 .heading-sec__main::after,
-.heading-sec__main::before,
-#about .heading-sec__main::after,
-#contact .heading-sec__main::after,
-.about .heading-sec__main::after,
-.contact .heading-sec__main::after {
-  display: none !important;
-  content: none !important;
-  visibility: hidden !important;
+.heading-sec__main::before {
+  display: none;
 }
 
-/* SINGLE GLOBAL SEPARATOR STYLE - HTML divs only */
 .about-underline, 
 .contact-underline {
-  width: 3rem !important;
-  height: 5px !important;
-  border-radius: 5px !important;
-  margin: 1rem auto 3rem auto !important;
-  display: block !important;
-  position: static !important;
-  clear: both !important;
+  width: 3rem;
+  height: 5px;
+  border-radius: 5px;
+  margin: 1rem auto 3rem auto;
+  display: block;
 }
 
 .about-underline {
-  background: #0062b9 !important;
+  background: #0062b9;
 }
 
 .contact-underline {
-  background: #fff !important;
+  background: #fff;
 }
 
 .heading-sec__sub {
@@ -499,7 +371,7 @@ textarea {
   line-height: 1.6;
 }
 
-/* Skills Section - Exact V1 Style */
+/* Skills */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -515,9 +387,9 @@ textarea {
   color: #666;
 }
 
-/* Contact Section Restoration */
+/* Contact Section */
 .contact {
-  background: #0062b9 !important;
+  background: #0062b9;
   padding: 8rem 0;
   color: #fff;
 }
@@ -526,10 +398,9 @@ textarea {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   background: white;
   padding: 4rem;
-  margin-top: 6rem;
+  margin: 5rem auto 0;
   max-width: 80rem;
   width: 95%;
-  margin: 5rem auto 0 auto;
   border-radius: 5px;
 }
 
@@ -553,7 +424,6 @@ textarea {
   width: 100%;
   border: 1px solid #ebebeb;
   font-size: 1.6rem;
-  letter-spacing: 0px;
   background: #f0f0f0;
   border-radius: 5px;
   font-weight: 600;
@@ -571,26 +441,18 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  background: #0062b9;
+  background: #000;
   color: #fff;
   border-radius: 5px;
   border: none;
   cursor: pointer;
 }
 
-/* Make only the contact section's submit button black */
-.contact__form .contact__btn {
-  background: #000 !important;
-  color: #fff !important;
-}
-
-/* Footer - V1 Restoration */
+/* Footer */
 .main-footer {
-  background: #000 !important;
-  color: #fff !important;
+  background: #000;
+  color: #fff;
 }
-
-
 
 .main-footer__upper {
   display: flex;
@@ -617,7 +479,6 @@ textarea {
   margin-top: 2rem;
 }
 
-/* Main page footer - clean styling without inline overrides */
 .main-footer__social {
   border: 2px solid white;
   padding: 5px 7px;
@@ -632,47 +493,17 @@ textarea {
   transform: translateY(1px);
 }
 
-/* Project pages - override inline styles to match main page */
-.main-footer__social[style*="border"] {
-  border: 2px solid white !important;
-  padding: 5px 7px !important;
-  border-radius: 8px !important;
-  display: inline-block !important;
-}
-
-.main-footer__icon[style*="transform"] {
-  transform: translateY(1px) !important;
-}
-
-/* Force same footer layout on ALL pages (desktop default) */
-.main-footer__upper {
-  display: flex !important;
-  justify-content: space-between !important;
-  padding: 8rem 0 !important;
-}
-
-.main-footer__row-1 {
-  order: 2 !important;
-}
-
-.main-footer__row-2 {
-  order: 1 !important;
-}
-
-/* Removed duplicate footer icon rule */
-
 .main-footer__lower {
   padding: 4rem 0;
   border-top: 1px solid #444;
-  color: #eee !important;
+  color: #eee;
   font-size: 1.2rem;
   text-align: left;
 }
 
-/* Footer heading fixes */
 .main-footer .heading-sm {
   font-size: 2.2rem;
-  text-transform: none; /* removes all caps */
+  text-transform: none;
   letter-spacing: 1px;
   margin-bottom: 2rem;
 }
@@ -700,493 +531,251 @@ textarea {
   color: #fff;
 }
 
-/* Contact button spacing */
 .about__content-details .btn {
   margin-top: 1.8rem;
 }
 
 
 
-/* =================================================================
-   GALLERY GLOBAL STYLES - Clean, consistent padding
-   ================================================================= */
-
-/* Global gallery image padding - AFTER each image (not above) - MAXIMUM SPECIFICITY */
-html body section.brochure-gallery div.brochure-image-container img.brochure-image,
-html body section.brochure-gallery div.brochure-image-container img,
-.brochure-gallery .brochure-image-container .brochure-image,
-.brochure-gallery .brochure-image {
-  margin-bottom: 2rem !important;
-  padding-bottom: 0 !important;
-}
-
-/* Remove rounded containers globally - MAXIMUM SPECIFICITY */
-html body section.brochure-gallery div.brochure-image-container,
-.brochure-gallery .brochure-image-container {
-  border-radius: 0 !important;
-  overflow: visible !important;
-  background: transparent !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* DEFAULT: Single column layout for ALL gallery pages */
-html body section.brochure-gallery,
+/* Gallery Styles */
 .brochure-gallery {
-  display: block !important;
-  grid-template-columns: none !important;
-  grid-template-rows: none !important;
-  gap: 0 !important;
-  max-width: 1235px !important;
-  margin: 0 auto !important;
-  padding: 6rem 2rem 4rem 2rem !important;
-  background: #f4f4f4 !important;
+  display: block;
+  max-width: 1235px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem 2rem;
+  background: #f4f4f4;
 }
 
-/* All individual gallery pages remain single-column at all screen sizes */
+.brochure-gallery .brochure-image-container {
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  margin-bottom: 2rem;
+}
 
-/* =================================================================
-   COMPREHENSIVE RESPONSIVE COVERAGE FOR ALL MODERN DEVICES
-   Global padding handles header overlap - no additional padding needed
-   ================================================================= */
+.brochure-gallery .brochure-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
 
-/* All Mobile Devices: 0-768px (Simplified for iPhone 16 and all phones) */
+/* Section Padding */
+.sec-pad {
+  padding: 8rem 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Mobile: 0-768px */
 @media screen and (max-width: 768px) {
   html { font-size: 55%; }
   
-  /* Ensure mobile content fits screen width */
   body { 
-    max-width: 100vw !important;
+    max-width: 100vw;
   }
   
   .main-container {
-    width: 95% !important;
-    max-width: 100vw !important;
-    padding: 0 2rem !important;
-    margin: 0 auto !important;
+    width: 95%;
+    padding: 0 2rem;
+    margin: 0 auto;
   }
   
   .header__content { 
     padding: 1rem 2rem; 
-    width: 100%;
-    max-width: 100vw;
   }
   
-  /* Projects grid - clean single column layout */
-  #projects .projects__content { 
-    display: grid !important;
-    grid-template-columns: 1fr !important; 
-    gap: 2rem !important; 
-    width: 100% !important; 
-    max-width: 400px !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
-    justify-items: center !important;
-  }
+  /* Hide desktop navigation, show hamburger */
+  .header__links { display: none; }
   
-  /* Projects row layout */
-  #projects .projects__row {
-    width: 100% !important;
-    max-width: 350px !important;
-    margin: 0 auto !important;
-  }
-  
-  #projects .projects__row-img-cont {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-    position: relative !important;
-  }
-  
-  #projects .projects__row-img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-  
-  /* Hide desktop navigation */
-  .header__links { display: none !important; }
-  
-  /* Show hamburger menu on mobile - ALL pages */
   .header__hamburger {
-    display: block !important;
+    display: block;
     cursor: pointer;
     padding: 0.5rem;
     margin-right: 1rem;
   }
-
   
-  /* About section - single column on mobile */
+  /* Projects: single column layout */
+  #projects .projects__content { 
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  #projects .projects__row {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  #projects .projects__row-img-cont {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
+  }
+  
+  /* About: single column */
   .about__content {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 3rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
   
-  /* Contact form button */
+  /* Contact button */
   .contact__btn {
-    width: 100% !important;
-    max-width: 200px !important;
-    margin: 0 auto !important;
-    display: block !important;
-    padding: 1.5rem 2rem !important;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    padding: 1.5rem 2rem;
   }
   
-  /* Project pages only - override inline styled LinkedIn icon */
+  /* Footer icons */
   .main-footer__social[style] .main-footer__icon {
-    width: 1.8rem !important;
-    height: auto !important;
+    width: 1.8rem;
   }
-
 }
 
-
-/* Tablets: 769-1024px (iPad, Android tablets) */
+/* Tablets: 769-1024px */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   html { 
     font-size: 58%; 
-    -webkit-overflow-scrolling: touch !important;
-    overscroll-behavior: contain !important;
-    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
   
   body {
-    overscroll-behavior: contain !important;
+    overscroll-behavior: contain;
   }
   
-  /* Hide hamburger menu on iPad - show desktop navigation */
-  .header__hamburger { display: none !important; }
-  
-  /* Show desktop navigation links on iPad */
-  .header__links { display: flex !important; }
-  .header__main { display: block !important; }
+  /* Show desktop navigation on tablets */
+  .header__hamburger { display: none; }
+  .header__links { display: flex; }
+  .header__main { display: block; }
   
   .header__content { 
     padding: 1rem 2rem; 
   }
   
   .main-container {
-    width: 90% !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
   
-  /* Projects grid - single column for tablets */
+  /* Projects: single column for tablets */
   #projects .projects__content { 
-    display: grid !important;
-    grid-template-columns: 1fr !important; 
-    gap: 3rem !important; 
-    width: 100% !important; 
-    max-width: 600px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    justify-items: center !important;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 3rem; 
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
   }
   
   #projects .projects__row {
-    width: 100% !important;
-    max-width: 500px !important;
-    margin: 0 auto !important;
+    max-width: 500px;
+    margin: 0 auto;
   }
   
   #projects .projects__row-img-cont {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-    position: relative !important;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
   }
   
-  #projects .projects__row-img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-  }
-  
-  /* About section - single column on tablets */
+  /* About: single column */
   .about__content {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4rem !important;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
   
-  /* Project pages only - override inline styled LinkedIn icon */
   .main-footer__social[style] .main-footer__icon {
-    width: 2rem !important;
-    height: auto !important;
+    width: 2rem;
   }
-
 }
 
-/* Small Laptops: 1025-1365px (13" MacBook, smaller Windows laptops) */
-@media screen and (min-width: 1025px) and (max-width: 1365px) {
+/* Desktop: 1025px+ */
+@media screen and (min-width: 1025px) {
   html { font-size: 60%; }
   
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none !important; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex !important; }
-  .header__main { display: block !important; }
+  /* Desktop navigation */
+  .header__hamburger { display: none; }
+  .header__links { display: flex; }
+  .header__main { display: block; }
   
   .main-container {
-    width: 92% !important;
-    margin: 0 auto !important;
-    padding: 0 1rem !important;
+    width: 92%;
+    margin: 0 auto;
   }
   
-  /* MAIN PAGE: 3-column grid for small laptops with larger images */
+  .header__content { 
+    padding: 1rem 3rem; 
+  }
+  
+  /* Projects: 3-column grid */
   #projects .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important; 
-    width: 98% !important;
-    max-width: 1300px !important;
-    margin: 0 auto !important;
-    padding: 0 0.5rem !important;
-    box-sizing: border-box !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+    max-width: 1300px;
+    margin: 0 auto;
   }
   
-  #projects .projects__row {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  #projects .projects__row-img-cont {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-    position: relative !important;
-    transform: scale(1.08) !important;
-    transform-origin: center !important;
-  }
-  
-  #projects .projects__row-img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-  }
-  
-  /* Gallery pages - larger images with less padding */
-  .brochure-gallery {
-    max-width: 1200px !important;
-    padding: 4rem 0.5rem 2.5rem 0.5rem !important;
-  }
-  
-  /* MacBook specific gallery container styling */
-  html body section.brochure-gallery div.brochure-image-container,
-  .brochure-gallery .brochure-image-container {
-    transform: scale(1.25) !important;
-    transform-origin: center !important;
-    margin-bottom: 2.5rem !important;
-    width: 85% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-  }
-  
-  html body section.brochure-gallery div.brochure-image-container img.brochure-image,
-  .brochure-gallery .brochure-image-container .brochure-image {
-    object-fit: cover !important;
-    object-position: center !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* Force remove border-radius on small laptops - maximum specificity override */
-  html body section.brochure-gallery div.brochure-image-container[class] {
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-  }
-  
-  /* About section - keep 2-column layout on laptops */
+  /* About: 2-column layout */
   .about__content {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 6rem !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
   }
   
-  /* Project pages - reset footer icon to desktop size */
   .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem !important;
-    height: auto !important;
+    width: 2.5rem;
   }
-  
-  .header__content { padding: 1rem 3rem; }
 }
 
-/* Standard Laptops: 1366-1440px (15" MacBook Pro, most Windows laptops) */
-@media screen and (min-width: 1366px) and (max-width: 1440px) {
+/* Large Desktop: 1366px+ */
+@media screen and (min-width: 1366px) {
   html { font-size: 61%; }
   
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none !important; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex !important; }
-  .header__main { display: block !important; }
-  
   .main-container {
-    width: 88% !important;
-    margin: 0 auto !important;
+    width: 88%;
   }
   
-  /* MAIN PAGE: 3-column grid for standard laptops with larger images */
+  .header__content { 
+    padding: 1rem 4rem; 
+  }
+  
   #projects .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2.8rem !important; 
-    width: 90% !important;
-    max-width: 1450px !important;
-    margin: 0 auto !important;
+    gap: 2.8rem; 
+    max-width: 1450px;
   }
   
-  #projects .projects__row-img-cont {
-    transform: scale(1.12) !important;
-    transform-origin: center !important;
-  }
-  
-  /* Gallery pages - larger images with less padding */
-  .brochure-gallery {
-    max-width: 1200px !important;
-    padding: 3.5rem 0.5rem 2.5rem 0.5rem !important;
-  }
-  
-  /* MacBook Pro specific gallery container styling */
-  html body section.brochure-gallery div.brochure-image-container,
-  .brochure-gallery .brochure-image-container {
-    transform: scale(1.28) !important;
-    transform-origin: center !important;
-    margin-bottom: 2.8rem !important;
-    width: 85% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-  }
-  
-  html body section.brochure-gallery div.brochure-image-container img.brochure-image,
-  .brochure-gallery .brochure-image-container .brochure-image {
-    object-fit: cover !important;
-    object-position: center !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-  
-  /* Force remove border-radius on laptops - maximum specificity override */
-  html body section.brochure-gallery div.brochure-image-container[class] {
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-  }
-  
-  /* About section - 2-column layout */
   .about__content {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 8rem !important;
+    gap: 8rem;
   }
-  
-  /* Project pages - reset footer icon to desktop size */
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem !important;
-    height: auto !important;
-  }
-  
-  .header__content { padding: 1rem 4rem; }
 }
 
-/* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-  html { font-size: 62.5%; }
-  
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none !important; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex !important; }
-  .header__main { display: block !important; }
-  
-  .main-container {
-    width: 80% !important;
-    margin: 0 auto !important;
-  }
-  
-  /* MAIN PAGE: 3-column grid for large desktops */
-  #projects .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 4rem !important; 
-    width: 80% !important; 
-    max-width: 1600px !important;
-    margin: 0 auto !important;
-  }
-  
-  /* About section - 2-column layout */
-  .about__content {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10rem !important;
-  }
-  
-  /* Project pages - reset footer icon to desktop size */
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem !important;
-    height: auto !important;
-  }
-  
-  .header__content { padding: 1rem 4rem; }
-}
-
-/* Ultra-wide/4K Displays: 1921px+ */
+/* Ultra-wide: 1921px+ */
 @media screen and (min-width: 1921px) {
   html { font-size: 65%; }
   
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none !important; }
+  .main-container {
+    width: 75%;
+  }
   
-  /* Show desktop navigation */
-  .header__links { display: flex !important; }
-  .header__main { display: block !important; }
+  .header__content { 
+    padding: 1rem 6rem; 
+  }
   
-  /* MAIN PAGE: 3-column grid for ultra-wide displays */
   #projects .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 5rem !important; 
-    width: 75% !important; 
-    max-width: 1800px !important; 
-    margin: 0 auto !important;
+    gap: 5rem; 
+    max-width: 1800px;
   }
   
-  /* About section - maintain 2-column layout */
   .about__content {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10rem !important;
+    gap: 10rem;
   }
-  
-  /* Project pages - reset footer icon to desktop size */
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem !important;
-    height: auto !important;
-  }
-  
-  .header__content { padding: 1rem 6rem; }
 }
