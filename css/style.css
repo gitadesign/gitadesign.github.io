@@ -715,19 +715,36 @@ textarea {
    GALLERY GLOBAL STYLES - Clean, consistent padding
    ================================================================= */
 
-/* Global gallery image padding - AFTER each image (not above) */
+/* Global gallery image padding - AFTER each image (not above) - MAXIMUM SPECIFICITY */
+html body section.brochure-gallery div.brochure-image-container img.brochure-image,
+html body section.brochure-gallery div.brochure-image-container img,
+.brochure-gallery .brochure-image-container .brochure-image,
 .brochure-gallery .brochure-image {
   margin-bottom: 2rem !important;
   padding-bottom: 0 !important;
 }
 
-/* Remove rounded containers globally */
-.brochure-image-container {
+/* Remove rounded containers globally - MAXIMUM SPECIFICITY */
+html body section.brochure-gallery div.brochure-image-container,
+.brochure-gallery .brochure-image-container {
   border-radius: 0 !important;
   overflow: visible !important;
   background: transparent !important;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
+}
+
+/* Force single column layout for ALL gallery pages - MAXIMUM SPECIFICITY */
+html body section.brochure-gallery,
+.brochure-gallery {
+  display: block !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  gap: 0 !important;
+  max-width: 1235px !important;
+  margin: 0 auto !important;
+  padding: 6rem 2rem 4rem 2rem !important;
+  background: #f4f4f4 !important;
 }
 
 /* =================================================================
