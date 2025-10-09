@@ -722,56 +722,131 @@ textarea {
   }
 }
 
-/* Desktop: 1025px+ */
-@media screen and (min-width: 1025px) {
+/* Small Laptops: 1025-1365px (13" MacBook, smaller Windows laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1365px) {
   html { font-size: 60%; }
   
-  /* Desktop navigation */
+  /* Hide hamburger menu on desktop */
   .header__hamburger { display: none; }
+  
+  /* Show desktop navigation */
   .header__links { display: flex; }
   .header__main { display: block; }
   
   .main-container {
     width: 92%;
     margin: 0 auto;
+    padding: 0 1rem;
   }
   
-  .header__content { 
-    padding: 1rem 3rem; 
-  }
-  
-  /* Projects: 3-column grid */
+  /* MAIN PAGE: 3-column grid for small laptops */
   #projects .projects__content { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem; 
+    width: 98%;
     max-width: 1300px;
     margin: 0 auto;
+    padding: 0 0.5rem;
   }
   
-  /* About: 2-column layout */
+  #projects .projects__row {
+    width: 100%;
+    margin: 0;
+  }
+  
+  #projects .projects__row-img-cont {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
+    position: relative;
+    transform: scale(1.08);
+    transform-origin: center;
+  }
+  
+  #projects .projects__row-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  /* About section - keep 2-column layout on laptops */
   .about__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
   }
   
+  .header__content { padding: 1rem 3rem; }
+  
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
   }
 }
 
-/* Large Desktop: 1441-1920px (27" iMac, 1080p monitors) */
+/* Standard Laptops: 1366-1440px (15" MacBook Pro, most Windows laptops) */
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  html { font-size: 61%; }
+  
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none; }
+  
+  /* Show desktop navigation */
+  .header__links { display: flex; }
+  .header__main { display: block; }
+  
+  .main-container {
+    width: 88%;
+    margin: 0 auto;
+  }
+  
+  /* MAIN PAGE: 3-column grid for standard laptops */
+  #projects .projects__content { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.8rem; 
+    width: 90%;
+    max-width: 1450px;
+    margin: 0 auto;
+  }
+  
+  #projects .projects__row-img-cont {
+    transform: scale(1.12);
+    transform-origin: center;
+  }
+  
+  /* About section - 2-column layout */
+  .about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+  }
+  
+  .header__content { padding: 1rem 4rem; }
+  
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem;
+  }
+}
+
+/* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
   html { font-size: 62.5%; }
+  
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none; }
+  
+  /* Show desktop navigation */
+  .header__links { display: flex; }
+  .header__main { display: block; }
   
   .main-container {
     width: 80%;
     margin: 0 auto;
-  }
-  
-  .header__content { 
-    padding: 1rem 4rem; 
   }
   
   /* MAIN PAGE: 3-column grid for large desktops */
@@ -791,7 +866,8 @@ textarea {
     gap: 10rem;
   }
   
-  /* Project pages - reset footer icon to desktop size */
+  .header__content { padding: 1rem 4rem; }
+  
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
   }
@@ -801,14 +877,12 @@ textarea {
 @media screen and (min-width: 1921px) {
   html { font-size: 65%; }
   
-  .main-container {
-    width: 75%;
-    margin: 0 auto;
-  }
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none; }
   
-  .header__content { 
-    padding: 1rem 6rem; 
-  }
+  /* Show desktop navigation */
+  .header__links { display: flex; }
+  .header__main { display: block; }
   
   /* MAIN PAGE: 3-column grid for ultra-wide displays */
   #projects .projects__content { 
@@ -827,7 +901,8 @@ textarea {
     gap: 10rem;
   }
   
-  /* Project pages - reset footer icon to desktop size */
+  .header__content { padding: 1rem 6rem; }
+  
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
   }
