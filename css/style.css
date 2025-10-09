@@ -284,6 +284,31 @@ textarea {
   white-space: nowrap;
 }
 
+/* Image sizing + overlay anchoring - DESKTOP ONLY (above 1600px) */
+@media screen and (min-width: 1601px) {
+  #projects .projects__row-img-cont {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: unset;
+    min-width: 617px;
+    max-width: 617px;
+    width: 617px;
+    height: 381px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #projects .projects__row-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    z-index: 1;
+  }
+}
+
 
 
 
@@ -736,94 +761,74 @@ textarea {
   }
 }
 
-/* Large Desktop: 1366px+ */
-@media screen and (min-width: 1366px) {
-  html { font-size: 61%; }
+/* Large Desktop: 1441-1920px (27" iMac, 1080p monitors) */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  html { font-size: 62.5%; }
   
   .main-container {
-    width: 88%;
+    width: 80%;
+    margin: 0 auto;
   }
   
   .header__content { 
     padding: 1rem 4rem; 
   }
   
+  /* MAIN PAGE: 3-column grid for large desktops */
   #projects .projects__content { 
-    gap: 2.8rem; 
-    max-width: 1450px;
-    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem; 
+    width: 80%; 
+    max-width: 1600px;
+    margin: 0 auto;
   }
   
-  #projects .projects__row-img-cont {
-    transform: scale(1.12);
-    transform-origin: center;
-  }
-  
+  /* About section - 2-column layout */
   .about__content {
-    gap: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
   }
   
-  /* Gallery pages - larger images */
-  .brochure-gallery {
-    max-width: 1200px;
-    padding: 3.5rem 0.5rem 2.5rem 0.5rem;
-  }
-  
-  .brochure-gallery .brochure-image-container {
-    transform: scale(1.28);
-    transform-origin: center;
-    margin-bottom: 2.8rem;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    background: #f4f4f4;
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem;
   }
 }
 
-/* Ultra-wide: 1600px+ */
-@media screen and (min-width: 1600px) {
-  #projects .projects__row-img-cont {
-    position: relative;
-    overflow: hidden;
-    min-width: 617px;
-    max-width: 617px;
-    width: 617px;
-    height: 381px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #projects .projects__row-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-    z-index: 1;
-  }
-}
-
-/* Ultra-wide: 1921px+ */
+/* Ultra-wide/4K Displays: 1921px+ */
 @media screen and (min-width: 1921px) {
   html { font-size: 65%; }
   
   .main-container {
     width: 75%;
+    margin: 0 auto;
   }
   
   .header__content { 
     padding: 1rem 6rem; 
   }
   
+  /* MAIN PAGE: 3-column grid for ultra-wide displays */
   #projects .projects__content { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem; 
-    max-width: 1800px;
-    width: 75%;
+    width: 75%; 
+    max-width: 1800px; 
+    margin: 0 auto;
   }
   
+  /* About section - maintain 2-column layout */
   .about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10rem;
+  }
+  
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem;
   }
 }
