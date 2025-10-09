@@ -926,19 +926,62 @@ html body section.brochure-gallery,
 
 }
 
-/* All Laptops and Desktops: 1025px+ (Ensure 3-column grid) */
-@media screen and (min-width: 1025px) {
+/* Small Laptops: 1025-1365px (13" MacBook, smaller Windows laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1365px) {
   html { font-size: 60%; }
   
   /* Hide hamburger menu on desktop */
   .header__hamburger { display: none !important; }
   
-  /* MAIN PAGE: Always 3-column grid on laptops/desktops */
+  /* Show desktop navigation */
+  .header__links { display: flex !important; }
+  .header__main { display: block !important; }
+  
+  .main-container {
+    width: 88% !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+  }
+  
+  /* MAIN PAGE: 3-column grid for small laptops */
   #projects .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 3rem !important; 
-    width: 90% !important; 
+    gap: 2.5rem !important; 
+    width: 95% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+  }
+  
+  #projects .projects__row {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  #projects .projects__row-img-cont {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    background: #f4f4f4 !important;
+    position: relative !important;
+  }
+  
+  #projects .projects__row-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+  
+  /* About section - keep 2-column layout on laptops */
+  .about__content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6rem !important;
   }
   
   /* Project pages - reset footer icon to desktop size */
@@ -954,16 +997,34 @@ html body section.brochure-gallery,
 @media screen and (min-width: 1366px) and (max-width: 1440px) {
   html { font-size: 61%; }
   
-  .header__content { padding: 1rem 4rem; }
-  #projects .projects__content { 
-    gap: 3.5rem !important; 
-    width: 85% !important; 
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none !important; }
+  
+  /* Show desktop navigation */
+  .header__links { display: flex !important; }
+  .header__main { display: block !important; }
+  
+  .main-container {
+    width: 85% !important;
+    margin: 0 auto !important;
   }
-}
-
-/* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-  html { font-size: 62.5%; }
+  
+  /* MAIN PAGE: 3-column grid for standard laptops */
+  #projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 3.5rem !important; 
+    width: 85% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* About section - 2-column layout */
+  .about__content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8rem !important;
+  }
   
   /* Project pages - reset footer icon to desktop size */
   .main-footer__social[style] .main-footer__icon {
@@ -972,16 +1033,77 @@ html body section.brochure-gallery,
   }
   
   .header__content { padding: 1rem 4rem; }
+}
+
+/* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+  html { font-size: 62.5%; }
+  
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none !important; }
+  
+  /* Show desktop navigation */
+  .header__links { display: flex !important; }
+  .header__main { display: block !important; }
+  
+  .main-container {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+  
+  /* MAIN PAGE: 3-column grid for large desktops */
   #projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 4rem !important; 
     width: 80% !important; 
-    max-width: 1600px !important; 
+    max-width: 1600px !important;
+    margin: 0 auto !important;
   }
+  
+  /* About section - 2-column layout */
+  .about__content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10rem !important;
+  }
+  
+  /* Project pages - reset footer icon to desktop size */
+  .main-footer__social[style] .main-footer__icon {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+  
+  .header__content { padding: 1rem 4rem; }
 }
 
 /* Ultra-wide/4K Displays: 1921px+ */
 @media screen and (min-width: 1921px) {
   html { font-size: 65%; }
+  
+  /* Hide hamburger menu on desktop */
+  .header__hamburger { display: none !important; }
+  
+  /* Show desktop navigation */
+  .header__links { display: flex !important; }
+  .header__main { display: block !important; }
+  
+  /* MAIN PAGE: 3-column grid for ultra-wide displays */
+  #projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 5rem !important; 
+    width: 75% !important; 
+    max-width: 1800px !important; 
+    margin: 0 auto !important;
+  }
+  
+  /* About section - maintain 2-column layout */
+  .about__content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10rem !important;
+  }
   
   /* Project pages - reset footer icon to desktop size */
   .main-footer__social[style] .main-footer__icon {
@@ -990,9 +1112,4 @@ html body section.brochure-gallery,
   }
   
   .header__content { padding: 1rem 6rem; }
-  #projects .projects__content { 
-    gap: 5rem !important; 
-    width: 75% !important; 
-    max-width: 1800px !important; 
-  }
 }
