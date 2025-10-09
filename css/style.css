@@ -899,6 +899,26 @@ textarea {
   /* Hide hamburger menu on desktop */
   .header__hamburger { display: none !important; }
   
+  /* FIX: Force 3-column layout for gallery pages on laptops */
+  .brochure-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 1235px !important;
+    margin: 0 auto !important;
+    padding: 6rem 2rem 4rem 2rem !important;
+  }
+  
+  .brochure-image-container {
+    margin-bottom: 2rem !important;
+  }
+  
+  .brochure-image {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 1rem !important;
+  }
+  
   /* Project pages - reset footer icon to desktop size */
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem !important;
@@ -926,6 +946,26 @@ textarea {
   .projects__content { 
     gap: 3.5rem !important; 
     width: 85% !important; 
+  }
+  
+  /* FIX: Force 3-column layout for gallery pages on standard laptops */
+  .brochure-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 1235px !important;
+    margin: 0 auto !important;
+    padding: 6rem 2rem 4rem 2rem !important;
+  }
+  
+  .brochure-image-container {
+    margin-bottom: 2rem !important;
+  }
+  
+  .brochure-image {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 1rem !important;
   }
 }
 
