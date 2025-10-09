@@ -730,7 +730,7 @@ html body section.brochure-gallery div.brochure-image-container,
   padding-bottom: 0 !important;
 }
 
-/* Force single column layout for ALL gallery pages - MAXIMUM SPECIFICITY */
+/* DEFAULT: Single column layout for ALL gallery pages */
 html body section.brochure-gallery,
 .brochure-gallery {
   display: block !important;
@@ -742,6 +742,8 @@ html body section.brochure-gallery,
   padding: 6rem 2rem 4rem 2rem !important;
   background: #f4f4f4 !important;
 }
+
+/* All individual gallery pages remain single-column at all screen sizes */
 
 /* =================================================================
    COMPREHENSIVE RESPONSIVE COVERAGE FOR ALL MODERN DEVICES
@@ -941,6 +943,8 @@ html body section.brochure-gallery,
   
   .header__content { padding: 1rem 3rem; }
   .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 3rem !important; 
     width: 90% !important; 
   }
@@ -958,6 +962,8 @@ html body section.brochure-gallery,
   
   .header__content { padding: 1rem 4rem; }
   .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 3.5rem !important; 
     width: 85% !important; 
   }
@@ -977,6 +983,8 @@ html body section.brochure-gallery,
   
   .header__content { padding: 1rem 4rem; }
   .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 4rem !important; 
     width: 80% !important; 
     max-width: 1600px !important; 
@@ -995,6 +1003,8 @@ html body section.brochure-gallery,
   
   .header__content { padding: 1rem 6rem; }
   .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 5rem !important; 
     width: 75% !important; 
     max-width: 1800px !important; 
