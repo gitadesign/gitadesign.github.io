@@ -985,7 +985,9 @@ html body section.brochure-gallery,
     padding: 4rem 0.5rem 2.5rem 0.5rem !important;
   }
   
-  .brochure-image-container {
+  /* MacBook specific gallery container styling */
+  html body section.brochure-gallery div.brochure-image-container,
+  .brochure-gallery .brochure-image-container {
     transform: scale(1.25) !important;
     transform-origin: center !important;
     margin-bottom: 2.5rem !important;
@@ -994,13 +996,22 @@ html body section.brochure-gallery,
     margin-right: auto !important;
     border-radius: 0 !important;
     overflow: hidden !important;
+    background: #f4f4f4 !important;
   }
   
-  .brochure-image-container .brochure-image {
+  html body section.brochure-gallery div.brochure-image-container img.brochure-image,
+  .brochure-gallery .brochure-image-container .brochure-image {
     object-fit: cover !important;
     object-position: center !important;
     width: 100% !important;
     height: auto !important;
+  }
+  
+  /* Force remove border-radius on small laptops - maximum specificity override */
+  html body section.brochure-gallery div.brochure-image-container[class] {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
   }
   
   /* About section - keep 2-column layout on laptops */
@@ -1056,7 +1067,9 @@ html body section.brochure-gallery,
     padding: 3.5rem 0.5rem 2.5rem 0.5rem !important;
   }
   
-  .brochure-image-container {
+  /* MacBook Pro specific gallery container styling */
+  html body section.brochure-gallery div.brochure-image-container,
+  .brochure-gallery .brochure-image-container {
     transform: scale(1.28) !important;
     transform-origin: center !important;
     margin-bottom: 2.8rem !important;
@@ -1065,13 +1078,22 @@ html body section.brochure-gallery,
     margin-right: auto !important;
     border-radius: 0 !important;
     overflow: hidden !important;
+    background: #f4f4f4 !important;
   }
   
-  .brochure-image-container .brochure-image {
+  html body section.brochure-gallery div.brochure-image-container img.brochure-image,
+  .brochure-gallery .brochure-image-container .brochure-image {
     object-fit: cover !important;
     object-position: center !important;
     width: 100% !important;
     height: auto !important;
+  }
+  
+  /* Force remove border-radius on laptops - maximum specificity override */
+  html body section.brochure-gallery div.brochure-image-container[class] {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
   }
   
   /* About section - 2-column layout */
