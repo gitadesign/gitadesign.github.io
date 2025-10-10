@@ -871,77 +871,7 @@ html body section#projects .projects__row-img-cont {
   .main-footer__lower { padding: 3rem 0; }
 }
 
-/* MacBook Pro: Multiple queries to ensure detection */
-@media screen and (min-width: 1280px) and (max-width: 1680px),
-       screen and (min-width: 1440px) and (max-width: 1440px),
-       screen and (min-width: 1512px) and (max-width: 1512px) {
-  html { font-size: 61%; }
-  
-  .main-container {
-    width: 88%;
-    margin: 0 auto;
-  }
-  
-  /* MAIN PAGE: 3-column grid for MacBook Pro - MAXIMUM SPECIFICITY */
-  html body section#projects .main-container .projects__content { 
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 4rem !important; 
-    width: 80% !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-  
-  html body section#projects .main-container .projects__row {
-    width: 70% !important;
-    margin: 0 auto 2rem auto !important;
-  }
-  
-  html body section#projects .main-container .projects__row-img-cont {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 0 !important;
-    overflow: hidden !important;
-    background: #f4f4f4 !important;
-    position: relative !important;
-    transform: none !important;
-    transform-origin: center !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-  }
-
-  /* FORCE SQUARE ON ALL POSSIBLE ELEMENTS */
-  html body section#projects .projects__row-img-cont,
-  html body section#projects .projects__row-img-cont *,
-  html body section#projects .projects__row,
-  html body section#projects .projects__row * {
-    border-radius: 0 !important;
-  }
-  
-  html body section#projects .projects__row-img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    display: block !important;
-  }
-  
-  /* About section - 2-column layout */
-  .about__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem;
-  }
-  
-  .header__content { padding: 0.5rem 4rem !important; }
-  
-  /* Reduce footer height significantly for MacBook Pro */
-  .main-footer__upper { padding: 2.5rem 0 !important; }
-  .main-footer__lower { padding: 1.5rem 0 !important; }
-}
+/* MacBook Pro: OLD PROBLEMATIC MEDIA QUERY REMOVED */
 
 /* Large Desktops: 1681-1920px (27" iMac, 1080p monitors) */
 @media screen and (min-width: 1681px) and (max-width: 1920px) {
@@ -1037,39 +967,33 @@ html body section#projects .projects__row-img-cont {
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* MACBOOK PRO DETECTION TEST - ULTRA WIDE RANGE */
-@media screen and (min-width: 1000px) and (max-width: 2500px) {
-  /* TEST: Make projects section bright green to see if media query works */
+/* MACBOOK PRO FIXES - SIMPLIFIED APPROACH */
+@media screen and (min-width: 1200px) and (max-width: 1679px) {
+  /* Remove test backgrounds and fix layout */
   #projects {
-    background: lime !important;
+    background: #f4f4f4 !important;
   }
   
-  /* FORCE SQUARE CONTAINERS */
+  /* ONLY fix border-radius and basic spacing */
   .projects__row-img-cont {
     border-radius: 0 !important;
-    background: red !important;
+    background: #f4f4f4 !important;
   }
   
   .projects__row-img {
     border-radius: 0 !important;
   }
-}
-
-/* SPECIFIC MACBOOK PRO TESTS - TRY DIFFERENT RANGES */
-@media screen and (min-width: 1440px) {
-  #projects {
-    border: 10px solid blue !important;
+  
+  /* Reduce header and footer heights */
+  .header__content { 
+    padding: 0.5rem 4rem !important; 
   }
-}
-
-@media screen and (min-width: 1920px) {
-  #projects {
-    border: 10px solid purple !important;
+  
+  .main-footer__upper { 
+    padding: 2.5rem 0 !important; 
   }
-}
-
-@media screen and (min-width: 1680px) {
-  #projects {
-    border: 10px solid orange !important;
+  
+  .main-footer__lower { 
+    padding: 1.5rem 0 !important; 
   }
 }
