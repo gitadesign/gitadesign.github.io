@@ -1024,3 +1024,14 @@ html body section#projects .projects__row-img-cont {
     transform: none !important;
   }
 }
+
+/* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
+/* LAST UPDATED: October 10, 2025 at 1:42 PM */
+
+/* ULTRA NUCLEAR OPTION: Test if ANY CSS works by making body background red temporarily */
+/*
+body {
+  background: red !important;
+  border: 10px solid blue !important;
+}
+*/
