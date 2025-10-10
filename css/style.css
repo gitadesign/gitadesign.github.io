@@ -248,7 +248,11 @@ textarea {
 
 /* Hide spacer that previously shifted layout */
 #projects .projects__spacer {
-  display: none;
+  display: none !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* The centered grid: fixed visible width (responsive), truly centered via margin:auto.
@@ -257,7 +261,7 @@ textarea {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   grid-template-rows: repeat(2, 1fr) !important;
-  gap: 4rem !important;
+  gap: 4rem 4rem !important;
   width: 100%;
   max-width: 1800px !important;
   margin-left: auto !important;
@@ -275,11 +279,14 @@ textarea {
   float: none !important;
 }
 
-/* Base styles for project rows and containers */
-#projects .projects__row,
-#projects .projects__row-img-cont {
-  width: 100%;
-  box-sizing: border-box;
+/* Ensure rows / cells don't introduce offsets */
+html body section#projects .projects__row,
+html body section#projects .projects__row-img-cont {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  float: none !important;
 }
 
 #projects .projects__row-img {
