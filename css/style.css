@@ -840,8 +840,22 @@ html body section#projects .projects__row-img-cont {
   }
   
   #projects .projects__row-img-cont {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
+    position: relative;
     transform: scale(1.08);
     transform-origin: center;
+  }
+  
+  #projects .projects__row-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
   
   /* About section - keep 2-column layout on laptops */
@@ -894,8 +908,22 @@ html body section#projects .projects__row-img-cont {
   }
   
   #projects .projects__row-img-cont {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f4f4f4;
+    position: relative;
     transform: scale(1.12);
     transform-origin: center;
+  }
+  
+  #projects .projects__row-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
   
   /* About section - 2-column layout */
