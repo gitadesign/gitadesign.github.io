@@ -964,7 +964,7 @@ html body section#projects .projects__row-img-cont {
 /* LAST UPDATED: October 10, 2025 - MacBook Pro Image Sizing FIXED */
 /* CRITICAL FIX: MacBook Pro 1200-1679px range now has proper grid sizing with NO transform scale, NO fixed pixel sizes, NO aspect-ratio forcing */
 
-/* MACBOOK PRO - FINAL FIX */
+/* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
 @media screen and (min-width: 1200px) and (max-width: 1679px) {
   
   html { font-size: 61%; }
@@ -986,12 +986,20 @@ html body section#projects .projects__row-img-cont {
     padding: 0 !important;
   }
   
+  /* FORCE EXACT SAME SIZE FOR ALL CONTAINERS */
+  section#projects .projects__content .projects__row .projects__row-img-cont,
+  section#projects .main-container .projects__content .projects__row .projects__row-img-cont,
   html body section#projects .projects__content .projects__row .projects__row-img-cont,
   html body section#projects .main-container .projects__content .projects__row .projects__row-img-cont,
-  html body section#projects .projects__row-img-cont {
+  #projects .projects__content .projects__row .projects__row-img-cont,
+  #projects .projects__row-img-cont,
+  .projects__row-img-cont {
     width: 100% !important;
-    height: 0 !important;
-    padding-bottom: 62% !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+    height: 250px !important;
+    padding: 0 !important;
+    padding-bottom: 0 !important;
     border-radius: 0 !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
@@ -999,11 +1007,17 @@ html body section#projects .projects__row-img-cont {
     transform: none !important;
     margin: 0 !important;
     aspect-ratio: unset !important;
+    display: block !important;
   }
   
+  /* FORCE IMAGES TO FILL CONTAINERS EXACTLY */
+  section#projects .projects__content .projects__row .projects__row-img,
+  section#projects .main-container .projects__content .projects__row .projects__row-img,
   html body section#projects .projects__content .projects__row .projects__row-img,
   html body section#projects .main-container .projects__content .projects__row .projects__row-img,
-  html body section#projects .projects__row-img {
+  #projects .projects__content .projects__row .projects__row-img,
+  #projects .projects__row-img,
+  .projects__row-img {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
