@@ -675,7 +675,7 @@ html body section#projects .projects__row-img-cont {
     overflow: visible !important;
     background: #f4f4f4 !important;
     position: relative !important;
-    transform: scale(1.2) !important;
+    transform: scale(1.05) !important;
     transform-origin: center !important;
   }
   
@@ -1107,5 +1107,26 @@ html body section#projects .projects__row-img-cont {
   
   .main-footer__short-desc {
     font-size: 1.4rem !important;
+  }
+  
+  .main-footer__icon {
+    width: 2rem !important;
+    height: auto !important;
+  }
+  
+  .main-footer__social {
+    padding: 4px 6px !important;
+  }
+}
+
+/* Large Desktop - Keep normal LinkedIn icon size */
+@media screen and (min-width: 1680px) {
+  .main-footer__icon {
+    width: 2.5rem !important;
+    height: auto !important;
+  }
+  
+  .main-footer__social {
+    padding: 5px 7px !important;
   }
 }
