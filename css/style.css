@@ -1037,8 +1037,8 @@ html body section#projects .projects__row-img-cont {
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* MACBOOK PRO TEST - IS THIS EVEN WORKING? */
-@media screen and (min-width: 1280px) and (max-width: 1680px) {
+/* MACBOOK PRO DETECTION TEST - ULTRA WIDE RANGE */
+@media screen and (min-width: 1000px) and (max-width: 2500px) {
   /* TEST: Make projects section bright green to see if media query works */
   #projects {
     background: lime !important;
@@ -1052,5 +1052,24 @@ html body section#projects .projects__row-img-cont {
   
   .projects__row-img {
     border-radius: 0 !important;
+  }
+}
+
+/* SPECIFIC MACBOOK PRO TESTS - TRY DIFFERENT RANGES */
+@media screen and (min-width: 1440px) {
+  #projects {
+    border: 10px solid blue !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #projects {
+    border: 10px solid purple !important;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  #projects {
+    border: 10px solid orange !important;
   }
 }
