@@ -664,7 +664,7 @@ html body section#projects .projects__row-img-cont {
   }
   
   /* Projects: single column layout - MAXIMUM SPECIFICITY */
-  html body section#projects .projects__content { 
+  html body section#projects .main-container .projects__content { 
     display: grid !important;
     grid-template-columns: 1fr !important;
     grid-template-rows: auto !important;
@@ -677,13 +677,13 @@ html body section#projects .projects__row-img-cont {
     padding-right: 0 !important;
   }
   
-  html body section#projects .projects__row {
+  html body section#projects .main-container .projects__row {
     width: 100% !important;
     max-width: 450px !important;
     margin: 0 auto !important;
   }
   
-  html body section#projects .projects__row-img-cont {
+  html body section#projects .main-container .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
     border-radius: 8px !important;
@@ -696,7 +696,7 @@ html body section#projects .projects__row-img-cont {
     padding: 0.5rem !important;
   }
   
-  html body section#projects .projects__row-img {
+  html body section#projects .main-container .projects__row-img {
     width: 100% !important;
     height: auto !important;
     object-fit: cover !important;
@@ -754,7 +754,7 @@ html body section#projects .projects__row-img-cont {
   }
   
   /* Projects: single column for tablets - MAXIMUM SPECIFICITY */
-  html body section#projects .projects__content { 
+  html body section#projects .main-container .projects__content { 
     display: grid !important;
     grid-template-columns: 1fr !important;
     grid-template-rows: auto !important;
@@ -767,13 +767,13 @@ html body section#projects .projects__row-img-cont {
     padding-right: 0 !important;
   }
   
-  html body section#projects .projects__row {
+  html body section#projects .main-container .projects__row {
     width: 100% !important;
     max-width: 650px !important;
     margin: 0 auto !important;
   }
   
-  html body section#projects .projects__row-img-cont {
+  html body section#projects .main-container .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
     border-radius: 8px !important;
@@ -786,7 +786,7 @@ html body section#projects .projects__row-img-cont {
     padding: 1rem !important;
   }
   
-  html body section#projects .projects__row-img {
+  html body section#projects .main-container .projects__row-img {
     width: 100% !important;
     height: auto !important;
     object-fit: cover !important;
