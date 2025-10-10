@@ -882,24 +882,24 @@ html body section#projects .projects__row-img-cont {
     margin: 0 auto;
   }
   
-  /* MAIN PAGE: 3-column grid for standard laptops */
-  html body section#projects .projects__content { 
+  /* MAIN PAGE: 3-column grid for MacBook Pro - MAXIMUM SPECIFICITY */
+  html body section#projects .main-container .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 3rem !important; 
-    width: 85% !important;
-    max-width: 1350px !important;
+    gap: 4rem !important; 
+    width: 80% !important;
+    max-width: 1200px !important;
     margin: 0 auto !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
-  html body section#projects .projects__row {
-    width: 75% !important;
-    margin: 0 auto !important;
+  html body section#projects .main-container .projects__row {
+    width: 70% !important;
+    margin: 0 auto 2rem auto !important;
   }
   
-  html body section#projects .projects__row-img-cont {
+  html body section#projects .main-container .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
     border-radius: 0 !important;
@@ -908,8 +908,9 @@ html body section#projects .projects__row-img-cont {
     position: relative !important;
     transform: none !important;
     transform-origin: center !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 0 !important;
+    box-shadow: none !important;
   }
   
   html body section#projects .projects__row-img {
@@ -1029,7 +1030,4 @@ html body section#projects .projects__row-img-cont {
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
 /* ULTRA NUCLEAR OPTION: Test if ANY CSS works by making body background red temporarily */
-body {
-  background: red !important;
-  border: 10px solid blue !important;
-}
+/* Test completed - CSS is loading correctly */
