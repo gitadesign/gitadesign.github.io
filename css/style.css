@@ -635,6 +635,13 @@ html body section#projects .projects__row-img-cont {
 
 /* ===== RESPONSIVE DESIGN ===== */
 
+/* Desktop Navigation (769px+) - Hide hamburger, show navigation */
+@media screen and (min-width: 769px) {
+  .header__hamburger { display: none; }
+  .header__links { display: flex; }
+  .header__main { display: block; }
+}
+
 /* Mobile: 0-768px */
 @media screen and (max-width: 768px) {
   html { font-size: 55%; }
@@ -738,10 +745,7 @@ html body section#projects .projects__row-img-cont {
     overscroll-behavior: contain;
   }
   
-  /* Show desktop navigation on tablets */
-  .header__hamburger { display: none; }
-  .header__links { display: flex; }
-  .header__main { display: block; }
+
   
   .header__content { 
     padding: 1rem 2rem; 
@@ -810,13 +814,6 @@ html body section#projects .projects__row-img-cont {
 @media screen and (min-width: 1025px) and (max-width: 1359px) {
   html { font-size: 60%; }
   
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex; }
-  .header__main { display: block; }
-  
   .main-container {
     width: 92%;
     margin: 0 auto;
@@ -872,22 +869,11 @@ html body section#projects .projects__row-img-cont {
   /* Reduce footer height for better MacBook proportions */
   .main-footer__upper { padding: 6rem 0; }
   .main-footer__lower { padding: 3rem 0; }
-  
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem;
-  }
 }
 
 /* Standard Laptops: 1360-1450px (15" MacBook Pro, most Windows laptops) - UPDATED */
 @media screen and (min-width: 1360px) and (max-width: 1450px) {
   html { font-size: 61%; }
-  
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex; }
-  .header__main { display: block; }
   
   .main-container {
     width: 88%;
@@ -939,27 +925,16 @@ html body section#projects .projects__row-img-cont {
     gap: 8rem;
   }
   
-  .header__content { padding: 0.5rem 4rem; }
+  .header__content { padding: 0.5rem 4rem !important; }
   
   /* Reduce footer height significantly for MacBook Pro */
-  .main-footer__upper { padding: 2.5rem 0; }
-  .main-footer__lower { padding: 1.5rem 0; }
-  
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem;
-  }
+  .main-footer__upper { padding: 2.5rem 0 !important; }
+  .main-footer__lower { padding: 1.5rem 0 !important; }
 }
 
 /* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
 @media screen and (min-width: 1441px) and (max-width: 1920px) {
   html { font-size: 62.5%; }
-  
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex; }
-  .header__main { display: block; }
   
   .main-container {
     width: 80%;
@@ -986,22 +961,11 @@ html body section#projects .projects__row-img-cont {
   }
   
   .header__content { padding: 1rem 4rem; }
-  
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem;
-  }
 }
 
 /* Ultra-wide/4K Displays: 1921px+ */
 @media screen and (min-width: 1921px) {
   html { font-size: 65%; }
-  
-  /* Hide hamburger menu on desktop */
-  .header__hamburger { display: none; }
-  
-  /* Show desktop navigation */
-  .header__links { display: flex; }
-  .header__main { display: block; }
   
   /* MAIN PAGE: 3-column grid for ultra-wide displays */
   html body section#projects .projects__content { 
@@ -1023,8 +987,4 @@ html body section#projects .projects__row-img-cont {
   }
   
   .header__content { padding: 1rem 6rem; }
-  
-  .main-footer__social[style] .main-footer__icon {
-    width: 2.5rem;
-  }
 }
