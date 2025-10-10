@@ -655,6 +655,27 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
+/* Mobile Gallery - Match main page image size */
+@media screen and (max-width: 768px) {
+  .brochure-gallery {
+    padding: 4rem 1rem 2rem 1rem;
+  }
+  
+  .brochure-gallery .brochure-image-container {
+    transform: scale(1.2) !important;
+    transform-origin: center !important;
+    margin: 1rem 0 !important;
+    padding: 0.5rem !important;
+    overflow: hidden !important;
+  }
+  
+  .brochure-gallery .brochure-image {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+  }
+}
+
 /* Section Padding */
 .sec-pad {
   padding: 8rem 0;
