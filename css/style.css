@@ -672,32 +672,36 @@ html body section#projects .projects__row-img-cont {
   .brochure-gallery .brochure-image-container {
     width: 100% !important;
     max-width: 450px !important;
-    margin: 2rem auto !important;
+    margin: 1rem auto !important;
     padding: 0.5rem !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
     transform: scale(1.2) !important;
     transform-origin: center !important;
+    box-sizing: border-box !important;
   }
   
   .brochure-gallery .brochure-image {
     width: 100% !important;
     height: auto !important;
+    max-height: none !important;
+    margin: 0 !important;
     margin-bottom: 0 !important;
+    padding: 0 !important;
     display: block !important;
     object-fit: cover !important;
     object-position: center !important;
   }
   
+  body:not(.main-page) .brochure-gallery .brochure-image-container img,
   body:not(.main-page) .brochure-gallery img {
+    width: 100% !important;
+    height: auto !important;
     max-height: none !important;
+    max-width: none !important;
     object-fit: cover !important;
     object-position: center !important;
-  }
-  
-  body:not(.main-page) .brochure-gallery .brochure-image-container {
-    overflow: hidden !important;
   }
 }
 
@@ -975,6 +979,15 @@ html body section#projects .projects__row-img-cont {
   }
   
   .header__content { padding: 1rem 4rem; }
+  
+  /* Reduce footer height */
+  .main-footer__upper { 
+    padding: 5rem 0 !important; 
+  }
+  
+  .main-footer__lower { 
+    padding: 2.5rem 0 !important; 
+  }
 }
 
 /* Ultra-wide/4K Displays: 1921px+ */
@@ -1001,6 +1014,15 @@ html body section#projects .projects__row-img-cont {
   }
   
   .header__content { padding: 1rem 6rem; }
+  
+  /* Reduce footer height */
+  .main-footer__upper { 
+    padding: 5rem 0 !important; 
+  }
+  
+  .main-footer__lower { 
+    padding: 2.5rem 0 !important; 
+  }
 }
 
 /* NUCLEAR OPTION: MacBook Pro Override - Maximum Priority */
