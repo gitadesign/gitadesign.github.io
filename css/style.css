@@ -236,11 +236,14 @@ textarea {
 /* Keep the main-container centered but remove any accidental offsets
    limit its visible width so the projects block lines up visually with the page */
 #projects > .main-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+  display: block !important;
 }
 
 /* Hide spacer that previously shifted layout */
@@ -251,17 +254,25 @@ textarea {
 /* The centered grid: fixed visible width (responsive), truly centered via margin:auto.
    max-width here controls how wide the 3-column layout appears. */
 #projects .projects__content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 4rem;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 4rem !important;
   width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 4vw;
-  box-sizing: border-box;
-  align-items: center;
-  justify-items: center;
+  max-width: 1800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 4vw !important;
+  padding-right: 4vw !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
+  justify-items: center !important;
+  align-content: center !important;
+  justify-content: center !important;
+  position: static !important;
+  left: auto !important;
+  transform: none !important;
+  float: none !important;
 }
 
 /* Base styles for project rows and containers */
@@ -738,7 +749,7 @@ textarea {
     overflow: hidden;
     background: #f4f4f4;
     position: relative;
-    transform: scale(1.15);
+    transform: scale(1.2);
     transform-origin: center;
     margin: 2rem 1.5rem;
     padding: 1rem;
