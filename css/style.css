@@ -657,28 +657,36 @@ textarea {
   }
   
   /* Projects: single column layout - MAXIMUM SPECIFICITY */
-  #projects .projects__content { 
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 0;
+  html body section#projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 2rem !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   
-  #projects .projects__row {
-    max-width: 450px;
-    margin: 0 auto;
+  html body section#projects .projects__row {
+    width: 100% !important;
+    max-width: 450px !important;
+    margin: 0 auto !important;
   }
   
-  #projects .projects__row-img-cont {
-    border-radius: 8px;
-    overflow: hidden;
-    background: #f4f4f4;
-    position: relative;
-    transform: scale(1.2);
-    transform-origin: center;
-    margin: 1rem 0;
-    padding: 0.5rem;
+  html body section#projects .projects__row-img-cont {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    background: #f4f4f4 !important;
+    position: relative !important;
+    transform: scale(1.2) !important;
+    transform-origin: center !important;
+    margin: 1rem 0 !important;
+    padding: 0.5rem !important;
   }
   
   /* About: single column */
@@ -731,28 +739,36 @@ textarea {
   }
   
   /* Projects: single column for tablets - MAXIMUM SPECIFICITY */
-  #projects .projects__content { 
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 0;
+  html body section#projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 3rem !important;
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   
-  #projects .projects__row {
-    max-width: 650px;
-    margin: 0 auto;
+  html body section#projects .projects__row {
+    width: 100% !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
   }
   
-  #projects .projects__row-img-cont {
-    border-radius: 8px;
-    overflow: hidden;
-    background: #f4f4f4;
-    position: relative;
-    transform: scale(1.2);
-    transform-origin: center;
-    margin: 2rem 1.5rem;
-    padding: 1rem;
+  html body section#projects .projects__row-img-cont {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    background: #f4f4f4 !important;
+    position: relative !important;
+    transform: scale(1.2) !important;
+    transform-origin: center !important;
+    margin: 2rem 1.5rem !important;
+    padding: 1rem !important;
   }
   
   /* About: single column */
