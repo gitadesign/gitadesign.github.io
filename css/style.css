@@ -297,6 +297,19 @@ section#projects .projects__row-img-cont {
   border-radius: 0 !important;
 }
 
+/* GLOBAL: CONSISTENT CONTAINER SIZING */
+html body section#projects .projects__row {
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+html body section#projects .projects__row-img-cont {
+  width: 100% !important;
+  margin: 0 !important;
+  display: block !important;
+  position: relative !important;
+}
+
 #projects .projects__row-img {
   width: 100%;
   height: auto;
@@ -975,15 +988,10 @@ section#projects .projects__row-img-cont {
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* MACBOOK PRO - BRUTE FORCE APPROACH */
+/* MACBOOK PRO - CLEAN APPROACH */
 @media screen and (min-width: 1200px) and (max-width: 1679px) {
   
-  /* BRUTE FORCE: Remove border-radius from EVERYTHING */
-  * {
-    border-radius: 0 !important;
-  }
-  
-  /* Reduce header and footer heights */
+  /* Reduce header and footer heights ONLY */
   .header__content { 
     padding: 0.5rem 4rem !important; 
   }
@@ -994,11 +1002,5 @@ section#projects .projects__row-img-cont {
   
   .main-footer__lower { 
     padding: 1.5rem 0 !important; 
-  }
-  
-  /* Make containers narrower as requested */
-  .projects__row {
-    width: 80% !important;
-    margin: 0 auto !important;
   }
 }
