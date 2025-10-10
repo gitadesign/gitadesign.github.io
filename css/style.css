@@ -686,12 +686,18 @@ html body section#projects .projects__row-img-cont {
     height: auto !important;
     margin-bottom: 0 !important;
     display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
   
   body:not(.main-page) .brochure-gallery img {
     max-height: none !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center !important;
+  }
+  
+  body:not(.main-page) .brochure-gallery .brochure-image-container {
+    overflow: hidden !important;
   }
 }
 
