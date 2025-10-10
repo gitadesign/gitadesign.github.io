@@ -810,8 +810,8 @@ html body section#projects .projects__row-img-cont {
   }
 }
 
-/* Small Laptops: 1025-1359px (13" MacBook, smaller Windows laptops) */
-@media screen and (min-width: 1025px) and (max-width: 1359px) {
+/* Small Laptops: 1025-1279px (13" MacBook, smaller Windows laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1279px) {
   html { font-size: 60%; }
   
   .main-container {
@@ -871,8 +871,8 @@ html body section#projects .projects__row-img-cont {
   .main-footer__lower { padding: 3rem 0; }
 }
 
-/* Standard Laptops: 1360-1450px (15" MacBook Pro, most Windows laptops) - UPDATED */
-@media screen and (min-width: 1360px) and (max-width: 1450px) {
+/* MacBook Pro 15": 1280-1680px (covers all MacBook Pro resolutions and scaling) */
+@media screen and (min-width: 1280px) and (max-width: 1680px) {
   html { font-size: 61%; }
   
   .main-container {
@@ -893,7 +893,7 @@ html body section#projects .projects__row-img-cont {
   }
   
   html body section#projects .projects__row {
-    width: 90% !important;
+    width: 75% !important;
     margin: 0 auto !important;
   }
   
@@ -932,8 +932,8 @@ html body section#projects .projects__row-img-cont {
   .main-footer__lower { padding: 1.5rem 0 !important; }
 }
 
-/* Large Desktops: 1441-1920px (27" iMac, 1080p monitors) */
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
+/* Large Desktops: 1681-1920px (27" iMac, 1080p monitors) */
+@media screen and (min-width: 1681px) and (max-width: 1920px) {
   html { font-size: 62.5%; }
   
   .main-container {
