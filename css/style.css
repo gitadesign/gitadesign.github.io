@@ -965,7 +965,8 @@ html body section#projects .projects__row-img-cont {
 /* CRITICAL FIX: MacBook Pro 1200-1679px range now has proper grid sizing with NO transform scale, NO fixed pixel sizes, NO aspect-ratio forcing */
 
 /* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
-@media screen and (min-width: 1200px) and (max-width: 1679px) {
+/* APPLYING TO ALL SCREENS 1025px to 1679px to catch ALL MacBook sizes */
+@media screen and (min-width: 1025px) and (max-width: 1679px) {
   
   html { font-size: 61%; }
   
