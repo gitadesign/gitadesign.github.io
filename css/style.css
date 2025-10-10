@@ -669,7 +669,7 @@ textarea {
     grid-template-columns: 1fr !important; 
     grid-template-rows: auto !important;
     gap: 2rem !important; 
-    max-width: 400px !important;
+    max-width: 500px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     width: 100% !important;
@@ -679,7 +679,7 @@ textarea {
   
   #projects .projects__row {
     width: 100% !important;
-    max-width: 350px !important;
+    max-width: 450px !important;
     margin: 0 auto !important;
   }
   
@@ -690,6 +690,16 @@ textarea {
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
+    transform: scale(1.2) !important;
+    transform-origin: center !important;
+  }
+  
+  #projects .projects__row-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
   }
   
   /* About: single column */
@@ -770,6 +780,8 @@ textarea {
     position: relative !important;
     transform: scale(1.15) !important;
     transform-origin: center !important;
+    margin: 2rem 1.5rem !important;
+    padding: 1rem !important;
   }
   
   /* About: single column */
