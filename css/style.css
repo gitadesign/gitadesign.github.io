@@ -349,8 +349,8 @@ html body section#projects .projects__row-img-cont {
   white-space: nowrap;
 }
 
-/* Image sizing + overlay anchoring - DESKTOP ONLY (above 1600px) */
-@media screen and (min-width: 1601px) {
+/* Image sizing + overlay anchoring - DESKTOP ONLY (above 1680px, excluding MacBook Pro range) */
+@media screen and (min-width: 1680px) {
   #projects .projects__row-img-cont {
     position: relative;
     overflow: hidden;
@@ -832,7 +832,7 @@ html body section#projects .projects__row-img-cont {
 }
 
 /* Small Laptops: 1025-1279px (13" MacBook, smaller Windows laptops) */
-@media screen and (min-width: 1025px) and (max-width: 1279px) {
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
   html { font-size: 60%; }
   
   .main-container {
@@ -854,7 +854,8 @@ html body section#projects .projects__row-img-cont {
   
   html body section#projects .projects__row {
     width: 100% !important;
-    margin: 0 0 1.5rem 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   html body section#projects .projects__row-img-cont {
@@ -864,8 +865,7 @@ html body section#projects .projects__row-img-cont {
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
-    transform: scale(1.08) !important;
-    transform-origin: center !important;
+    transform: none !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -955,45 +955,69 @@ html body section#projects .projects__row-img-cont {
 /* CONFLICTING MEDIA QUERY REMOVED - WAS OVERRIDING MACBOOK PRO FIXES */
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
-/* LAST UPDATED: October 10, 2025 at 1:42 PM */
+/* LAST UPDATED: October 10, 2025 - MacBook Pro Image Sizing FIXED */
+/* CRITICAL FIX: MacBook Pro 1200-1679px range now has proper grid sizing with NO transform scale, NO fixed pixel sizes, NO aspect-ratio forcing */
 
 /* MACBOOK PRO - FINAL FIX */
 @media screen and (min-width: 1200px) and (max-width: 1679px) {
   
-  /* FORCE ALL CONTAINERS TO BE IDENTICAL */
-  .projects__content {
-    gap: 1rem !important;
+  html { font-size: 61%; }
+  
+  /* MAIN PAGE: 3-column grid for MacBook Pro */
+  html body section#projects .projects__content { 
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem !important; 
+    width: 95% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
   }
   
-  .projects__row {
+  html body section#projects .projects__row {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
   
-  .projects__row-img-cont {
-    width: 70% !important;
-    margin: 0 auto 1rem auto !important;
+  html body section#projects .projects__row-img-cont {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    background: #f4f4f4 !important;
+    position: relative !important;
+    transform: none !important;
+    margin: 0 !important;
     padding: 0 !important;
-    aspect-ratio: 4/3 !important;
+    aspect-ratio: unset !important;
   }
   
-  .projects__row-img {
+  html body section#projects .projects__row-img {
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
     object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+  
+  /* About section - 2-column layout */
+  .about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
   }
   
   /* Reduce header and footer heights */
   .header__content { 
-    padding: 0.3rem 4rem !important; 
+    padding: 0.8rem 4rem !important; 
   }
   
   .main-footer__upper { 
-    padding: 1.5rem 0 !important; 
+    padding: 4rem 0 !important; 
   }
   
   .main-footer__lower { 
-    padding: 1rem 0 !important; 
+    padding: 2rem 0 !important; 
   }
 }
