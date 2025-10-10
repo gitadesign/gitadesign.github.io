@@ -952,55 +952,48 @@ html body section#projects .projects__row-img-cont {
 }
 
 /* NUCLEAR OPTION: MacBook Pro Override - Maximum Priority */
-@media screen and (min-width: 1200px) and (max-width: 1800px) {
-  /* Force MacBook Pro styles with maximum specificity */
-  html body div.header .header__content { 
-    padding: 0.3rem 4rem !important; 
-    background: #000 !important;
-  }
-  
-  html body div.main-footer .main-footer__upper { 
-    padding: 2rem 0 !important; 
-  }
-  
-  html body div.main-footer .main-footer__lower { 
-    padding: 1rem 0 !important; 
-  }
-  
-  /* Make images narrower on MacBook Pro */
-  html body section#projects .main-container .projects__row {
-    width: 70% !important;
-    margin: 0 auto !important;
-  }
-  
-  html body section#projects .main-container .projects__content {
-    gap: 3rem !important;
-    width: 85% !important;
-    max-width: 1300px !important;
-  }
-  
-  html body section#projects .main-container .projects__row-img-cont {
-    border-radius: 0 !important;
-    transform: none !important;
-  }
-}
+/* CONFLICTING MEDIA QUERY REMOVED - WAS OVERRIDING MACBOOK PRO FIXES */
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* MACBOOK PRO - CLEAN APPROACH */
+/* MACBOOK PRO - FINAL FIX */
 @media screen and (min-width: 1200px) and (max-width: 1679px) {
   
-  /* Reduce header and footer heights ONLY */
+  /* FORCE ALL CONTAINERS TO BE IDENTICAL */
+  .projects__content {
+    gap: 1rem !important;
+  }
+  
+  .projects__row {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .projects__row-img-cont {
+    width: 70% !important;
+    margin: 0 auto 1rem auto !important;
+    padding: 0 !important;
+    aspect-ratio: 4/3 !important;
+  }
+  
+  .projects__row-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  /* Reduce header and footer heights */
   .header__content { 
-    padding: 0.5rem 4rem !important; 
+    padding: 0.3rem 4rem !important; 
   }
   
   .main-footer__upper { 
-    padding: 2.5rem 0 !important; 
+    padding: 1.5rem 0 !important; 
   }
   
   .main-footer__lower { 
-    padding: 1.5rem 0 !important; 
+    padding: 1rem 0 !important; 
   }
 }
