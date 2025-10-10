@@ -741,8 +741,8 @@ textarea {
     padding: 0 2rem;
   }
   
-  /* Projects: single column for tablets */
-  #projects .projects__content { 
+  /* Projects: single column for tablets - MAXIMUM SPECIFICITY */
+  html body #projects .projects__content { 
     display: grid !important;
     grid-template-columns: 1fr !important; 
     grid-template-rows: auto !important;
@@ -755,13 +755,13 @@ textarea {
     padding-right: 0 !important;
   }
   
-  #projects .projects__row {
+  html body #projects .projects__row {
     width: 100% !important;
     max-width: 650px !important;
     margin: 0 auto !important;
   }
   
-  #projects .projects__row-img-cont {
+  html body #projects .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
     border-radius: 8px !important;
