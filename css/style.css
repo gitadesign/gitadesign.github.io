@@ -280,11 +280,17 @@ textarea {
 }
 
 /* Ensure rows / cells don't introduce offsets */
-html body section#projects .projects__row,
-html body section#projects .projects__row-img-cont {
+html body section#projects .projects__row {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  box-sizing: border-box !important;
+  float: none !important;
+}
+
+html body section#projects .projects__row-img-cont {
+  width: 100% !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
   float: none !important;
 }
@@ -980,6 +986,8 @@ html body section#projects .projects__row-img-cont {
     padding: 0 !important;
   }
   
+  html body section#projects .projects__content .projects__row .projects__row-img-cont,
+  html body section#projects .main-container .projects__content .projects__row .projects__row-img-cont,
   html body section#projects .projects__row-img-cont {
     width: 100% !important;
     height: 0 !important;
@@ -990,8 +998,11 @@ html body section#projects .projects__row-img-cont {
     position: relative !important;
     transform: none !important;
     margin: 0 !important;
+    aspect-ratio: unset !important;
   }
   
+  html body section#projects .projects__content .projects__row .projects__row-img,
+  html body section#projects .main-container .projects__content .projects__row .projects__row-img,
   html body section#projects .projects__row-img {
     position: absolute !important;
     top: 0 !important;
