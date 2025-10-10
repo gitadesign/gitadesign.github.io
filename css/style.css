@@ -672,7 +672,7 @@ html body section#projects .projects__row-img-cont {
     max-width: 450px !important;
     margin: 1rem auto !important;
     padding: 0.5rem !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     background: #f4f4f4 !important;
     position: relative !important;
     transform: scale(1.2) !important;
@@ -688,7 +688,8 @@ html body section#projects .projects__row-img-cont {
   
   body:not(.main-page) .brochure-gallery img {
     max-height: none !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
+    object-position: center !important;
   }
 }
 
