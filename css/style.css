@@ -696,6 +696,14 @@ html body section#projects .projects__row-img-cont {
     padding: 0.5rem !important;
   }
   
+  html body section#projects .projects__row-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
   /* About: single column */
   .about__content {
     display: flex;
@@ -778,6 +786,14 @@ html body section#projects .projects__row-img-cont {
     padding: 1rem !important;
   }
   
+  html body section#projects .projects__row-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
   /* About: single column */
   .about__content {
     display: flex;
