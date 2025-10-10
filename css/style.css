@@ -836,26 +836,12 @@ html body section#projects .projects__row-img-cont {
   
   #projects .projects__row {
     width: 100%;
-    margin: 0;
+    margin: 0 0 1.5rem 0;
   }
   
   #projects .projects__row-img-cont {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #f4f4f4;
-    position: relative;
     transform: scale(1.08);
     transform-origin: center;
-  }
-  
-  #projects .projects__row-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    display: block;
   }
   
   /* About section - keep 2-column layout on laptops */
@@ -896,10 +882,15 @@ html body section#projects .projects__row-img-cont {
   #projects .projects__content { 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.8rem; 
+    gap: 2rem; 
     width: 90%;
     max-width: 1450px;
     margin: 0 auto;
+  }
+  
+  #projects .projects__row {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
   }
   
   #projects .projects__row-img-cont {
@@ -914,11 +905,11 @@ html body section#projects .projects__row-img-cont {
     gap: 8rem;
   }
   
-  .header__content { padding: 1rem 4rem; }
+  .header__content { padding: 0.7rem 4rem; }
   
-  /* Reduce footer height for better MacBook proportions */
-  .main-footer__upper { padding: 6rem 0; }
-  .main-footer__lower { padding: 3rem 0; }
+  /* Reduce footer height significantly for MacBook Pro */
+  .main-footer__upper { padding: 4rem 0; }
+  .main-footer__lower { padding: 2rem 0; }
   
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
