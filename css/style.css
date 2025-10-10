@@ -898,27 +898,27 @@ html body section#projects .projects__row-img-cont {
   html body section#projects .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important; 
-    width: 90% !important;
-    max-width: 1450px !important;
+    gap: 3rem !important; 
+    width: 85% !important;
+    max-width: 1350px !important;
     margin: 0 auto !important;
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
   
   html body section#projects .projects__row {
-    width: 100% !important;
-    margin: 0 0 1.5rem 0 !important;
+    width: 90% !important;
+    margin: 0 auto !important;
   }
   
   html body section#projects .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
-    border-radius: 8px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
-    transform: scale(1.12) !important;
+    transform: none !important;
     transform-origin: center !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -939,11 +939,11 @@ html body section#projects .projects__row-img-cont {
     gap: 8rem;
   }
   
-  .header__content { padding: 0.7rem 4rem; }
+  .header__content { padding: 0.5rem 4rem; }
   
   /* Reduce footer height significantly for MacBook Pro */
-  .main-footer__upper { padding: 4rem 0; }
-  .main-footer__lower { padding: 2rem 0; }
+  .main-footer__upper { padding: 2.5rem 0; }
+  .main-footer__lower { padding: 1.5rem 0; }
   
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
