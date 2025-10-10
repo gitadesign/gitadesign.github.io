@@ -867,15 +867,6 @@ html body section#projects .projects__row-img-cont {
   
   .header__content { padding: 1rem 3rem; }
   
-  /* Reduce footer height on laptops */
-  .main-footer__upper {
-    padding: 5rem 0;
-  }
-  
-  .main-footer__lower {
-    padding: 2.5rem 0;
-  }
-  
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
   }
@@ -920,15 +911,6 @@ html body section#projects .projects__row-img-cont {
   }
   
   .header__content { padding: 1rem 4rem; }
-  
-  /* Reduce footer height on standard laptops */
-  .main-footer__upper {
-    padding: 5rem 0;
-  }
-  
-  .main-footer__lower {
-    padding: 2.5rem 0;
-  }
   
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
