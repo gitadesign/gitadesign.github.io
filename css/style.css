@@ -867,6 +867,10 @@ html body section#projects .projects__row-img-cont {
   
   .header__content { padding: 1rem 3rem; }
   
+  /* Reduce footer height for better MacBook proportions */
+  .main-footer__upper { padding: 6rem 0; }
+  .main-footer__lower { padding: 3rem 0; }
+  
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
   }
@@ -911,6 +915,10 @@ html body section#projects .projects__row-img-cont {
   }
   
   .header__content { padding: 1rem 4rem; }
+  
+  /* Reduce footer height for better MacBook proportions */
+  .main-footer__upper { padding: 6rem 0; }
+  .main-footer__lower { padding: 3rem 0; }
   
   .main-footer__social[style] .main-footer__icon {
     width: 2.5rem;
