@@ -806,8 +806,8 @@ html body section#projects .projects__row-img-cont {
   }
 }
 
-/* Small Laptops: 1025-1365px (13" MacBook, smaller Windows laptops) */
-@media screen and (min-width: 1025px) and (max-width: 1365px) {
+/* Small Laptops: 1025-1359px (13" MacBook, smaller Windows laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1359px) {
   html { font-size: 60%; }
   
   /* Hide hamburger menu on desktop */
