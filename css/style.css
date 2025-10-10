@@ -289,6 +289,14 @@ html body section#projects .projects__row-img-cont {
   float: none !important;
 }
 
+/* GLOBAL: NO ROUNDED CONTAINERS ANYWHERE */
+.projects__row-img-cont,
+html body section#projects .projects__row-img-cont,
+#projects .projects__row-img-cont,
+section#projects .projects__row-img-cont {
+  border-radius: 0 !important;
+}
+
 #projects .projects__row-img {
   width: 100%;
   height: auto;
@@ -693,7 +701,7 @@ html body section#projects .projects__row-img-cont {
   html body section#projects .main-container .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
-    border-radius: 8px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
@@ -780,7 +788,7 @@ html body section#projects .projects__row-img-cont {
   html body section#projects .main-container .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
-    border-radius: 8px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
@@ -839,7 +847,7 @@ html body section#projects .projects__row-img-cont {
   html body section#projects .projects__row-img-cont {
     width: 100% !important;
     height: auto !important;
-    border-radius: 8px !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
@@ -967,20 +975,11 @@ html body section#projects .projects__row-img-cont {
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* MACBOOK PRO FIXES - SIMPLIFIED APPROACH */
+/* MACBOOK PRO - BRUTE FORCE APPROACH */
 @media screen and (min-width: 1200px) and (max-width: 1679px) {
-  /* Remove test backgrounds and fix layout */
-  #projects {
-    background: #f4f4f4 !important;
-  }
   
-  /* ONLY fix border-radius and basic spacing */
-  .projects__row-img-cont {
-    border-radius: 0 !important;
-    background: #f4f4f4 !important;
-  }
-  
-  .projects__row-img {
+  /* BRUTE FORCE: Remove border-radius from EVERYTHING */
+  * {
     border-radius: 0 !important;
   }
   
@@ -995,5 +994,11 @@ html body section#projects .projects__row-img-cont {
   
   .main-footer__lower { 
     padding: 1.5rem 0 !important; 
+  }
+  
+  /* Make containers narrower as requested */
+  .projects__row {
+    width: 80% !important;
+    margin: 0 auto !important;
   }
 }
