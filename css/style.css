@@ -747,7 +747,7 @@ textarea {
     grid-template-columns: 1fr !important; 
     grid-template-rows: auto !important;
     gap: 3rem !important; 
-    max-width: 600px !important;
+    max-width: 750px !important;
     margin: 0 auto !important;
     padding: 0 !important;
     width: 100% !important;
@@ -757,7 +757,7 @@ textarea {
   
   #projects .projects__row {
     width: 100% !important;
-    max-width: 500px !important;
+    max-width: 650px !important;
     margin: 0 auto !important;
   }
   
@@ -768,6 +768,8 @@ textarea {
     overflow: hidden !important;
     background: #f4f4f4 !important;
     position: relative !important;
+    transform: scale(1.15) !important;
+    transform-origin: center !important;
   }
   
   /* About: single column */
