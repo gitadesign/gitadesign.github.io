@@ -1037,17 +1037,20 @@ html body section#projects .projects__row-img-cont {
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* MACBOOK PRO BORDER-RADIUS NUCLEAR OVERRIDE */
+/* MACBOOK PRO TEST - IS THIS EVEN WORKING? */
 @media screen and (min-width: 1280px) and (max-width: 1680px) {
-  #projects * {
-    border-radius: 0 !important;
+  /* TEST: Make projects section bright green to see if media query works */
+  #projects {
+    background: lime !important;
   }
   
-  .projects__row-img-cont,
-  .projects__row-img-cont *,
-  section#projects .projects__row-img-cont,
-  section#projects .projects__row-img-cont * {
+  /* FORCE SQUARE CONTAINERS */
+  .projects__row-img-cont {
     border-radius: 0 !important;
-    transform: scale(1) !important;
+    background: red !important;
+  }
+  
+  .projects__row-img {
+    border-radius: 0 !important;
   }
 }
