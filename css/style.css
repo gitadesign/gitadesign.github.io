@@ -677,7 +677,7 @@ html body section#projects .projects__row-img-cont {
     position: relative !important;
     transform: scale(1.2) !important;
     transform-origin: center !important;
-    margin: 2rem auto !important;
+    margin: 3rem auto !important;
     padding: 0.5rem !important;
   }
   
