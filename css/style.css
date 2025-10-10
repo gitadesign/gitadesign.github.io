@@ -1036,16 +1036,38 @@ html body section#projects .projects__row-img-cont {
     gap: 6rem;
   }
   
-  /* Reduce header and footer heights */
+  /* Reduce header and footer heights for MacBook Pro */
   .header__content { 
-    padding: 0.8rem 4rem !important; 
+    padding: 0.5rem 3rem !important; 
+  }
+  
+  .header__logo-img-cont {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  
+  .header__logo-sub {
+    font-size: 1.6rem !important;
+  }
+  
+  .header__link {
+    padding: 1.5rem 2rem !important;
+    font-size: 1.4rem !important;
   }
   
   .main-footer__upper { 
-    padding: 4rem 0 !important; 
+    padding: 3rem 0 !important; 
   }
   
   .main-footer__lower { 
-    padding: 2rem 0 !important; 
+    padding: 1.5rem 0 !important; 
+  }
+  
+  .main-footer .heading-sm {
+    font-size: 2rem !important;
+  }
+  
+  .main-footer__short-desc {
+    font-size: 1.4rem !important;
   }
 }
