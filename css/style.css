@@ -912,6 +912,14 @@ html body section#projects .projects__row-img-cont {
     padding: 0 !important;
     box-shadow: none !important;
   }
+
+  /* FORCE SQUARE ON ALL POSSIBLE ELEMENTS */
+  html body section#projects .projects__row-img-cont,
+  html body section#projects .projects__row-img-cont *,
+  html body section#projects .projects__row,
+  html body section#projects .projects__row * {
+    border-radius: 0 !important;
+  }
   
   html body section#projects .projects__row-img {
     width: 100% !important;
@@ -1029,5 +1037,17 @@ html body section#projects .projects__row-img-cont {
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 10, 2025 at 1:42 PM */
 
-/* ULTRA NUCLEAR OPTION: Test if ANY CSS works by making body background red temporarily */
-/* Test completed - CSS is loading correctly */
+/* MACBOOK PRO BORDER-RADIUS NUCLEAR OVERRIDE */
+@media screen and (min-width: 1280px) and (max-width: 1680px) {
+  #projects * {
+    border-radius: 0 !important;
+  }
+  
+  .projects__row-img-cont,
+  .projects__row-img-cont *,
+  section#projects .projects__row-img-cont,
+  section#projects .projects__row-img-cont * {
+    border-radius: 0 !important;
+    transform: scale(1) !important;
+  }
+}
