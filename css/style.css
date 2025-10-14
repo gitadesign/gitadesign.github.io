@@ -1089,11 +1089,11 @@ html body section#projects .projects__row-img-cont {
   html body section#projects .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2rem !important; 
-    width: 98% !important;
-    max-width: 1450px !important;
+    gap: 1.8rem !important; 
+    width: 99% !important;
+    max-width: 1480px !important;
     margin: 0 auto !important;
-    padding: 0 0.5rem !important;
+    padding: 0 0.3rem !important;
   }
   
   html body section#projects .projects__row {
