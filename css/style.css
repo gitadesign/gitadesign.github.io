@@ -1089,7 +1089,7 @@ html body section#projects .projects__row-img-cont {
   html body section#projects .projects__content { 
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 2.5rem !important; 
+    gap: 2rem !important; 
     width: 95% !important;
     max-width: 1400px !important;
     margin: 0 auto !important;
@@ -1111,9 +1111,9 @@ html body section#projects .projects__row-img-cont {
   #projects .projects__row-img-cont,
   .projects__row-img-cont {
     width: 100% !important;
-    min-height: 250px !important;
-    max-height: 250px !important;
-    height: 250px !important;
+    min-height: 270px !important;
+    max-height: 270px !important;
+    height: 270px !important;
     padding: 0 !important;
     padding-bottom: 0 !important;
     border-radius: 0 !important;
