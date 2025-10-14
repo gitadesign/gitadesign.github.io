@@ -695,6 +695,29 @@ html body section#projects .projects__row-img-cont {
   }
 }
 
+<<<<<<< HEAD
+=======
+/* 2-Column Grid for Tablet/iPad (769px - 1024px) - Logos Project Only */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body:not(.main-page) .brochure-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem 2rem;
+  }
+  
+  body:not(.main-page) .brochure-gallery .brochure-image-container {
+    margin-bottom: 0;
+  }
+  
+  body:not(.main-page) .brochure-gallery .brochure-image {
+    margin-bottom: 0;
+  }
+}
+
+>>>>>>> parent of 0817b84 (2 grid layout for ipad)
 @media screen and (max-width: 768px) {
   body:not(.main-page) {
     max-width: 100vw !important;
