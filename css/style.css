@@ -655,6 +655,67 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
+/* Logos Gallery Grid Layouts - LOGOS PROJECT ONLY */
+/* 4-Column Grid for Large Screens (1441px+) */
+@media screen and (min-width: 1441px) {
+  .logos-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem 2rem;
+  }
+  
+  .logos-gallery .brochure-image-container {
+    margin-bottom: 0;
+  }
+  
+  .logos-gallery .brochure-image {
+    margin-bottom: 0;
+  }
+}
+
+/* 3-Column Grid for MacBook/Laptop (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .logos-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem 2rem;
+  }
+  
+  .logos-gallery .brochure-image-container {
+    margin-bottom: 0;
+  }
+  
+  .logos-gallery .brochure-image {
+    margin-bottom: 0;
+  }
+}
+
+/* 2-Column Grid for Tablet/iPad (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .logos-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem 2rem 4rem 2rem;
+  }
+  
+  .logos-gallery .brochure-image-container {
+    margin-bottom: 0;
+  }
+  
+  .logos-gallery .brochure-image {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body:not(.main-page) {
     max-width: 100vw !important;
