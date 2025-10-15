@@ -675,9 +675,11 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
   }
 }
 
-/* MacBook Pro ALL RANGES (1025px - 1679px) - Uniform width for all gallery images (Excludes Logos, Inopsys, Web & Social) */
+/* MacBook Pro ALL RANGES (1025px - 1679px) - Uniform width for all gallery images (Excludes Logos, Inopsys, Web & Social) 
+   CRITICAL: body:not(.keep-original-width) excludes pages with that BODY class (Logos, Inopsys, Web & Social)
+   CRITICAL: .brochure-gallery:not(.logos-gallery) is a safety check (though .logos-gallery class isn't currently used) */
 @media screen and (min-width: 1025px) and (max-width: 1679px) {
-  body:not(.main-page):not(.keep-original-width):not(.logos-gallery) .brochure-gallery .brochure-image-container {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image-container {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -687,7 +689,7 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     margin-right: auto !important;
   }
   
-  body:not(.main-page):not(.keep-original-width):not(.logos-gallery) .brochure-gallery .brochure-image {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image {
     width: 100% !important;
     max-width: 945px !important;
     height: auto !important;
@@ -698,7 +700,7 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 
 /* Large Desktop Screens (1680px+) - Uniform width for all gallery images (Excludes Logos, Inopsys, Web & Social) */
 @media screen and (min-width: 1680px) {
-  body:not(.main-page):not(.keep-original-width):not(.logos-gallery) .brochure-gallery .brochure-image-container {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image-container {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -708,7 +710,7 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     margin-right: auto !important;
   }
   
-  body:not(.main-page):not(.keep-original-width):not(.logos-gallery) .brochure-gallery .brochure-image {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image {
     width: 100% !important;
     max-width: 1050px !important;
     height: auto !important;
