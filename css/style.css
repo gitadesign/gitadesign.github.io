@@ -683,14 +683,16 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100% !important;
+    width: 945px !important;
+    min-width: 945px !important;
     max-width: 945px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
   
   body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image {
-    width: 100% !important;
+    width: 945px !important;
+    min-width: 945px !important;
     max-width: 945px !important;
     height: auto !important;
     display: block !important;
@@ -1140,8 +1142,9 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 /* CONFLICTING MEDIA QUERY REMOVED - WAS OVERRIDING MACBOOK PRO FIXES */
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
-/* LAST UPDATED: October 10, 2025 - MacBook Pro Image Sizing FIXED */
-/* CRITICAL FIX: MacBook Pro 1200-1679px range now has proper grid sizing with NO transform scale, NO fixed pixel sizes, NO aspect-ratio forcing */
+/* LAST UPDATED: October 15, 2025 - Gallery Uniform Width FIXED with FIXED 945px width */
+/* CRITICAL FIX: Changed from max-width to FIXED width: 945px to force uniform sizing */
+/* VERSION: 20251015FIX3 - ALL containers and images now have width: 945px (not 100%) */
 
 /* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
 /* APPLYING TO ALL SCREENS 1025px to 1679px to catch ALL MacBook sizes */
@@ -1206,6 +1209,29 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     object-fit: cover !important;
     object-position: center !important;
     display: block !important;
+  }
+  
+  /* GALLERY PAGES: Force uniform width for ALL gallery images (except Logos, Inopsys, Web & Social) */
+  html body:not(.main-page):not(.keep-original-width) section.brochure-gallery div.brochure-image-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 945px !important;
+    min-width: 945px !important;
+    max-width: 945px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  html body:not(.main-page):not(.keep-original-width) section.brochure-gallery div.brochure-image-container img.brochure-image,
+  html body:not(.main-page):not(.keep-original-width) section.brochure-gallery div.brochure-image-container img {
+    width: 945px !important;
+    min-width: 945px !important;
+    max-width: 945px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
   }
   
   /* About section - 2-column layout */
