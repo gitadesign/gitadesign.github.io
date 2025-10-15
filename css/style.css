@@ -655,6 +655,13 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
+/* MacBook Pro Gallery Override (1025-1679px) - Make gallery container smaller */
+@media screen and (min-width: 1025px) and (max-width: 1679px) {
+  .brochure-gallery {
+    max-width: 1050px;
+  }
+}
+
 /* Logos Gallery Grid Layouts - LOGOS PROJECT ONLY */
 /* 4-Column Grid for Large Screens (1441px+) */
 @media screen and (min-width: 1441px) {
