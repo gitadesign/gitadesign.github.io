@@ -108,8 +108,28 @@
             }
         }
         
-        /* MacBook Pro specific adjustments - REMOVED to allow external CSS uniform width rules */
-        
+        /* MacBook Pro specific adjustments - UNIFORM WIDTH FOR ALL IMAGES */
+        @media screen and (min-width: 1025px) and (max-width: 1679px) {
+            html body section.brochure-gallery div.brochure-image-container {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 945px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                margin-bottom: 3rem !important;
+            }
+            
+            html body section.brochure-gallery div.brochure-image-container img.brochure-image,
+            html body section.brochure-gallery div.brochure-image-container img {
+                width: 100% !important;
+                max-width: 945px !important;
+                height: auto !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+        }
 
         
         /* iPad specific navigation fixes */
