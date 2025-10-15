@@ -25,6 +25,12 @@
             min-height: 100vh !important;
         }
         
+        .brochure-gallery {
+            max-width: 1235px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem 2rem;
+            background: #f4f4f4 !important;
+        }
         
         /* Adjust top padding for different screen sizes to match reduced header height */
         @media screen and (min-width: 601px) {
@@ -93,6 +99,7 @@
         /* Tablet adjustments */
         @media screen and (min-width: 601px) and (max-width: 1024px) {
             .brochure-gallery {
+                max-width: 117% !important;
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;
             }
@@ -130,6 +137,7 @@
         @media screen and (min-width: 1441px) {
             html body section.brochure-gallery {
                 padding-top: 4.5rem !important;
+                max-width: 1200px !important;
             }
             html body section.brochure-gallery div.brochure-image-container {
                 margin-bottom: 3rem !important;

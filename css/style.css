@@ -655,21 +655,6 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
-/* Uniform Width for Gallery Images - Excludes Logos, Inopsys, and Web & Social Media */
-body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
-  width: 100%;
-  max-width: 1050px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 /* Inopsys Gallery - First image 20% smaller on ALL devices */
 body.keep-original-width .brochure-gallery .brochure-image-container:first-of-type {
   display: block !important;
