@@ -680,24 +680,17 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
    CRITICAL: body:not(.keep-original-width) excludes pages with that BODY class (Logos, Inopsys, Web & Social)
    CRITICAL: .brochure-gallery:not(.logos-gallery) is a safety check (though .logos-gallery class isn't currently used) */
 @media screen and (min-width: 1025px) and (max-width: 1679px) {
-  body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 945px !important;
-    min-width: 945px !important;
-    max-width: 945px !important;
+  /* All gallery images 15% smaller on MacBook Pro (except excluded galleries) */
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image-container {
+    width: 85% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
   
-  body:not(.main-page):not(.keep-original-width) .brochure-gallery:not(.logos-gallery) .brochure-image {
-    width: 945px !important;
-    min-width: 945px !important;
-    max-width: 945px !important;
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
+    width: 100% !important;
     height: auto !important;
     display: block !important;
-    margin: 0 auto !important;
   }
 }
 
@@ -1143,9 +1136,9 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 /* CONFLICTING MEDIA QUERY REMOVED - WAS OVERRIDING MACBOOK PRO FIXES */
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
-/* LAST UPDATED: October 15, 2025 - Gallery Uniform Width FIXED with FIXED 945px width */
-/* CRITICAL FIX: Base has width:100%, media queries override with 945px for uniform galleries */
-/* VERSION: 20251015FIX6 - Base gallery width:100% restored for Logos/Inopsys/Web galleries */
+/* LAST UPDATED: October 15, 2025 - Gallery images 15% smaller on MacBook Pro */
+/* EXCLUDED GALLERIES: Logos, Inopsys, Web & Social, Lifesize Stands (keep-original-width class) */
+/* VERSION: 20251015FINAL - All gallery images scaled to 85% width on MacBook Pro (1025-1679px) */
 
 /* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
 /* APPLYING TO ALL SCREENS 1025px to 1679px to catch ALL MacBook sizes */
@@ -1212,14 +1205,9 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     display: block !important;
   }
   
-  /* GALLERY PAGES: Force uniform width for ALL gallery images (except Logos, Inopsys, Web & Social) */
+  /* GALLERY PAGES: All images 15% smaller on MacBook Pro (except excluded galleries) */
   html body:not(.main-page):not(.keep-original-width) section.brochure-gallery div.brochure-image-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 945px !important;
-    min-width: 945px !important;
-    max-width: 945px !important;
+    width: 85% !important;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 2rem !important;
@@ -1227,12 +1215,9 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
   
   html body:not(.main-page):not(.keep-original-width) section.brochure-gallery div.brochure-image-container img.brochure-image,
   html body:not(.main-page):not(.keep-original-width) section.brochure-gallery div.brochure-image-container img {
-    width: 945px !important;
-    min-width: 945px !important;
-    max-width: 945px !important;
+    width: 100% !important;
     height: auto !important;
     display: block !important;
-    margin: 0 auto !important;
   }
   
   /* About section - 2-column layout */
