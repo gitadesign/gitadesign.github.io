@@ -663,16 +663,21 @@ body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image
 }
 
 body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
-  width: 85%;
+  width: 100%;
   max-width: 1050px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* MacBook Pro Specific - Reduce gallery images by 10% (Excludes Logos and Web & Social) */
+/* MacBook Pro ONLY - Reduce whole image size by 15% (Excludes Logos, Inopsys and Web & Social) */
 @media screen and (min-width: 1280px) and (max-width: 1920px) {
   body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
-    width: 75%;
-    max-width: 945px;
+    width: 100%;
+    max-width: 892px;
+    transform: scale(0.85);
+    transform-origin: center top;
+    margin-bottom: 1rem;
   }
 }
 
