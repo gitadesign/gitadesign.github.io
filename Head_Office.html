@@ -47,17 +47,7 @@
         }
         
         /* Large desktop screens - reduced padding and larger images */
-        @media screen and (min-width: 1441px) {
-            body .brochure-gallery {
-                padding: 4.5rem 2rem 4rem 2rem !important;
-                max-width: 1359px !important;
-            }
-            body .brochure-gallery .brochure-image-container {
-                transform: scale(1.1) !important;
-                margin-bottom: 3rem !important;
-                transform-origin: center !important;
-            }
-        }
+        /* Large screens 1441px+ - Let external CSS handle uniform width and padding */
         
         .brochure-image-container {
             width: 100%;
@@ -137,17 +127,7 @@
             }
         }
         
-        /* MacBook Pro specific adjustments */
-        @media screen and (min-width: 1025px) and (max-width: 1600px) {
-            .brochure-gallery {
-                max-width: 88.8% !important;
-                padding-left: 2rem !important;
-                padding-right: 2rem !important;
-            }
-            .brochure-image-container {
-                margin-bottom: 2rem !important;
-            }
-        }
+        /* MacBook Pro specific adjustments - REMOVED to allow external CSS uniform width rules */
         
 
         
