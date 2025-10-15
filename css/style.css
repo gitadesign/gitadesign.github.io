@@ -29,8 +29,8 @@ body {
   padding-top: calc(6rem + 1vw);
 }
 
-/* Project pages image handling */
-body:not(.main-page) img {
+/* Project pages image handling - EXCLUDE gallery images from this rule */
+body:not(.main-page) img:not(.brochure-image) {
   object-fit: contain;
   object-position: center;
   width: 100%;
@@ -649,8 +649,8 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
+/* Base gallery image styles - will be overridden by media queries for specific screen sizes */
 .brochure-gallery .brochure-image {
-  width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
@@ -1143,8 +1143,8 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 15, 2025 - Gallery Uniform Width FIXED with FIXED 945px width */
-/* CRITICAL FIX: Changed from max-width to FIXED width: 945px to force uniform sizing */
-/* VERSION: 20251015FIX3 - ALL containers and images now have width: 945px (not 100%) */
+/* CRITICAL FIX: REMOVED width:100% from base .brochure-gallery .brochure-image rule (line 652) */
+/* VERSION: 20251015FIX5 - Base gallery image has NO width, only media queries set width */
 
 /* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
 /* APPLYING TO ALL SCREENS 1025px to 1679px to catch ALL MacBook sizes */
