@@ -668,6 +668,21 @@ body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image
   height: auto;
 }
 
+/* MacBook Pro Specific - Reduce gallery images by 10% (Excludes Logos and Web & Social) */
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
+    width: 75%;
+    max-width: 945px;
+  }
+}
+
+/* Head Office Gallery ONLY - Extra padding after images (Large screens only) */
+@media screen and (min-width: 1280px) {
+  body.head-office-gallery .brochure-gallery .brochure-image-container {
+    margin-bottom: 3rem;
+  }
+}
+
 /* Logos Gallery Grid Layouts - LOGOS PROJECT ONLY */
 /* 4-Column Grid for Large Screens (1441px+) */
 @media screen and (min-width: 1441px) {
