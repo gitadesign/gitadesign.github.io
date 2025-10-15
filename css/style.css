@@ -649,8 +649,9 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
-/* Base gallery image styles - will be overridden by media queries for specific screen sizes */
+/* Base gallery image styles - width 100% for Logos, Inopsys, Web & Social (keep-original-width) */
 .brochure-gallery .brochure-image {
+  width: 100%;
   height: auto;
   margin-bottom: 2rem;
 }
@@ -1143,8 +1144,8 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 15, 2025 - Gallery Uniform Width FIXED with FIXED 945px width */
-/* CRITICAL FIX: REMOVED width:100% from base .brochure-gallery .brochure-image rule (line 652) */
-/* VERSION: 20251015FIX5 - Base gallery image has NO width, only media queries set width */
+/* CRITICAL FIX: Base has width:100%, media queries override with 945px for uniform galleries */
+/* VERSION: 20251015FIX6 - Base gallery width:100% restored for Logos/Inopsys/Web galleries */
 
 /* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
 /* APPLYING TO ALL SCREENS 1025px to 1679px to catch ALL MacBook sizes */
