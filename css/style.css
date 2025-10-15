@@ -1137,8 +1137,8 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 
 /* CSS LOADING TEST - If you see this in browser devtools, CSS is loading correctly */
 /* LAST UPDATED: October 15, 2025 - Gallery images 15% smaller on MacBook Pro */
-/* EXCLUDED GALLERIES: Logos, Inopsys, Web & Social, Lifesize Stands (keep-original-width class) */
-/* VERSION: 20251015FINAL - All gallery images scaled to 85% width on MacBook Pro (1025-1679px) */
+/* EXCLUDED GALLERIES (only 3): Logos, Inopsys Eco Origin, Web & Social (keep-original-width class) */
+/* VERSION: 20251015FINAL2 - All gallery images scaled to 85% width on MacBook Pro (1025-1679px) */
 
 /* MACBOOK PRO - NUCLEAR OPTION - ABSOLUTE OVERRIDE */
 /* APPLYING TO ALL SCREENS 1025px to 1679px to catch ALL MacBook sizes */
