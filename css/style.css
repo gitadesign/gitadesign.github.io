@@ -670,38 +670,21 @@ body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image
   margin: 0 auto;
 }
 
-/* Large Screens (1441px+) - For all devices except MacBook Pro range */
-@media screen and (min-width: 1441px) {
-  body.head-office-gallery .brochure-gallery .brochure-image-container {
-    margin-bottom: 3rem !important;
-  }
-}
-
-/* Inopsys Gallery - First image 20% smaller on ALL devices */
-body.keep-original-width .brochure-gallery .brochure-image-container:first-of-type .brochure-image {
-  width: 80%;
-  max-width: 80%;
-  height: auto;
-}
-
-/* MacBook Pro ONLY (1280px - 1440px) - Same width + 10% size reduction (Excludes Logos, Inopsys, Web & Social) */
-@media screen and (min-width: 1280px) and (max-width: 1440px) {
-  body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  
+/* MacBook Pro ONLY - Reduce whole image size by 15% (Excludes Logos, Inopsys and Web & Social) */
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
   body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
-    width: 90% !important;
-    max-width: 945px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
+    width: 100%;
+    max-width: 892px;
+    transform: scale(0.85);
+    transform-origin: center top;
+    margin-bottom: 1rem;
   }
-  
+}
+
+/* Head Office Gallery ONLY - Extra padding after images (Large screens only) */
+@media screen and (min-width: 1280px) {
   body.head-office-gallery .brochure-gallery .brochure-image-container {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem;
   }
 }
 
