@@ -697,6 +697,9 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
+    max-width: 1050px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   
   body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
@@ -715,10 +718,13 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
+    max-width: 945px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   
   body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
-    width: 90% !important;
+    width: 100% !important;
     max-width: 945px !important;
     height: auto !important;
     display: block !important;
