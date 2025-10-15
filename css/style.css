@@ -655,6 +655,13 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
+/* Inopsys & Lifesize Stands - Constrain image width like Web & Social */
+body.keep-original-width .brochure-gallery .brochure-image-container {
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* Inopsys Gallery - First image 20% smaller on ALL devices */
 body.keep-original-width .brochure-gallery .brochure-image-container:first-of-type .brochure-image {
   width: 80% !important;
