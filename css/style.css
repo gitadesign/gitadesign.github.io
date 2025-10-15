@@ -655,6 +655,19 @@ html body section#projects .projects__row-img-cont {
   margin-bottom: 2rem;
 }
 
+/* Uniform Width for Gallery Images - Excludes Logos, Inopsys, and Web & Social Media */
+body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
+  width: 85%;
+  max-width: 1050px;
+  height: auto;
+}
+
 /* Logos Gallery Grid Layouts - LOGOS PROJECT ONLY */
 /* 4-Column Grid for Large Screens (1441px+) */
 @media screen and (min-width: 1441px) {
