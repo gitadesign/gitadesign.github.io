@@ -690,8 +690,15 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
   }
 }
 
-/* MacBook Pro AND Large Screens (1280px+) - Same width for gallery images (Excludes Logos, Inopsys, Web & Social) */
+/* Large Screens (1280px+) - Uniform width for all gallery images (Excludes Logos, Inopsys, Web & Social) */
 @media screen and (min-width: 1280px) {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
   body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
     width: 100% !important;
     max-width: 1050px !important;
@@ -703,9 +710,19 @@ body.keep-original-width .brochure-gallery .brochure-image-container:first-of-ty
 
 /* MacBook Pro ONLY (1280px - 1440px) - Additional 10% size reduction (Excludes Logos, Inopsys, Web & Social) */
 @media screen and (min-width: 1280px) and (max-width: 1440px) {
+  body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
   body:not(.main-page):not(.keep-original-width) .brochure-gallery .brochure-image {
     width: 90% !important;
     max-width: 945px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
   }
 }
 
