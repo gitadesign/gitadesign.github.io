@@ -7,8 +7,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>R&A Brochure — Gita Ogneva</title>
-    <meta name="description" content="R&A Brochure Portfolio — Gita Ogneva" />
+    <title>Filterprogram Brochure — Gita Ogneva</title>
+    <meta name="description" content="Filterprogram Brochure Portfolio — Gita Ogneva" />
     <meta name="robots" content="noindex, nofollow" />
     
     <!-- Favicon -->
@@ -18,11 +18,14 @@
 
     <link rel="stylesheet" href="css/style.css?v=20251010NUCLEAR" />
     
+    </style>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
     
-
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -62,45 +65,38 @@
       </ul>
     </div>
 
-    <!-- R&A Brochure Gallery -->
+        <!-- Filterprogram Brochure Gallery -->
     <section class="brochure-gallery">
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-3.webp" alt="R&A Brochure 3" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_03.jpg" alt="Filterprogram 03" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-5.webp" alt="R&A Brochure 5" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_06.jpg" alt="Filterprogram 06" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure 6" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_07.jpg" alt="Filterprogram 07" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-8.webp" alt="R&A Brochure 8" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_08.jpg" alt="Filterprogram 08" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-9.webp" alt="R&A Brochure 9" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_09.jpg" alt="Filterprogram 09" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-10.webp" alt="R&A Brochure 10" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_10.jpg" alt="Filterprogram 10" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-11.webp" alt="R&A Brochure 11" class="brochure-image" loading="lazy" />
-        </div>
-        
-        <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-12.webp" alt="R&A Brochure 12" class="brochure-image" loading="lazy" />
-        </div>
-        
-        <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-13.webp" alt="R&A Brochure 13" class="brochure-image" loading="lazy" />
+            <img src="./assets/Projects/Dinex/Filterprogram Brochure/Filterprogram_DE_01.jpg" alt="Filterprogram 01" class="brochure-image" loading="lazy" />
         </div>
     </section>
+
 
     <footer class="main-footer">
       <div class="main-container">
@@ -174,39 +170,6 @@
         if (e.keyCode === 123) {
           e.preventDefault();
           return false;
-        }
-      });
-      
-      // Mobile menu functionality
-      function toggleMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.querySelector(".header__mobile-menu");
-        
-        if (hamburger && mobileMenu) {
-          hamburger.classList.toggle("active");
-          mobileMenu.classList.toggle("active");
-        }
-      }
-
-      function closeMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.querySelector(".header__mobile-menu");
-        
-        if (hamburger && mobileMenu) {
-          hamburger.classList.remove("active");
-          mobileMenu.classList.remove("active");
-        }
-      }
-
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', function(event) {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.querySelector(".header__mobile-menu");
-        
-        if (mobileMenu && hamburger && mobileMenu.classList.contains("active") && 
-            !hamburger.contains(event.target) && 
-            !mobileMenu.contains(event.target)) {
-          closeMobileMenu();
         }
       });
     </script>
