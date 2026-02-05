@@ -18,11 +18,14 @@
 
     <link rel="stylesheet" href="css/style.css?v=20251010NUCLEAR" />
     
+    </style>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
     
-
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -62,11 +65,23 @@
       </ul>
     </div>
 
-    <!-- R&A Brochure Gallery -->
+        <!-- R&A Brochure Gallery -->
     <section class="brochure-gallery">
         
         <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-3.webp" alt="R&A Brochure 3" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-5.webp" alt="R&A Brochure 5" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
             <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-6.webp" alt="R&A Brochure 6" class="brochure-image" loading="lazy" />
+        </div>
+        
+        <div class="brochure-image-container">
+            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-8.webp" alt="R&A Brochure 8" class="brochure-image" loading="lazy" />
         </div>
         
         <div class="brochure-image-container">
@@ -88,9 +103,10 @@
         <div class="brochure-image-container">
             <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-13.webp" alt="R&A Brochure 13" class="brochure-image" loading="lazy" />
         </div>
-        
-        <div class="brochure-image-container">
-            <img src="./assets/Projects/Air Liquide/Brochures/R&A Brochure/R&A_Brochure-5.webp" alt="R&A Brochure 5" class="brochure-image" loading="lazy" />
+    </section>
+
+
+    <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
           <div class="main-footer__row main-footer__row-1">
@@ -162,39 +178,6 @@
         if (e.keyCode === 123) {
           e.preventDefault();
           return false;
-        }
-      });
-      
-      // Mobile menu functionality
-      function toggleMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.querySelector(".header__mobile-menu");
-        
-        if (hamburger && mobileMenu) {
-          hamburger.classList.toggle("active");
-          mobileMenu.classList.toggle("active");
-        }
-      }
-
-      function closeMobileMenu() {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.querySelector(".header__mobile-menu");
-        
-        if (hamburger && mobileMenu) {
-          hamburger.classList.remove("active");
-          mobileMenu.classList.remove("active");
-        }
-      }
-
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', function(event) {
-        const hamburger = document.querySelector(".header__hamburger");
-        const mobileMenu = document.querySelector(".header__mobile-menu");
-        
-        if (mobileMenu && hamburger && mobileMenu.classList.contains("active") && 
-            !hamburger.contains(event.target) && 
-            !mobileMenu.contains(event.target)) {
-          closeMobileMenu();
         }
       });
     </script>
